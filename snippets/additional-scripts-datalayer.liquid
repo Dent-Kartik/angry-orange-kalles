@@ -1,0 +1,59 @@
+<script> 
+  document.body.addEventListener('click', function(event) {
+  var target = event.target;
+  if (target && target.classList.contains('prlinkasec')) {
+   // event.preventDefault(); // Prevent default link behavior
+   // alert('Working');
+    var id = target.getAttribute('data-proid');
+    var prtit = target.getAttribute('data-ptitle');
+    var pbrand = target.getAttribute('data-vendor');
+    var dpr = target.getAttribute('data-price');
+    var qty = target.getAttribute('data-quantity');
+    var varname = target.getAttribute('data-variantname');
+    var sourcep = target.getAttribute('data-cat');
+  //  alert(id);
+    select_item_asec(id, prtit, pbrand, dpr, qty, varname, sourcep);
+  }
+});
+
+function select_item_asec(pid,prt,brand,pr,qt,varnm,srcp){
+//alert('Working');
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object. 
+
+dataLayer.push({ 
+
+  event: "select_item", 
+
+  ecommerce: { 
+
+    items: [ 
+
+    { 
+
+      item_id: pid, // Pass the product SKU or Product ID 
+
+      item_name: `"${prt}"`, // Pass the product Name 
+
+      currency: "USD", // Pass the store currency code 
+
+      item_brand: `"${brand}"`, // Pass the brand to which it belongs to 
+
+     source: `"${srcp}"`, // Pass the product category name 
+
+     item_variant: `"${varnm}"`, 
+
+      price: pr, // Pass the product price 
+
+      quantity: qt // Pass the product quantity  
+
+    } 
+
+    ] 
+
+  } 
+
+}); 
+
+}
+
+</script> 

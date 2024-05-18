@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    <script type="application/javascript" async src="https://sdk.postscript.io/integrations/sdk-min.js"></script>
+      	<!-- AOEX016: Control -->
+    <script>
+      !function(){"use strict";var e="aoex016-flat-vs-dynamic-shipping--hide";!function(e,t){void 0===t&&(t={});var n=t.insertAt;if(e&&"undefined"!=typeof document){var o=document.head||document.getElementsByTagName("head")[0],i=document.createElement("style");i.type="text/css","top"===n&&o.firstChild?o.insertBefore(i,o.firstChild):o.appendChild(i),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(document.createTextNode(e))}}(".aoex016-flat-vs-dynamic-shipping--hide.content-box__row{display:none}.aoex016-flat-vs-dynamic-shipping--show.content-box__row{display:table!important}");!function e(t,n){document.querySelectorAll(t).length<t.length?setTimeout(e.bind(null,t,n),50):n()}(['[data-shipping-method-label-title="Priority Mail"]'],(function(){var t;(t=function(){["Priority"].forEach((function(t){document.querySelectorAll('[data-shipping-method*="'.concat(t,'"]')).forEach((function(t){t.closest(".content-box__row").classList.add(e)}))}))})(),new MutationObserver(t).observe(document.querySelector(".order-summary__section"),{subtree:!0,childList:!0})}))}();
+    </script>
+    <!-- AOEX016: Control -->
+  <!-- Optimizely -->
+  <script src="https://cdn.optimizely.com/js/20542322736.js"></script>
+  <!-- -->
+    <style>
+      @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://fonts.shopifycdn.com/avenir_next/avenirnext_n5.972a96b7a049f12c89d6d1cd0e1b6c9211f7ba14.woff2?h1=YW5ncnlvcmFuZ2V1c2EuY29t&h2=YW5ncnlvcmFuZ2UuY29t&hmac=d5c5e199c36b02f82b5cf69e2f9ed0c76f2ca302181250b476a4f1dad6a90f3d') format('woff2'),
+        url('https://fonts.shopifycdn.com/avenir_next/avenirnext_n5.9e88d20fa9eb66ba268ac60ab013006ef69a310a.woff?h1=YW5ncnlvcmFuZ2V1c2EuY29t&h2=YW5ncnlvcmFuZ2UuY29t&hmac=0d3172c250a8e558297b49aba19c2f5c50e6e1a9324f71d149b11306aa2c1af3') format('woff');
+}
+ .modal__content.iframe_container {
+    overflow-y:scroll!important;
+}
+    </style>
+    
+  {% render 'shogun-head' %}
+  {% include 'dataLayer.checkout' %}
+
+    
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W7DJ8GJ');</script>
+  <!-- End Google Tag Manager -->
+  <script src="{{ 'checkout-social-proof.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'privacy-policy-modal.js' | asset_url }}" defer="defer"></script>
+     <script src="{{ 'termsOfUseModal.js' | asset_url }}" defer="defer"></script>
+
+</head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DJ8GJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            
+{% comment %} The Vaan Group - Order Bump (1/2) {% endcomment %}
+<div id="superbump"></div>
+{% comment %} END OF The Vaan Group - Order Bump (1/2) {% endcomment %}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+           	{{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+  
+                  {% comment %} The Vaan Group - Order Bump (2/2) {% endcomment %}
+                    <script src="/apps/superbump/superbump_widget.js"></script>
+                  {% comment %} END OF The Vaan Group - Order Bump (2/2) {% endcomment %}
+    <!-- --- Discount Coupon Issue Fix Start --- -->
+    <script>
+    // Apply discount if available on checkout page
+    //console.log('Applying Coupon.');
+    setTimeout(function() {
+        if (window.location.href.indexOf('/checkouts/') != -1) {
+            //console.log('On checkout page.')
+            // Check if the cookie has a dicount code
+            var disCookie, startPos, endPos, disCoupon, tags;
+            disCookie = document.cookie;
+            startPos = disCookie.indexOf('discount_code=');
+            // Cookie exists
+            if (startPos != -1) {
+                endPos = disCookie.indexOf(';', startPos);
+                disCoupon = disCookie.slice(startPos + 14, endPos);
+                //console.log('Discount coupon detected: ' + disCookie);
+
+                // Check if any coupon code is already applied, if not then apply it
+                tags = document.querySelectorAll('div.tags-list div.tag form span.reduction-code__text');
+                //console.log('Some Coupon already exists.')
+                if (tags.length > 0) {
+                    //console.log('Already applied coupons: ' + tags)
+                    tags.forEach((coupon) => {
+                        if (coupon.innerText.toLowerCase() == disCoupon) {
+                            //console.log('Coupon already exists.');
+                            return false;
+                        }
+                    });
+                } else {
+                    // Apply the discount code
+                    //console.log('Applying coupon: ' + disCoupon);
+                    document.getElementById('checkout_reduction_code').value = disCoupon;
+                    document.querySelector('div.field--show-floating-label button[type="submit"]').click();
+                }
+            }
+        }
+    }, 100);
+    //console.log('Applied Coupon...'); 
+    </script>
+    <!-- --- Discount Coupon Issue Fix End --- -->
+    
+    <!-- Thrasio Checkout Countdown -->
+    <script>
+      !function(){"use strict";function t(t,e){var n=Object.keys(t);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(t);e&&(o=o.filter((function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),n.push.apply(n,o)}return n}function e(e){for(var o=1;o<arguments.length;o++){var c=null!=arguments[o]?arguments[o]:{};o%2?t(Object(c),!0).forEach((function(t){n(e,t,c[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(c)):t(Object(c)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(c,t))}))}return e}function n(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}function o(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){var n=null==t?null:"undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null==n)return;var o,c,r=[],i=!0,a=!1;try{for(n=n.call(t);!(i=(o=n.next()).done)&&(r.push(o.value),!e||r.length!==e);i=!0);}catch(t){a=!0,c=t}finally{try{i||null==n.return||n.return()}finally{if(a)throw c}}return r}(t,e)||function(t,e){if(!t)return;if("string"==typeof t)return c(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return c(t,e)}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function c(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,o=new Array(e);n<e;n++)o[n]=t[n];return o}var r=function(t){var e=(window.sgd=window.sgd||{},window.sgd);if(window.preact)return t();if(e.preactLoading)var n=setInterval((function(){e.preactLoading||(clearInterval(n),t())}),50);else e.preactLoading=!0,function(t,e){var n=document.createElement("script"),o=document.getElementsByTagName("script")[0];n.async=1,n.onload=n.onreadystatechange=function(t,o){(o||!n.readyState||/loaded|complete/.test(n.readyState))&&(n.onload=n.onreadystatechange=null,n=void 0,!o&&e&&setTimeout(e,0))},n.src=t,o.parentNode.insertBefore(n,o)}("https://cdn.jsdelivr.net/combine/npm/preact@10.5.14/dist/preact.umd.min.js,npm/preact@10.5.14/hooks/dist/hooks.umd.min.js",(function(){e.preactLoading=!1,t()}))};function i(t){var e=new Date,n=(new Date(t)-e)/1e3;if(n<0)return{days:0,hours:0,minutes:0,seconds:0};var o=Math.floor(n/86400);n-=86400*o;var c=Math.floor(n/3600)%24;n-=3600*c;var r=Math.floor(n/60)%60;return{days:o,hours:c,minutes:r,seconds:(n-=60*r)%60}}var a,u={container:"th-checkout-countdown--container",scrolled:"th-checkout-countdown--scrolled",countdownTimer:"th-checkout-countdown--countdownTimer",heading:"th-checkout-countdown--heading","checkoutStep--contact_information":"th-checkout-countdown--checkoutStep--contact_information","checkoutStep--shipping_method":"th-checkout-countdown--checkoutStep--shipping_method","checkoutStep--payment_method":"th-checkout-countdown--checkoutStep--payment_method"};!function(t,e){void 0===e&&(e={});var n=e.insertAt;if(t&&"undefined"!=typeof document){var o=document.head||document.getElementsByTagName("head")[0],c=document.createElement("style");c.type="text/css","top"===n&&o.firstChild?o.insertBefore(c,o.firstChild):o.appendChild(c),c.styleSheet?c.styleSheet.cssText=t:c.appendChild(document.createTextNode(t))}}('@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");@font-face{font-family:Avenir Next;font-weight:800;font-style:normal;src:url(https://fonts.shopifycdn.com/avenir_next/avenirnext_n5.972a96b7a049f12c89d6d1cd0e1b6c9211f7ba14.woff2?h1=YW5ncnlvcmFuZ2V1c2EuY29t&h2=YW5ncnlvcmFuZ2UuY29t&hmac=d5c5e199c36b02f82b5cf69e2f9ed0c76f2ca302181250b476a4f1dad6a90f3d) format("woff2"),url(https://fonts.shopifycdn.com/avenir_next/avenirnext_n5.9e88d20fa9eb66ba268ac60ab013006ef69a310a.woff?h1=YW5ncnlvcmFuZ2V1c2EuY29t&h2=YW5ncnlvcmFuZ2UuY29t&hmac=0d3172c250a8e558297b49aba19c2f5c50e6e1a9324f71d149b11306aa2c1af3) format("woff")}.th-checkout-countdown--container{width:100%;z-index:3;margin-bottom:20px}@media (max-width:26.5625em){.th-checkout-countdown--container{position:relative;z-index:3;margin-top:0!important}}@media (max-width:26.5625em){.th-checkout-countdown--scrolled{position:fixed;top:0}.th-checkout-countdown--scrolled .th-checkout-countdown--countdownTimer{border:none;border-bottom:1px solid #ffd936}}.th-checkout-countdown--countdownTimer{display:flex;justify-content:center;align-items:center;background-color:#fff2c2;border:1px solid #ffd936;border-radius:6px;padding:4px}@media (max-width:26.5625em){.th-checkout-countdown--countdownTimer{width:100vw;justify-content:center;flex-wrap:wrap;border-radius:0;border-right:none;border-left:none;margin-left:-5.17647vw}}.th-checkout-countdown--countdownTimer h2{font-family:Inter,sans-serif;font-weight:700;font-size:12px;line-height:14.52px;color:#000;margin:0 4px 0 12px}@media (max-width:26.5625em){.th-checkout-countdown--countdownTimer h2{margin-left:8px}}.th-checkout-countdown--countdownTimer .th-checkout-countdown--heading{font-family:Inter,sans-serif;font-size:12px;line-height:14.52px;font-weight:400;color:#000;margin:0}.th-checkout-countdown--checkoutStep--contact_information,.th-checkout-countdown--checkoutStep--payment_method,.th-checkout-countdown--checkoutStep--shipping_method{box-sizing:border-box}.th-checkout-countdown--checkoutStep--contact_information .dynamic-checkout~.th-checkout-countdown--container{margin-top:20px}');var d,M=function(t){var e=t.endTime,n=o(preactHooks.useState(i(e)),2),c=n[0],r=n[1];return preactHooks.useEffect((function(){return a=setInterval((function(){var t=i(e);r(t),0===t.minutes&&0===t.seconds&&clearInterval(a)}),1e3),function(){clearInterval(a)}}),[]),preact.h("div",{className:u.countdownTimer},preact.h("img",{alt:"Checkout Countdown Timer",src:"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuMzQzMzUgMEMxLjQ3OTM3IDAgLTAuMDMxNjQ2NyAxLjUxMTAyIC0wLjAzMTY0NjcgMy4zNzVDLTAuMDMxNjQ2NyA0LjA0MTIxIDAuMTY3NzI0IDQuNjU4MiAwLjUwMDk3IDUuMTgxMzNMNS42MzAyNyAwLjkwNjMyOEM1LjA1ODk4IDAuMzQ4NTM5IDQuMjYwOTMgMCAzLjM0MzM1IDBaTTE0LjU5MzQgMEMxMy43MDc4IDAgMTIuOTA4MyAwLjM0ODUzOSAxMi4zMDYxIDAuOTA2NjhMMTcuNDM1NCA1LjE4MTY4QzE3Ljc5OTYgNC42NTgyIDE3Ljk2ODQgNC4wMzk0NSAxNy45Njg0IDMuMzc1QzE3Ljk2ODQgMS41MTEwMiAxNi40ODgzIDAgMTQuNTkzNCAwWk04Ljk5OTk5IDIuMjVDNC42NTExNyAyLjI1IDEuMTI0OTkgNS43NzYxNyAxLjEyNDk5IDEwLjEyNUMxLjEyNDk5IDExLjk5NTcgMS43Nzk5NiAxMy43MTA5IDIuODY5NDUgMTUuMDYwOUwxLjM3MjE0IDE2LjU1ODJDMS4yMDcyNiAxNi43MjM4IDEuMTI0OTkgMTYuOTQxOCAxLjEyNDk5IDE3LjE1NjJDMS4xMjQ5OSAxNy42MDYzIDEuNDg3MSAxOCAxLjk2ODc0IDE4QzIuMTg0NjQgMTggMi40MDA0NiAxNy45MTc2IDIuNTY1MzUgMTcuNzUyOEw0LjA2MjY1IDE2LjI1NTVDNS4zODI0MiAxNy4zNDYxIDcuMTI5NjggMTggOC45OTk5OSAxOEMxMC44NzAzIDE4IDEyLjU4NTkgMTcuMzQ1IDEzLjkzNTkgMTYuMjU1NUwxNS40MzMyIDE3Ljc1MjlDMTUuNTk4OCAxNy45MTkxIDE1LjgxNjggMTggMTYuMDMxMiAxOEMxNi41MTMyIDE4IDE2Ljg3NSAxNy42MDU5IDE2Ljg3NSAxNy4xNTYyQzE2Ljg3NSAxNi45NDA0IDE2Ljc5MjYgMTYuNzI0NSAxNi42Mjc4IDE2LjU1OTZMMTUuMTMwNSAxNS4wNjIzQzE2LjIyIDEzLjcxMTMgMTYuODc1IDExLjk5NTcgMTYuODc1IDEwLjEyNjRDMTYuODQzNCA1Ljc3NjE3IDEzLjM0ODggMi4yNSA4Ljk5OTk5IDIuMjVaTTguOTk5OTkgMTYuMzEyNUM1LjU4ODA4IDE2LjMxMjUgMi44MTI0OSAxMy41MzY5IDIuODEyNDkgMTAuMTI1QzIuODEyNDkgNi43MTMwOSA1LjU1ODIgMy45Mzc1IDguOTk5OTkgMy45Mzc1QzEyLjQ0MTggMy45Mzc1IDE1LjE4NzUgNi43MTMwOSAxNS4xODc1IDEwLjEyNUMxNS4xODc1IDEzLjUzNjkgMTIuNDEwMSAxNi4zMTI1IDguOTk5OTkgMTYuMzEyNVpNOS44NDM3NCAxMC4yNjU2VjYuNDY4NzVDOS44NDM3NCA2LjAwMjkzIDkuNDY1ODEgNS42MjUgOC45OTk5OSA1LjYyNUM4LjUzNDE3IDUuNjI1IDguMTU2MjQgNi4wMDQ2OSA4LjE1NjI0IDYuNDY4NzVWMTAuNjg3NUM4LjE1NjI0IDEwLjk1MzQgOC4yODE1MSAxMS4yMDI5IDguNDkzNTMgMTEuMzYyMUwxMC43NDM1IDEzLjA0OTZDMTAuODk0OSAxMy4xNjI1IDExLjA0MjYgMTMuMjE4OCAxMS4yMTg0IDEzLjIxODhDMTEuNjgyNCAxMy4yMTg4IDEyLjA2MjggMTIuODQ0IDEyLjA2MjggMTIuMzc1N0MxMi4wNjI4IDEyLjExOTIgMTEuOTQ2MyAxMS44NjU5IDExLjcyNTQgMTEuNzAwN0w5Ljg0Mzc0IDEwLjI2NTZaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K"}),preact.h("h2",null,"Order Soon:"),preact.h("h3",{className:u.heading},"Your cart is reserved for"," ",c.minutes.toFixed(0).padStart(2,"0"),":",Math.floor(c.seconds).toString().padStart(2,"0")))};d=function(t){var e,n=t.cartDurationMins;window.Shopify&&window.Shopify.Checkout&&("contact_information"===window.Shopify.Checkout.step||"payment_method"===window.Shopify.Checkout.step||"shipping_method"===window.Shopify.Checkout.step)&&(e=function(){var t,e,o=(t="th--endTime",void 0!==(e=document.cookie.split(";").map((function(t){return t.split("=")})).find((function(e){return e[0].trim()===t})))?e[1]:null),c=o?new Date(o):new Date((new Date).getTime()+6e4*n);o||function(t,e,n){var o="";if(n){var c=new Date;c.setTime(c.getTime()+24*n*60*60*1e3),o="; expires=".concat(c.toUTCString())}document.cookie="".concat(t,"=").concat(e||"").concat(o,"; path=/")}("th--endTime",c.toISOString(),n/60/24),document.body.classList.add(u["checkoutStep--".concat(window.Shopify.Checkout.step)]),r((function(){var t,e,n="contact_information"===window.Shopify.Checkout.step&&document.querySelector(".dynamic-checkout")?".dynamic-checkout":".main__content",o=(t='<div class="'.concat(u.container,'"/>'),(e=document.createElement("div")).innerHTML=t.trim(),e.firstChild),r=document.querySelector(n);r.parentNode.insertBefore(o,r),preact.render(preact.h(M,{endTime:c}),o);var i=document.querySelector(".breadcrumb");new IntersectionObserver((function(t){t.forEach((function(t){!1===t.isIntersecting?o.classList.add(u.scrolled):o.classList.remove(u.scrolled)}))}),{root:null,threshold:0,rootMargin:"0px"}).observe(i)}))},"loading"!==document.readyState?e():document.addEventListener?document.addEventListener("DOMContentLoaded",e):document.attachEvent("onreadystatechange",(function(){"loading"!==document.readyState&&e()})))},window.sgd=window.sgd||{},window.sgd.components=e(e({},window.sgd.components),{},n({},"th-checkout-countdown",d))}();
+    </script>
+    <script>
+      window.sgd.components['th-checkout-countdown']({ cartDurationMins: 15});
+    </script>
+    <!-- End Thrasio Checkout Countdown --> 
+    
+  </body>
+</html>
+
+
+
+

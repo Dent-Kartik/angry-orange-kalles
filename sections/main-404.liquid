@@ -1,0 +1,123 @@
+{%- assign link = section.settings.link | default: routes.root_url -%}
+
+<div
+  class="t4s-section-inner t4s_nt_se_template--20783189655849__aafa63cc-534d-4985-8a51-ed0938321f4c t4s_nt_se_template--20783189655849__aafa63cc-534d-4985-8a51-ed0938321f4c t4s-container-fluid"
+  style="    padding: 70px 0px;"
+>
+  <div class="t4s-container">
+    <div class="t4s-image-text t4s-row t4s-align-items-center t4s-row t4s-gx-md-20 t4s-gy-md-10 t4s-gx-20 t4s-gy-10">
+      <div class="timercountdown t4s-col-text t4s-col-item t4s-col-lg-4 t4s-col-md-4 t4s-order-md-1 t4s-order-1 t4s-col-12 t4s-txt-shadow-false">
+        <div class="t4s-image-text-content t4s-text-center t4s-shadow-wrap" style="padding: 0 80px;">
+          <h1 class="error-404-title">{{ 'templates.404.title' | t }}</h1>
+          <h3 class="error-404-subtext">{{ 'templates.404.subtext' | t }}</h3>
+          <p class="error-404-link">{{ 'templates.404.link_html' | t: link: link }}</p>
+        </div>
+      </div>
+      <div class="t4s-col-img t4s-col-item t4s-col-lg-8 t4s-col-md-8 t4s-col-12 t4s-order-md-2 t4s-order-1 t4s-image-text-layout-carousel t4s-image-text-col-img-right">
+        <div class="t4s-image-text-carousel t4s-flicky-slider t4s-row t4s-gx-0 t4s-gy-0 t4s-row-cols-1 t4s_ratioadapt t4s_position_8 t4s_cover flickityt4s flickityt4s-enabled t4s-enabled">
+          <div class="bird-img">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0694/1510/8905/t/4/assets/Nestopia_404_110923.webp?v=1699860592"
+              alt="Nestopia"
+              width="700"
+              height="500"
+            >
+            <!--
+              <div class="floating-content">
+                <div>Oops!</div>
+                <div>Look like this page left the nest!</div>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    .error-404.not-found{letter-spacing:1px}
+    .error-404.not-found h1{font-size:80px;letter-spacing:0px;font-weight:700;margin:0 0 5px; color:#f66065;}
+    .error-404.not-found h3{text-transform:none;font-size:14px;margin:0 0 15px; color:#f66065}
+    .error-404.not-found a{font-weight:700;border-bottom:1px solid #222;padding:2px 5px}
+    .error-404.not-found a:hover{background:#a4ddd8;color:#000f41}
+    .error-404.not-found a {
+      background: #f66065;
+      padding: 10px 30px;
+      border-radius: 40px;
+      text-decoration: none;
+      border: none;
+      text-transform: uppercase;
+      color:#fff;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .bird-img{
+      position:relative;
+    }
+    .floating-content{
+      display: flex;
+      /* background: url({{ 'blue.png' | asset_img_url:'master' }}) top left no-repeat; */
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      height: 150px;
+      width: 300px;
+      font-family: var(--font-heading-family);
+      padding: 25px 15px;
+      left: 10px;
+    }
+    .floating-content div:nth-child(1){
+      font-size:30px;
+    }
+    .floating-content div:nth-child(2){
+      font-size: 17px;
+      padding-left: 10px;
+      line-height: 18px;
+      padding-top: 9px;
+    }
+  @media(max-width: 767px) {
+    .floating-content div:nth-child(2) {
+      font-size: 10px;
+      padding-left: 10px;
+      line-height: 18px;
+      padding-top: 0px;
+  }
+    .floating-content div:nth-child(1) {
+      font-size: 20px;
+  }
+    .floating-content {
+      display: flex;
+      color: #fff;
+      position: absolute;
+      top: 0px;
+      height: 110px;
+      width: 210px;
+      font-family: var(--font-heading-family);
+      padding: 25px 15px;
+      left: 10px;
+    }
+  }
+</style>
+{% comment %}
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'page_not_found',
+  });
+</script>
+{% endcomment %}
+{%- schema -%}
+{
+  "name": "404",
+  "tag": "section",
+  "class": "t4s-section t4s-section-main error-404 not-found t4s-pr t4s-oh",
+  "settings": [
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link Button"
+      }
+  ]
+}
+{%- endschema -%}

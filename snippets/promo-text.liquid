@@ -1,0 +1,58 @@
+<b class="promo-text" id="promo-text">
+  {% if current_variant.metafields.global.promo_text != blank -%}
+    {{- current_variant.metafields.global.promo_text }}
+  {% endif -%}
+</b>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  jQuery(document).ready(function(){
+    var swatchItems = jQuery('.t4s-swatch__item');
+    var optionsE = jQuery('.variantOption');
+    var c= 0;
+    $(document).on('click', '.t4s-swatch__item', function(e) {
+      var selectedItems = jQuery('.t4s-swatch__item.is--selected').text();
+      //alert(selectedItems);
+c=0;
+      optionsE.each(function () {
+        var optionV = jQuery(this).text();
+        var modifiedString = optionV.replace(/ \/ /g, "");
+
+        //  alert(modifiedString);
+        // Check if a variant is selected
+        console.log("vals----",selectedItems +'==='+ modifiedString)
+        if (selectedItems === modifiedString) {
+          // Extract the metafield value from the selected variant
+          var metafieldValue = jQuery(this).data('promo');
+          // Update the metafield display
+          if(metafieldValue != '')
+          c=1;
+          
+          jQuery('.promo-text').text(metafieldValue);
+        }
+      });
+      //alert(c);
+if(c==1){
+  $('.promo-text').addClass('active');
+}else{
+  $('.promo-text').removeClass('active');
+}
+    });
+  });
+</script>
+<style>
+  .promo-text.active{
+  font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    width: 79%;
+    border-radius: 0 20px 20px 0;
+    padding: 5px 20px;
+    margin: 20px 0;
+    position: relative;
+    right: 0;
+  }
+</style>

@@ -1,0 +1,40 @@
+<script id="dataLayer-common">
+  window.dataLayer = window.dataLayer || [];
+  window.sgdAnalytics = {
+    customerId: '{{customer.id}}',
+    customerEmail: '{{customer.email}}',
+    pageType: '{{request.page_type}}'
+  };
+  
+{% if request.page_type == "product" %}
+  sgdAnalytics.product = {
+    price: '{{product.selected_or_first_available_variant.price | money_without_currency}}',
+    sku: '{{product.selected_or_first_available_variant.sku}}',
+    inventory_quantity: {{ product.selected_or_first_available_variant.inventory_quantity }},
+    product: {{product | json}},
+    firstAvailableVariant: {{  product.selected_or_first_available_variant | json }}
+  }
+{% elsif request.page_type == "cart" %}
+  sgdAnalytics.cartItems = [];
+  {% for line_item in cart.items %}
+    sgdAnalytics.cartItems.push({
+      linePrice: '{{ line_item.final_line_price | money_without_currency}}',
+      sku: '{{ line_item.sku }}',
+      quantity: '{{ line_item.quantity }}',
+    });
+  {% endfor %}
+{% endif %}
+  
+!function(){"use strict";function e(e,r){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){var r=null==e?null:"undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(null==r)return;var n,o,a=[],c=!0,i=!1;try{for(r=r.call(e);!(c=(n=r.next()).done)&&(a.push(n.value),!t||a.length!==t);c=!0);}catch(e){i=!0,o=e}finally{try{c||null==r.return||r.return()}finally{if(i)throw o}}return a}(e,r)||function(e,r){if(!e)return;if("string"==typeof e)return t(e,r);var n=Object.prototype.toString.call(e).slice(8,-1);"Object"===n&&e.constructor&&(n=e.constructor.name);if("Map"===n||"Set"===n)return Array.from(e);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return t(e,r)}(e,r)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function t(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}var r="thrasio-dl--tracked";!function(e,t){void 0===t&&(t={});var r=t.insertAt;if(e&&"undefined"!=typeof document){var n=document.head||document.getElementsByTagName("head")[0],o=document.createElement("style");o.type="text/css","top"===r&&n.firstChild?n.insertBefore(o,n.firstChild):n.appendChild(o),o.styleSheet?o.styleSheet.cssText=e:o.appendChild(document.createTextNode(e))}}(".thrasio-dl--tracked{box-sizing:inherit}");var n=function(e,t,n){e&&(e.classList.contains(r)||(e.addEventListener(t,n),e.classList.add(r)))},o=function(e){arguments[0].eventType="thrasio-dl",window.dataLayer.push.apply(window.dataLayer,arguments),window.dataLayer.push({event:"flush dataLayer",eventCategory:void 0,eventLabel:void 0,eventValue:void 0,ecommerce:void 0,attributes:void 0,eventType:void 0})},a=function(e,t,r,a,c){n(e,"click",(function(){var e={event:t,eventCategory:r,eventLabel:a};c&&(e.attributes=c),o(e)}))};window.dlPush=o;var c;c=function(){!function(){document.querySelectorAll('[role="navigation"] .site-nav__link, [role="navigation"] .site-nav__dropdown-link').forEach((function(e){var t=e.classList.contains("site-nav__dropdown-link")?"".concat(e.parentNode.parentNode.previousElementSibling.textContent.trim()," - ").concat(e.textContent.trim()):e.textContent;a(e,"click","header",t.trim())})),document.querySelectorAll('a[href="/search"]').forEach((function(e){a(e,"open search","header - search","open search")}));var e=document.querySelector(".js-search-header-close");a(e,"close search","header - search","close search");var t=document.querySelector("#HeaderSearchForm");n(t,"submit",(function(){o({event:"search",eventCategory:"header - search",eventLabel:document.querySelector(".site-header__search-input").value})}));var r=document.querySelector(".js-drawer-open-cart");a(r,"open cart drawer","cart drawer","open cart drawer");var c=document.querySelector("#CartDrawer .drawer__close-button");a(c,"close cart drawer","cart drawer","close cart drawer"),Array.from(document.querySelectorAll('a[href="/account"]')).forEach((function(e){a(e,"click","header","profile")}));var i=document.getElementById("qab_bar");a(i,"click","header","header bar");var l=document.getElementById("qab_close");a(l,"click","header","close header bar")}();var t=document.querySelector(".t4s-newsletter__email"),r=document.querySelector(".t4s-newsletter__form");n(r,"submit",(function(){o({event:"subscribe to newsletter",eventCategory:"footer",eventLabel:"subscribe to newsletter",attributes:{email:t.value}})})),Array.from(document.querySelectorAll(".footer__social li")).forEach((function(e){a(e,"click","footer",e.querySelector("span").innerText.trim(),{social:e.querySelector("span").innerText})})),function e(t,r){document.querySelectorAll(t).length<t.length?setTimeout(e.bind(null,t,r),50):r()}(['div[data-testID="POPUP"] .klaviyo-close-form'],(function(){o({event:"view popup",eventCategory:"klaviyo - popup",eventLabel:"view klaviyo popup (impression)"});var t=document.querySelector('div[data-testID="POPUP"]'),r=t.querySelector("form");n(r.querySelector("button"),"click",(function(){var t=e(r.querySelectorAll("input"),7),n=t[0],a=t[1],c=t[2],i=t[3],l=t[4],u=t[5],d=t[6];o({event:"click",eventCategory:"klaviyo - popup",eventLabel:"next",attributes:{firstName:n.value,lastName:a.value,dogOwned:c.checked,catOwned:i.checked,oneOwned:l.checked,twoOwned:u.checked,threeOwned:d.checked}})})),new MutationObserver((function(){var e=r.querySelector("button");n(e,"click",(function(){o({event:"submit",eventCategory:"klaviyo - popup",eventLabel:"sign me up"})}))})).observe(r,{childList:!0}),a(t.querySelector(".klaviyo-close-form"),"close popup","popup","Klaviyo - Close Popup")})),document.querySelectorAll(".site-footer__linklist li").forEach((function(e){a(e,"click","footer",e.innerText.trim())})),a(document.querySelector("header .js-drawer-open-nav"),"open mobile nav","mobile nav"),a(document.querySelector("#NavDrawer .js-drawer-close"),"close mobile nav","mobile nav"),document.querySelectorAll(".mobile-nav__toggle button").forEach((function(e){n(e,"click",(function(){o({event:"".concat(e.classList.contains("is-open")?"collapse":"expand"," mobile nav item"),eventCategory:"mobile nav",eventLabel:e.parentNode.previousElementSibling.textContent.trim()})}))})),document.querySelectorAll(".mobile-nav__social-item a").forEach((function(e){a(e,"click","mobile nav",e.textContent.trim())}))},"loading"!==document.readyState?c():document.addEventListener?document.addEventListener("DOMContentLoaded",c):document.attachEvent("onreadystatechange",(function(){"loading"!==document.readyState&&c()}))}();
+
+</script>
+
+{% if request.page_type == 'product' %}
+	{% render 'dataLayer.product' %}
+{% elsif request.page_type == 'index' %}
+	{% render 'dataLayer.index' %}
+{% elsif request.page_type == 'collection' %}
+	{% render 'dataLayer.collection' %}
+{% elsif request.page_type == 'cart' %}
+	{% render 'dataLayer.cart' %}
+{% endif %}

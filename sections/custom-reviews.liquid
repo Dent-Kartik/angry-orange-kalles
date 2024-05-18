@@ -1,0 +1,44 @@
+<div style="background-image: url('{{ section.settings.background_image }}')">
+    <h2>{{ section.settings.heading }}</h2>
+  {% section 'opinew_review_carousel' %}
+</div>
+<style>
+  @media screen and (max-width: 680px){
+    #shopify-section-template--16600850464957__opinew_review_carousel_iPqT4n h2{
+      padding: 0 15px;
+    }
+  }
+
+</style>
+{% schema %}
+{
+  "name": "Custom Reviews Carousel",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "image_picker",
+      "label": "Background Image",
+      "id": "background_image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Review Carousel"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+ 
+ 

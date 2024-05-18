@@ -1,0 +1,167 @@
+{{ 'ugc-slider.scss.css' | asset_url | stylesheet_tag }}
+<div class="trypage-v2">
+<section class="video-section" data-check-for-order="true">
+<h2 class="video-section-title">{{ section.settings.video_section_title }}</h2>
+<div class="video-section-inner section is-flex main-carousel container">
+{% for block in section.blocks %}
+  <div id="shopify-section-{{ block.id }}" {{ block.shopify_attributes }}
+        class="shopify-section one-half is-flex is-justify-center">
+        {% include 'include-tested-and-approved', type: 'block' %}
+  </div>
+{% endfor %}
+</div>
+</section>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel='stylesheet' href='https://unpkg.com/flickity@2/dist/flickity.css'>
+<script>
+var elem = document.querySelector('.video-section-inner');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  draggable: true,
+  prevNextButtons: true,
+  wrapAround:true
+});
+</script>
+</div>
+{% style %}
+  .video-section{
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: calc({{ section.settings.padding_bottom }}px + 40px);
+  }
+  .video-section-title{
+    color: {{ section.settings.title_color }};
+  }
+  /* smaller, dark, rounded square */
+  .flickity-prev-next-button:hover {
+    background: #FFFFFF;
+    color:#F26829 !important;
+  }
+  .flickity-prev-next-button:hover path{
+    fill:#F26829 !important;
+  }
+  /* arrow color */
+  .flickity-prev-next-button .arrow {
+    fill: white;
+  }
+  .flickity-prev-next-button.no-svg {
+    color: white;
+  }
+ .carousel-cell {
+  width: 50%; /* half-width */
+ 
+}
+  .flickity-button{
+    position: absolute;
+    background: #282973;
+    border: none;
+    color: #333;
+
+  }
+  .video-section-inner{
+    position:relative;
+  }
+  .flickity-prev-next-button {
+    top: 50%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    padding:12px;
+}
+  .flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+    &::after {
+    content: "flickity";
+    display: none;
+  }
+
+  .flickity-cell.is-selected {
+    position: absolute;
+    inset: 0;
+  }
+  .flickity-prev-next-button .flickity-button-icon{
+    width: 24px;
+  }
+{% endstyle %}
+
+
+
+{% schema %}
+  {
+    "name": "Video Section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Tested and Approved Content"
+      },
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "video_section_title",
+        "default": "Mother Tested and Approved"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title Color",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Top Spacing",
+        "min": 20,
+        "max": 100,
+        "default": 45,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Bottom Spacing",
+        "min": 20,
+        "max": 100,
+        "default": 100,
+        "unit": "px"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "video-col",
+        "name": "Video Column",
+        "settings": [
+          {
+            "type": "url",
+            "label": "Video URL",
+            "id": "video_url"
+          },
+          {
+            "type": "image_picker",
+            "label": "Thumbnail Image",
+            "id": "image_url"
+          }
+        ]
+      }
+    ],
+    "default": {
+      "settings": {
+      },
+      "blocks": [
+        {
+          "type": "video-col"
+        }
+      ]
+    }
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

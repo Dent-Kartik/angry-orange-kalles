@@ -1,0 +1,88 @@
+.feature-desc-title h3.t4s-section-title.t4s-title{
+  color: #000F41;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 10px 0 0 0;
+  line-height: 20px;
+  border-top: 2px solid #459B96;
+  margin-top: 10px;
+}
+.t4s-pr__btn-detail a{
+  width: 100%;
+  padding: 24px;
+  border-color: #459B96;
+  color: #459B96;
+  font-size: 16px;
+}
+a.t4s-btn-style-outline::after{
+  border:2px solid #459B96;
+}
+.opinew-stars-plugin-product-list {
+  text-align: center;
+  margin-top: 10px;
+}
+.t4s-product__info-container .opinew-stars-plugin-product-list{
+   text-align: left;
+    margin-top: 20px !important;
+}
+.t4s-richtext_7446a327-4ad0-4c62-8c41-45c0b8a04467 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  color: #fff;
+  background-color: #b8abea;
+  width: 79%;
+  border-radius: 0 20px 20px 0px;
+  padding: 5px 20px;
+  margin: 10px 0;
+  position: relative;
+  right: 0;
+}
+.t4s-richtext_7446a327-4ad0-4c62-8c41-45c0b8a04467 p{margin-bottom:0px;}
+.t4s-product__description{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+}
+.t4s-product-form__buttons .t4s-product-form__submit{
+  /* border-top: 1px solid #459B96; */
+  border-radius: 500px !important;
+}
+.t4s-pr__btn-detail{
+  border-bottom: 2px solid #459B96;
+  padding-bottom: 20px;
+}
+
+p#b_89b7eb3a-eede-4194-8af2-a25abe56fd20 {
+  top: -40%;
+  position: absolute;
+  left: -40px;
+}
+#shopify-section-template--21119131025705__4f1214a4-2d4a-430c-859a-32dee9fb7802 .t4s-content-position.t4s-auto.t4s-pa.t4s-text-md-start.t4s-text-center.t4s-bg-content-true.t4s-box-content-square-false.t4s-br-content-false.t4s-br-style-solid{
+  max-width: 520px;
+  width: 100%;
+  top: 200px;
+  left: 250px;
+}
+@media(max-width: 767px) {
+  .t4s-richtext_7446a327-4ad0-4c62-8c41-45c0b8a04467 {
+    width: 79%;
+    right: 5%;
+  }
+  p#b_89b7eb3a-eede-4194-8af2-a25abe56fd20 {
+    top: -44px;
+    position: absolute;
+    right: 104px;
+  }
+  #shopify-section-template--21119131025705__4f1214a4-2d4a-430c-859a-32dee9fb7802 .t4s-content-position.t4s-auto.t4s-pa.t4s-text-md-start.t4s-text-center.t4s-bg-content-true.t4s-box-content-square-false.t4s-br-content-false.t4s-br-style-solid{
+    top: 20px;
+    left: 0px;
+  }
+}
+.t4s-product__media-wrapper svg.flickityt4s-button-icon {
+    stroke-width: 0px !important;
+}

@@ -1,0 +1,102 @@
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  assign stt_layout = se_stts.layout
+  assign stt_image_bg = se_stts.image_bg
+  if stt_layout == 't4s-se-container'
+    assign html_layout = '<div class="t4s-container">__</div></div>' | split: '__'
+  elsif stt_layout == 't4s-container-wrap'
+    assign html_layout = '<div class="t4s-container">__</div>' | split: '__'
+  else
+    assign html_layout = '__' | split: '__'
+  endif
+
+  assign carousel_mobile = se_stts.carousel_mobile
+  assign t4s_se_class = 't4s_nt_se_' | append: sid
+  if se_stts.use_cus_css and se_stts.code_cus_css != blank
+    render 'se_cus_css', code_cus_css: se_stts.code_cus_css, t4s_se_class: t4s_se_class
+  endif
+
+  assign cl_ic_lightness = se_stts.cl_ic | color_extract: 'lightness'
+  if cl_ic_lightness < 85
+    assign cl_ic2 = '#ffffff'
+  else
+    assign cl_ic2 = '#222222'
+  endif
+-%}
+<div
+  class="t4s-section-inner t4s_nt_se_{{ sid }} t4s_se_{{ sid }} {{ stt_layout }}{% if stt_image_bg != blank and stt_layout != 't4s-se-container' %} t4s-has-imgbg lazyloadt4s{% endif %}"
+  {% if stt_image_bg != blank and stt_layout != 't4s-se-container' %}
+    data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto" data-optimumx="2"
+  {% endif %}
+  {% render 'section_style', se_stts: se_stts -%}
+>
+  {{- html_layout[0] -}}
+  {%- if stt_layout == 't4s-se-container' -%}
+    <div
+      class="t4s-container-inner{% if stt_image_bg != blank %} t4s-has-imgbg lazyloadt4s{% endif %}"
+      {% if stt_image_bg != blank %}
+        data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto" data-optimumx="2"
+      {% endif %}
+    >
+  {% endif -%}
+  {%- render 'section_tophead', se_stts: se_stts -%}
+  <div
+    class="t4s-shipping-list {% if carousel_mobile %} carousel-disable-md t4s-flicky-slider flickityt4s t4s-dots-style-default t4s-dots-cl-{{ se_stts.dots_cl }} t4s-dots-round-{{ se_stts.dots_round }} {% else %} dispflex {% endif %} t4s-shipping-padding-{{ se_stts.design_padding }} t4s-shipping-icon-{{ se_stts.icon_des }} t4s-shipping-icon-{{ se_stts.icon_size }} t4s-{{ se_stts.content_align }} t4s-ver-center-{{ se_stts.align_vertical }} use_border_{{ se_stts.border }} t4s-row t4s-row-cols-lg-{{ se_stts.col_dk }} t4s-row-cols-md-{{ se_stts.col_tb }} t4s-row-cols-{{ se_stts.col_mb }}  t4s-gx-md-{{ se_stts.space_h_item }} t4s-gy-md-{{ se_stts.space_v_item }} t4s-gx-{{ se_stts.space_h_item_mb }} t4s-gy-{{ se_stts.space_v_item_mb }}"
+    style="--icon-cl: {{ se_stts.cl_ic }};--icon-cl2: {{ cl_ic2 }};--bd-cl: {{ se_stts.cl_bd }}; --bg-cl: {{ se_stts.bg_item }};--title-cl: {{ se_stts.cl_hd }};--content-cl: {{ se_stts.cl_cot }};--hd-fs: {{ se_stts.hd_fs }}px; --txt-fs: {{ se_stts.txt_fs }}px; --hd-fw: {{ se_stts.hd_fw }};"
+    data-flickityt4s-js='{"watchCSS":1,"setPrevNextButtons":false,"arrowIcon":"1","imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": false,"prevNextButtons": false,"percentPosition": 1,"pageDots": true, "autoPlay" : false, "pauseAutoPlayOnHover" : true }'
+  >
+    {%- if section.blocks.size > 0 -%}
+      {%- for block in section.blocks -%}
+        {%- assign bk_stts = block.settings -%}
+        {%- assign image = bk_stts.image_icon -%}
+        <div class="t4s-shipping t4s-shipping-item t4s-col-item">
+          <div class="t4s-shipping-inner" timeline hdt-reveal="slide-in">
+            {%- if se_stts.source == 'themes_icon' -%}
+              {%- if bk_stts.icon_themes != blank and bk_stts.icon_themes != 'none' -%}
+                <div class="t4s-col-auto t4s-shipping-icon t4s-shipping-icon-themes">
+                  {%- render 'icon_shipping', icon_name: bk_stts.icon_themes %}
+                </div>
+              {%- endif -%}
+            {%- elsif se_stts.source == 'get_image' -%}
+              {%- if image != blank -%}
+                <div
+                  class="t4s-col-auto t4s-shipping-icon t4s-shipping-icon-img t4s-ship-img lazyloadt4s"
+                  data-bgset="{{ image | image_url: width: 1 }}"
+                  data-sizes="auto"
+                  data-optimumx="2" role="img" aria-label="{{ shop.name }}-{{ bk_stts.title }}"
+                ></div>
+              {%- endif -%}
+            {%- else -%}
+              {%- if bk_stts.icon != blank -%}
+                <div class="t4s-col-auto t4s-shipping-icon t4s-shipping-icon-line">
+                  <i class="{{ bk_stts.icon }}"></i>
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+            <div class="t4s-col t4s-shipping-content">
+              <h3 class="t4s-shipping-title">{{ bk_stts.title }}</h3>
+              <div class="t4s-shipping-des t4s-rte--list">{{ bk_stts.text }}</div>
+              <div class="t4s-shipping-des t4s-rte--list">{{ bk_stts.html }}</div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+  {{- html_layout[1] -}}
+  {% if se_stts.button_link != blank %}
+    <center>  <a class="t4s-btn t4s-btn-base t4s-btn-style-default t4s-btn-size-large t4s-btn-color-primary t4s-btn-effect-default t4s-btn-radius-" href="{{ se_stts.button_link }}" rel="noopener" aria-describedby="a11y-new-window-message">{{ se_stts.button_text }}
+</a></center>{% endif %}
+</div>
+<style>
+  :root {
+  --num-of-blocks: {{ section.blocks.size }}; /* Define a custom property for the number of blocks */
+}
+  .dispflex{display: flex;
+    flex-wrap: nowrap;}
+  .dispflex .t4s-shipping-item{
+    flex: calc(100% / var(--num-of-blocks)) 1 0;
+  }
+</style>

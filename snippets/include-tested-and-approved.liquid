@@ -1,0 +1,28 @@
+{% comment %}
+  Snippet can be used in section or block
+  eg. {% include 'include-content-page' %}
+{% endcomment %}
+
+{% comment %}Assign object as block or section{% endcomment %}
+{% if type == 'block' %}
+  {% assign object = block %}
+{% else %}
+  {% assign object = section %}
+{% endif %}
+
+{% assign id = object.id %}
+{% assign title = object.settings.title %}
+
+{% comment %}Background{% endcomment %}
+{% assign background = object.settings.background %}
+
+{% comment %}Content{% endcomment %}
+{% assign video_url = object.settings.video_url %}
+{% assign image_url = object.settings.image_url %}
+
+{% comment %} HTML markup {% endcomment %}
+        <div class="video-wrapper">
+          <video controls poster="{{ image_url | image_url }}">
+            <source src="{{ video_url }}" type="video/mp4">
+          </video>
+        </div>

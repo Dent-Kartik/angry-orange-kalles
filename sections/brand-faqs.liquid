@@ -1,0 +1,835 @@
+<!-- sections/accordion.liquid -->
+{{ 'tabs.css' | asset_url | stylesheet_tag }}
+{{ 'section.css' | asset_url | stylesheet_tag }}
+{{ 'accordion.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+  assign stt_layout = se_stts.layout
+  assign stt_image_bg = se_stts.image_bg
+  if se_stts.layout == 't4s-cus-width'
+    assign html_layout = '<div class="t4s-container" style="--width:010693px">__</div>' | split: '__'
+  elsif stt_layout == 't4s-se-container' 
+    assign html_layout = '<div class="t4s-container">__</div></div>' | split: '__'
+  elsif stt_layout == 't4s-container-wrap'
+    assign html_layout = '<div class="t4s-container">__</div>' | split: '__'
+  else
+    assign html_layout = '__' | split: '__'
+  endif
+  assign search_url = routes.all_products_collection_url
+
+  assign t4s_se_class = 't4s_nt_se_' | append: sid
+  if se_stts.use_cus_css and se_stts.code_cus_css != blank
+    render 'se_cus_css', code_cus_css: se_stts.code_cus_css, t4s_se_class: t4s_se_class
+  endif 
+  assign tabs_pos = se_stts.tabs_pos
+  if tabs_pos == "start"
+    assign tab_cellAlign = "left"
+  elsif tabs_pos == "end" 
+      assign tab_cellAlign = "right"
+  else
+    assign tab_cellAlign = "center"
+  endif
+  assign sp = se_stts.space_between
+ -%}
+ {% style %}
+.coll-tabs .t4s-product .t4s-product-inner{border-radius:30px;}
+  #ul_{{ section.id }}{text-align:{{tab_cellAlign}};}
+   #ul_{{ section.id }} li{margin-right:{{sp}}px;}
+   .t4s-tab-title{    font-size: 16px;
+    padding: 7px 25px;
+    border-width: 1px;
+    border-style: var(--border);
+    border-color: transparent;
+    font-weight: 700;
+    line-height: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+ .coll-tabs .t4s-product.t4s-pr-style8 .t4s-product-btns{padding:15px;}
+ .coll-tabs .t4s-tabs-border-bg.t4s-border-none .t4s-tabs-ul li a{
+    padding: 8px 25px;
+  }
+  .coll-tabs a.t4s-active{
+    text-decoration:underline;
+  }
+ .t4s-li-active{
+   border-radius: var(--btn-radius);
+   background-color:#f1f1f1;
+   opacity: 1;
+   text-decoration:underline;
+   color: #000f41;
+   border:1px solid #459B96;
+}
+   .t4s_se_{{ sid }} .t4s-accordion-style-2 .t4s-type-accordion .t4s-accor-title{padding:10px 18px;}
+   .t4s_se_{{ sid }} .t4s-tab-wrapper.t4s-active .t4s-accor-title{padding:10px 18px 5px;}
+   .t4s_se_{{ sid }} .t4s-accordion-style-2 .t4s-accor-title .t4s-accor-item-nav{background:{{ section.settings.bg_icon_cl }}; border:1px solid {{ section.settings.bg_icon_color }};}
+.t4s_se_{{ sid }} .t4s-accor-title .t4s-accor-item-nav:before,.t4s_se_{{ sid }}  .t4s-accor-title .t4s-accor-item-nav:after{background-color:{{ section.settings.bg_icon_color }}!important;}
+  {% if section.settings.bg_icon_cl_active != blank %}
+    .t4s_se_{{ sid }} .t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav{background-color:{{ section.settings.bg_icon_cl_active }};}
+    {% else %}
+    .t4s_se_{{ sid }} .t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav{background-color:transparent;}
+    {% endif %}
+   #t4s-faq-{{ sid }}{border:1px solid #459B96;border-radius:25px;padding:25px;}
+   #t4s-support-{{ sid }}{border:1px solid #459B96;border-radius:25px;padding:25px;}
+  .t4s_se_{{ sid }} .t4s-type-accordion>.t4s-tab-wrapper{border-bottom:1px solid {{ section.settings.bg_icon_color }};}
+   @media (min-width:768px){
+     .t4s_se_{{ sid }} .t4s-section-des.t4s-subtitle{padding:0 20%;}
+     .t4s_se_{{ sid }} .t4s-accor-title .t4s-accor-text{font-size:26px;padding: 10px 25px 10px 0;margin-left: -3px;}
+     .t4s_se_{{ sid }}{ -webkit-text-stroke: 0.5px #459b96;font-weight:500;}
+     .t4s_se_{{ sid }} .t4s-type-accordion .t4s-tab-content{padding:0 20px 20px;font-size:18px;line-height:22px;}
+    .t4s_se_{{ sid }} .t4s-tab-wrapper.t4s-active .t4s-accor-text {text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);}
+     .mt25{margin-top:2.5%;}
+     .mt25 .t4s-btn{padding:14px 30px;font-size:22px;color:#56cfe1;}
+   }
+    @media (max-width:767px){
+      .t4s_se_{{ sid }} .t4s-accordion-style-2 .t4s-type-accordion .t4s-accor-title{padding:10px 50px 10px 7px;}
+      .t4s_se_{{ sid }} .t4s-type-accordion .t4s-tab-content{padding-top:0;font-size:16px;line-height:1.2;}
+      .t4s_se_{{ sid }} .t4s-accor-title .t4s-accor-text{font-size:22px;}
+      .t4s_se_{{ sid }} .t4s-tab-title{font-size:18px;}
+      .mt25{margin-top:12.5%;}
+      .mt25 .t4s-btn{padding:14px 30px;color:#56cfe1;}
+      .t4s_se_{{ sid }} .t4s-tab-wrapper.t4s-active .t4s-accor-title{padding:10px 18px 5px 5px;}
+    }   
+ .mt25 .t4s-btn:hover{color:#ffffff;}
+   .t4s_se_{{ sid }} .t4s-accor-title .t4s-accor-text{font-weight:900;}
+   .t4s_se_{{ sid }}{--pdmb-right:0!important;}
+   {% endstyle %}
+  <div class="t4s-section-inner t4s_nt_se_{{ sid }} t4s_se_{{ sid }} {{ stt_layout }} {% if stt_image_bg != blank and stt_layout != 't4s-se-container' %} t4s-has-imgbg lazyloadt4s {% endif %} "  {% if stt_image_bg != blank and stt_layout != 't4s-se-container' %}  data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto"  data-optimumx="2" {% endif %}   {% render 'section_style', se_stts: se_stts %}>
+    {{- html_layout[0] |replace: '010693', se_stts.custom_width -}}
+    {%- if stt_layout == 't4s-se-container' -%}<div class="t4s-container-inner {% if stt_image_bg != blank %} t4s-has-imgbg lazyloadt4s {% endif %} "  {%- if stt_image_bg != blank -%} data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto"  data-optimumx="2" {%- endif -%} > {%- endif -%}
+    <div class="t4s-accordion-style-{{ se_stts.accor_des }}">
+      {%- render 'section_tophead', se_stts: se_stts -%}
+      <ul data-t4s-tab-ul2 class="t4s-tabs-ul t4s-align-items-center t4s-justify-content-{{ tabs_pos }}" id="ul_{{ section.id }}">  
+  <li class="t4s-tab-item t4s-d-inline-flex"><a id="b_{{ section.id }}" href="#t4s-faq-{{ section.id }}" rel="nofollow" data-t4s-tab-item data-no-instant {{ block.shopify_attributes }} class="t4s-active t4s-li-active t4s-tab-title" >
+              <span>
+                    <span class="t4s-text-title">FAQs</span>
+              </span>
+            </a></li>
+ <li class="t4s-tab-item t4s-d-inline-flex"><a id="b_support_{{ section.id }}" href="{{ section.settings.support_link }}" rel="nofollow" data-t4s-tab-item data-no-instant {{ block.shopify_attributes }} class="t4s-tab-title" target="_blank">
+              <span>
+                    <span class="t4s-text-title">Get Support</span>
+              </span>
+            </a></li>
+
+        </ul>
+      <div id="t4s-faq-{{ section.id }}" class="t4s-tabs t4s-type-accordion {{ se_stts.content_align }}" data-t4s-tabs style="--title-cl: {{ se_stts.title_cl }};--bg-title-cl: {{ se_stts.bg_title_cl }};--title-active-cl: {{ se_stts.title_active_cl }};--bg-title-active-cl: {{ se_stts.bg_title_active_cl }};--content-cl: {{ se_stts.content_cl }};--bg-content-cl: {{ se_stts.bg_content_cl }}; t4s-tab-content2 {% if forloop.first == true %} t4s-active {% endif %}" data-t4s-tab-content data-render-lazy-component>
+        {%- for block in se_blocks -%}
+          {%- assign bk_stts = block.settings -%} 
+          {%- assign blockid = block.id -%}
+          <div class="t4s-tab-wrapper {% if forloop.first == true and se_stts.auto_active %} t4s-active {% endif %}" data-t4s-tab-wrapper {{ block.shopify_attributes }}>
+            <a id="b_{{ block.id }}" class="t4s-accor-title" href="#t4s-{{ blockid }}" rel="nofollow" data-t4s-tab-item data-no-instant>
+              <span class="t4s-accor-text">
+                <span class="t4s-accor-icon">{%- render 'icon_accordion',icon: bk_stts.icon -%} </span>
+                {{ bk_stts.title }}
+              </span>
+              <span class="t4s-accor-item-nav"></span>
+            </a>
+            <div id="t4s-{{ blockid }}" class="t4s-tab-content t4s-rte" data-t4s-tab-content {% if se_stts.auto_active == false %} style="display: none;"{%- endif -%}>{{ bk_stts.content }}</div>
+          </div>
+        {%- endfor -%}
+          <center class="mt25"><a href="{{ section.settings.faq_link }}" class="t4s-btn" style="background:#000f41;" target="_blank">See More FAQs</a></center>
+      </div>
+      {% comment %}
+    <div id="t4s-support-{{ section.id }}" class="t4s-tabs t4s-type-accordion {{ se_stts.content_align }}" data-t4s-tabs style="--title-cl: {{ se_stts.title_cl }};--bg-title-cl: {{ se_stts.bg_title_cl }};--title-active-cl: {{ se_stts.title_active_cl }};--bg-title-active-cl: {{ se_stts.bg_title_active_cl }};--content-cl: {{ se_stts.content_cl }};--bg-content-cl: {{ se_stts.bg_content_cl }}; t4s-tab-content2" data-t4s-tab-content data-render-lazy-component style="display:none;">
+  {% if section.settings.support_heading %} <h3 style="text-align:center;" class="t4s-title">{{ section.settings.support_heading }}</h3>{% endif %}
+  {% if section.settings.support_text_block %} <p style="text-align:center;">{{ section.settings.support_text_block }}</p>{% endif %}
+      <center><a href="{{ section.settings.support_link }}" class="t4s-btn" style="padding:10px 25px;background:#000f41;color:#c6d1ff;">{{ section.settings.support_text }}</a></center>
+    </div>
+   {% endcomment %}
+      {{- html_layout[1] -}}
+      
+{% comment %}                                 
+<script>
+  // Get all 'a' elements within the 'ul'
+  const ul = document.querySelector('#ul_{{ section.id }}');
+  const aElements = ul.querySelectorAll('a');
+
+  // Function to hide the non-active blocks
+  function hideNonActiveBlocks() {
+    aElements.forEach(a => {
+      const targetId = a.getAttribute('href').substring(1); // Remove the '#' from the href
+      const targetBlock = document.getElementById(targetId);
+
+      if (!a.classList.contains('t4s-li-active')) {
+        targetBlock.style.display = 'none'; // Hide the block
+      } else {
+        targetBlock.style.display = 'block'; // Show the active block
+      }
+    });
+  }
+
+  // Add a click event listener to each 'a' element
+  aElements.forEach(a => {
+    a.addEventListener('click', () => {
+      // Remove the 't4s-li-active' class from all 'a' elements
+      aElements.forEach(element => {
+        element.classList.remove('t4s-li-active');
+      });
+
+      // Add the 't4s-li-active' class to the clicked 'a' element
+      a.classList.add('t4s-li-active');
+
+      // Hide non-active blocks
+      hideNonActiveBlocks();
+    });
+  });
+
+  // Initially hide non-active blocks
+  hideNonActiveBlocks();
+</script>
+{% endcomment %}
+
+{%- schema -%}
+  {
+    "name": "Brand FAQs",
+    "tag": "section",
+    "class": "t4s-section t4s-section-all t4s_tp_cdt t4s-accordion t4s_tp_tab",
+    "settings": [
+      {
+          "type": "header",
+          "content": "1. Heading options"
+      },
+      {
+          "type": "select",
+          "id": "design_heading",
+          "label": "+ Design heading",
+          "default": "1",
+          "options": [
+              {
+                  "value": "1",
+                  "label": "Design 01"
+              },
+              {
+                  "value": "2",
+                  "label": "Design 02"
+              },
+              {
+                  "value": "3",
+                  "label": "Design 03"
+              },
+              {
+                  "value": "4",
+                  "label": "Design 04"
+              },
+              {
+                  "value": "5",
+                  "label": "Design 05"
+              },
+              {
+                  "value": "6",
+                  "label": "Design 06 (width line-awesome)"
+              },
+              {
+                  "value": "7",
+                  "label": "Design 07"
+              },
+              {
+                  "value": "8",
+                  "label": "Design 08"
+              },
+              {
+                  "value": "9",
+                  "label": "Design 09"
+              },
+              {
+                  "value": "10",
+                  "label": "Design 10"
+              },
+              {
+                  "value": "11",
+                  "label": "Design 11"
+              },
+              {
+                  "value": "12",
+                  "label": "Design 12"
+              },
+              {
+                  "value": "13",
+                  "label": "Design 13"
+              },
+              {
+                  "value": "14",
+                  "label": "Design 14"
+              },
+              {
+                "value": "15",
+                "label": "Design 15"
+              },
+              {
+                "value": "16",
+                "label": "Design 16"
+            }
+          ]
+      },
+      {
+          "type": "select",
+          "id": "heading_align",
+          "label": "+ Heading align",
+          "default": "t4s-text-center",
+          "options": [
+              {
+                  "value": "t4s-text-start",
+                  "label": "Left"
+              },
+              {
+                  "value": "t4s-text-center",
+                  "label": "Center"
+              },
+              {
+                  "value": "t4s-text-end",
+                  "label": "Right"
+              }
+          ]
+      },
+      {
+          "type": "text",
+          "id": "top_heading",
+          "label": "+ Heading",
+          "default": "Accordion"
+      },
+      {
+        "type": "text",
+        "id": "icon_heading",
+        "label": "Enter a icon name on heading",
+        "info": "Only used for design 6 [LineAwesome](https://kalles.the4.co/font-lineawesome/)",
+        "default": "las la-gem"
+      },
+      {
+          "type": "textarea",
+          "id": "top_subheading",
+          "label": "+ Subheading"
+      }, 
+      {
+        "type": "number",
+        "id": "tophead_mb",
+        "label": "+ Space bottom (px)",
+        "info": "The vertical spacing between heading and content",
+        "default": 30
+      },
+      {
+        "type": "header",
+        "content": "2. General options"
+      },
+      {
+        "type": "select",
+        "id": "accor_des",
+        "options": [
+          {
+            "value": "1",
+            "label": "Design 1"
+          },
+          {
+            "value": "2",
+            "label": "Design 2"
+          }
+        ],
+        "label": "Accordion design",
+        "default": "1"
+      },
+      {
+        "type": "color",
+        "id": "title_cl",
+        "label": "Accordion label color",
+        "default": "#222"
+      },
+      {
+        "type": "color",
+        "id": "bg_title_cl",
+        "label": "Accordion label background color",
+        "default": "#f6f6f8"
+      },
+      {
+        "type": "color",
+        "id": "title_active_cl",
+        "label": "Accordion label active color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "bg_title_active_cl",
+        "label": "Accordion label active background color",
+        "default": "#f6f6f8"
+      },
+      {
+        "type": "color",
+        "id": "content_cl",
+        "label": "Accordion content color",
+        "default": "#878787"
+      },
+      {
+        "type": "color",
+        "id": "bg_content_cl",
+        "label": "Accordion content background color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bg_icon_cl",
+        "label": "Accordion icon background color",
+        "default": "#D1EFEC"
+      },
+      {
+        "type": "color",
+        "id": "bg_icon_cl_active",
+        "label": "Accordion icon - active background color"
+      },
+      {
+        "type": "color",
+        "id": "bg_icon_color",
+        "label": "Accordion icon color",
+        "default": "#459B96"
+      },
+      {
+        "type": "select",
+        "id": "content_align",
+        "label": "Accordion content align",
+        "default": "t4s-text-start",
+        "options": [
+          {
+            "value": "t4s-text-start",
+            "label": "Left"
+          },
+          {
+            "value": "t4s-text-center",
+            "label": "Center"
+          },
+          {
+            "value": "t4s-text-end",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+          "type": "checkbox",
+          "id": "auto_active",
+          "label": "Auto active 1 items",
+          "default": true
+      },
+      {
+        "type": "header",
+        "content": "3. Design options"
+      },
+      {
+        "type": "select","id": "layout","default": "t4s-container-wrap","label": "Layout",
+        "options": [
+            { "value": "t4s-cus-width", "label": "Custom width"},
+            { "value": "t4s-se-container", "label": "Container"},
+            { "value": "t4s-container-wrap", "label": "Wrapped container"},
+            { "value": "t4s-container-fluid", "label": "Full width"}
+        ]
+      },
+      {
+         "type": "range",
+         "id": "custom_width",
+         "label": "Custom width for content",
+         "info": "Only working when use layout custom width",
+         "default": 1000,
+         "min": 500,
+         "max": 1000,
+         "step": 10,
+         "unit": "px"
+      },
+      {
+        "type": "color",
+        "id": "cl_bg",
+        "label": "Background"
+      },
+      {
+        "type": "color_background",
+        "id": "cl_bg_gradient",
+        "label": "Background gradient"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_bg",
+        "label": "Background image"
+      },
+      {
+          "type": "text",
+          "id": "mg",
+          "label": "Margin",
+          "info":"Margin top, margin right, margin bottom, margin left. If you not use to blank",
+          "default": ",,50px,",
+          "placeholder": ",,50px,"
+      },
+      {
+          "type": "text",
+          "id": "pd",
+          "label": "Padding",
+          "info":"Padding top, padding right, padding bottom, padding left. If you not use to blank",
+          "placeholder": "50px,,50px,"
+      },
+      {
+        "type": "header",
+        "content": "+ Design Tablet Options"
+      },
+      {
+          "type": "text",
+          "id": "mg_tb",
+          "label": "Margin",
+          "placeholder": ",,50px,"
+      },
+      {
+          "type": "text",
+          "id": "pd_tb",
+          "label": "Padding",
+          "placeholder": ",,50px,"
+      }, 
+      {
+        "type": "header",
+        "content": "+ Design mobile options"
+      },
+      {
+          "type": "text",
+          "id": "mg_mb",
+          "label": "Margin",
+          "default": ",,30px,",
+          "placeholder": ",,50px,"
+      },
+      {
+          "type": "text",
+          "id": "pd_mb",
+          "label": "Padding",
+          "placeholder": ",,50px,"
+      },
+      {
+        "type": "header",
+        "content": "4. General options - Tab"
+      },
+      {
+        "type": "select",
+        "id": "tabs_des",
+        "options": [
+          {
+            "value": "base",
+            "label": "Base"
+          },
+          {
+            "value": "border",
+            "label": "Has border (when item active)"
+          },
+          {
+            "value": "border-bg",
+            "label": "Has border and background"
+          },
+          {
+            "value": "underline",
+            "label": "Has underline (when item active)"
+          },
+          {
+            "value": "divider",
+            "label": "Has underline (when item active) and divider"
+          },
+          {
+            "value": "list-underline",
+            "label": "Tabs list has underline"
+          },
+          {
+            "value": "inline",
+            "label": "Inline"
+          }
+        ],
+        "label": "Tabs design",
+        "default": "base"
+      },
+      {
+        "type": "select",
+        "id": "tabs_border",
+        "label": "Tabs item border",
+        "info": "Only working with design has border and inline",
+        "default": "solid",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "solid",
+            "label": "Solid"
+          },
+          {
+            "value": "dashed",
+            "label": "Dashed"
+          },
+          {
+            "value": "dotted",
+            "label": "Dotted"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "item_rounded",
+        "label": "Tabs item rounded",
+        "info":"Only working with design has border and background",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "item_cl",
+        "label": "Color item",
+        "default": "#222222"
+      },
+      {
+        "type": "color",
+        "id": "item_bg",
+        "label": "Background/border item",
+        "info":"Only working with design has border and background"
+      },
+      {
+        "type": "color",
+        "id": "item_cl_active",
+        "label": "Color item active",
+        "default": "#56CFE1"
+      },
+      {
+        "type": "color",
+        "id": "item_bg_active",
+        "label": "Background/border item active",
+         "info":"Only working with design has border and background",
+        "default": "#56CFE1"
+      },
+      {
+        "type": "range",
+        "id": "space_between",
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "label": "Space between items",
+        "unit": "px",
+        "default": 30
+      },
+      {
+        "type": "select",
+        "id": "tabs_pos",
+        "label": "Tabs List Position",
+        "default": "center",
+        "options": [
+          {
+            "value": "start",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "end",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "number",
+        "id": "tabslist_mb",
+        "label": "Tabs list margin bottom",
+        "default": 30
+      },
+      {
+        "type":"url",
+        "id":"faq_link",
+        "label":"More FAQs Link",
+        "info":"Zendesk Link for individual brand"
+      },
+      {
+        "type": "header",
+        "content": "5. Support Tab Details"
+      },
+      {
+        "type":"text",
+        "id":"support_heading",
+        "label":"Support Section Heading"
+      },
+      {
+        "type":"text",
+        "id":"support_text_block",
+        "label":"Support text block"
+      },
+      {
+        "type":"url",
+        "id":"support_link",
+        "label":"Support Link",
+        "info":"Zendesk Link for individual brand"
+      },
+      {
+        "type":"text",
+        "id":"support_text",
+        "label":"Support button text",
+        "default":"Reach out to us"
+      },
+      {
+        "type": "header",
+        "content": "6. Custom css"
+      },
+      {
+        "id": "use_cus_css",
+        "type": "checkbox",
+        "label": "Use custom css",
+        "default":false,
+        "info": "If you want custom style for this section."
+      },
+      { 
+        "id": "code_cus_css",
+        "type": "textarea",
+        "label": "Code custom css",
+        "info": "Use selector .SectionID to style css"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "accor_item",
+        "name": "Accordion item",
+        "settings": [
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Accordion icon",
+            "default": "none",
+            "options": [
+              {
+                "value": "none",
+                "label": "None"
+              },
+              {
+                "value": "box",
+                "label": "Box"
+              },
+              {
+                "value": "chat_bubble",
+                "label": "Chat bubble"
+              },
+              {
+                "value": "check_mark",
+                "label": "Check mark"
+              },
+              {
+                "value": "dryer",
+                "label": "Dryer"
+              },
+              {
+                "value": "eye",
+                "label": "Eye"
+              },
+              {
+                "value": "heart",
+                "label": "Heart"
+              },
+              {
+                "value": "iron",
+                "label": "Iron"
+              },
+              {
+                "value": "leaf",
+                "label": "Leaf"
+              },
+              {
+                "value": "leather",
+                "label": "Leather"
+              },
+              {
+                "value": "lock",
+                "label": "Lock"
+              },
+              {
+                "value": "map_pin",
+                "label": "Map pin"
+              },
+              {
+                "value": "pants",
+                "label": "Pants"
+              },
+              {
+                "value": "plane",
+                "label": "Plane"
+              },
+              {
+                "value": "price_tag",
+                "label": "Price tag"
+              },
+              {
+                "value": "question_mark",
+                "label": "Question mark"
+              },
+              {
+                "value": "return",
+                "label": "Return"
+              },
+              {
+                "value": "ruler",
+                "label": "Ruler"
+              },
+              {
+                "value": "shirt",
+                "label": "Shirt"
+              },
+              {
+                "value": "shoe",
+                "label": "Shoe"
+              },
+              {
+                "value": "silhouette",
+                "label": "Silhouette"
+              },
+              {
+                "value": "star",
+                "label": "Star"
+              },
+              {
+                "value": "truck",
+                "label": "Truck"
+              },
+              {
+                "value": "washing",
+                "label": "Washing"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Accordion label",
+            "default": "Accordion item"
+          },
+          {
+            "id": "content",
+            "type": "richtext",
+            "label": "Accordion content"
+          }
+        ]
+      }
+    ],
+  "presets": [
+      {
+        "name": "Brand FAQs",
+        "category": "Homepage",
+        "blocks": [
+          { "type": "accor_item",
+            "settings": {
+              "title": "Tab 01",
+              "content": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p>"
+            }
+          },
+          { "type": "accor_item",
+            "settings": {
+              "title": "Tab 02",
+              "content": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p>"
+            }
+          },
+          { "type": "accor_item",
+            "settings": {
+              "title": "Tab 03",
+              "content": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{%- endschema -%}
+
+{%- javascript -%}
+{%- endjavascript -%}
