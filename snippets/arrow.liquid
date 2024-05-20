@@ -1,0 +1,20 @@
+{% if section.settings.arrow_outside %}
+  <button class="toggle-button tbtn_menu" aria-controls="content_{{ blockID }}" aria-expanded="false"><svg class="t4s-icon-select-arrow" width="10" height="10" role="presentation" viewBox="0 0 19 12"><use xlink:href="#t4s-select-arrow"></use></svg><span class="sr-only">Shop collections</span></button>
+<style>.t4s-menu-item.has--children{display:flex}.t4s-menu-item.has--children a{padding-right:0!important}.tbtn_menu{background:transparent!important;color:black;padding:0 15px 0 0!important}.tbtn_menu:hover{color:black;}</style>
+<script>const menuItem = document.querySelector('.t4s-menu-item.has--children');
+  const targetElement = document.querySelector('.mi1');
+  const firstSimpleMenuItem = document.querySelector('.t4s-type__simple.t4s-menu-item');
+
+  // Add event listener for keydown event on the menu button
+  document.querySelector('.tbtn_menu').addEventListener('keydown', function(event) {
+    // Check if the pressed key is 'Enter' (key code 13)
+    if (event.keyCode === 13) {
+      // Add the 'is-action__hover' class to the menu item
+      menuItem.classList.add('is-action__hover');
+      // Move focus to the target element
+      targetElement.focus();
+    }
+  });
+
+ </script>
+{% endif -%}
