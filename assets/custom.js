@@ -244,6 +244,9 @@ jQuery(document).ready(function() {
   },2000);
     });
 
+jQuery(document).ready(function() {
+        $('.video-section-inner .flickity-button').attr("role","button");
+    });
 function activateTab($tab) {
       $('.t4s-tabs-collection .t4s-tab-item a').removeClass('t4s-active').attr('aria-selected', 'false');
       $tab.addClass('t4s-active').attr('aria-selected', 'true');
