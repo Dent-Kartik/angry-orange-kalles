@@ -16,7 +16,6 @@ data-show="login" login , create, recover
 {%- if request.design_mode -%}
 <link rel="stylesheet" href="{{ 'login-sidebar.css' | asset_url }}" media="all">
 <div id="t4s-login-sidebar" class="t4s-drawer t4s-drawer__right" aria-hidden="true" aria-label="Login" role="dialog" aria-modal="true">
-  <p>test</p>
 {%- endif -%}
 
    <div class="t4s-drawer__header">
@@ -463,3 +462,4 @@ data-show="login" login , create, recover
     ]
   }
 {% endschema %}
+<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>

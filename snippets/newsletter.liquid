@@ -39,7 +39,7 @@
     assign class_ip = 't4s-text-center t4s-text-md-start'
   endif -%}
 {% style %}
-  .shopify-section.t4s-newsletter .t4s-top-heading{width: 40%;  padding-left: 60px;}
+  .shopify-section.t4s-newsletter .t4s-top-heading{width:40%;  padding-left: 60px;}
   .shopify-section.t4s-newsletter .t4s-container .t4s-container-inner{
       border-radius:36px;
       margin-top:20px;
@@ -47,12 +47,11 @@
   
   @media (max-width: 1023px){
     .shopify-section.t4s-newsletter .t4s-top-heading {
-      width: 100%;
+      width: 70%;
       padding-left: 0px;
-      margin-bottom:10px;
     }
     .t4s-newsletter__fields {
-      width: 100%;
+      width: 70%;
       margin: 0 auto;
     }
     .t4s-newsletter-wrap .t4s-top-heading div:nth-child(2){
@@ -109,8 +108,9 @@
         <input type="hidden" name="g" value="{{ settings.klaviyo_list_id }}">
         <div class="t4s-newsletter__fields">
            <div class="t4s-newsletter__inner t4s-row t4s-g-0 t4s-pr t4s-oh {{ class }}">
-              <div class="{{ class_email }} t4s-col-item is--col-email"><input type="email" name="email" placeholder="{{ 'sections.newsletter_form.email_placeholder' | t }}"  value="{% if customer %}{{ customer.email }}{% endif %}" class="{{ class_ip }} t4s-newsletter__email" required="required" aria-required="true" aria-label="Email for Newsletter Subscription"></div>
-                    <label class="placeholderav">{{ 'sections.newsletter_form.email_placeholder' | t }}</label>
+              <div class="{{ class_email }} t4s-col-item is--col-email"><input type="email" name="email" placeholder="{{ 'sections.newsletter_form.email_placeholder' | t }}"  value="{% if customer %}{{ customer.email }}{% endif %}" class="{{ class_ip }} t4s-newsletter__email" autocomplete="email" required="required" aria-required="true" aria-label="Email for Newsletter Subscription" onfocus="focusInput(this)" onblur="blurInput(this)">
+                <label class="placeholderav">{{ 'sections.newsletter_form.email_placeholder' | t }}<span class="required">*</span></label>
+              </div>              
              <div class="{{ class_btn }} t4s-col-item is--col-btn">
                 <button data-t4s-klaviyo-submit data-agreeMail-btn type="submit" class="t4s-w-100 t4s-newsletter__submit t4s-truncate t4s-btn-loading__svg">
                   <span class="t4s-newsletter__text">{{ 'sections.newsletter_form.submit' | t }}{{ btn_icon }}{{ icon_Html }}</span>
@@ -126,6 +126,7 @@
          <div class="t4s-newsletter__success success_message t4s-dn" style="display:none"><svg width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="presentation"><path d="M443.3 100.7C449.6 106.9 449.6 117.1 443.3 123.3L171.3 395.3C165.1 401.6 154.9 401.6 148.7 395.3L4.686 251.3C-1.562 245.1-1.562 234.9 4.686 228.7C10.93 222.4 21.06 222.4 27.31 228.7L160 361.4L420.7 100.7C426.9 94.44 437.1 94.44 443.3 100.7H443.3z"/></svg>{{ 'sections.newsletter_form.confirmation' | t }}</div>
          <div class="t4s-newsletter__error error_message t4s-dn" style="display:none"></div>
        </div>
+           <span class="required disclaimerreq" style="font-size:12px;display:block;">* indicates a required field</span>
       </form>
 <script>
   function focusInput(input) {
