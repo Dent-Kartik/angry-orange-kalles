@@ -338,7 +338,7 @@
                 {% endcomment %}
              {%- endif -%}
               <div class="t4s-search-header__main t4s-pr t4s-oh t4s-d-flex t4s-col t4s-col-item">
-               <input data-input-search class="t4s-search-header__input t4s-input__currentcolor" autocomplete="off" type="text" name="q" placeholder="" aria-label="Search bar">
+               <input data-input-search class="t4s-search-header__input t4s-input__currentcolor" autocomplete="off" type="text" name="q" placeholder="" aria-label="Search box input field">
                 <button class="t4s-search-header__submit{% if settings.ajax_search %} t4s-pe-none{% endif %}" type="submit" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none" role="presentation">
                    <g clip-path="url(#clip0_314_697)">
                     <path d="M21.1757 20.384L16.6497 15.859C16.4272 15.6373 16.1259 15.5129 15.8118 15.5129C15.4977 15.5129 15.1964 15.6373 14.9739 15.859C13.7813 17.0119 12.2399 17.7367 10.5911 17.9198C8.9423 18.103 7.27932 17.7341 5.86267 16.8711C4.44602 16.008 3.35574 14.6995 2.76263 13.1506C2.16952 11.6016 2.10709 9.89967 2.58511 8.31142C3.06314 6.72318 4.05462 5.33834 5.40422 4.37385C6.75383 3.40936 8.38532 2.91971 10.0431 2.98162C11.7009 3.04353 13.2913 3.6535 14.5651 4.71596C15.839 5.77842 16.7244 7.23335 17.0826 8.85283C17.3393 10.0277 17.3128 11.2468 17.0055 12.4095C16.9692 12.5456 16.96 12.6876 16.9786 12.8273C16.9972 12.967 17.0431 13.1017 17.1138 13.2237C17.1844 13.3456 17.2784 13.4525 17.3903 13.5381C17.5023 13.6238 17.63 13.6865 17.7662 13.7228C18.0413 13.7961 18.3342 13.7572 18.5806 13.6145C18.8269 13.4719 19.0065 13.2373 19.0799 12.9622C19.6704 10.7433 19.4509 8.38665 18.4608 6.31487C17.4707 4.24309 15.7748 2.59172 13.6772 1.65691C11.5796 0.722097 9.21746 0.564995 7.01447 1.21378C4.81148 1.86256 2.91172 3.27478 1.65589 5.19719C0.400054 7.1196 -0.129704 9.42643 0.161617 11.704C0.452938 13.9816 1.54628 16.0809 3.24557 17.6254C4.94486 19.17 7.13894 20.0588 9.43434 20.1324C11.7297 20.2061 13.9763 19.4597 15.7711 18.0272L19.6585 21.9095C19.758 22.0093 19.8762 22.0884 20.0064 22.1424C20.1366 22.1964 20.2761 22.2242 20.4171 22.2242C20.558 22.2242 20.6976 22.1964 20.8277 22.1424C20.9579 22.0884 21.0762 22.0093 21.1757 21.9095C21.2768 21.8098 21.357 21.6911 21.4118 21.5602C21.4666 21.4292 21.4948 21.2887 21.4948 21.1468C21.4948 21.0048 21.4666 20.8643 21.4118 20.7334C21.357 20.6024 21.2768 20.4837 21.1757 20.384Z" fill="#111111"/>
@@ -386,7 +386,7 @@
         {% endcomment %}
      
       <div class="t4s-col-lg-8 t4s-col-sm-12 t4s-text-end t4s-col-group_btns t4s-col-item t4s-lh-1 header-sub-navigation">
-    	<nav class="t4s-navigation t4s-text-start t4s-nav__hover_sideup t4s-nav-arrow__false" role="navigation">
+    	<nav class="t4s-navigation t4s-text-start t4s-nav__hover_sideup t4s-nav-arrow__false" role="navigation" aria-label="Primary Navigation">
           <ul data-menu-nav class="flexbox">
             {%- for link in linklists.header-sub-menu.links -%}
               <li class="">
