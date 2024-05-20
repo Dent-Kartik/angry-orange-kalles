@@ -22,6 +22,6 @@
          </ul>
       </div>
    {%- else -%}
-      <li class="t4s-menu-item{% if link.active %} is--current{% endif %}"><a href="{{ link.url }}">{%- render 'title_menu2', title: link.title -%}</a></li>
+      <div class="t4s-menu-item{% if link.active %} is--current{% endif %}"><a href="{{ link.url }}">{%- render 'title_menu2', title: link.title -%}</a></div>
    {%- endif -%}
 {%- endfor -%}
