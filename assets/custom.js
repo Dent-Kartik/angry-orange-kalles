@@ -159,6 +159,53 @@ jQuery_T4NT(document).on('keydown','#t4s-backToTop',function(event){
     }
  
 });
+jQuery_T4NT(document).on('keydown','.mini_cart_tool_btn.is--note',function(event){
+   
+  // Add an event listener to the checkout button to trap focus
+
+    if (event.key === 'Enter') {
+        setTimeout(function(){
+            event.preventDefault(); // Prevent default tab behavior
+           //  console.log('Working');
+localStorage.setItem('lastFocusedElementClass','mini_cart_tool_btn.is--note');
+localStorage.setItem('resumeElement','CartSpecialInstructions');        
+         $('#CartSpecialInstructions').focus();
+       
+        },500);
+    }
+ 
+});
+
+jQuery_T4NT(document).on('keydown','.mini_cart_tool_btn.is--rates',function(event){
+  // Add an event listener to the checkout button to trap focus
+
+    if (event.key === 'Enter') {
+        setTimeout(function(){
+            event.preventDefault(); // Prevent default tab behavior
+           //  console.log('Working');
+localStorage.setItem('lastFocusedElementClass','mini_cart_tool_btn.is--rates');
+localStorage.setItem('resumeElement','ShippingCountry_mini_cart');      
+         $('#ShippingCountry_mini_cart').focus();
+       
+        },500);
+    }
+ 
+});
+jQuery_T4NT(document).on('keydown','.mini_cart_tool_btn.is--discount',function(event){
+  // Add an event listener to the checkout button to trap focus
+
+    if (event.key === 'Enter') {
+        setTimeout(function(){
+            event.preventDefault(); // Prevent default tab behavior
+           //  console.log('Working');
+localStorage.setItem('lastFocusedElementClass','mini_cart_tool_btn.is--discount');
+localStorage.setItem('resumeElement','CartDiscountcode');      
+         $('#CartDiscountcode').focus();
+       
+        },500);
+    }
+ 
+});
 jQuery_T4NT(document).on('keydown','.t4s-mini_cart-tool__back',function(event){
    
   // Add an event listener to the checkout button to trap focus
@@ -167,9 +214,18 @@ jQuery_T4NT(document).on('keydown','.t4s-mini_cart-tool__back',function(event){
         setTimeout(function(){
             event.preventDefault(); // Prevent default tab behavior
            //  console.log('Working');
-//var lastFocusedElementId = localStorage.getItem('lastFocusedElement');
+var resumeElement = localStorage.getItem('resumeElement');
       
-         $('#CartSpecialInstructions').focus();
+         $('#'+resumeElement).focus();
+       
+        },500);
+    }else if (event.key === 'Enter') {
+        setTimeout(function(){
+            event.preventDefault(); // Prevent default tab behavior
+           //  console.log('Working');
+var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
+      
+         $('.'+lastFocusedElementClass).focus();
        
         },500);
     }
