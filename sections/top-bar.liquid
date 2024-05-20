@@ -118,7 +118,7 @@
   {%- endstyle -%}
 
 
-  <div data-topbar-options='{ "isTransparent": {{ topbar_transparent }} }' id="t4s-top-bar-main" class="t4s-top-bar">
+  <div data-topbar-options='{ "isTransparent": {{ topbar_transparent }} }' id="t4s-top-bar-main" class="t4s-top-bar" role="region" aria-label="Announcement bar">
     <div class="t4s-container">
       <div class="t4s-row t4s-top-bar__wrap t4s-align-items-center">
         {%- if section.blocks.size > 0 -%}
@@ -160,7 +160,7 @@
                   {%- endif -%}
 
                 {%- when 'text' -%}
-                  {%- capture cap_date %}{% assign se_dayx = bk_stts.dayx %}<span role="heading" aria-level="1" aria-label="Main Countdown" data-refresh-owl data-countdown-t4s data-loop="{% if se_dayx > 0 %}true{% else %}false{% endif %}" data-date="{{ bk_stts.countdown }}" data-dayl="{{ se_dayx }}"><span class="countdown-text">{{ bk_stts.txt_day }}</span> <span class="time">%H</span>:<span class="time">%M</span>:<span class="time">%S</span></span>{% endcapture -%}
+                  {%- capture cap_date %}{% assign se_dayx = bk_stts.dayx %}<span aria-label="Main Countdown" data-refresh-owl data-countdown-t4s data-loop="{% if se_dayx > 0 %}true{% else %}false{% endif %}" data-date="{{ bk_stts.countdown }}" data-dayl="{{ se_dayx }}"><span class="countdown-text">{{ bk_stts.txt_day }}</span> <span class="time">%H</span>:<span class="time">%M</span>:<span class="time">%S</span></span>{% endcapture -%}
                   {%- assign array_txt = bk_stts.text | remove: '<p>' | remove: '</p>' | split: ';;;' | compact -%}
 
                   {%- if array_txt.size > 1 -%}
@@ -184,7 +184,7 @@
                         </div>
                       {% endif %}
                       <div class="usp_text">
-      {{ bk_stts.text | replace: '<p', '<p role="heading" aria-label="Top Bar Title" aria-level="1"' | replace: '[countdown]', cap_date }}
+      {{ bk_stts.text | replace: '<p', '<p aria-label="Top Bar Title"' | replace: '[countdown]', cap_date }}
 
                       </div>
                     </div>
