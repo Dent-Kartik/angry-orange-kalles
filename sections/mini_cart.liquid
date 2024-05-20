@@ -910,5 +910,35 @@ dataLayer.push({
 
 }); 
 
-   }   
+   }
+ jQuery(document).on('keydown','.t4s-btn__checkout',function(event){
+var checkoutButton = $('.t4s-btn__checkout');
+  var closeButton = $('.t4s-drawer__close');
+
+  // Add an event listener to the checkout button to trap focus
+
+    if (event.key === 'Tab') {
+      event.preventDefault(); // Prevent default tab behavior
+      closeButton.focus(); // Move focus to the close button
+    }
+ 
+});
+
+    jQuery(document).on('keydown','.t4s-site-nav__cart a[href="/cart"]',function(event){
+    var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
+    var miniCart = $('#t4s-mini_cart .t4s-drawer__close');
+        setTimeout(function() {
+            // Prevent the default link behavior
+            event.preventDefault();
+
+            // Check if the pressed key is Enter (key code 13)
+            if (event.key === 'Enter') {
+                // Move focus to the mini cart
+                miniCart.focus();
+            }
+        }, 500);
+    
+
+});
+   
 </script>
