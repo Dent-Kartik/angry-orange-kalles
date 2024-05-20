@@ -19,9 +19,9 @@
 <{{ tag }} class="{{ class }} t4s-header__logo t4s-lh-1"><a class="{{ class_a | default: 't4s-d-inline-block' }}" href="{{ routes.root_url }}" {{ block.shopify_attributes }}>
 
    {%- if svg != blank -%}
-      <img loading="eager" class="header__normal-logo t4s-d-none t4s-d-lg-block" src="{{ svg }}" alt="{{ shop_name_escape }}" style="width: {{ lg_w }}px">
-      <img loading="lazy" class="header__sticky-logo t4s-d-none t4s-d-none" src="{{ svg_df | default: svg }}" alt="{{ shop_name_escape }}" style="width: {{ settings.logos_width }}px">
-      <img loading="eager" class="header__mobile-logo t4s-d-lg-none" src="{{ svg }}" alt="{{ shop_name_escape }}" style="width: {{ settings.logo_mb_width }}px">
+      <img loading="eager" class="header__normal-logo t4s-d-none t4s-d-lg-block" src="{{ svg }}" alt="Angry Orange Home" style="width: {{ lg_w }}px">
+      <img loading="lazy" class="header__sticky-logo t4s-d-none t4s-d-none" src="{{ svg_df | default: svg }}" alt="Angry Orange Home" style="width: {{ settings.logos_width }}px">
+      <img loading="eager" class="header__mobile-logo t4s-d-lg-none" src="{{ svg }}" alt="Angry Orange Home" style="width: {{ settings.logo_mb_width }}px">
    
    {%- elsif logo != blank -%}
 
