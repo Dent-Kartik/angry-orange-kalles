@@ -368,6 +368,7 @@ display: none;
     border-right: 1px solid rgba(0,0,0,.09);
     transition: background-color .3s;
     text-align: center;
+   padding:0px !important;
 }
 .t4s-mini_cart__tool.t4s-mini_cart__tool_icon >div,.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >button{
     border: 0;
