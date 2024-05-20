@@ -356,7 +356,7 @@ display: none;
     transition: .35s;
     background-color: #f5f5f5;
 }
-.t4s-mini_cart__tool >div{
+.t4s-mini_cart__tool >div,.t4s-mini_cart__tool >button{
     height: 40px;
     line-height: 40px;
     margin: 0 20px;
