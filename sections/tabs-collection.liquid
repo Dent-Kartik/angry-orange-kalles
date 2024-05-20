@@ -90,7 +90,7 @@
           {%- else -%}
               {%- assign block = section.blocks[0] -%}
               {%- assign collection = collections[block.settings.collection] -%}
-              <div id="t4s-{{ block.id }}" class="t4s-tab-content2 t4s-active" data-t4s-tab-content data-render-lazy-component >
+              <div id="t4s-{{ block.id }}" class="t4s-tab-content2 t4s-active" data-t4s-tab-content data-render-lazy-component role="tabpanel" aria-labelledby="b_{{ block.id }}">
                 {%- render 'inc_tab',ck_q:true,section:section,sid: sid,collection:collection, block: block, se_stts: se_stts,arrow_icon:arrow_icon,use_link_vendor:use_link_vendor -%}
               </div>
               {%- for block in section.blocks offset:1 -%}
