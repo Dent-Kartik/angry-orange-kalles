@@ -369,7 +369,7 @@ display: none;
     transition: background-color .3s;
     text-align: center;
 }
-.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >div{
+.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >div,.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >button{
     border: 0;
     display: inline-flex;
     align-items: center;
@@ -381,7 +381,7 @@ display: none;
     border-radius: 50%;
     box-shadow: 9px 5px 10px #dfe3ea, -5px -5px 10px #faffff;
 }
-.t4s-mini_cart__tool >div:hover {
+.t4s-mini_cart__tool >div:hover,.t4s-mini_cart__tool >button:hover {
     background-color: #f9f9f9;
     box-shadow: inset 5px 5px 10px #dfe3ea, inset -5px -5px 10px #faffff;
 }
