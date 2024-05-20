@@ -22,10 +22,10 @@
   endif
 -%}
 
- <div data-cart-item data-pid="{{ item.product_id }}" class="t4s-mini_cart__item cart_item_{{ item_id }} t4s-d-flex t4s-align-items-center t4s-pr t4s-oh{% if gift_pr_id == item.product_id %} is--gift{% endif %}">
-    <a href="{{ item_url }}" class="t4s-mini_cart__img t4s-pr t4s-oh t4s_ratio t4s-bg-11" style="background: url({{ image | image_url: width: 1 }});--aspect-ratioapt:{{ image.aspect_ratio | default: 1 }}" role="img">
+ <div data-cart-item data-pid="{{ item.product_id }}" class="t4s-mini_cart__item cart_item_{{ item_id }} t4s-d-flex t4s-align-items-center t4s-pr t4s-oh{% if gift_pr_id == item.product_id %} is--gift{% endif %}" role="group" aria-label="product">
+    <a href="{{ item_url }}" class="t4s-mini_cart__img t4s-pr t4s-oh t4s_ratio t4s-bg-11" style="background: url({{ image | image_url: width: 1 }});--aspect-ratioapt:{{ image.aspect_ratio | default: 1 }}">
       {%- if image != blank -%}
-        <img class="lazyloadt4s" width="120" height="{{ 120 | divided_by: image.aspect_ratio | ceil }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 1 }}" data-widths="[120, 240]" data-sizes="auto" alt="{{ image.alt | escape }}">
+        <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s" width="120" height="{{ 120 | divided_by: image.aspect_ratio | ceil }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 1 }}" data-widths="[120, 240]" data-sizes="auto" alt="{{ image.alt | escape }}">
       {%- endif -%}
       <div class="t4s-cart-ld__bar t4s-pe-none t4s-dn" hidden><span>
         <svg width="16" height="16" hidden class="t4s-cart-spinner" focusable="false" role="presentation" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@
       </span></div>
     </a>
     <div class="t4s-mini_cart__info">
-       <a href="{{ item_url }}" class="t4s-mini_cart__title t4s-truncate">{{ item_pr.title }}</a>
+       <a href="{{ item_url }}" class="t4s-mini_cart__title t4s-truncate"><h3>{{ item_pr.title }}</h3></a>
        <div class="t4s-mini_cart__meta">
           {%- assign qv_key = item_pr.id -%}
           {%- unless item_pr.has_only_default_variant or item_variant.title contains 'mczr_price_' -%}{%- assign qv_key = item_id -%}<p class="t4s-cart_meta_variant">{{ item_variant.title }}</p>{%- endunless -%}
@@ -132,9 +132,9 @@
        <div class="t4s-mini_cart__actions">
           {%- if cart_ajax_enable -%}
           <div data-quantity-wrapper class="t4s-quantity-wrapper t4s-quantity-cart-item"> 
-            <button data-quantity-selector data-decrease-qty type="button" class="t4s-quantity-selector is--minus">{% if item_qty > 1 or min_qty == 1 %}<svg focusable="false" class="icon icon--minus" viewBox="0 0 10 2" role="presentation"><path d="M10 0v2H0V0z" fill="currentColor"></path></svg>{% else %}<svg viewBox="0 0 24 24" width="17"><use href="#icon-cart-remove"/></svg>{% endif %}</button>
-            <input data-action-change data-quantity-value type="number" id="miniupdates_{{ item_key }}" data-id="{{ item_key }}" class="t4s-quantity-input" step="{{ item_variant.quantity_rule.increment | default: 1 }}" min="{{ min_qty }}" max="{{ max_qty }}" name="updates[]" data-current-qty="{{ item_qty }}" value="{{ item_qty }}" size="4" pattern="[0-9]*" inputmode="numeric">
-            <button data-quantity-selector data-increase-qty type="button" class="t4s-quantity-selector is--plus"><svg focusable="false" class="icon icon--plus" viewBox="0 0 10 10" role="presentation"><path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path></svg></button>
+            <button data-quantity-selector data-decrease-qty type="button" class="t4s-quantity-selector is--minus" aria-label="{% if item_qty == 1 %}Remove product{% else %}Decrease quantity{% endif %}">{% if item_qty > 1 or min_qty == 1 %}<svg focusable="false" class="icon icon--minus" viewBox="0 0 10 2" role="presentation"><path d="M10 0v2H0V0z" fill="currentColor"></path></svg>{% else %}<svg viewBox="0 0 24 24" width="17"><use href="#icon-cart-remove"/></svg>{% endif %}</button>
+            <input data-action-change data-quantity-value type="number" id="miniupdates_{{ item_key }}" data-id="{{ item_key }}" class="t4s-quantity-input" step="{{ item_variant.quantity_rule.increment | default: 1 }}" min="{{ min_qty }}" max="{{ max_qty }}" name="updates[]" data-current-qty="{{ item_qty }}" value="{{ item_qty }}" size="4" pattern="[0-9]*" inputmode="numeric" aria-label="Quantity for item {{ item_key }}">
+            <button data-quantity-selector data-increase-qty type="button" class="t4s-quantity-selector is--plus" aria-label="Increase quantity"><svg focusable="false" class="icon icon--plus" viewBox="0 0 10 10" role="presentation"><path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path></svg></button>
           </div>
           {%- endif -%}
           {%- if item_pr.has_only_default_variant == false and atc_ajax_enable -%}
