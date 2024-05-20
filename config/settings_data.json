@@ -610,6 +610,7 @@
           "full_header": true,
           "height": 70,
           "arrow": false,
+          "arrow_outside": true,
           "align": "center",
           "hover": "hover_sideup",
           "enable_active": false,
