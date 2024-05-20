@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ 't4s-submenu.css' | asset_url }}" media="all">
 {%- assign llists = linklists[handle_menu].links -%} 
-   {%- if link.links = blank -%}<ul>{% endif %}
+   {%- if llists == blank -%}<ul>{% endif %}
 {%- for link in llists -%}
    {%- if link.links != blank -%}
       <div class="t4s-menu-item has--children{% if link.active %} is--current{% endif %}">
