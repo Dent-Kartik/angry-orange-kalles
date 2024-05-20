@@ -432,6 +432,9 @@
           "91fda933-0e19-49b6-9810-b031e272d0cf",
           "cus_socials_nmqzeq"
         ],
+        "custom_css": [
+          "#ot-sdk-btn.ot-sdk-show-settings {color: black !important; border: none; font-weight: 600; padding: 0px !important;}"
+        ],
         "settings": {
           "sticky": false,
           "collapse": false,
