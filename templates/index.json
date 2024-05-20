@@ -925,7 +925,8 @@
       "custom_css": [
         "section {padding: 30px 0;}",
         "h2 {text-align: center; text-transform: capitalize; color: white !important;}",
-        ".opw-starsColor {color: #bb3b00 !important;}"
+        ".opw-starsColor {color: #bb3b00 !important;}",
+        "path{fill:white;}"
       ],
       "settings": {
       }
