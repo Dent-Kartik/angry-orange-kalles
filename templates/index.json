@@ -926,7 +926,8 @@
         "section {padding: 30px 0;}",
         "h2 {text-align: center; text-transform: capitalize; color: white !important;}",
         ".opw-starsColor {color: #bb3b00 !important;}",
-        ".opw-carousel__control path {fill: white;}"
+        ".opw-carousel__control path {fill: white;}",
+        ".opw-font-medium.opw-carousel-prodname {color: black;}"
       ],
       "settings": {
       }
