@@ -602,3 +602,15 @@ ul.t4s-cart_discount_price {
 .t4s-mini_cart-tool__wrap select:focus {
          outline: 0.2rem solid black;
 }
+.mini_cart_tool_btn{
+  border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 8px;
+    width: 35px;
+    line-height: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 9px 5px 10px #dfe3ea, -5px -5px 10px #faffff;
+}
