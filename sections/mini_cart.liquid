@@ -74,8 +74,8 @@
         <button data-cart-tool_action data-id="note" class="mini_cart_tool_btn is--note is--editNote t4s-pr t4s-truncate {{ style_edit }}">{{ 'cart.tool.edit_note' | t }}</button>
         {%- endif -%}
         {%- if se_stts.enable_gift_wrap and gift_pr.available == true -%}<div data-toogle-gift data-cart-tool_action data-id="gift" class="mini_cart_tool_btn is--gift t4s-pr t4s-truncate"{% if arr_gift_id.size > 0 %} style=" display:none"{% endif %}>{{ 'cart.tool.add_gift_wrap' | t }}</button>{%- endif -%}
-        {%- if se_stts.enable_rates -%}<button data-cart-tool_action data-id="rates" class="mini_cart_tool_btn is--rates t4s-pr t4s-truncate">{{ 'cart.shipping_estimator.estimate' | t }}</button>{%- endif -%}
-        {%- if se_stts.enable_discount -%}<button data-cart-tool_action data-id="discount" class="mini_cart_tool_btn is--discount t4s-pr t4s-truncate">{{ 'cart.tool.add_coupon' | t }}</button>{%- endif -%}
+        {%- if se_stts.enable_rates -%}<button data-cart-tool_action data-id="rates" class="mini_cart_tool_btn is--rates t4s-pr t4s-truncate" role="button">{{ 'cart.shipping_estimator.estimate' | t }}</button>{%- endif -%}
+        {%- if se_stts.enable_discount -%}<button data-cart-tool_action data-id="discount" class="mini_cart_tool_btn is--discount t4s-pr t4s-truncate" role="button">{{ 'cart.tool.add_coupon' | t }}</button>{%- endif -%}
       </div>
    {%- endif -%}
 {%- endcapture -%}
