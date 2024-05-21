@@ -248,7 +248,9 @@ jQuery(document).ready(function() {
         $('.video-section-inner .flickity-button').attr("role","button");
       $('.video-section-inner .flickity-button').attr("tabindex","0");
       $('.video-section-inner .flickity-page-dots li').attr("tabindex","0");
-        $('.flickityt4s-page-dots li').attr("role","button");
+  setTimeout(function () {
+    $('.flickityt4s-page-dots li').attr("role","button");
+  },2000);
     });
 function activateTab($tab) {
       $('.t4s-tabs-collection .t4s-tab-item a').removeClass('t4s-active').attr('aria-selected', 'false');
