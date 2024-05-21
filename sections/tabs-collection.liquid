@@ -63,19 +63,21 @@
           <div class="t4s-tabs-head">
             {%- if se_stts.top_heading != blank -%}<h2 class="t4s-section-title t4s-title {{ se_stts.heading_align }}"><span>{{ se_stts.top_heading }}</span></h2>{%- endif -%}
         {% endif %}
-          <ul data-t4s-tab-ul2 class="t4s-tabs-ul t4s-align-items-center t4s-justify-content-{{ tabs_pos }} t4s-flicky-slider t4s-slider-btn-style-simple t4s-slider-btn-none t4s-slider-btn-small t4s-slider-btn-vi-always flickityt4s" 
+          <div data-t4s-tab-ul2 class="t4s-tabs-ul t4s-align-items-center t4s-justify-content-{{ tabs_pos }} t4s-flicky-slider t4s-slider-btn-style-simple t4s-slider-btn-none t4s-slider-btn-small t4s-slider-btn-vi-always flickityt4s" 
            data-flickityt4s-js='{"isSimple": true,"freeScroll": true, "arrowIcon":"1", "imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "minWidthLG": 992, "cellAlignLG":"{{ slide_cellAlign }}", "cellAlign":"center", "wrapAround": false,"prevNextButtons": true,"percentPosition": 0,"pageDots": false, "pauseAutoPlayOnHover" : true }'>  
-          {%- for block in se_blocks -%}
+  <ul role="tablist">
+  {%- for block in se_blocks -%}
             {%- assign bk_stts = block.settings -%}
             {%- assign blockid = block.id -%} 
-            <li class="t4s-tab-item t4s-d-inline-flex"><a id="b_{{ block.id }}" href="#t4s-{{ blockid }}" rel="nofollow" data-t4s-tab-item data-no-instant {{ block.shopify_attributes }} {% if forloop.first == true %} class="t4s-active" {% endif %}>
+            <li class="t4s-tab-item t4s-d-inline-flex"><a id="b_{{ block.id }}" href="#t4s-{{ blockid }}" rel="nofollow" data-t4s-tab-item data-no-instant {{ block.shopify_attributes }} {% if forloop.first == true %} class="t4s-active" aria-selected="true"{% else %} aria-selected="false" tabindex="-1"{% endif %} role="tab" aria-controls="t4s-{{ block.id }}">
               <span>
                 {% if bk_stts.icon_title != blank %} <span class="t4s-icon-title"><i class="{{ bk_stts.icon_title }}"></i></span>{% endif %}
                 <span class="t4s-text-title">{{ bk_stts.title }}</span>
               </span>
             </a></li>
           {%- endfor -%}
-        </ul>
+  </ul>           
+  </div>
         {% if tabs_des == "inline" %}
           </div>
         {% endif %}
@@ -83,14 +85,14 @@
           {%- if request.design_mode -%}
             {%- for block in se_blocks -%}
               {%- assign collection = collections[block.settings.collection] -%}
-              <div id="t4s-{{ block.id }}" class="t4s-tab-content2 {% if forloop.first == true %} t4s-active {% endif %}" data-t4s-tab-content data-render-lazy-component >
+              <div id="t4s-{{ block.id }}" class="t4s-tab-content2 {% if forloop.first == true %} t4s-active {% endif %}" data-t4s-tab-content data-render-lazy-component role="tabpanel" aria-labelledby="b_{{ block.id }}">
                 {%- render 'inc_tab',ck_q:true,section:section,sid: sid,collection:collection, block: block, se_stts: se_stts,arrow_icon:arrow_icon,use_link_vendor:use_link_vendor -%}
               </div>
             {%- endfor -%}
           {%- else -%}
               {%- assign block = section.blocks[0] -%}
               {%- assign collection = collections[block.settings.collection] -%}
-              <div id="t4s-{{ block.id }}" class="t4s-tab-content2 t4s-active" data-t4s-tab-content data-render-lazy-component >
+              <div id="t4s-{{ block.id }}" class="t4s-tab-content2 t4s-active" data-t4s-tab-content data-render-lazy-component role="tabpanel" aria-labelledby="b_{{ block.id }}">
                 {%- render 'inc_tab',ck_q:true,section:section,sid: sid,collection:collection, block: block, se_stts: se_stts,arrow_icon:arrow_icon,use_link_vendor:use_link_vendor -%}
               </div>
               {%- for block in section.blocks offset:1 -%}
