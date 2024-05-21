@@ -73,7 +73,7 @@
           "settings": {
             "text": "ODORS & STAINS<br>DON'T STAND A CHANCE!",
             "remove_br_tag": false,
-            "heading_level": 1,
+            "heading_level": 2,
             "tag": "h2",
             "fontf": "inherit",
             "text_cl": "#ffffff",
@@ -97,7 +97,7 @@
           "settings": {
             "text": "Smells like Heaven. Works like Hell.",
             "remove_br_tag": false,
-            "heading_level": 3,
+            "heading_level": 0,
             "tag": "p",
             "fontf": "inherit",
             "text_cl": "#ffffff",
