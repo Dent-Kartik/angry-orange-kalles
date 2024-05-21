@@ -606,7 +606,7 @@
           "base_GqR7dq"
         ],
         "custom_css": [
-          ".t4s-site-nav__icons svg.t4s-icon {color: #f26829;}"
+          ".t4s-site-nav__icons svg.t4s-icon {color: #bb3b00;}"
         ],
         "settings": {
           "layout": "logo_center",
