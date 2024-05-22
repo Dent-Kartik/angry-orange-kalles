@@ -356,7 +356,7 @@ t4s_group_btns_split
 				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} role="button" data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart">
 					<span class="t4s-pr t4s-icon-cart__wrap">
 					  <i class="fas fa-shopping-bag t4s-icon t4s-icon--account"></i>
-					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" {% if cart.item_count == 0 %}style="display:none;"{% endif %}>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
+					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" {% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
 					</span>
 					<span class="t4s-h-cart-totals t4s-dn t4s-truncate">
 						<span class="t4s-h-cart__divider t4s-dn">/</span>
