@@ -238,7 +238,15 @@ t4s_group_btns_split
               <div class="t4s-search-header_border t4s-col-auto t4s-col-item"></div>
              {%- endif -%}
               <div class="t4s-search-header__main t4s-pr t4s-oh t4s-d-flex t4s-col t4s-col-item">
-                <input data-input-search class="t4s-search-header__input t4s-input__currentcolor" autocomplete="off" type="text" name="q" placeholder="Search..." aria-label="Search bar">
+                <label class="sr-only" for="search-input" id="search-label">Search</label>
+                <input data-input-search id="search-input" class="t4s-search-header__input t4s-input__currentcolor" autocomplete="off" type="text" name="q" placeholder="Search..." aria-label="Search input field" aria-autocomplete="list" 
+    aria-controls="autocomplete-results"
+    aria-haspopup="listbox" 
+    aria-expanded="false"
+aria-describedby="instructions">
+ <div id="instructions" class="sr-only" aria-hidden="true">
+    Begin typing to search, the field will be completed as you type
+  </div>
                 <button class="t4s-search-header__submit{% if settings.ajax_search %} t4s-pe-none{% endif %}" type="submit" aria-label="Submit Search Form"><svg class="t4s-icon t4s-icon--search" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-search"></use></svg></button>
 	          </div>
             </form>
@@ -252,12 +260,16 @@ t4s_group_btns_split
                        </div>
                        {%- endfor -%}
                     </div>
-                    <div data-results-search class="t4s-frm-search__content t4s_ratioadapt t4s-current-scrollbar"{% if collection == blank or show_search_suggest == false %} style="display: none;"{% endif %}>
-                      {%- if collection != blank and show_search_suggest -%}
+                    <div data-results-search class="t4s-frm-search__content t4s_ratioadapt t4s-current-scrollbar"{% if collection == blank or show_search_suggest == false %} style="display: none;"{% endif %} id="autocomplete-results" role="listbox" aria-labelledby="search-label">
+ <div role="group" aria-labelledby="products-heading">
+<div class="t4s-result-title" id="products-heading">Results from products</div> 
+                     
+ {%- if collection != blank and show_search_suggest -%}
                           {%- for product in collection.products limit: limit -%}
                           {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style -%}
                           {%- endfor -%}
                       {%- endif -%}
+                    </div>
                     </div>
                     {%- if collection != blank and show_search_suggest -%}
                        {%- if collection.all_products_count > limit -%}
@@ -355,7 +367,7 @@ t4s_group_btns_split
 		   <div class="t4s-site-nav__icon t4s-site-nav__cart">	
 				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} role="button" data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart">
 					<span class="t4s-pr t4s-icon-cart__wrap">
-					  <i class="fas fa-shopping-bag t4s-icon t4s-icon--account"></i>
+					  <i class="fas fa-shopping-bag t4s-icon t4s-icon--account"  aria-hidden="true" focusable="false" role="presentation"></i>
 					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" {% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
 					</span>
 					<span class="t4s-h-cart-totals t4s-dn t4s-truncate">
