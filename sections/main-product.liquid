@@ -393,7 +393,7 @@ endif -%}
                   <div data-t4s-gallery data-t4s-thumb-false data-main-media class="t4s-product__media-item t4s_{{ image_ratio }} t4s_position_{{ se_stts.image_position }} t4s_{{ se_stts.image_size }}">
                     <div data-t4s-gallery--open data-media-type="image" class="t4s_ratio t4s-product__media{{ class_pswp_disable }}" {{ imgatt }}style="--aspect-ratioapt:{{ image.aspect_ratio }};--mw-media:{{ image.width }}px">
                       <noscript>{{ image | image_url: width: 1500 | image_tag: widths: '288, 576, 750, 1100, 1500', class: 't4s-img-noscript', loading: 'lazy', sizes: '(min-width: 1500px) 1500px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)' }}</noscript>
-                      <img data-master="{{ image | image_url }}" class="lazyloadt4s t4s-lz--fadeIn" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt | escape }}{% else %}{{ shop.name }}{% endif %}"><span class="lazyloadt4s-loader" role="presentation"></span>
+                      <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" data-master="{{ image | image_url }}" class="lazyloadt4s t4s-lz--fadeIn" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt | escape }}{% else %}{{ shop.name }}{% endif %}"><span class="lazyloadt4s-loader" role="presentation"></span>
                     </div>
                   </div>
                   <div data-product-single-badge data-sort="sale,new,soldout,preOrder,custom" class="t4s-single-product-badge lazyloadt4s t4s-pa t4s-pe-none t4s-op-0" data-rendert4s="css:{{ 'single-pr-badge.css' | asset_url }}"></div>
@@ -734,7 +734,7 @@ endif -%}
                   <div class="t4s-pr-vendor t4s-pr t4s-d-inline-flex t4s-align-items-center t4s-justify-content-center t4s-text-center{% if image != blank %} has-img__vendor{% endif %}">
                     <a href="{{ pr_vendor_url }}">
                       {%- if image != blank -%}
-                        <img width="{{ image.width }}" height="{{ image.height }}" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20{{ image.width }}%20{{ image.height }}%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="{{ image | image_url: width: 1 }}" data-widths="[60, 90, 180, 320, 640]" data-sizes="auto" class="t4s-w-100 lazyloadt4s t4s-lz--fadeIn" alt="{% if pr_vendor %}{{ pr_vendor | escape }}{% else %}{{ shop.name }}{% endif %}"><span class="lazyloadt4s-loader" role="presentation"></span><span class="visually-hidden">{{ pr_vendor | escape }}</span>
+                        <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" width="{{ image.width }}" height="{{ image.height }}" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20{{ image.width }}%20{{ image.height }}%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="{{ image | image_url: width: 1 }}" data-widths="[60, 90, 180, 320, 640]" data-sizes="auto" class="t4s-w-100 lazyloadt4s t4s-lz--fadeIn" alt="{% if pr_vendor %}{{ pr_vendor | escape }}{% else %}{{ shop.name }}{% endif %}"><span class="lazyloadt4s-loader" role="presentation"></span><span class="visually-hidden">{{ pr_vendor | escape }}</span>
                       {%- else -%}
                         {{ pr_vendor | escape }}
                       {%- endif -%}
@@ -745,14 +745,14 @@ endif -%}
                   {%- capture html_trust -%}
                     {%- assign image = bk_stts.image -%}
                     {%- if bk_stts.source == '1' and image != blank -%}
-                      <img style="--max-w-img:{{ bk_stts.wimg }}%" width="{{ image.width }}" height="{{ image.height }}" class="t4s-img-tr__img lazyloadt4s" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20{{ image.width }}%20{{ image.height }}%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="{{ image | image_url: width: 1 }}" data-widths="[90, 120, 150, 180, 360, 480, 600, 750, 940]" data-sizes="auto" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
+                      <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" style="--max-w-img:{{ bk_stts.wimg }}%" width="{{ image.width }}" height="{{ image.height }}" class="t4s-img-tr__img lazyloadt4s" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20{{ image.width }}%20{{ image.height }}%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="{{ image | image_url: width: 1 }}" data-widths="[90, 120, 150, 180, 360, 480, 600, 750, 940]" data-sizes="auto" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
                     {%- else bk_stts.svg -%}
                       {%- assign isStyleSvg = true -%}
                       {%- assign svg_height = bk_stts.height -%}
                       {%- assign svg_width = svg_height | times: 1.57446809 | ceil -%}
                       {%- assign arr = bk_stts.svg | remove: ' ' | split: "," -%}
                       {%- for img in arr -%}
-                        <img width="{{ svg_width }}" height="{{ svg_height }}" class="t4s-img-tr__svg lazyloadt4s" src="https://cdn.shopify.com/s/assets/payment_icons/generic-dfdcaf09b6731ca14dd7441354c0ad8bc934184eb15ae1fda6a6b9e307675485.svg" data-src="{{ img | payment_type_img_url }}" alt="{{ img | replace: '_', ' ' }}">
+                        <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" width="{{ svg_width }}" height="{{ svg_height }}" class="t4s-img-tr__svg lazyloadt4s" src="https://cdn.shopify.com/s/assets/payment_icons/generic-dfdcaf09b6731ca14dd7441354c0ad8bc934184eb15ae1fda6a6b9e307675485.svg" data-src="{{ img | payment_type_img_url }}" alt="{{ img | replace: '_', ' ' }}">
                       {%- endfor -%}
                     {%- endif -%}
                   {%- endcapture -%}
@@ -766,7 +766,7 @@ endif -%}
                   <div id="t4s-counter{{ bk_id }}" class="t4s-pr_counter t4s-dn t4s-ch" data-live-view='{ "min":{{ bk_stts.min }}, "max":{{ bk_stts.max }}, "interval":{{ bk_stts.time }}000 }' {{ block.shopify_attributes }}>
                     {%- if bk_stts.icon != '1' -%}{%- assign image = bk_stts.img -%}
                       {%- if bk_stts.icon == '3' and image != blank -%}
-                        <img class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
+                        <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
                       {%- else -%}
                         <i class="t4s-ani-{{ bk_stts.ani }} {{ bk_stts.icon_name }}"></i>
                       {%- endif -%}
@@ -780,7 +780,7 @@ endif -%}
                 {%- when 'sold' %}{% if bk_stts.text == blank or isProductAvailable == false %}{% continue %}{% endif -%}
                   <div id="t4s-sold{{ bk_id }}" class="t4s-pr_flash_sold t4s-ch t4s-dn" data-time="120000" data-flash-sold='{ "mins":{{ bk_stts.mins }}, "maxs":{{ bk_stts.maxs }}, "mint":{{ bk_stts.mint }}, "maxt":{{ bk_stts.maxt }}, "id":"{{ product.id }}", "time": 120000 }' {{ block.shopify_attributes }}>
                     {%- if bk_stts.icon != '1' -%}{%- assign image = bk_stts.img -%}
-                      {%- if bk_stts.icon == '3' and image != blank -%}<img class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
+                      {%- if bk_stts.icon == '3' and image != blank -%}<img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
                       {%- else -%}<i class="t4s-ani-{{ bk_stts.ani }} {{ bk_stts.icon_name }}"></i>
                       {%- endif -%}
                       {%- if bk_stts.ani != 'none' %}<link href="{{ 'ani-atc.min.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">{% endif -%}
@@ -791,7 +791,7 @@ endif -%}
                 {%- when 'order' -%}{% unless isProductAvailable %}{% continue %}{% endunless -%}{% if isPreoder and variants_size == 1 and bk_stts.hide_pre %}{% continue %}{% endif -%}
                   <div id="t4s-delivery{{ bk_id }}" class="t4s-pr_delivery  t4s-ch t4s-dn" data-order-delivery='{ "timezone":false, "format_day":"{{ bk_stts.frm_day }}", "mode":"{{ bk_stts.mode }}", "cut_day": {{ bk_stts.cut_day | json }}, "estimateStartDate": {{ meta_theme.estimateStartDate | default: bk_stts.ds | json }}, "estimateEndDate": {{ meta_theme.estimateEndDate | default: bk_stts.de | json }}, "time":{{ bk_stts.time | default: 19041994 | json }}, "hideWithPreorder":{{ bk_stts.hide_pre }} }' {{ block.shopify_attributes }}>
                     {%- if bk_stts.icon != '1' -%}{%- assign image = bk_stts.img -%}
-                      {%- if bk_stts.icon == '3' and image != blank -%}<img class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
+                      {%- if bk_stts.icon == '3' and image != blank -%}<img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
                       {%- else -%}<i class="t4s-ani-{{ bk_stts.ani }} {{ bk_stts.icon_name }}"></i>
                       {%- endif -%}
                       {%- if bk_stts.ani != 'none' %}<link href="{{ 'ani-atc.min.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">{% endif -%}
@@ -825,7 +825,7 @@ endif -%}
                       {%- if bk_stts.mess != blank -%}
                         <p class="t4s-countdown__mess t4s-ch t4s-lh-1 t4s-fwm" >
                           {%- if bk_stts.icon != '1' -%}{%- assign image = bk_stts.img -%}
-                          {%- if bk_stts.icon == '3' and image != blank -%}<img class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
+                          {%- if bk_stts.icon == '3' and image != blank -%}<img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
                           {%- else -%}<i class="t4s-ani-{{ bk_stts.ani }} {{ bk_stts.icon_name }}"></i>
                           {%- endif -%}
                           {%- if bk_stts.ani != 'none' %}<link href="{{ 'ani-atc.min.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">{% endif -%}{%- endif -%}{{ bk_stts.mess }}</p>
@@ -848,7 +848,7 @@ endif -%}
                     <p data-message class="t4s-inventory_message t4s-dn t4s-ch t4s-lh-1 t4s-fwm" style="font-size:{{ bk_stts.size }}px" role="heading">
                     {%- if bk_stts.icon != '1' -%}{%- assign image = bk_stts.img -%}
                       {%- if bk_stts.icon == '3' and image != blank -%}
-                        <img class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
+                        <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s t4s-w-100 t4s-ani-{{ bk_stts.ani }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 50 }}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ shop.name }}{% endif %}">
                       {%- else -%}
                         <i class="t4s-ani-{{ bk_stts.ani }} {{ bk_stts.icon_name }}"></i>
                       {%- endif -%}
@@ -957,7 +957,7 @@ endif -%}
        assign img_url = image | image_url: width: 1
        -%}
       <div data-sticky-img class="t4s-sticky-atc__img t4s-pr">
-         <img class="lazyloadt4s t4s-lz--fadeIn" data-orginal="{{ img_url }}" data-src="{{ img_url }}" data-widths="[65,120]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt | escape }}{% else %}{{ shop.name }}{% endif %}">
+         <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s t4s-lz--fadeIn" data-orginal="{{ img_url }}" data-src="{{ img_url }}" data-widths="[65,120]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt | escape }}{% else %}{{ shop.name }}{% endif %}">
          <span class="lazyloadt4s-loader is-bg-img" style="background: url({{ img_url }})"></span>
       </div>
       <div class="t4s-sticky-atc__infos">
@@ -1011,7 +1011,11 @@ endif -%}
   </div>
 </template>
 {%- endif -%}
+         <script>
+   document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){let t=document.querySelectorAll('.t4s-product[aria-hidden="true"] a.prlink');t.forEach(t=>{t.setAttribute("tabindex","-1")})},6800)});
 
+
+  </script>
 <script> 
   document.addEventListener('DOMContentLoaded', function() {
  dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object. 
