@@ -270,7 +270,7 @@ t4s_group_btns_split
                  </div>
             </div>
 	      </div>
-			  <a class="t4s-pr t4s-d-lg-none" href="{{ routes.search_url }}" data-drawer-delay- data-drawer-options='{ "id":"#t4s-search-hidden" }' aria-label="Search Icon">
+			  <a class="t4s-pr t4s-d-lg-none" href="{{ routes.search_url }}" data-drawer-delay- data-drawer-options='{ "id":"#t4s-search-hidden" }' aria-label="Search">
 					<svg class="t4s-icon t4s-icon--search" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-search"></use></svg>
 			  </a>
     {%- else -%}
@@ -283,7 +283,7 @@ t4s_group_btns_split
    
 	{%- if shop.customer_accounts_enabled and se_stts.show_acc -%}
 		<div class="t4s-site-nav__icon t4s-site-nav__account t4s-pr t4s-d-none t4s-d-md-inline-block">
-			<a class="t4s-pr" href="{{ routes.account_url }}"{% unless customer or request.page_type contains 'customers' or settings.login_side == false %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-login-sidebar" }' {% endunless %} aria-label="Account Icon">
+			<a class="t4s-pr" href="{{ routes.account_url }}"{% unless customer or request.page_type contains 'customers' or settings.login_side == false %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-login-sidebar" }' {% endunless %} role="button" aria-label="Account">
     		<i class="fa-solid fa-circle-user t4s-icon t4s-icon--account" aria-hidden="true" focusable="false" role="presentation"></i>	
         </a>
 			{%- if customer -%}
@@ -353,10 +353,10 @@ t4s_group_btns_split
 
 	{%- if se_stts.cart_des != '0' -%}
 		   <div class="t4s-site-nav__icon t4s-site-nav__cart">	
-				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart Icon">
+				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} role="button" data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart">
 					<span class="t4s-pr t4s-icon-cart__wrap">
 					  <i class="fas fa-shopping-bag t4s-icon t4s-icon--account"></i>
-					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" {% if cart.item_count == 0 %}style="display:none;"{% endif %}>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
+					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" {% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
 					</span>
 					<span class="t4s-h-cart-totals t4s-dn t4s-truncate">
 						<span class="t4s-h-cart__divider t4s-dn">/</span>
