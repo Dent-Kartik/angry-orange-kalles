@@ -392,6 +392,22 @@ dataLayer.push({
 window.addEventListener('scroll', onScroll);
  </script>
      {% endcomment %}
-  
+  <script>
+    
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".t4s-tab-item").forEach(function(tabItem) {
+        tabItem.addEventListener("click", function() {
+            tabItem.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        });
+    });
+
+    setTimeout(function() {
+        let hiddenLinks = document.querySelectorAll('.t4s-product[aria-hidden="true"] a');
+        hiddenLinks.forEach(link => {
+            link.setAttribute("tabindex", "-1");
+        });
+    }, 2200);
+});
+  </script>
   </body>
 </html>
