@@ -4940,3 +4940,11 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
     border: 1px solid black !important;
       outline: 1px solid black !important;
 }
+
+.t4s-space-item-inner a,.t4s-result__item a {
+    display: inline-flex!important
+}
+
+.hiddennav {
+    display: none
+}
