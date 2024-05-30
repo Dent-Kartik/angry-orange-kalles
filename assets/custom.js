@@ -467,7 +467,7 @@ setTimeout(function(){
 jQuery(document).on('click','.pswp__button',function(event){
    
   // Add an event listener to the checkout button to trap focus
-     var text = $(".pswp__counter").val();
+     var text = $(".pswp__counter").text();
       console.log("val "+text);
       $(".pswp__top-bar .sr-only").html(text);
     // if (event.key === 'Tab') {
