@@ -107,7 +107,7 @@
       <form data-t4s-klaviyo-form data-form-mail-agree id="t4s-form-{{ form_id }}" class="t4s-pr t4s-z-100 t4s-newsletter__form is--klaviyo" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET"{% if settings.ajax_klaviyo and settings.klaviyo_list_id != blank %} data-t4s-klaviyo-ajax{% endif %}>
         <input type="hidden" name="g" value="{{ settings.klaviyo_list_id }}">
         <div class="t4s-newsletter__fields">
-           <div class="t4s-newsletter__inner t4s-row t4s-g-0 t4s-pr t4s-oh {{ class }}">
+           <div class="t4s-newsletter__inner t4s-row t4s-g-0 t4s-pr t4s-oh {{ class }}"><h1>fdgfdg</h1>
               <div class="{{ class_email }} t4s-col-item is--col-email"><input type="email" name="email" placeholder="{{ 'sections.newsletter_form.email_placeholder' | t }}"  value="{% if customer %}{{ customer.email }}{% endif %}" class="{{ class_ip }} t4s-newsletter__email" autocomplete="email" required="required" aria-required="true" aria-label="Email for Newsletter Subscription" onfocus="focusInput(this)" onblur="blurInput(this)">
                 <label class="placeholderav">{{ 'sections.newsletter_form.email_placeholder' | t }}<span class="required">*</span></label>
               </div>              
