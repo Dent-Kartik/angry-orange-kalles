@@ -467,8 +467,9 @@ setTimeout(function(){
 jQuery(document).on('click','.pswp__button',function(event){
    
   // Add an event listener to the checkout button to trap focus
-     var text = $(".pswp__counter").text();
-      console.log("val "+text);
+       let slide_number = $(".pswp__counter").text();
+    slide_number = slide_number.replace("/", "of");
+      console.log("Image "+text);
       $(".pswp__top-bar .sr-only").html(text);
     // if (event.key === 'Tab') {
     //     setTimeout(function(){
