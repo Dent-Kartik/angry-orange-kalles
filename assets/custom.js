@@ -484,4 +484,5 @@ jQuery( document ).ready(function() {
   $('.blog_slider').removeAttr('tabindex'); 
   $('.video-section-inner').removeAttr('tabindex'); 
   $('.t4s-flicky-slider').removeAttr('tabindex'); 
+  $('.t4s-footer-content a.t4s-d-block img').attr("alt","Angry Orange Home link");
 });
