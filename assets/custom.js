@@ -463,6 +463,18 @@ setTimeout(function(){
   $('.t4s-carousel__nav-item.is-nav-selected').siblings().attr('aria-current','false');
 },200);
 });
-jQuery_T4NT('.pswp__counter').on('DOMSubtreeModified', function(){
-  console.log('changed');
-})
+
+jQuery_T4NT(document).on('click','.pswp__button',function(event){
+   
+  // Add an event listener to the checkout button to trap focus
+      console.log("hi");
+    // if (event.key === 'Tab') {
+    //     setTimeout(function(){
+    //         event.preventDefault(); // Prevent default tab behavior
+    //        //  console.log('Working');
+    //      $('.pswp__button--zoom').focus();
+       
+    //     },500);
+    }
+ 
+});
