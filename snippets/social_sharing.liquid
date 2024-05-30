@@ -27,66 +27,66 @@
     assign socials_txt = "socials.follow_fb;socials.follow_tw;socials.follow_it;socials.follow_dr;socials.follow_ld;socials.follow_pr;socials.follow_tu;socials.follow_sp;socials.follow_yt;socials.follow_vm;socials.follow_bh;socials.follow_sc;socials.follow_tt;socials.follow_sptify;socials.follow_threads" | split: ';'  
   endif -%}
 
-<div class="t4s-socials t4s-socials-style-{{ style }} t4s-socials-size-{{ size }} t4s-setts-color-{{ use_color_set }} t4s-row t4s-gx-md-{{ space_h_item }} t4s-gy-md-{{ space_v_item }} t4s-gx-{{ space_h_item_mb }} t4s-gy-{{ space_v_item_mb }}">
+<ul class="t4s-socials t4s-socials-style-{{ style }} t4s-socials-size-{{ size }} t4s-setts-color-{{ use_color_set }} t4s-row t4s-gx-md-{{ space_h_item }} t4s-gy-md-{{ space_v_item }} t4s-gx-{{ space_h_item_mb }} t4s-gy-{{ space_v_item_mb }}">
   {%- unless follow_social -%}  
     {%- if settings.share_facebook -%}
-    <div class="t4s-col-item t4s-col-auto">
+    <li class="t4s-col-item t4s-col-auto">
      <a title='{{ 'socials.share_fb' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="https://www.facebook.com/sharer/sharer.php?u={{ permalinkURL }}" target="{{ target }}" class="facebook" data-tooltip="{{ class_tooltip }}" role="link">
         {%- render 'icon_socials', icon_name: 'facebook' -%} 
      </a>
-    </div>
+    </li>
     {%- endif -%}
     {%- if settings.share_twitter -%}
-      <div class="t4s-col-item t4s-col-auto">
+      <li class="t4s-col-item t4s-col-auto">
         <a title='{{ 'socials.share_tw' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="http://twitter.com/share?text={{ permaTitle }}&amp;url={{ permalinkURL }}" target="{{ target }}" class="twitter" data-tooltip="{{ class_tooltip }}" role="link">
             {%- render 'icon_socials', icon_name: 'twitter' -%} 
         </a>
-      </div>
+      </li>
     {%- endif -%}
     {%- if permaImage != blank -%}
       {%- if settings.share_pinterest -%}
-        <div class="t4s-col-item t4s-col-auto">
+        <li class="t4s-col-item t4s-col-auto">
           <a title='{{ 'socials.share_pr' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="http://pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{{ permaImage }}&amp;description={{ permaTitle }}" target="{{ target }}" class="pinterest" data-tooltip="{{ class_tooltip }}" role="link">
             {%- render 'icon_socials', icon_name: 'pinterest' -%} 
           </a>
-        </div>
+        </li>
       {%- endif -%}        
       {%- if settings.share_tumblr -%}
-        <div class="t4s-col-item t4s-col-auto">
+        <li class="t4s-col-item t4s-col-auto">
           <a title='{{ 'socials.share_tu' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" data-content="http:{{ permaImage }}" href="//tumblr.com/widgets/share/tool?canonicalUrl={{ permalinkURL }}" target="{{ target }}" class="tumblr" data-tooltip="{{ class_tooltip }}" role="link">
             {%- render 'icon_socials', icon_name: 'tumblr' -%} 
           </a>
-        </div>
+        </li>
       {%- endif -%}
     {%- endif -%}
       {%- if settings.share_telegram -%}
-        <div class="t4s-col-item t4s-col-auto">
+        <li class="t4s-col-item t4s-col-auto">
           <a title='{{ 'socials.share_tl' | t | escape }}' data-no-instant rel="nofollow" target="{{ target }}" class="telegram" href="https://telegram.me/share/url?url={{ permalinkURL }}" data-tooltip="{{ class_tooltip }}" role="link"> 
              {%- render 'icon_socials', icon_name: 'telegram' -%} 
           </a>
-        </div>
+        </li>
       {%- endif -%}
       {%- if settings.share_email -%}
-        <div class="t4s-col-item t4s-col-auto">
+        <li class="t4s-col-item t4s-col-auto">
           <a title='{{ 'socials.share_em' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="mailto:?subject={{ permaTitle }}&amp;body={{ permalinkURL }}" target="{{ target }}" class="email" data-tooltip="{{ class_tooltip }}" role="link">
             {%- render 'icon_socials', icon_name: 'mail' -%} 
           </a>
-        </div>
+        </li>
       {%- endif -%}
       {%- if settings.share_whatsapp -%}
-        <div class="t4s-col-item t4s-col-auto">
+        <li class="t4s-col-item t4s-col-auto">
           <a title='{{ 'socials.share_wa' | t | escape }}' data-no-instant rel="nofollow" target="{{ target }}" class="whatsapp" href="https://wa.me/?text={{ permaTitle }}&#x20;{{ permalinkURL }}" data-tooltip="{{ class_tooltip }}" role="link"> 
              {%- render 'icon_socials', icon_name: 'whatsapp' -%} 
           </a>
-        </div>
+        </li>
       {%- endif -%}
   {%- else -%}
     {%- if social_icons -%}
       {%- for social_link in socials -%} {% if settings[social_link] != blank -%}
-        <div class="t4s-col-item t4s-col-auto">
+        <li class="t4s-col-item t4s-col-auto">
           <a title='{{ socials_txt[forloop.index0] | t | escape }}' aria-label='{{ socials_txt[forloop.index0] | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="{{ settings[social_link] | escape }}" target="{{ target }}" class="{{ socials_icon[forloop.index0] }}" data-tooltip="{{ class_tooltip }}" role="link">{%- render 'icon_socials', icon_name: socials_icon[forloop.index0] -%} </a>
-        </div>
+        </li>
       {%- endif -%} {% endfor -%}
     {%- endif -%}
   {%- endunless -%}
-</div>
+</ul>
