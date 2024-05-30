@@ -68,15 +68,17 @@
         {%- if se_stts.enable_discount -%}<button data-tooltip="top" title="{{ 'cart.tool.add_coupon' | t }}" data-cart-tool_action data-id="discount" class="mini_cart_tool_btn is--discount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="add-coupon"> <title id="add-coupon" role="tooltip">Add Coupon</title><path d="M 16 5 L 15.6875 5.28125 L 4.28125 16.8125 L 3.59375 17.5 L 4.28125 18.21875 L 13.78125 27.71875 L 14.5 28.40625 L 15.1875 27.71875 L 26.71875 16.3125 L 27 16 L 27 5 Z M 16.84375 7 L 25 7 L 25 15.15625 L 14.5 25.59375 L 6.40625 17.5 Z M 22 9 C 21.449219 9 21 9.449219 21 10 C 21 10.550781 21.449219 11 22 11 C 22.550781 11 23 10.550781 23 10 C 23 9.449219 22.550781 9 22 9 Z"/></svg></button>{%- endif -%}
       </div>
     {%- else -%}
+        <ul>
       <div data-cart-tools class="t4s-when-cart-emty t4s-mini_cart__tool t4s-mini_cart__tool_button">
         {%- if se_stts.enable_note -%}
-        <button data-cart-tool_action data-id="note" class="mini_cart_tool_btn is--note is--addNote t4s-pr t4s-truncate {{ style_add }}">{{ 'cart.tool.note' | t }}</button>
-        <button data-cart-tool_action data-id="note" class="mini_cart_tool_btn is--note is--editNote t4s-pr t4s-truncate {{ style_edit }}">{{ 'cart.tool.edit_note' | t }}</button>
+        <li><button data-cart-tool_action data-id="note" class="mini_cart_tool_btn is--note is--addNote t4s-pr t4s-truncate {{ style_add }}">{{ 'cart.tool.note' | t }}</button></li>
+          <li><button data-cart-tool_action data-id="note" class="mini_cart_tool_btn is--note is--editNote t4s-pr t4s-truncate {{ style_edit }}">{{ 'cart.tool.edit_note' | t }}</button></li>
         {%- endif -%}
-        {%- if se_stts.enable_gift_wrap and gift_pr.available == true -%}<div data-toogle-gift data-cart-tool_action data-id="gift" class="mini_cart_tool_btn is--gift t4s-pr t4s-truncate"{% if arr_gift_id.size > 0 %} style=" display:none"{% endif %}>{{ 'cart.tool.add_gift_wrap' | t }}</button>{%- endif -%}
-        {%- if se_stts.enable_rates -%}<button data-cart-tool_action data-id="rates" class="mini_cart_tool_btn is--rates t4s-pr t4s-truncate" role="button">{{ 'cart.shipping_estimator.estimate' | t }}</button>{%- endif -%}
-        {%- if se_stts.enable_discount -%}<button data-cart-tool_action data-id="discount" class="mini_cart_tool_btn is--discount t4s-pr t4s-truncate" role="button">{{ 'cart.tool.add_coupon' | t }}</button>{%- endif -%}
+        {%- if se_stts.enable_gift_wrap and gift_pr.available == true -%}  <li><button data-toogle-gift data-cart-tool_action data-id="gift" class="mini_cart_tool_btn is--gift t4s-pr t4s-truncate"{% if arr_gift_id.size > 0 %} style=" display:none"{% endif %}>{{ 'cart.tool.add_gift_wrap' | t }}</button></li>{%- endif -%}
+        {%- if se_stts.enable_rates -%}  <li><button data-cart-tool_action data-id="rates" class="mini_cart_tool_btn is--rates t4s-pr t4s-truncate" role="button">{{ 'cart.shipping_estimator.estimate' | t }}</button></li>{%- endif -%}
+        {%- if se_stts.enable_discount -%}  <li><button data-cart-tool_action data-id="discount" class="mini_cart_tool_btn is--discount t4s-pr t4s-truncate" role="button">{{ 'cart.tool.add_coupon' | t }}</button></li>{%- endif -%}
       </div>
+      </ul>
    {%- endif -%}
 {%- endcapture -%}
 
