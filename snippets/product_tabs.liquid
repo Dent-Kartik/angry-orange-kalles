@@ -62,7 +62,8 @@ assign listTyCurent2 = '' -%}
     <div class="t4s-tabs t4s-type-tabs t4s-accordion-mb-{% if tabs_design_mb == 'accordion' %}true{% else %}false{% endif %}" data-t4s-tabs data-t4s-accordion-pr>
         
         {%- if tabs_design == 'tab' %}{% assign forloop_first = true -%}
-        <ul class="t4s-tabs-ul t4s-tabs-pr-ul t4s-flicky-slider t4s-slider-btn-style-simple t4s-slider-btn-none t4s-slider-btn-small t4s-slider-btn-vi-always flickityt4s" data-t4s-tab-ul data-flickityt4s-js='{"isSimple": true,"freeScroll": true, "setPrevNextButtons":true, "arrowIcon":"1", "imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign":"center", "wrapAround": false,"prevNextButtons": true,"percentPosition": 0,"pageDots": false, "pauseAutoPlayOnHover" : true }'>
+        <div class="t4s-tabs-ul t4s-tabs-pr-ul t4s-flicky-slider t4s-slider-btn-style-simple t4s-slider-btn-none t4s-slider-btn-small t4s-slider-btn-vi-always flickityt4s" data-t4s-tab-ul data-flickityt4s-js='{"isSimple": true,"freeScroll": true, "setPrevNextButtons":true, "arrowIcon":"1", "imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign":"center", "wrapAround": false,"prevNextButtons": true,"percentPosition": 0,"pageDots": false, "pauseAutoPlayOnHover" : true }'>
+         <ul role="tablist">
           {%- for type in tabBlocks -%}
 
             {%- liquid 
@@ -103,11 +104,12 @@ assign listTyCurent2 = '' -%}
             endcase
            -%}
 
-          <li class="t4s-d-inline-flex"><a id="b_{{ bk_id }}"{% if forloop_first %} class="t4s-active"{% endif %} href="#{{ tab_id }}" rel="nofollow" data-t4s-tab-item data-no-instant>{{ bk_stts.title | escape }}</a></li>
+          <li class="t4s-d-inline-flex"><a id="b_{{ bk_id }}"{% if forloop_first %} class="t4s-active" aria-selected="true"{% else %} aria-selected="false" tabindex="-1"{% endif %} href="#{{ tab_id }}" rel="nofollow" data-t4s-tab-item data-no-instant role="tab" aria-controls="{{ tab_id }}">{{ bk_stts.title | escape }}</a></li>
           
           {%- assign forloop_first = false -%}
           {%- endfor -%}
         </ul>
+        </div>
         {%- endif -%}
         
         {%- liquid 
@@ -138,7 +140,7 @@ assign listTyCurent2 = '' -%}
             {%- when 'tab_des' %}
               <div class="t4s-tab-wrapper{{ class_first_tab }}" data-t4s-tab-wrapper>
                 <a id="t44_{{ bk_id }}" href="#{{ idTabDes }}" rel="nofollow" class="t4s-tab__title t4s-fwm t4s-ch" data-t4s-tab-item data-no-instant><span class="t4s-tab__text">{{ bk_stts.title | escape }}</span><span class="t4s-tab__icon" role="presentation"></span></a>
-                <div id="{{ idTabDes }}" class="t4s-rte t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content>{{- product.description -}}</div>
+                <div id="{{ idTabDes }}" class="t4s-rte t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content role="tabpanel" aria-labelledby="b_{{ bk_id }}">{{- product.description -}}</div>
              </div>
              {%- assign forloop_first = false %}{% assign isEmty = false -%}
 
@@ -172,7 +174,7 @@ assign listTyCurent2 = '' -%}
             {%- when 'tab_add' %}{% if isProductDefault %}{% continue %}{% endif -%}
               <div class="t4s-tab-wrapper{{ class_first_tab }}" data-t4s-tab-wrapper>
                 <a id="t44_{{ bk_id }}" href="#{{ tab_id }}" rel="nofollow" class="t4s-tab__title t4s-fwm t4s-ch" data-t4s-tab-item data-no-instant><span class="t4s-tab__text">{{ bk_stts.title | escape }}</span><span class="t4s-tab__icon" role="presentation"></span></a>
-                <div id="{{ tab_id }}" class="t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content>
+                <div id="{{ tab_id }}" class="t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content role="tabpanel" aria-labelledby="b_{{ bk_id }}">
                   <table class="t4s-pr_attrs">
                     <tbody>
                       {%- for product_option in product.options_with_values -%}
@@ -192,14 +194,14 @@ assign listTyCurent2 = '' -%}
             {%- when 'tab_buy' %}{% if nav_up_size == 0 %}{% continue %}{% endif -%}
               <div class="t4s-tab-wrapper{{ class_first_tab }}" data-t4s-tab-wrapper>
                 <a id="t44_{{ bk_id }}" href="#{{ tab_id }}" rel="nofollow" class="t4s-tab__title t4s-fwm t4s-ch" data-t4s-tab-item data-no-instant><span class="t4s-tab__text">{{ bk_stts.title | escape }}</span><span class="t4s-tab__icon" role="presentation"></span></a>
-                <div id="{{ tab_id }}" class="t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content>{%- render 't4s-pr-FBT', product: product, nav_up_size: nav_up_size, class: 'is--tab-product' -%}</div>
+                <div id="{{ tab_id }}" class="t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content role="tabpanel" aria-labelledby="b_{{ bk_id }}">{%- render 't4s-pr-FBT', product: product, nav_up_size: nav_up_size, class: 'is--tab-product' -%}</div>
              </div>
              {%- assign forloop_first = false %}{% assign isEmty = false -%}
 
             {%- when 'tab_html' %}{% assign bk_title =  bk_stts.title | default: bk_stts.page.title %}{%- if bk_title == blank or bk_stts.page.content == blank and bk_stts.content == blank %}{% continue %}{% endif -%}
               <div class="t4s-tab-wrapper{{ class_first_tab }}" data-t4s-tab-wrapper>
                 <a id="t44_{{ bk_id }}" href="#{{ tab_id }}" rel="nofollow" class="t4s-tab__title t4s-fwm t4s-ch" data-t4s-tab-item data-no-instant><span class="t4s-tab__text">{{ bk_title | escape }}</span><span class="t4s-tab__icon" role="presentation"></span></a>
-                <div id="{{ tab_id }}" class="t4s-rte t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content>
+                <div id="{{ tab_id }}" class="t4s-rte t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content role="tabpanel" aria-labelledby="b_{{ bk_id }}">
                   {{ bk_stts.content }}
                   {{ bk_stts.page.content }}
                 </div>
@@ -209,7 +211,7 @@ assign listTyCurent2 = '' -%}
             {%- when 'tab_liquid' %}{% if bk_stts.title == blank or bk_stts.custom_liquid == blank %}{% continue %}{% endif -%}
               <div class="t4s-tab-wrapper{{ class_first_tab }}" data-t4s-tab-wrapper>
                 <a id="t44_{{ bk_id }}" href="#{{ tab_id }}" rel="nofollow" class="t4s-tab__title t4s-fwm t4s-ch" data-t4s-tab-item data-no-instant><span class="t4s-tab__text">{{ bk_stts.title | escape }}</span><span class="t4s-tab__icon" role="presentation"></span></a>
-                <div id="{{ tab_id }}" class="t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content>{{ bk_stts.custom_liquid }}</div>
+                <div id="{{ tab_id }}" class="t4s-tab-content{{ class_first_tab }}" data-t4s-tab-content role="tabpanel" aria-labelledby="b_{{ bk_id }}">{{ bk_stts.custom_liquid }}</div>
              </div>
              {%- assign forloop_first = false %}{% assign isEmty = false -%}
 
