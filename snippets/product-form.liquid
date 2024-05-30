@@ -119,7 +119,7 @@
             {%- if get_color contains name_downcase -%}
               
               <div data-swatch-option data-id="{{ forloop.index0 }}" class="t4s-swatch__option is-t4s-style__color is-t4s-name__{{ option_name | handle }} {% cycle 'is--first-color', '', '' %}">
-                <h4 class="t4s-swatch__title"><span>{{ forloop.index }}. Select {{ option_name }}: <span data-current-value class="t4s-dib t4s-swatch__current">{{ selected_value | default: choose_an_option }}</span></span>{% if name_sizeg == name_downcase %}{{ html_sizeg }}{% endif %}</h4>
+                <h2 class="t4s-swatch__title"><span>{{ forloop.index }}. Select {{ option_name }}: <span data-current-value class="t4s-dib t4s-swatch__current">{{ selected_value | default: choose_an_option }}</span></span>{% if name_sizeg == name_downcase %}{{ html_sizeg }}{% endif %}</h2>
                 <ul data-swatch-list class="t4s-swatch__list " id="list">
                   {%- if color_mode != 'dropdown' -%}
                     {%-  if  current_variant.inventory_quantity > 0 -%}
@@ -127,13 +127,13 @@
                       {%- endif -%}
                     {%- for value in option.values -%}
                       
-                    <li data-swatch-item data-tooltip{{ show_tooltip }}="top" title="{{ value | escape }}"  class="t4s-swatch__item {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}">{{ value }}</li>
+                    <li data-swatch-item data-tooltip{{ show_tooltip }}="top" title="{{ value | escape }}" class="t4s-swatch__item {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</li>
                     {%- endfor -%}
                     {% if loopindex > 5 %}
                     <li class="lazyloadt4sed "><button class="  t4s-swatch__item " id="show-more">More+</button></li>
                       {%- endif -%}
                   {%- else -%}
-                    <button type="button" data-dropdown-open data-position="bottom-end" data-id="t4s_nt_{{ pr_se_id }}{{ forloop.index }}"><span  data-current-value>{{ selected_value | default: choose_an_option }}</span><svg class="t4s-icon-select-arrow" role="presentation" viewBox="0 0 19 12"><use xlink:href="#t4s-select-arrow"></use></svg></button>
+                    <button type="button" data-dropdown-open data-position="bottom-end" data-id="t4s_nt_{{ pr_se_id }}{{ forloop.index }}"><span  data-current-value>{{ selected_value | default: choose_an_option }}</span><svg class="t4s-icon-select-arrow" role="presentation" viewBox="0 0 19 12" aria-label="Dropdown Arrow Icon"><use xlink:href="#t4s-select-arrow"></use></svg></button>
                     <div data-dropdown-wrapper class="t4s-dropdown__wrapper t4s-current-scrollbar" id="t4s_nt_{{ pr_se_id }}{{ forloop.index }}">
                       <div class="t4s-drop-arrow"></div>
                       <div class="t4s-dropdown__header">
@@ -143,7 +143,7 @@
                       <div class="t4s-dropdown__content">
                           {%- for value in option.values -%}
                             {% assign loopindex = forloop.index | minus: 1 %}
-                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="{{ loopindex }}">{{ value }}</div>
+                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</div>
                           {%- endfor -%}
                       </div>
                     </div>
@@ -155,16 +155,16 @@
             {%- else -%}
 
               <div data-swatch-option data-id="{{ forloop.index0 }}" class="t4s-swatch__option is-t4s-name__{{ option_name | handle }}">
-                <h4 class="t4s-swatch__title"><span>{{ forloop.index }}. Select {{ option_name }}: <span data-current-value class="t4s-dib t4s-swatch__current">{{ selected_value | default: choose_an_option }}</span></span>{% if name_sizeg == name_downcase %}{{ html_sizeg }}{% endif %}</h4>
+                <h2 class="t4s-swatch__title"><span>{{ forloop.index }}. Select {{ option_name }}: <span data-current-value class="t4s-dib t4s-swatch__current">{{ selected_value | default: choose_an_option }}</span></span>{% if name_sizeg == name_downcase %}{{ html_sizeg }}{% endif %}</h2>
                 <ul class="t4s-swatch__list flexbox">
                   {%- if selector_mode != 'dropdown' -%}
                     {%- for value in option.values -%}
                       {% assign loopindex = forloop.index | minus: 1 %}
-                    <li data-swatch-item class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="{{ loopindex }}">{{ value }}</li>
+                    <li data-swatch-item class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</li>
                     {%- endfor -%}
             
                   {%- else -%}
-                    <button type="button" data-dropdown-open data-position="bottom-end" data-id="t4s_nt_{{ pr_se_id }}{{ forloop.index }}"><span data-current-value>{{ selected_value | default: choose_an_option }}</span><svg class="t4s-icon-select-arrow" role="presentation" viewBox="0 0 19 12"><use xlink:href="#t4s-select-arrow"></use></svg></button>
+                    <button type="button" data-dropdown-open data-position="bottom-end" data-id="t4s_nt_{{ pr_se_id }}{{ forloop.index }}"><span data-current-value>{{ selected_value | default: choose_an_option }}</span><svg class="t4s-icon-select-arrow" role="presentation" viewBox="0 0 19 12" aria-label="Dropdown Arrow Icon"><use xlink:href="#t4s-select-arrow"></use></svg></button>
                     <div data-dropdown-wrapper class="t4s-dropdown__wrapper t4s-current-scrollbar" id="t4s_nt_{{ pr_se_id }}{{ forloop.index }}">
                       <div class="t4s-drop-arrow"></div>
                       <div class="t4s-dropdown__header">
@@ -174,7 +174,7 @@
                       <div class="t4s-dropdown__content">
                           {%- for value in option.values -%}
                             {% assign loopindex = forloop.index | minus: 1 %}
-                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="{{ loopindex }}">{{ value }}</div>
+                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</div>
                           {%- endfor -%}
                       </div>
                     </div>
@@ -240,7 +240,7 @@
               <div data-quantity-wrapper class="t4s-quantity-wrapper t4s-product-form__qty"> 
                 
                 <button data-quantity-selector data-decrease-qty type="button" class="t4s-quantity-selector is--minus" aria-label="Decrease Quantity"><svg focusable="false" class="icon icon--minus" viewBox="0 0 10 2" role="presentation"><path d="M10 0v2H0V0z" fill="currentColor"></path></svg></button>
-                <input data-quantity-value type="number" class="t4s-quantity-input" step="{{ current_variant.quantity_rule.increment | default: 1 }}" min="{{ cus_qty }}" max="{{ max_qty }}" name="quantity" value="{{ cus_qty }}" size="4" pattern="[0-9]*" inputmode="numeric" aria-required="true" aria-label="Quantity Input">
+                <input data-quantity-value type="number" class="t4s-quantity-input" step="{{ current_variant.quantity_rule.increment | default: 1 }}" min="{{ cus_qty }}" max="{{ max_qty }}" name="quantity" value="{{ cus_qty }}" size="4" pattern="[0-9]*" inputmode="numeric" aria-required="true" aria-label="Quantity">
                 <button data-quantity-selector data-increase-qty type="button" class="t4s-quantity-selector is--plus" aria-label="Increase Quantity"><svg focusable="false" class="icon icon--plus" viewBox="0 0 10 10" role="presentation"><path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path></svg></button>
               </div>
             {%- else -%}
