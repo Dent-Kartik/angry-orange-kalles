@@ -120,7 +120,7 @@ endif -%}
       </div>
       {%- if size_count > 0 and pr_size_pos == '1' %}{%- render 'product-size', size_variants: size_variants, size_variants_avai: size_variants_avai, show_size_type: show_size_type -%}{% endif -%}
       {%- if use_countdown and countdown != blank %}{%- render 'product-countdown', countdown: countdown %}{% endif -%}
-      <a data-pr-href class="t4s-full-width-link prlink" href="{{ pr_url }}" aria-label="Link to {{ product.title }}"  data-proid="{{ product.id }}" data-ptitle='{{ product.title | escape }}' data-vendor="{{ product.vendor }}" {% if template.name == 'collection' %}data-cat="{{ collection.title }}"{% elsif template.name == 'product' %}data-cat="Related Products"{% endif %} data-price="{{ product.price }}" data-quantity="1" data-variantname="{{ product.selected_or_first_available_variant.title }}"></a>
+      <a data-pr-href class="t4s-full-width-link prlink" role="link" href="{{ pr_url }}" aria-label="Link to {{ product.title }}"  data-proid="{{ product.id }}" data-ptitle='{{ product.title | escape }}' data-vendor="{{ product.vendor }}" {% if template.name == 'collection' %}data-cat="{{ collection.title }}"{% elsif template.name == 'product' %}data-cat="Related Products"{% endif %} data-price="{{ product.price }}" data-quantity="1" data-variantname="{{ product.selected_or_first_available_variant.title }}"></a>
     </div>
     <div class="t4s-product-info">
       <div class="t4s-product-info__inner">
