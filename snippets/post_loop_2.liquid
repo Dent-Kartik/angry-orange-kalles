@@ -1,11 +1,11 @@
 {%- assign image = post.image -%}
-<article class="t4s-col-item t4s-post t4s-post-item t4s-post-des-2">
+<article class="t4s-col-item t4s-post t4s-post-item t4s-post-des-2" role="group" aria-label="blog post">
 	<div class="t4s-post-inner" timeline hdt-reveal="slide-in">
 		{%- if image != blank -%}
 			<div class="t4s-post-thumb">
 				<a class="t4s-eff t4s-eff-{{ b_effect }} t4s-eff-img-{{ img_effect }} t4s-d-block" href="{{ post.url }}"  aria-label="Visit post - {{ post.title }}">
 					<div class="t4s_ratio t4s-bg-11" style="background: url({{ image | image_url: width: 1 }});--aspect-ratioapt: {{ image.aspect_ratio | default: 2 }}"  data-cacl-slide role="img" aria-label="{{ blog.title | escape }}">
-						<img class="lazyloadt4s t4s-lz--fadeIn t4s-obj-eff" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
+						<img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s t4s-lz--fadeIn t4s-obj-eff" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
 					</div>
 				</a>
 				{%- if show_cate -%}
