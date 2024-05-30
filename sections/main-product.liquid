@@ -971,19 +971,20 @@ endif -%}
       {%- unless isProductDefault -%}
        {%- if se_stts.enable_select -%}
           <link rel="stylesheet" href="{{ 'base_drop.min.css' | asset_url }}" media="all">
+<label class="sr-only" id="variant-selection">Select a variant</label>
           <div class="t4s-dropdown t4s-dropdown__sortby">
-            <button type="button" data-dropdown-open data-position="bottom-end" data-id="t4s__dropdown-{{ pr_se_id }}" class="t4s-truncate"><span>{{ current_variant.title | escape }}</span><svg class="t4s-icon-select-arrow" role="presentation" viewBox="0 0 19 12"><use xlink:href="#t4s-select-arrow"></use></svg></button>
+            <button type="button" data-dropdown-open data-position="bottom-end" data-id="t4s__dropdown-{{ pr_se_id }}" class="t4s-truncate" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-controls="t4s__dropdown-{{ pr_se_id }}" aria-label="Variant selection list" id="sticky-dropdown" aria-activedescendant=""><span>{{ current_variant.title | escape }}</span><svg class="t4s-icon-select-arrow" role="presentation" viewBox="0 0 19 12" aria-label="Dropdown Arrow"><use xlink:href="#t4s-select-arrow"></use></svg></button>
             <div data-dropdown-wrapper class="t4s-dropdown__wrapper t4s-current-scrollbar" id="t4s__dropdown-{{ pr_se_id }}">
                <div class="t4s-drop-arrow"></div>
                <div class="t4s-dropdown__header">
                   <span class="t4s-dropdown__title"></span><button data-dropdown-close="" aria-label="Close"><svg role="presentation" class="t4s-iconsvg-close" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></button>
                </div>
-               <div data-sticky-select class="t4s-dropdown__content t4s-current-scrollbar">
+               <div data-sticky-select class="t4s-dropdown__content t4s-current-scrollbar" role="listbox" aria-labelledby="variant-selection">
                 {%- for variant in pr_variants -%}
                   {%- if variant.available -%}
-                  <button data-dropdown-item data-value="{{ variant.id }}"{% if variant.id == current_variant.id %} class="is--selected"{% endif %}>{{ variant.title | escape }}</button>
+                  <button data-dropdown-item data-value="{{ variant.id }}"{% if variant.id == current_variant.id %} class="is--selected" aria-selected="true"{% endif %} role="option" id="dropdownop-{{ forloop.index }}">{{ variant.title | escape }}</button>
                   {%- else -%}
-                  <button data-dropdown-item data-value="{{ variant.id }}" disabled="disabled"{% if variant.id == current_variant.id %} class="is--selected"{% endif %}>{{ variant.title | escape }} - {{ 'products.product.sold_out' | t | escape }}</button>
+                  <button data-dropdown-item data-value="{{ variant.id }}" disabled="disabled"{% if variant.id == current_variant.id %} class="is--selected" aria-selected="true"{% endif %} role="option" id="dropdownop-{{ forloop.index }}">{{ variant.title | escape }} - {{ 'products.product.sold_out' | t | escape }}</button>
                   {%- endif -%}
                 {%- endfor -%}
               </div>
@@ -4648,3 +4649,15 @@ dataLayer.push({
   }
 }
 {% endschema %}
+<script>
+   const listItems = document.querySelectorAll('.t4s-swatch__item');
+
+    listItems.forEach(item => {
+        item.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                // Trigger click event
+                this.click();
+            }
+        });
+    });
+</script>
