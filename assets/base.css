@@ -4951,3 +4951,7 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
 .pswp__button:focus {
     outline: .2rem solid white;
 }
+.pswp__top-bar {
+    display: flex;
+    justify-content: flex-end;
+}
