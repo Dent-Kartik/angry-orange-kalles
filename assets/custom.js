@@ -464,6 +464,13 @@ setTimeout(function(){
 },200);
 });
 
+jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
+   
+  // Add an event listener to the checkout button to trap focus
+       let slide_number = $(".pswp__counter").text();
+      $(".pswp__top-bar .sr-only").html("Image "+slide_number);
+ 
+});
 jQuery(document).on('click','.pswp__button',function(event){
    
   // Add an event listener to the checkout button to trap focus
@@ -471,13 +478,5 @@ jQuery(document).on('click','.pswp__button',function(event){
     slide_number = slide_number.replace("/", "of");
       console.log("Image "+slide_number);
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);
-    // if (event.key === 'Tab') {
-    //     setTimeout(function(){
-    //         event.preventDefault(); // Prevent default tab behavior
-    //        //  console.log('Working');
-    //      $('.pswp__button--zoom').focus();
-       
-    //     },500);
-    // }
  
 });
