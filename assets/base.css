@@ -4948,3 +4948,6 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
 .hiddennav {
     display: none
 }
+.pswp__button:focus {
+    outline: .2rem solid white;
+}
