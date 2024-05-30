@@ -419,7 +419,7 @@ echo '<div id="t4s-snow_ef" class="t4s-dn"></div><div id="t4s-assets-pre" class=
 
 {%- unless customer or settings.login_side == false or request.page_type contains 'customers' -%}
 <link href="{{ 'login-sidebar.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
-<div id="t4s-login-sidebar" class="t4s-drawer t4s-drawer__right" aria-hidden="true">
+<div id="t4s-login-sidebar" class="t4s-drawer t4s-drawer__right" aria-hidden="true" aria-label="Login" role="dialog" aria-modal="true">
     <div class="t4s-skeleton-element ske-h-50 ske-mt-20 ske-mrl-20 ske-shine"></div>
     <div class="t4s-skeleton-element ske-h-50 ske-mrl-20"></div><div class="t4s-skeleton-element ske-h-50 ske-mrl-20"></div><div class="t4s-skeleton-element ske-h-20 ske-mrl-20"></div>
     <div class="t4s-skeleton-element ske-h-50 ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-h-50 ske-mrl-20 ske-shine"></div>
