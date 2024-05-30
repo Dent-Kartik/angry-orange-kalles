@@ -468,8 +468,8 @@ jQuery(document).on('click','.pswp__button',function(event){
    
   // Add an event listener to the checkout button to trap focus
      var text = $(".pswp__counter").val();
+      console.log("val "+text);
       $(".pswp__top-bar .sr-only").html(text);
-      console.log(text);
     // if (event.key === 'Tab') {
     //     setTimeout(function(){
     //         event.preventDefault(); // Prevent default tab behavior
