@@ -464,7 +464,7 @@ setTimeout(function(){
 },200);
 });
 
-jQuery_T4NT(document).on('click','.pswp__button',function(event){
+jQuery(document).on('click','.pswp__button',function(event){
    
   // Add an event listener to the checkout button to trap focus
       console.log("hi");
@@ -475,6 +475,6 @@ jQuery_T4NT(document).on('click','.pswp__button',function(event){
     //      $('.pswp__button--zoom').focus();
        
     //     },500);
-    }
+    // }
  
 });
