@@ -370,7 +370,7 @@ display: none;
     text-align: center;
    padding:0px !important;
 }
-.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >div,.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >button{
+.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >div,.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >button,.t4s-mini_cart__tool.t4s-mini_cart__tool_icon >li{
     border: 0;
     display: inline-flex;
     align-items: center;
