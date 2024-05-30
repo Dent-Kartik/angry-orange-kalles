@@ -10,8 +10,8 @@
 		assign placeholder_img = settings.placeholder_img
 	 -%}
 	<div class="t4s-minicart-recommendations t4s_bk_flickity t4s_ratioadapt">
-		<div class="t4s-minicart-recommendations__title t4s-text-center">{{ 'cart.mini_cart.title_recommendations' | t }}</div>
-		<div class="t4s-minicart-recommendations_items t4s-row t4s-row-cols-1 t4s-g-0 flickityt4s" data-flickityt4s-js='{"setPrevNextButtons":true,"arrowIcon":"2","imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": 0,"pageDots": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true }' style="--space-dots: 8px;--flickity-btn-pos: 0px;--flickity-btn-pos-mb: 0px;">
+		<div class="t4s-minicart-recommendations__title t4s-text-center" role="heading" aria-level="2">{{ 'cart.mini_cart.title_recommendations' | t }}</div>
+<div role="region" aria-label="Cart Recommendation carousel">		<div class="t4s-minicart-recommendations_items t4s-row t4s-row-cols-1 t4s-g-0 flickityt4s" data-flickityt4s-js='{"setPrevNextButtons":true,"arrowIcon":"2","imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": 0,"pageDots": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true }' style="--space-dots: 8px;--flickity-btn-pos: 0px;--flickity-btn-pos-mb: 0px;">
 		    {%- for product in recommendations.products -%}
 		    	{%- liquid
 				    assign pr_url = product.url
@@ -21,7 +21,7 @@
 		       		<div class="t4s-row t4s-g-0 t4s-align-items-center">
 						<div class="t4s-col-item t4s-col-auto t4s-minicart-recommendations__item--img">
 							{%- if image != blank -%}
-								<a class="t4s-d-block t4s-pr t4s-oh t4s_ratio" href="{{ pr_url }}"style="--aspect-ratioapt: {{ image.aspect_ratio | default: 1 }}">
+								<a class="t4s-d-block t4s-pr t4s-oh t4s_ratio" href="{{ pr_url }}"style="--aspect-ratioapt: {{ image.aspect_ratio | default: 1 }}" {% if forloop.index != 1 %}tabindex="-1" aria-hidden="true"{% endif %}>
 									<img class="lazyloadt4s" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
 									<span class="lazyloadt4s-loader is-bg-img" style="background: url({{ image | image_url: width: 1 }});"></span>
 								</a>
@@ -29,16 +29,16 @@
 						</div>
 						<div class="t4s-col-item t4s-col t4s-pr t4s-oh">
 							{%- if enable_rating -%}{%- render 'product-rating', product: product, app_review: app_review -%}{%- endif -%}
-							<a href="{{ pr_url }}" class="t4s-d-block t4s-minicart-recommendations__item--title t4s-truncate">{{ product.title }}</a>
+							<a href="{{ pr_url }}" class="t4s-d-block t4s-minicart-recommendations__item--title t4s-truncate" {% if forloop.index != 1 %}tabindex="-1" aria-hidden="true"{% endif %}><h3 class="cart_recommendation_prt">{{ product.title }}</h3></a>
 							{%- render 'product-price', class_price: 't4s-minicart-recommendations__item--price', product: product, price_varies_style: price_varies_style, type: 'card', isGrouped: false -%}
 						</div>
-						{%- if settings.enable_quickview %}<div class="t4s-col-item t4s-col-auto"><a href="{{ pr_url }}" data-id="{{ product.id }}" data-tooltip="top" title="{{ 'products.product_card.quick_view' | t | escape }}" rel="nofollow" class="t4s-minicart-recommendations__item--qv t4s-btn-loading__svg" data-action-quickview>
+						{%- if settings.enable_quickview %}<div class="t4s-col-item t4s-col-auto"><a href="{{ pr_url }}" data-id="{{ product.id }}" data-tooltip="top" title="{{ 'products.product_card.quick_view' | t | escape }}" rel="nofollow" class="t4s-minicart-recommendations__item--qv t4s-btn-loading__svg" data-action-quickview {% if forloop.index != 1 %}tabindex="-1" aria-hidden="true"{% endif %}>
 							<svg viewBox="0 0 24 24" class="t4s-btn-op0"><use xlink:href="#t4s-icon-qv"></use></svg>
 							<span class="t4s-loading__spinner" hidden><svg width="16" height="16" hidden="" class="t4s-svg-spinner" focusable="false" role="presentation" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="t4s-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></span>
 						</a></div>{% endif %}
 					</div>
                 </div>
 		    {%- endfor -%}
-	    </div>
+	    </div></div>
     </div>
 {%- endif -%} 
