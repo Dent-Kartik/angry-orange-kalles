@@ -266,7 +266,7 @@
             "type": "image",
             "settings": {
               "image_child": "shopify:\/\/shop_images\/AO-Wordmark_O.png",
-              "link_img": "",
+              "link_img": "\/",
               "img_width": 160,
               "img_width_mb": 120,
               "mgb": 20,
