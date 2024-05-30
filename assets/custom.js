@@ -483,4 +483,5 @@ jQuery(document).on('click','.pswp__button',function(event){
 jQuery( document ).ready(function() {
   $('.blog_slider').removeAttr('tabindex'); 
   $('.video-section-inner').removeAttr('tabindex'); 
+  $('.t4s-flicky-slider').removeAttr('tabindex'); 
 });
