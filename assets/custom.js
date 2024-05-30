@@ -480,3 +480,6 @@ jQuery(document).on('click','.pswp__button',function(event){
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);
  
 });
+jQuery( document ).ready(function() {
+  $('.blog_slider').removeAttr('tabindex'); 
+});
