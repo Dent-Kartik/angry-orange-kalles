@@ -252,14 +252,15 @@ endif -%}
   {%- endif -%}
 </template>
 <template id="t4s_temp_modal">
-  <div class="t4s-modal" aria-hidden="true" tabindex="-1" role="dialog">
+  <div class="t4s-modal" aria-hidden="false" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="t4s-modal__inner">
-      <div class="t4s-modal__content"></div>
-      <button data-t4s-modal-close title="{{ 'general.popup.close' | t }}" type="button" class="t4s-modal-close"><svg class="t4s-modal-icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></button>
+  <button data-t4s-modal-close title="{{ 'general.popup.close' | t }}" type="button" class="t4s-modal-close" aria-label="close"><svg class="t4s-modal-icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></button> 
+     <div class="t4s-modal__content"></div>
+    
     </div>
   </div>
 </template>
-<template id ="photoswipe_template"><div class="pswp pswp__t4s" tabindex="-1" role="dialog" aria-hidden="false"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><span class="sr-only"></span><div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="{{ 'general.popup.close' | t }}"></button> <button class="pswp__button pswp__button--share" title="{{ 'general.popup.pswp_share' | t }}"></button> <button class="pswp__button pswp__button--fs" title="{{ 'general.popup.pswp_fs' | t }}"></button> <button class="pswp__button pswp__button--zoom" title="{{ 'general.popup.pswp_zoom' | t }}"></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="{{ 'general.popup.pswp_prev' | t }}"></button> <button class="pswp__button pswp__button--arrow--right" title="{{ 'general.popup.pswp_next' | t }}"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div><div class="pswp__thumbnails t4s-current-scrollbar t4s-scheme-light"></div></div></template>
+<template id ="photoswipe_template"><div class="pswp pswp__t4s" tabindex="-1" role="dialog" aria-modal="true" aria-hidden="false" aria-labelledby="photoZoomTitle"><h2 id="photoZoomTitle" class="sr-only">Photo Zoom Modal</h2><div class="pswp__bg"></div><div class="pswp__scroll-wrap" role="region" aria-label="Zoomed Product Image Carousel"><div class="pswp__container"><div class="pswp__item" aria-hidden="true" tabindex="-1"></div><div class="pswp__item"></div><div class="pswp__item" aria-hidden="true" tabindex="-1"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button class="pswp__button pswp__button--zoom" title="{{ 'general.popup.pswp_zoom' | t }}" aria-label="{{ 'general.popup.pswp_zoom' | t }}"></button> <button class="pswp__button pswp__button--fs" title="{{ 'general.popup.pswp_fs' | t }}" aria-label="{{ 'general.popup.pswp_fs' | t }}"></button> <button class="pswp__button pswp__button--share" title="{{ 'general.popup.pswp_share' | t }}" aria-label="{{ 'general.popup.pswp_share' | t }}" aria-controls="share_modal" aria-expanded="false"></button> <button class="pswp__button pswp__button--close" title="{{ 'general.popup.close' | t }}" aria-label="close"><span class="sr-only">close</span></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap" id="share_modal"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="{{ 'general.popup.pswp_prev' | t }}" aria-label="{{ 'general.popup.pswp_prev' | t }}"></button> <button class="pswp__button pswp__button--arrow--right" title="{{ 'general.popup.pswp_next' | t }}" aria-label="{{ 'general.popup.pswp_next' | t }}"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div><div class="pswp__thumbnails t4s-current-scrollbar t4s-scheme-light"></div></div></template>
 {%- if settings.wishlist_mode == "2" and customer %}{% assign customer_meta_wis_prs = customer.metafields.the4.wishlist.value.the4_ids %}<script type="application/json" id="wis_t4s_list">{% if customer_meta_wis_prs != blank %}{{- customer_meta_wis_prs | join: ' ' | strip -}}{% endif %}</script>{% endif -%}
 
 <template id="t4s-notices__tmp">
@@ -278,9 +279,9 @@ endif -%}
 
 <link rel="stylesheet" href="{{ 'mobile_nav.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- if admin_sp -%}
-   <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left t4s-dn{% if is_page_index %} t4s-page-index-{{ page.id }}{% endif %}" aria-hidden="true">
+   <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left t4s-dn{% if is_page_index %} t4s-page-index-{{ page.id }}{% endif %}" aria-hidden="true" role="dialog" aria-modal="true">
      {%- if mobile_nav_type == '1' or mobile_nav_type == '2' -%}
-     <div class="t4s-drawer__header"><span>{% if mobile_nav_type == '1' %}{%- assign navActive = 'is--active' -%}{{ 'general.mobile_menu.menu' | t }}{% else %}{%- assign catActive = 'is--active' -%}{{ 'general.mobile_menu.categories' | t }}{% endif %}</span></div>
+     <div class="t4s-drawer__header"><span role="heading" aria-level="1">{% if mobile_nav_type == '1' %}{%- assign navActive = 'is--active' -%}{{ 'general.mobile_menu.menu' | t }}{% else %}{%- assign catActive = 'is--active' -%}{{ 'general.mobile_menu.categories' | t }}{% endif %}</span></div>
      {%- else -%}
       
       {%- liquid
@@ -304,7 +305,7 @@ endif -%}
    {%- if page_type != 'cart' and settings.cart_type != 'disable' %}{% section 'mini_cart' %}</div>{% endif -%}
    
 {%- else -%}
-   <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left{% if settings.header_design != 'sidebar' %} t4s-d-lg-none{% endif %}" aria-hidden="true">
+   <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left{% if settings.header_design != 'sidebar' %} t4s-d-lg-none{% endif %}" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Responsive Menu">
      <div class="t4s-skeleton-element ske-h-50 ske-mb-20 ske-shine"></div>
      <div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div>
      <div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div>
