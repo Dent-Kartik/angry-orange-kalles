@@ -470,7 +470,7 @@ jQuery(document).on('click','.pswp__button',function(event){
        let slide_number = $(".pswp__counter").text();
     slide_number = slide_number.replace("/", "of");
       console.log("Image "+slide_number);
-      $(".pswp__top-bar .sr-only").html(slide_number);
+      $(".pswp__top-bar .sr-only").html("Image "+slide_number);
     // if (event.key === 'Tab') {
     //     setTimeout(function(){
     //         event.preventDefault(); // Prevent default tab behavior
