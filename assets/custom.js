@@ -462,7 +462,7 @@ setTimeout(function(){
 jQuery(document).on('click','.flickity-page-dots .dot',function(event){
 setTimeout(function(){
    $('.dot.is-selected').attr('aria-current','true');
-  $('dot.is-selected').siblings().attr('aria-current','false');
+  $('.dot.is-selected').siblings().attr('aria-current','false');
 },200);
 });
 jQuery(document).on('click','.t4s-carousel__nav-item',function(event){
