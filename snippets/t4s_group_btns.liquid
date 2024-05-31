@@ -245,7 +245,7 @@ t4s_group_btns_split
     aria-expanded="false"
 aria-describedby="instructions">
  <div id="instructions" class="sr-only" aria-hidden="true">
-    Begin typing to search, the field will be completed as you type
+    Begin typing to search, the field will be completed as you type. Once you see the search results, use arrow keys to navigate and press Enter to select.
   </div>
                 <button class="t4s-search-header__submit{% if settings.ajax_search %} t4s-pe-none{% endif %}" type="submit" aria-label="Submit Search Form"><svg class="t4s-icon t4s-icon--search" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-search"></use></svg></button>
 	          </div>
@@ -365,11 +365,12 @@ aria-describedby="instructions">
 
 	{%- if se_stts.cart_des != '0' -%}
 		   <div class="t4s-site-nav__icon t4s-site-nav__cart">	
-				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} role="button" data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart">
+				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart" role="button" id="header-cart">
 					<span class="t4s-pr t4s-icon-cart__wrap">
 					  <i class="fas fa-shopping-bag t4s-icon t4s-icon--account"  aria-hidden="true" focusable="false" role="presentation"></i>
 					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" aria-label="Items in cart"{% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
 					</span>
+					<span class="sr-only">Items in cart</span></span>
 					<span class="t4s-h-cart-totals t4s-dn t4s-truncate">
 						<span class="t4s-h-cart__divider t4s-dn">/</span>
 						<span data-cart-tt-price class="t4s-h-cart__total">{{ cart.total_price | money }}</span>
