@@ -46,6 +46,20 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__cart a[href="/cart"]', funct
 		}
 	}, 250);
 });
+jQuery_T4NT(document).on('keydown', '.t4s-mini_cart__edit', function(event) {
+	//  var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
+	var miniCart = $('#t4s-mini_cart .t4s-modal-close');
+	setTimeout(function() {
+		// Prevent the default link behavior
+		event.preventDefault();
+		localStorage.setItem('lastFocusedElement', 'header-cart');
+		// Check if the pressed key is Enter (key code 13)
+		if (event.key === 'Enter') {
+			// Move focus to the mini cart
+			miniCart.focus();
+		}
+	}, 250);
+});
 jQuery_T4NT(document).on('keydown', '.t4s-product-form__submit', function(event) {
 	var miniCart = $('#t4s-mini_cart .t4s-drawer__close');
 	setTimeout(function() {
@@ -481,16 +495,16 @@ jQuery( document ).ready(function() {
   $('.t4s-flicky-slider').removeAttr('tabindex'); 
   $('.t4s-footer-content a img').attr("alt","Angry Orange Home link");
 });
-// var dialog = document.querySelector('[role="dialog"]');
-// var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
-// var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
+var dialog = document.querySelector('.t4s-modal__inner');
+var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
+var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
 
-// dialog.addEventListener('keydown', function(e) {
-//   if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
-//     e.preventDefault();
-//     lastFocusableElement.focus();
-//   } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
-//     e.preventDefault();
-//     firstFocusableElement.focus();
-//   }
-// });
+dialog.addEventListener('keydown', function(e) {
+  if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
+    e.preventDefault();
+    lastFocusableElement.focus();
+  } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
+    e.preventDefault();
+    firstFocusableElement.focus();
+  }
+});
