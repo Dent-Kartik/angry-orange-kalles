@@ -497,7 +497,7 @@ jQuery( document ).ready(function() {
 });
 jQuery( document ).ready(function() {
 
-var dialog_product = $('.t4s-modal');
+var dialog_product = $('.t4s-modal__inner');
 var firstFocusableElement = document.querySelector('.t4s-modal-close');
 var lastFocusableElement = document.querySelector('.t4s-product-form__submit');
 
