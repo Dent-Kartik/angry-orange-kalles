@@ -495,11 +495,13 @@ jQuery( document ).ready(function() {
   $('.t4s-flicky-slider').removeAttr('tabindex'); 
   $('.t4s-footer-content a img').attr("alt","Angry Orange Home link");
 });
+jQuery( document ).ready(function() {
+
 var dialog = document.querySelector('.t4s-modal');
 var firstFocusableElement = document.querySelector('.t4s-modal-close');
 var lastFocusableElement = document.querySelector('.t4s-product-form__submit');
 
-  setTimeout(() => { dialog.addEventListener('keydown', function(e) {
+dialog.addEventListener('keydown', function(e) {
       if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
         e.preventDefault();
         lastFocusableElement.focus();
@@ -508,5 +510,6 @@ var lastFocusableElement = document.querySelector('.t4s-product-form__submit');
         firstFocusableElement.focus();
       }
     });
-  }, 250);
+  });
+
   
