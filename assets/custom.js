@@ -496,8 +496,8 @@ jQuery( document ).ready(function() {
   $('.t4s-footer-content a img').attr("alt","Angry Orange Home link");
 });
 jQuery( document ).ready(function() {
-setTimeout(function(){
 
+jQuery(document).on('click','.t4s-modal',function(event){
 var dialog_product = $('.t4s-modal');
 var dialog = document.querySelector('.t4s-modal');
 var firstFocusableElement = document.querySelector('.t4s-modal-close');
@@ -513,7 +513,7 @@ dialog_product.addEventListener('keydown', function(e) {
         firstFocusableElement.focus();
       }
     });
-  },250);
+  });
 
   });
 
