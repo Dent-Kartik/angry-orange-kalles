@@ -497,11 +497,11 @@ jQuery( document ).ready(function() {
 });
 jQuery( document ).ready(function() {
 
-var dialog = document.querySelector('.t4s-modal');
+var dialog_product = $('.t4s-modal');
 var firstFocusableElement = document.querySelector('.t4s-modal-close');
 var lastFocusableElement = document.querySelector('.t4s-product-form__submit');
 
-dialog.addEventListener('keydown', function(e) {
+dialog_product.addEventListener('keydown', function(e) {
       if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
         e.preventDefault();
         lastFocusableElement.focus();
