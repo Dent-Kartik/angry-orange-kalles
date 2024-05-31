@@ -499,7 +499,7 @@ var dialog = document.querySelector('.t4s-modal');
 var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
 var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
 
-  dialog.addEventListener('keydown', function(e) {
+  setTimeout(() => { dialog.addEventListener('keydown', function(e) {
     if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
       e.preventDefault();
       lastFocusableElement.focus();
@@ -507,5 +507,5 @@ var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
       e.preventDefault();
       firstFocusableElement.focus();
     }
-  });
+  }), 250);
   
