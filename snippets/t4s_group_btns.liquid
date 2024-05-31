@@ -354,7 +354,7 @@ aria-describedby="instructions">
       {%- if settings.wishlist_mode != '3' -%}		
 	      <a data-link-wishlist class="t4s-pr" href="{{ routes.search_url }}/?view=wishlist">
 			  <svg class="t4s-icon t4s-icon--heart" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-heart"></use></svg>
-			  <span data-count-wishlist class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box">0</span>
+			  <span data-count-wishlist class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" aria-label="Items in cart">0</span>
 	      </a>
 	   {%- else -%}
 	      {%- capture the_snippet_fave_icon_menu %}{% render 'ssw-widget-faveicon-menu' with product.id %}{% endcapture -%}
@@ -368,7 +368,7 @@ aria-describedby="instructions">
 				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} role="button" data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart">
 					<span class="t4s-pr t4s-icon-cart__wrap">
 					  <i class="fas fa-shopping-bag t4s-icon t4s-icon--account"  aria-hidden="true" focusable="false" role="presentation"></i>
-					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" {% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
+					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" aria-label="Items in cart"{% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
 					</span>
 					<span class="t4s-h-cart-totals t4s-dn t4s-truncate">
 						<span class="t4s-h-cart__divider t4s-dn">/</span>
