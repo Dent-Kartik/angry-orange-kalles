@@ -497,7 +497,7 @@ jQuery( document ).ready(function() {
 });
 jQuery( document ).ready(function() {
 
-jQuery(document).on('click','.t4s-modal',function(event){
+jQuery(document).on('keydown','.t4s-mini_cart__edit',function(event){
 var dialog_product = $('.t4s-modal');
 var dialog = document.querySelector('.t4s-modal');
 var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
@@ -516,5 +516,6 @@ dialog.addEventListener('keydown', function(e) {
   });
 
   });
+
 
   
