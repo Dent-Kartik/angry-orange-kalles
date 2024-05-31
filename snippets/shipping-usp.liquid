@@ -76,9 +76,7 @@
               {%- endif -%}
             {%- endif -%}
             <div class="t4s-col t4s-shipping-content">
-              {% if bk_stts.title != "" or bk_stts.title != null %}
-              <h3 class="t4s-shipping-title">{{ bk_stts.title }}</h3>
-                {% endif %}
+              <h3 class="t4s-shipping-title" style="display:none!important">{{ bk_stts.title }}</h3>
               <div class="t4s-shipping-des t4s-rte--list">{{ bk_stts.text }}</div>
               <div class="t4s-shipping-des t4s-rte--list">{{ bk_stts.html }}</div>
             </div>
