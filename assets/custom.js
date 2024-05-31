@@ -519,6 +519,25 @@ dialog.addEventListener('keydown', function(e) {
   });
 
   });
+jQuery(document).on('click','.t4s-modal',function(event){
 
+var dialog_product = $('.t4s-modal');
+var dialog = document.querySelector('.t4s-modal');
+var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
+var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
+console.log(dialog_product);
+console.log(dialog);
+dialog.addEventListener('keydown', function(e) {
+      if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
+        e.preventDefault();
+        lastFocusableElement.focus();
+      } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
+        e.preventDefault();
+        firstFocusableElement.focus();
+      }
+    });
+  });
+
+  });
 
   
