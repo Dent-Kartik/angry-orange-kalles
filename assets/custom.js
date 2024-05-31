@@ -496,8 +496,8 @@ jQuery( document ).ready(function() {
   $('.t4s-footer-content a img').attr("alt","Angry Orange Home link");
 });
 var dialog = document.querySelector('.t4s-modal');
-var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
-var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
+var firstFocusableElement = document.querySelector('.t4s-modal-close');
+var lastFocusableElement = document.querySelector('.t4s-product-form__submit');
 
   setTimeout(() => { dialog.addEventListener('keydown', function(e) {
       if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
