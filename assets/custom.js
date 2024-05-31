@@ -494,16 +494,16 @@ jQuery( document ).ready(function() {
   $('.t4s-flicky-slider').removeAttr('tabindex'); 
   $('.t4s-footer-content a img').attr("alt","Angry Orange Home link");
 });
-var dialog = document.querySelector('[role="dialog"]');
-var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
-var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
+// var dialog = document.querySelector('[role="dialog"]');
+// var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
+// var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
 
-dialog.addEventListener('keydown', function(e) {
-  if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
-    e.preventDefault();
-    lastFocusableElement.focus();
-  } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
-    e.preventDefault();
-    firstFocusableElement.focus();
-  }
-});
+// dialog.addEventListener('keydown', function(e) {
+//   if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
+//     e.preventDefault();
+//     lastFocusableElement.focus();
+//   } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
+//     e.preventDefault();
+//     firstFocusableElement.focus();
+//   }
+// });
