@@ -495,7 +495,7 @@ jQuery( document ).ready(function() {
   $('.t4s-flicky-slider').removeAttr('tabindex'); 
   $('.t4s-footer-content a img').attr("alt","Angry Orange Home link");
 });
-var dialog = document.querySelector('.t4s-modal__inner');
+var dialog = document.querySelector('.t4s-modal');
 var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
 var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
 
