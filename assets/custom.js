@@ -497,7 +497,7 @@ jQuery( document ).ready(function() {
 });
 jQuery( document ).ready(function() {
 
-jQuery(document).on('keypress','.t4s-modal',function(event){
+jQuery(document).on('click','.t4s-modal',function(event){
 var dialog_product = $('.t4s-modal');
 var dialog = document.querySelector('.t4s-modal');
 var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
