@@ -52,8 +52,7 @@
       {%- for block in section.blocks -%}
         {%- assign bk_stts = block.settings -%}
         {%- assign image = bk_stts.image_icon -%}
-        <li>
-          <div class="t4s-shipping t4s-shipping-item t4s-col-item">
+          <li class="t4s-shipping t4s-shipping-item t4s-col-item">
           <div class="t4s-shipping-inner" timeline hdt-reveal="slide-in">
             {%- if se_stts.source == 'themes_icon' -%}
               {%- if bk_stts.icon_themes != blank and bk_stts.icon_themes != 'none' -%}
@@ -85,8 +84,7 @@
               <div class="t4s-shipping-des t4s-rte--list">{{ bk_stts.html }}</div>
             </div>
           </div>
-        </div
-        </li>
+          </li>
       {%- endfor -%}
     {%- endif -%}
   </div></ul>
