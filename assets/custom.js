@@ -515,7 +515,7 @@ dialog.addEventListener('keydown', function(e) {
         firstFocusableElement.focus();
       }
     });
-},200);
+},2500);
   });
 
   });
