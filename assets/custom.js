@@ -500,12 +500,13 @@ var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
 var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
 
   setTimeout(() => { dialog.addEventListener('keydown', function(e) {
-    if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
-      e.preventDefault();
-      lastFocusableElement.focus();
-    } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
-      e.preventDefault();
-      firstFocusableElement.focus();
-    }
-  }), 250);
+      if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
+        e.preventDefault();
+        lastFocusableElement.focus();
+      } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
+        e.preventDefault();
+        firstFocusableElement.focus();
+      }
+    });
+  }, 250);
   
