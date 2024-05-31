@@ -501,7 +501,7 @@ var dialog_product = $('.t4s-modal');
 var firstFocusableElement = document.querySelector('.t4s-modal-close');
 var lastFocusableElement = document.querySelector('.t4s-product-form__submit');
 
-dialog_product.on('keydown', function(e) {
+dialog_product.keydown(function(e){
       if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
         e.preventDefault();
         lastFocusableElement.focus();
