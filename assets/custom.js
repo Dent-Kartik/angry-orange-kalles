@@ -537,7 +537,3 @@ dialog.addEventListener('keydown', function(e) {
       }
     });
   });
-
-  });
-
-  
