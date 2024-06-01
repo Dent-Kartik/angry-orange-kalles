@@ -60,6 +60,21 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__cart a[href="/cart"]', funct
 // 		}
 // 	}, 250);
 // });
+// jQuery_T4NT(document).on('keydown', '#product-edit-modal .t4s-modal-close', function(event) {
+// 	//  var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
+// 	var editCart = $('#t4s-mini_cart .t4s-modal-close');
+// 	setTimeout(function() {
+// 		// Prevent the default link behavior
+// 		event.preventDefault();
+// 		localStorage.setItem('lastFocusedElement', $(this).attr("class"));
+//         var lastfocus = $(this).attr("class");
+// 		// Check if the pressed key is Enter (key code 13)
+// 		if (event.key === 'Enter') {
+// 			// Move focus to the mini cart
+// 			lastfocus.focus();
+// 		}
+// 	}, 250);
+// });
 jQuery_T4NT(document).on('keydown', '.t4s-product-form__submit', function(event) {
 	var miniCart = $('#t4s-mini_cart .t4s-drawer__close');
 	setTimeout(function() {
