@@ -209,7 +209,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      <!-- Optimizely -->
   <script src="https://cdn.optimizely.com/js/20542322736.js" defer></script>
   <!-- -->
+    {% comment %}
   {% render 'opinew_head' %}
+    {% endcomment %}
    {% if request.page_type == 'product' %}
       {%- render 'recharge-product-subscription' -%}
 {% else %}
