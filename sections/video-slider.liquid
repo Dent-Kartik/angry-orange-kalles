@@ -1,8 +1,8 @@
 {{ 'ugc-slider.scss.css' | asset_url | stylesheet_tag }}
 <div class="trypage-v2">
-<section class="video-section" data-check-for-order="true">
+<section class="video-section" data-check-for-order="true" aria-label="{{ section.settings.video_section_title }} carousel">
 <h2 class="video-section-title">{{ section.settings.video_section_title }}</h2>
-<div class="video-section-inner section is-flex main-carousel container">
+<div class="video-section-inner section is-flex main-carousel container" >
 {% for block in section.blocks %}
   <div id="shopify-section-{{ block.id }}" {{ block.shopify_attributes }}
         class="shopify-section one-half is-flex is-justify-center">
@@ -102,6 +102,7 @@ var flkty = new Flickity( elem, {
 {% schema %}
   {
     "name": "Video Section",
+    "tag": "section",
     "settings": [
       {
         "type": "header",
