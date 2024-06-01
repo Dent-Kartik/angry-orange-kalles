@@ -9,9 +9,9 @@
 		assign enable_rating = settings.enable_rating
 		assign placeholder_img = settings.placeholder_img
 	 -%}
-	<div class="t4s-minicart-recommendations t4s_bk_flickity t4s_ratioadapt">
+	<div class="t4s-minicart-recommendations t4s_bk_flickity t4s_ratioadapt"> 
+      <p class="sr-only">This is a Upsell products carousel. Use Next and Previous buttons to navigate, or jump to a slide with the slide dots.</p>
 		<div class="t4s-minicart-recommendations__title t4s-text-center" role="heading" aria-level="2">{{ 'cart.mini_cart.title_recommendations' | t }}</div>
- <p class="sr-only">This is a Upsell products carousel. Use Next and Previous buttons to navigate, or jump to a slide with the slide dots.</p>
 <div role="region" aria-label="Cart Recommendation carousel">		<div class="t4s-minicart-recommendations_items t4s-row t4s-row-cols-1 t4s-g-0 flickityt4s" data-flickityt4s-js='{"setPrevNextButtons":true,"arrowIcon":"2","imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": 0,"pageDots": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true }' style="--space-dots: 8px;--flickity-btn-pos: 0px;--flickity-btn-pos-mb: 0px;">
 		    {%- for product in recommendations.products -%}
 		    	{%- liquid
