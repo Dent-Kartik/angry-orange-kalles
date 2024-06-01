@@ -24,6 +24,25 @@ var flkty = new Flickity( elem, {
   prevNextButtons: true,
   wrapAround:true
 });
+
+function updateAriaAttributes() {
+  var dots = document.querySelectorAll('.flickity-page-dots .dot');
+  
+  dots.forEach((dot, index) => {
+    dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+    if (dot.classList.contains('is-selected')) {
+      dot.setAttribute('aria-current', 'true');
+    } else {
+      dot.removeAttribute('aria-current');
+    }
+  });
+}
+  updateAriaAttributes();
+
+// Update the attributes whenever the slider changes
+flkty.on('change', function(index) {
+  updateAriaAttributes();
+});
 </script>
 </div>
 {% style %}
