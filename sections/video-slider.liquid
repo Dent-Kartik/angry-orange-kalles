@@ -40,14 +40,15 @@ function updateAriaAttributes() {
 }
 function updateAriaHidden() {
   var slides = document.querySelectorAll('.flickity-slider .shopify-section');
-
   slides.forEach((slide, index) => {
-    if (index === flkty.selectedIndex) {
-      slide.setAttribute('aria-hidden', 'false');
-    } else {
-      slide.setAttribute('aria-hidden', 'true');
-    }
-  });
+      if (index === flkty.selectedIndex) {
+        slide.setAttribute('aria-hidden', 'false');
+        slide.setAttribute('tabindex', '0');
+      } else {
+        slide.setAttribute('aria-hidden', 'true');
+        slide.setAttribute('tabindex', '-1');
+      }
+    });
 }
 
   updateAriaAttributes();
