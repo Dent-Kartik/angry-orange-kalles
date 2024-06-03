@@ -98,26 +98,26 @@
            {%- if results_count == 0 -%}{{ 'search.general.no_product_results' | t }}
            {%- elsif results_count > 0 -%}
                  {%- for product in search.results limit: limit -%}
-                     {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style -%} 
+                     {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style, pr_index: forloop.index -%} 
                  {%- endfor -%}
 
              {%- elsif predictive_search == blank and collection != blank and show_search_suggest -%}
                  {%- for product in collection.products limit: limit -%}
-                     {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style -%} 
+                     {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style, pr_index: forloop.index -%} 
                  {%- endfor -%}
              {%- endif -%}
-             {%- unless settings.only_search_prs %}<div class="t4s-results-others t4s_ratioadapt lazyloadt4s" data-rendert4s='{{ routes.search_url }}?q={{ search.terms | url_encode }}&type=article,page&section_id=search-others'></div>{% endunless -%}
+             {%- unless settings.only_search_prs %}<div class="t4s-results-others t4s_ratioadapt lazyloadt4s" data-rendert4s='{{ routes.search_url }}?q={{ search.terms | url_encode }}&type=article,page&section_id=search-others' role="group"></div>{% endunless -%}
          </div>
       </div>
    </div>
    {%- if results_count >= 0 -%}
          <div data-viewAll-search class="t4s-drawer__bottom">
-            <a href="{{ routes.search_url }}?type=product&options%5Bunavailable_products%5D={{ settings.unavailable_prs }}&options%5Bprefix%5D=last&q={{ key_terms | url_escape }}" class="t4s-mini-search__viewAll t4s-d-block" tabindex="-1">{{ 'search.search_for' | t: terms: search_terms }} <svg width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path d="M 18.71875 6.78125 L 17.28125 8.21875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 17.28125 23.78125 L 18.71875 25.21875 L 27.21875 16.71875 L 27.90625 16 L 27.21875 15.28125 Z"/></svg></a>
+            <a href="{{ routes.search_url }}?type=product&options%5Bunavailable_products%5D={{ settings.unavailable_prs }}&options%5Bprefix%5D=last&q={{ key_terms | url_escape }}" class="t4s-mini-search__viewAll t4s-d-block" tabindex="-1">{{ 'search.search_for' | t: terms: search_terms }} <svg width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 18.71875 6.78125 L 17.28125 8.21875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 17.28125 23.78125 L 18.71875 25.21875 L 27.21875 16.71875 L 27.90625 16 L 27.21875 15.28125 Z"/></svg></a>
          </div>
    {%- elsif collection != blank -%}
       {%- if collection.all_products_count > limit -%}
          <div data-viewAll-search class="t4s-drawer__bottom">
-            <a href="{{ collection.url }}" class="t4s-mini-search__viewAll t4s-d-block">{{ 'search.pagination.view_all' | t }} <svg width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path d="M 18.71875 6.78125 L 17.28125 8.21875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 17.28125 23.78125 L 18.71875 25.21875 L 27.21875 16.71875 L 27.90625 16 L 27.21875 15.28125 Z"/></svg></a>
+            <a href="{{ collection.url }}" class="t4s-mini-search__viewAll t4s-d-block">{{ 'search.pagination.view_all' | t }} <svg width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 18.71875 6.78125 L 17.28125 8.21875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 17.28125 23.78125 L 18.71875 25.21875 L 27.21875 16.71875 L 27.90625 16 L 27.21875 15.28125 Z"/></svg></a>
          </div>
       {%- endif -%}
    {%- else -%}<div data-viewAll-search class="t4s-drawer__bottom" style="display:none"></div>
