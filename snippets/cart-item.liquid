@@ -24,7 +24,7 @@
 <li>
  <div data-cart-item data-pid="{{ item.product_id }}" class="t4s-mini_cart__item cart_item_{{ item_id }} t4s-d-flex t4s-align-items-center t4s-pr t4s-oh{% if gift_pr_id == item.product_id %} is--gift{% endif %}" role="group" aria-label="product">
       {%- if image != blank -%}
-        <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s" width="120" height="{{ 120 | divided_by: image.aspect_ratio | ceil }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 1 }}" data-widths="[120, 240]" data-sizes="auto" alt="{{ {{ item_pr.title }} }}">
+        <img data-wpsob="1" data-wpsob-lazy="1" loading="lazy" class="lazyloadt4s" width="120" height="{{ 120 | divided_by: image.aspect_ratio | ceil }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ image | image_url: width: 1 }}" data-widths="[120, 240]" data-sizes="auto" alt="{{ item_pr.title }}">
       {%- endif -%}
       <div class="t4s-cart-ld__bar t4s-pe-none t4s-dn" hidden><span>
         <svg width="16" height="16" hidden class="t4s-cart-spinner" focusable="false" role="presentation" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
