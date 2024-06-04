@@ -4955,3 +4955,6 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
     display: flex;
     justify-content: flex-end;
 }
+.t4s-newsletter-wrap .required{
+  color:white;
+}
