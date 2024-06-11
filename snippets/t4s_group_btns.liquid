@@ -99,11 +99,12 @@ t4s_group_btns_split
 					}
 					.t4s-search-header__submit {
 						    position: absolute;
-						    top: 0;
+						    top: 1px;
 						    left: 2px;
 						    bottom: 0;
 						    padding: 0;
 						    width: 50px;
+                            height:97%;
 						    border: none;
 						    background-color: transparent !important;
 						    color: var(--h-text-color);
@@ -211,6 +212,10 @@ t4s_group_btns_split
                    .t4s-search-header__form-wrap .t4s-mini-search__viewAll:hover {
                           color: var(--accent-color);
                    }
+                button.t4s-search-header__submit:focus-visible, button.t4s-search-header__submit:focus:focus-visible {
+                    1px solid black;
+                        outline-offset: 0rem;
+                }
 			  </style>	
 	      <div data-predictive-search data-sid="search-hidden" class="t4s-search-header__form-wrap t4s-search-header t4s-pr t4s-d-none t4s-d-lg-block">
             {%- liquid
