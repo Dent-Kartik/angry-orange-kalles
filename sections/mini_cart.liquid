@@ -308,7 +308,7 @@
    {%- if se_stts.enable_rates %}{% assign idShip = 'mini_cart' -%}
    <div class="t4s-mini_cart-tool__content is--rates t4s-pe-none" role="dialog" aria-modal="true" aria-label="Estimate shipping">
       <div class="t4s-mini_cart-tool__wrap" data-estimate-shipping-wrap data-id="{{ idShip }}">
-        <span class="t4s-mini_cart-tool__text">{{ 'cart.shipping_estimator.title' | t }}</span>
+        <span class="t4s-mini_cart-tool__text" role="heading" aria-level="2">{{ 'cart.shipping_estimator.title' | t }}</span>
           <div class="t4s-field">
             <label for="ShippingCountry_{{ idShip }}">{{ 'cart.shipping_estimator.country' | t }}</label>
             <select id="ShippingCountry_{{ idShip }}" name="country" data-default="{% if customer %}{{ customer.default_address.country }}{% elsif se_stts.ship_df_country != '' %}{{ se_stts.ship_df_country | escape }}{% endif %}">{{- country_option_tags -}}</select>
@@ -372,7 +372,7 @@
    {%- if se_stts.enable_discount -%}
    <div class="t4s-mini_cart-tool__content is--discount t4s-pe-none" role="dialog" aria-modal="true" aria-label="Coupon code">
      <div class="t4s-mini_cart-tool__wrap">
-        <span class="t4s-mini_cart-tool__text">{{ 'cart.tool.add_coupon' | t }}</span>
+        <span class="t4s-mini_cart-tool__text" role="heading" aria-level="2">{{ 'cart.tool.add_coupon' | t }}</span>
         <p>{{ 'cart.tool.info_coupon' | t }}</p>
         <div class="t4s-field">
 <label for="CartDiscountcode">{{ 'cart.tool.placeholder_coupon' | t }}</label>
