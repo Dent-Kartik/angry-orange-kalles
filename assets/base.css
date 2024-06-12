@@ -4958,3 +4958,7 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
 .t4s-newsletter-wrap .required{
   color:white;
 }
+[for=ShippingZip_mini_cart]::after {
+    content: '*';
+    color: red;
+}
