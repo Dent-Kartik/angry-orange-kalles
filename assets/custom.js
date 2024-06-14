@@ -284,6 +284,7 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--rates', function(ev
 			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--rates');
 			localStorage.setItem('resumeElement', 'ShippingCountry_mini_cart');
 			$('#ShippingCountry_mini_cart').focus();
+             Console.log("works");
 		}, 250);
 	}
 });
