@@ -97,7 +97,7 @@
               </div>
               {%- for block in section.blocks offset:1 -%}
               {%- assign collection = collections[block.settings.collection] -%}
-                <div id="t4s-{{ block.id }}" class="t4s-tab-content2 lazyloadt4s" data-t4s-tab-content data-render-lazy-component data-rendert4s="{{ routes.search_url }}?type=article&q={{ forloop.index }}_bid+ntt4tag" data-set4url='&section_id={{ sid }}' data-t4splitlz><div class="lds_bginfinity t4s-pr"></div></div>
+                <div id="t4s-{{ block.id }}" class="t4s-tab-content2 lazyloadt4s" data-t4s-tab-content data-render-lazy-component data-rendert4s="{{ routes.search_url }}?type=article&q={{ forloop.index }}_bid+ntt4tag" data-set4url='&section_id={{ sid }}' data-t4splitlz  role="tabpanel" aria-labelledby="tab-{{ forloop.index }}"><div class="lds_bginfinity t4s-pr"></div></div>
               {%- endfor -%}
           {%- endif -%}
         </div>
