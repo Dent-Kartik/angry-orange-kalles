@@ -91,10 +91,15 @@ jQuery_T4NT(document).on('keydown', '.signup_btn', function(event) {
 	//var suButton = $('.signup_btn');
 	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
 	// Add an event listener to the checkout button to trap focus
-	if (event.key === 'Tab') {
-		event.preventDefault(); // Prevent default tab behavior
-		closesuButton.focus(); // Move focus to the close button
-	}
+    	if (event.key === 'Tab') {
+    		event.preventDefault(); // Prevent default tab behavior
+    		closesuButton.focus(); // Move focus to the close button
+    	} else if (event.key === 'Enter') {
+    		setTimeout(function() {
+    			event.preventDefault(); // Prevent default tab behavior
+    			closesuButton.focus(); // Move focus to the close button 
+    		}, 250);
+    	}
 });
 jQuery_T4NT(document).on('keydown', '.t4s-site-nav__account a[href="/account"]', function(event) {
 	// var accountLink = $('.t4s-site-nav__account a[href="/account"]');
