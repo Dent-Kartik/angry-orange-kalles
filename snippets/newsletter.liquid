@@ -108,8 +108,8 @@
         <input type="hidden" name="g" value="{{ settings.klaviyo_list_id }}">
         <div class="t4s-newsletter__fields">
            <div class="t4s-newsletter__inner t4s-row t4s-g-0 t4s-pr t4s-oh {{ class }}">
-              <div class="{{ class_email }} t4s-col-item is--col-email"><input type="email" name="email" placeholder="{{ 'sections.newsletter_form.email_placeholder' | t }}"  value="{% if customer %}{{ customer.email }}{% endif %}" class="{{ class_ip }} t4s-newsletter__email" autocomplete="email" required="required" aria-required="true" aria-label="Email for Newsletter Subscription" onfocus="focusInput(this)" onblur="blurInput(this)">
-                <label class="placeholderav">{{ 'sections.newsletter_form.email_placeholder' | t }}<span class="required">*</span></label>
+              <div class="{{ class_email }} t4s-col-item is--col-email"><input type="email" name="email" placeholder="{{ 'sections.newsletter_form.email_placeholder' | t }}"  value="{% if customer %}{{ customer.email }}{% endif %}" class="{{ class_ip }} t4s-newsletter__email"id="newsletter_kl" autocomplete="email" required="required" aria-required="true" aria-label="Email for Newsletter Subscription" onfocus="focusInput(this)" onblur="blurInput(this)">
+                <label class="placeholderav" for="newsletter_kl">{{ 'sections.newsletter_form.email_placeholder' | t }}<span class="required">*</span></label>
               </div>              
              <div class="{{ class_btn }} t4s-col-item is--col-btn">
                 <button data-t4s-klaviyo-submit data-agreeMail-btn type="submit" class="t4s-w-100 t4s-newsletter__submit t4s-truncate t4s-btn-loading__svg">
