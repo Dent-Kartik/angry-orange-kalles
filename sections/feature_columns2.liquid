@@ -85,7 +85,7 @@
                         {%- if bk_stts.enable_image -%}
                             <div class="t4s-eff t4s-eff-{{ b_effect }} t4s-eff-img-{{ img_effect }}" timeline hdt-reveal="slide-in">
                                 {%- if image != blank -%}
-                                    <div class="t4s_ratio t4s-bg-11" style="background: url({{ image | image_url: width: 1 }});--aspect-ratioapt: {{ image.aspect_ratio | default: 1.7777 }};--max-width:{{ image.width }}px" data-cacl-slide role="img">
+                                    <div class="t4s_ratio t4s-bg-11" style="background: url({{ image | image_url: width: 1 }});--aspect-ratioapt: {{ image.aspect_ratio | default: 1.7777 }};--max-width:{{ image.width }}px" data-cacl-slide>
                                         <img {% if image.presentation.focal_point != '50.0% 50.0%' %} style="object-position: {{ image.presentation.focal_point }}"{% endif %} class="lazyloadt4s t4s-lz--fadeIn t4s-obj-eff" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{% if image.alt %}{{ image.alt | escape }}{% else %}{{ shop.name }}{% endif %}">
                                     </div>
                                 {%- else -%}
