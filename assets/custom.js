@@ -272,7 +272,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__back', function(event)
 	} else if (event.key === 'Enter') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
-			console.log('Working');
+			console.log(lastFocusedElementClass);
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
 			$('.' + lastFocusedElementClass).focus();
 		}, 250);
