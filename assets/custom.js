@@ -238,7 +238,7 @@ jQuery_T4NT(document).on('keydown', '.pswp__button.pswp__button--share', functio
 			$('#share_modal .pswp__share--facebook').focus();
 		}, 250);
     }
-      if (event.key === 'Spacebar') {
+      if (event.key === ' ') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			$('#share_modal .pswp__share--facebook').focus();
