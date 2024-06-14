@@ -927,7 +927,9 @@
         "h2 {text-align: center; text-transform: capitalize; color: white !important;}",
         ".opw-starsColor {color: #bb3b00 !important;}",
         ".opw-carousel__control path {fill: white;}",
-        ".opw-font-medium.opw-carousel-prodname {color: black;}"
+        ".opw-font-medium.opw-carousel-prodname {color: black;}",
+        ".opw-carousel__control:hover,.opw-carousel__control:focus {background: white;}",
+        ".opw-carousel__control:hover path {fill: #F26829;}"
       ],
       "settings": {
       }
@@ -936,7 +938,7 @@
       "type": "apps",
       "blocks": {
         "opinew_product_reviews_app_carousel_abrFgP": {
-          "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/carousel\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "type": "shopify:\/\/apps\/opinew-reviews\/blocks\/carousel\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
           "disabled": true,
           "settings": {
           }
