@@ -319,7 +319,7 @@
           </div>  
           <div class="t4s-field">
             <label for="ShippingZip_{{ idShip }}">{{ 'cart.shipping_estimator.zip_code' | t }}</label>
-            <input type="text" data-opend-focus id="ShippingZip_{{ idShip }}" name="zip" value="{% if customer %}{{ customer.default_address.zip }}{% endif %}" autocomplete="postal-code"/>
+            <input type="text" data-opend-focus id="ShippingZip_{{ idShip }}" name="zip" value="{% if customer %}{{ customer.default_address.zip }}{% endif %}" autocomplete="postal-code" aria-required="true"/>
           </div>
           <div class="t4s-field">
             <button data-action="estimate-shipping" type="button" class="t4s-get__rates t4s-mini_cart-tool__primary t4s-btn-loading__svg"> 
