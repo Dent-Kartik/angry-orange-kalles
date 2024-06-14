@@ -929,7 +929,7 @@
         ".opw-carousel__control path {fill: white;}",
         ".opw-font-medium.opw-carousel-prodname {color: black;}",
         ".opw-carousel__control:hover,.opw-carousel__control:focus {background: white;}",
-        ".opw-carousel__control:hover path {fill: #F26829;}"
+        ".opw-carousel__control:hover path,.opw-carousel__control:focus path {fill: #f26829;}"
       ],
       "settings": {
       }
