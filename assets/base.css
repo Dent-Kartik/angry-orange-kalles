@@ -4962,3 +4962,6 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
     content: '*';
     color: red;
 }
+.t4s-minicart-recommendations .flickityt4s-page-dots .dot{
+      background: #000000;
+}
