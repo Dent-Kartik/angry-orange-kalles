@@ -550,6 +550,7 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
         var firstFocusableElement = $('.pswp__button--zoom');
         var lastFocusableElement = $('.pswp__button--arrow--right');
       $('.pswp__scroll-wrap').on('keydown', function(e) {
+             console.log("shift");
          if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
             e.preventDefault();
             lastFocusableElement.focus();
