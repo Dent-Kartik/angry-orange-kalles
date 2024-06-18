@@ -255,6 +255,20 @@ jQuery_T4NT(document).on('keydown', '.t4s-pr__pswp-btn', function(event) {
 		}, 250);
 	}
 });
+  var dialog = $('.pswp__t4s');
+  var firstFocusableElement = $('.pswp__button--zoom');
+  var lastFocusableElement = $('.pswp__button--arrow--right');
+ 
+dialog.addEventListener('keydown', function(e) {
+  
+   if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
+      e.preventDefault();
+      lastFocusableElement.focus();
+    } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
+      e.preventDefault();
+      firstFocusableElement.focus();
+    }
+  });
 jQuery_T4NT(document).on('keydown', '.pswp__button--arrow--right', function(event) {
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Tab') {
