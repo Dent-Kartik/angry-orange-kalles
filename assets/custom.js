@@ -565,6 +565,7 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
                     e.preventDefault();
                 }
             }
+        }
          // if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
          //    e.preventDefault();
          //    lastFocusableElement.focus();
