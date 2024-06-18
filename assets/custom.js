@@ -544,6 +544,7 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
   // Add an event listener to the checkout button to trap focus
        let slide_number = $(".pswp__counter").text();
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);
+  setTimeout(function(){
         var dialog = $('.pswp__t4s');
         var firstFocusableElement = $('.pswp__button--zoom');
         var lastFocusableElement = $('.pswp__button--arrow--right');
@@ -558,7 +559,8 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
             firstFocusableElement.focus();
           }
         });
-       
+ },2500);
+      
 });
 jQuery(document).on('click','.pswp__button',function(event){
    
