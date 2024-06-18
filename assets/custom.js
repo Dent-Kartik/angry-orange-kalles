@@ -546,6 +546,7 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);
   setTimeout(function(){
         var dialog = $('.pswp__t4s');
+        console.log(dialog);
         var firstFocusableElement = $('.pswp__button--zoom');
         var lastFocusableElement = $('.pswp__button--arrow--right');
        
