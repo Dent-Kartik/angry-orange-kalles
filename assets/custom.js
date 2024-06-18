@@ -544,6 +544,10 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
   // Add an event listener to the checkout button to trap focus
        let slide_number = $(".pswp__counter").text();
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);
+      
+});
+jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
+  
   setTimeout(function(){
         var dialog = $('.pswp__t4s');
         console.log(dialog);
@@ -566,18 +570,8 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
                 }
             }
         }
-         // if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
-         //    e.preventDefault();
-         //    lastFocusableElement.focus();
-         //     console.log("shift");
-         //  } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
-         //    e.preventDefault();
-         //    firstFocusableElement.focus();
-         //   console.log("no shift");
-         //  }
         });
  },2500);
-      
 });
 jQuery(document).on('click','.pswp__button',function(event){
    
