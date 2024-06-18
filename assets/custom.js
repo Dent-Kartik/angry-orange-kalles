@@ -553,9 +553,11 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
          if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
             e.preventDefault();
             lastFocusableElement.focus();
+             console.lof("shift");
           } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
             e.preventDefault();
             firstFocusableElement.focus();
+           console.lof("no shift");
           }
         });
  },2500);
