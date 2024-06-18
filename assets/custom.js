@@ -554,13 +554,13 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
-                  onsole.log("No shift");
+                  console.log("No shift");
                     lastFocusableElement.focus();
                     e.preventDefault();
                 }
             } else { // tab
                 if (document.activeElement === lastFocusableElement[0]) {
-                  onsole.log("shift");
+                  console.log("shift");
                     firstFocusableElement.focus();
                     e.preventDefault();
                 }
