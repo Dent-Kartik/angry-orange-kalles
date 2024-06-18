@@ -549,8 +549,8 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
         console.log(dialog);
         var firstFocusableElement = $('.pswp__button--zoom');
         var lastFocusableElement = $('.pswp__button--arrow--right');
-      $('.pswp__scroll-wrap').on('keydown', function(e) {
-             console.log("shift");
+      $('.pswp__t4s').on('keydown', function(e) {
+             console.log("out");
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
