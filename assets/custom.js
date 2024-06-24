@@ -601,26 +601,26 @@ jQuery( document ).ready(function() {
 });
 // jQuery( document ).ready(function() {
 
-jQuery(document).on('keydown','.t4s-mini_cart__edit',function(event){
-setTimeout(function(){
+// jQuery(document).on('keydown','.t4s-mini_cart__edit',function(event){
+// setTimeout(function(){
 
-var dialog_product = $('.t4s-modal');
-var dialog = document.querySelector('.t4s-modal');
-var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
-var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
-console.log(dialog_product);
-console.log(dialog);
-dialog.addEventListener('keydown', function(e) {
-      if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
-        e.preventDefault();
-        lastFocusableElement.focus();
-      } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
-        e.preventDefault();
-        firstFocusableElement.focus();
-      }
-    });
-},2500);
-  });
+// var dialog_product = $('.t4s-modal');
+// var dialog = document.querySelector('.t4s-modal');
+// var firstFocusableElement = dialog.querySelector('.t4s-modal-close');
+// var lastFocusableElement = dialog.querySelector('.t4s-product-form__submit');
+// console.log(dialog_product);
+// console.log(dialog);
+// dialog.addEventListener('keydown', function(e) {
+//       if(e.target == firstFocusableElement && e.key == 'Tab' && e.shiftKey) {
+//         e.preventDefault();
+//         lastFocusableElement.focus();
+//       } else if(e.target == lastFocusableElement && e.key == 'Tab' && !e.shiftKey) {
+//         e.preventDefault();
+//         firstFocusableElement.focus();
+//       }
+//     });
+// },2500);
+//   });
 
 //   });
 jQuery(document).on('click','.t4s-modal',function(event){
