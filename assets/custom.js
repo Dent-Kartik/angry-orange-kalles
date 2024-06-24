@@ -649,20 +649,20 @@ jQuery(document).on('keydown','#t4s-mini_cart',function(e){
         var lastFocusableElement = $('.t4s-btn__checkout');
              console.log("out");
         if (e.key === 'Tab' || e.keyCode === 9) {
-                               console.log("tab 1");
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
+                    console.log("shft");
                     lastFocusableElement.focus();
                     e.preventDefault();
-                               console.log("shift");
                 }
             } else { // tab
                 if (document.activeElement === lastFocusableElement[0]) {
+                    console.log("tab");
                     firstFocusableElement.focus();
                     e.preventDefault();
-                               console.log("tab");
                 }
             }
         }
  },250);
+  
 });
