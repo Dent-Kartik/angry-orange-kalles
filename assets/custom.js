@@ -328,8 +328,8 @@ jQuery(document).ready(function() {
 			}
 		});
 	});
-	$('.t4s-tabs-collection .flickityt4s-prev-next-button').removeAttr('disabled', 'disabled');
-	$('.t4s-product-tabs-wrapper .flickityt4s-prev-next-button').removeAttr('disabled', 'disabled');
+	// $('.t4s-tabs-collection .flickityt4s-prev-next-button').removeAttr('disabled', 'disabled');
+	// $('.t4s-product-tabs-wrapper .flickityt4s-prev-next-button').removeAttr('disabled', 'disabled');
 	setTimeout(function() {
 		checkHidden();
 		$('.t4s-drawer__header span').attr("role", "heading").attr("aria-level", "1");
