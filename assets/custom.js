@@ -667,4 +667,4 @@ jQuery(document).on('keydown','#t4s-mini_cart',function(event){
          }
         });
  },2500);
-}
+});
