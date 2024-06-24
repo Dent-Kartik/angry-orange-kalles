@@ -642,8 +642,9 @@ dialog.addEventListener('keydown', function(e) {
     });
   });
 
-jQuery_T4NT(document).on('keydown', '.t4s-footer-menu .t4s-tooltip-actived:eq(1)', function(event) {
+jQuery_T4NT(document).on('keydown', '#ot-sdk-btn', function(event) {
 	var closesuButton = $('#t4s-backToTop');
+     console.log
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Tab') {
 			event.preventDefault(); // Prevent default tab behavior
