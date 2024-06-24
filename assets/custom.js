@@ -679,4 +679,13 @@ $('#t4s-mini_cart').on('keydown', function(e) {
  },250);
   
 });
+$('#t4s-login-sidebar').on('keydown', function(e) {
+   setTimeout(function(){
+       
+         if (e.key === 'Escape' || e.keyCode === 27) {
+			$('#header-account').focus();
+         }
+ },250);
+  
+});
 });
