@@ -544,8 +544,11 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
         var lastFocusableElement = $(".pswp_thumb_item").last();
       $('.pswp__t4s').on('keydown', function(e) {
 
-     console.log(firstFocusableElement[0]);
-     console.log(lastFocusableElement[0]);
+         if (e.key === 'Escape' || e.keyCode === 27) {
+                    console.log("escape")
+                    $(".t4s-pr__pswp-btn").focus();
+                    e.preventDefault();
+        }
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
@@ -560,11 +563,6 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
                     e.preventDefault();
                 }
             }
-        }
-         if (e.key === 'Escape' || e.keyCode === 27) {
-                    console.log("escape")
-                    $(".t4s-pr__pswp-btn").focus();
-                    e.preventDefault();
         }
         });
  },2500);
