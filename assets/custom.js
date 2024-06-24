@@ -576,7 +576,7 @@ jQuery(document).on('click','.pswp__button',function(event){
     slide_number = slide_number.replace("/", "of");
       console.log("Image "+slide_number);
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);  
-  $('.pswp__button--zoom').on('click', function () {
+ jQuery(document).on('click','.pswp__button--zoom', function (e) {
           console.log('works');
           if($('.pswp__button--zoom').attr("aria-label") == 'Zoom in'){
             $('.pswp__button--zoom').attr("aria-label","Zoom out")
