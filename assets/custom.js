@@ -647,7 +647,7 @@ $('#t4s-mini_cart').on('keydown', function(e) {
    setTimeout(function(){
         var firstFocusableElement = $('.t4s-btn__checkout');
         var lastFocusableElement = $('.t4s-drawer__close');
-             console.log("out");
+             // console.log("out");
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
@@ -657,7 +657,7 @@ $('#t4s-mini_cart').on('keydown', function(e) {
                 }
             } else { // tab
                 if (document.activeElement === lastFocusableElement[0]) {
-                    console.log("shft");
+                    console.log("tab");
                     firstFocusableElement.focus();
                     e.preventDefault();
                 }
