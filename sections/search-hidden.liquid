@@ -96,7 +96,9 @@
          </div>
          <div data-results-search class="t4s-mini-search__content t4s_ratioadapt">
            <div class="results-count sr-only" aria-live="assertive">{% if results_count == 0 %}No {% else %}{{ results_count }}{% endif %} Results</div>
+                      <ul role="listbox" aria-labelledby="label" >
            {%- if results_count == 0 -%}{{ 'search.general.no_product_results' | t }}
+             
            {%- elsif results_count > 0 -%}
                  {%- for product in search.results limit: limit -%}
                      {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style, pr_index: forloop.index -%} 
@@ -107,6 +109,7 @@
                      {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style, pr_index: forloop.index -%} 
                  {%- endfor -%}
              {%- endif -%}
+                      </ul>
              {%- unless settings.only_search_prs %}<div class="t4s-results-others t4s_ratioadapt lazyloadt4s" data-rendert4s='{{ routes.search_url }}?q={{ search.terms | url_encode }}&type=article,page&section_id=search-others' role="group"></div>{% endunless -%}
          </div>
       </div>
