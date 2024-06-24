@@ -673,6 +673,10 @@ $('#t4s-mini_cart').on('keydown', function(e) {
                 }
             }
         }
+         if (e.key === 'Escape' || e.keyCode === 27) {
+			$('#header-cart').focus();
+         }
+        });
  },250);
   
 });
