@@ -642,6 +642,14 @@ dialog.addEventListener('keydown', function(e) {
     });
   });
 
+jQuery_T4NT(document).on('keydown', '.t4s-bottom-bar .t4s-footer-link:eq(1)', function(event) {
+	var closesuButton = $('#t4s-backToTop');
+	// Add an event listener to the checkout button to trap focus
+	if (event.key === 'Tab') {
+			event.preventDefault(); // Prevent default tab behavior
+			closesuButton.focus(); // Move focus to the close button
+	}
+});
 $(document).ready(function () {
 
 $('#t4s-mini_cart').on('keydown', function(e) {
