@@ -641,3 +641,30 @@ dialog.addEventListener('keydown', function(e) {
       }
     });
   });
+
+
+jQuery(document).on('keydown','#t4s-mini_cart',function(event){
+   setTimeout(function(){
+        var firstFocusableElement = $('.t4s-drawer__close');
+        var lastFocusableElement = $('.t4s-btn__checkout');
+      $('.pswp__t4s').on('keydown', function(e) {
+             console.log("out");
+        if (e.key === 'Tab' || e.keyCode === 9) {
+            if (e.shiftKey) { // shift + tab
+                if (document.activeElement === firstFocusableElement[0]) {
+                    lastFocusableElement.focus();
+                    e.preventDefault();
+                }
+            } else { // tab
+                if (document.activeElement === lastFocusableElement[0]) {
+                    firstFocusableElement.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+         if (e.key === 'Escape' || e.keyCode === 27) {
+			$('.t4s-pr__pswp-btn').focus();
+         }
+        });
+ },2500);
+}
