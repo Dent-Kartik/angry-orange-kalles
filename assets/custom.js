@@ -559,12 +559,6 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
             }
         }
         });
-       $('.pswp__t4s').on('keydown', function(e) {
-        if (e.key === 'Escape' || e.keyCode === 27) {
-                    e.preventDefault();
-                    $(".t4s-pr__icon-btn").focus();
-        }
-      });
  },2500);
 });
       // $('.pswp__t4s').on('keydown', function(e) {
