@@ -164,7 +164,7 @@
          <div class="t4s-cookie-message t4s-dn">{{ 'cart.general.cookies_required' | t }}</div>
          {%- if se_style == '1' and se_pos == '1' %}{{- html_btn -}}{% endif -%}
         <ul>
-         <div data-cart-items class="t4s-mini_cart__items t4s_ratioadapt t4s-product" role="group" aria-label="product">
+         <div data-cart-items class="t4s-mini_cart__items t4s_ratioadapt t4s-product">
             {%- if ccount > 0 -%}
 
                {%- for item in cart.items -%}
