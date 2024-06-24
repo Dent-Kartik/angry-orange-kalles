@@ -642,7 +642,7 @@ dialog.addEventListener('keydown', function(e) {
     });
   });
 
-
+jQuery(document).on('keydown','#header-cart',function(event){
 jQuery(document).on('keydown','#t4s-mini_cart',function(e){
    setTimeout(function(){
         var firstFocusableElement = $('.t4s-drawer__close');
@@ -665,4 +665,5 @@ jQuery(document).on('keydown','#t4s-mini_cart',function(e){
         }
  },250);
   
+});
 });
