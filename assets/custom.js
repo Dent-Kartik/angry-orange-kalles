@@ -577,11 +577,18 @@ jQuery(document).on('click','.pswp__button',function(event){
       console.log("Image "+slide_number);
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);  
  jQuery(document).on('click','.pswp__button--zoom', function (e) {
-          console.log('works');
           if($('.pswp__button--zoom').attr("aria-label") == 'Zoom in'){
             $('.pswp__button--zoom').attr("aria-label","Zoom out")
           } else{
             $('.pswp__button--zoom').attr("aria-label","Zoom in")
+            
+          }
+  });
+ jQuery(document).on('click','.pswp__button--share', function (e) {
+          if($('.pswp__button--share').attr("aria-expanded") == 'false'){
+            $('.pswp__button--share').attr("aria-expanded","true")
+          } else{
+            $('.pswp__button--share').attr("aria-expanded","false")
             
           }
   });
