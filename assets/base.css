@@ -4968,3 +4968,8 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
 .t4s-minicart-recommendations .flickityt4s-page-dots .dot.is-selected {
     background-color: var(--secondary-color)!important;
 }
+.pswp_thumb_item :focus-visible, .pswp_thumb_item:focus:focus-visible {
+    outline: .2rem solid white;
+    outline-offset: .3rem;
+    box-shadow: none;
+}
