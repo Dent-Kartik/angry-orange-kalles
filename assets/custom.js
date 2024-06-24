@@ -567,10 +567,10 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
         console.log(dialog);
         var firstFocusableElement = $('.pswp__button--zoom');
         var lastFocusableElement = $('.pswp__button--arrow--right');
-     console.log(firstFocusableElement[0]);
-     console.log("last "+lastFocusableElement[0]);
       $('.pswp__t4s').on('keydown', function(e) {
-             console.log("out");
+
+     console.log(firstFocusableElement[0]);
+     console.log(lastFocusableElement[0]);
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
