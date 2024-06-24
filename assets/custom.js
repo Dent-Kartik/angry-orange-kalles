@@ -242,7 +242,7 @@ jQuery_T4NT(document).on('keydown', '.pswp__button.pswp__button--share', functio
     console.log("shar");
    var isShareOpen = $(".pswp__button.pswp__button--share").attr("aria-expanded");
     console.log(isShareOpen);
-   if (isShareOpen == true){
+   if (isShareOpen == 'true'){
           console.log("shareee");
           if (event.key === 'Tab') {
     			event.preventDefault(); // Prevent default tab behavior
