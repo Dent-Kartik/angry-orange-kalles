@@ -265,17 +265,18 @@ aria-describedby="instructions">
                        </div>
                        {%- endfor -%}
                     </div>
-                    <div data-results-search class="t4s-frm-search__content t4s_ratioadapt t4s-current-scrollbar"{% if collection == blank or show_search_suggest == false %} style="display: none;"{% endif %} id="autocomplete-results" role="listbox" aria-labelledby="search-label">
+                    <div data-results-search class="t4s-frm-search__content t4s_ratioadapt t4s-current-scrollbar"{% if collection == blank or show_search_suggest == false %} style="display: none;"{% endif %} id="autocomplete-results" aria-labelledby="search-label">
  <div role="group" aria-labelledby="products-heading">
-<div class="t4s-result-title" id="products-heading">Results from products</div> 
-                     
- {%- if collection != blank and show_search_suggest -%}
+          <div class="t4s-result-title" id="products-heading">Results from products</div> 
+            <ul role="listbox" aria-labelledby="label" >
+           {%- if collection != blank and show_search_suggest -%}
                           {%- for product in collection.products limit: limit -%}
                           {%- render 'pr-sidebar-loop', imgatt: "", product: product, pr_url: product.url, placeholder_img: placeholder_img, price_varies_style: price_varies_style -%}
                           {%- endfor -%}
                       {%- endif -%}
+                      </ul>    
                     </div>
-                    </div>
+                    </div>   
                     {%- if collection != blank and show_search_suggest -%}
                        {%- if collection.all_products_count > limit -%}
                           <div data-viewAll-search>
@@ -359,8 +360,7 @@ aria-describedby="instructions">
       {%- if settings.wishlist_mode != '3' -%}		
 	      <a data-link-wishlist class="t4s-pr" href="{{ routes.search_url }}/?view=wishlist">
 			  <svg class="t4s-icon t4s-icon--heart" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-heart"></use></svg>
-			  <span data-count-wishlist class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box">0</span>
-					<span class="sr-only">Items in cart</span></span>
+			  <span data-count-wishlist class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" aria-label="Items in cart">0</span>
 	      </a>
 	   {%- else -%}
 	      {%- capture the_snippet_fave_icon_menu %}{% render 'ssw-widget-faveicon-menu' with product.id %}{% endcapture -%}
@@ -371,10 +371,10 @@ aria-describedby="instructions">
 
 	{%- if se_stts.cart_des != '0' -%}
 		   <div class="t4s-site-nav__icon t4s-site-nav__cart">	
-				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} role="button" id="header-cart">
+				<a href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart" role="button" id="header-cart">
 					<span class="t4s-pr t4s-icon-cart__wrap">
 					  <i class="fas fa-shopping-bag t4s-icon t4s-icon--account"  aria-hidden="true" focusable="false" role="presentation"></i>
-					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box"{% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
+					  <span data-cart-count class="t4s-pa t4s-op-0 t4s-ts-op t4s-count-box" aria-label="Items in cart"{% if cart.item_count == 0 %}style="display:none;"{% endif %}><span class="sr-only" style="display:none;">Items in cart: </span>{% comment %}{{ cart.item_count }}{% endcomment %}</span>
 					</span>
 					<span class="sr-only">Items in cart</span></span>
 					<span class="t4s-h-cart-totals t4s-dn t4s-truncate">
