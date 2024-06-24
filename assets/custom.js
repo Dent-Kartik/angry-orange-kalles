@@ -280,12 +280,6 @@ jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 			$('.t4s-pr__pswp-btn').focus();
 		}, 250);
 	}
-        if (event.key === 'Tab' || event.keyCode === 9) {
-            if (event.shiftKey) { // shift + tab
-                    e.preventDefault();
-              $('#share_modal .pswp__share--pinterest').focus();
-                }
-            }
 });
 jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 	// Add an event listener to the checkout button to trap focus
