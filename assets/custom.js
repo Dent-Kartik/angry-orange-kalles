@@ -507,6 +507,14 @@ $('[data-dropdown-open]').on('keydown', function(event) {
 });
 $('[data-sticky-select] [data-dropdown-item]').on('click', handleDropdownOpen);
 
+$('.pswp__button--zoom').on('click', function () {
+        if(this.attr("aria-label") == 'Zoom in'){
+          this.attr("aria-label","Zoom out")
+        } else{
+          this.attr("aria-label","Zoom in")
+          
+        }
+});
 jQuery(document).on('click','.t4s-swatch__item',function(event){
 setTimeout(function(){
    $('.t4s-swatch__item.is--selected').attr('aria-current','true');
