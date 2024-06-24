@@ -534,15 +534,7 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
   // Add an event listener to the checkout button to trap focus
        let slide_number = $(".pswp__counter").text();
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);
-    $('.pswp__button--zoom').on('click', function () {
-          console.log('works');
-          if($('.pswp__button--zoom').attr("aria-label") == 'Zoom in'){
-            $('.pswp__button--zoom').attr("aria-label","Zoom out")
-          } else{
-            $('.pswp__button--zoom').attr("aria-label","Zoom in")
-            
-          }
-  });
+
       
 });
 jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
@@ -583,7 +575,16 @@ jQuery(document).on('click','.pswp__button',function(event){
        let slide_number = $(".pswp__counter").text();
     slide_number = slide_number.replace("/", "of");
       console.log("Image "+slide_number);
-      $(".pswp__top-bar .sr-only").html("Image "+slide_number);
+      $(".pswp__top-bar .sr-only").html("Image "+slide_number);  
+  $('.pswp__button--zoom').on('click', function () {
+          console.log('works');
+          if($('.pswp__button--zoom').attr("aria-label") == 'Zoom in'){
+            $('.pswp__button--zoom').attr("aria-label","Zoom out")
+          } else{
+            $('.pswp__button--zoom').attr("aria-label","Zoom in")
+            
+          }
+  });
  
 });
 jQuery( document ).ready(function() {
