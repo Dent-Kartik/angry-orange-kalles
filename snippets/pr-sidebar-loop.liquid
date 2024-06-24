@@ -4,7 +4,7 @@
 	assign image = product.featured_media | default: placeholder_img
  -%}
  
-<div class="t4s-row t4s-space-item-inner t4s-widget__pr" id="pres-{{ pr_index }}" role="option">
+<li class="t4s-row t4s-space-item-inner t4s-widget__pr" id="pres-{{ pr_index }}" role="option">
 <a href="{{ pr_url }}" class="t4s-d-block t4s-widget__pr-title prlinksf" data-proid="{{ product.id }}" data-ptitle='{{ product.title | escape }}' data-vendor="{{ product.vendor }}" data-cat="Search Bar" data-price="{{ product.price }}" data-quantity="1" data-variantname="{{ product.selected_or_first_available_variant.title }}" data-rid="pres-{{ pr_index }}">
 	<div class="t4s-col-item t4s-col t4s-widget_img_pr">
 		{%- if image != blank -%}
@@ -18,5 +18,5 @@
 		{%- render 'product-price',class_price: 't4s-widget__pr-price',product: product,price_varies_style:price_varies_style, type: 'card',isGrouped:false -%}
 	</div>
 </a>
-</div>
+</li>
  
