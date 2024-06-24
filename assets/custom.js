@@ -642,8 +642,8 @@ dialog.addEventListener('keydown', function(e) {
     });
   });
 
-jQuery(document).on('keydown','#header-cart',function(event){
-jQuery(document).on('keydown','#t4s-mini_cart',function(e){
+
+$('#t4s-mini_cart').on('keydown', function(e) {
    setTimeout(function(){
         var firstFocusableElement = $('.t4s-drawer__close');
         var lastFocusableElement = $('.t4s-btn__checkout');
@@ -657,7 +657,7 @@ jQuery(document).on('keydown','#t4s-mini_cart',function(e){
                 }
             } else { // tab
                 if (document.activeElement === lastFocusableElement[0]) {
-                    console.log("tab");
+                    console.log("shft");
                     firstFocusableElement.focus();
                     e.preventDefault();
                 }
@@ -665,5 +665,4 @@ jQuery(document).on('keydown','#t4s-mini_cart',function(e){
         }
  },250);
   
-});
 });
