@@ -236,7 +236,6 @@ jQuery_T4NT(document).on('keydown', '.pswp__button.pswp__button--share', functio
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			$('#share_modal .pswp__share--facebook').focus();
-            $(".pswp__button.pswp__button--share").attr("aria-expanded","true");
 		}, 250);
     }
    var isShareOpen = $(".pswp__button.pswp__button--share").attr("aria-expanded");
