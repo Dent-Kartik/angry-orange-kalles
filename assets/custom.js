@@ -329,7 +329,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__back', function(event)
 		}, 250);
 	}
 });
-jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__wrap', function(event) {
+jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__content', function(event) {
   
       if (event.key === 'Escape' || event.keyCode === 27){
 		setTimeout(function() {
