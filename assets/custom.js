@@ -507,15 +507,7 @@ $('[data-dropdown-open]').on('keydown', function(event) {
 });
 $('[data-sticky-select] [data-dropdown-item]').on('click', handleDropdownOpen);
 
-$('.pswp__button--zoom').on('click', function () {
-        console.log('works');
-        if($('.pswp__button--zoom').attr("aria-label") == 'Zoom in'){
-          $('.pswp__button--zoom').attr("aria-label","Zoom out")
-        } else{
-          $('.pswp__button--zoom').attr("aria-label","Zoom in")
-          
-        }
-});
+
 jQuery(document).on('click','.t4s-swatch__item',function(event){
 setTimeout(function(){
    $('.t4s-swatch__item.is--selected').attr('aria-current','true');
@@ -542,6 +534,15 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
   // Add an event listener to the checkout button to trap focus
        let slide_number = $(".pswp__counter").text();
       $(".pswp__top-bar .sr-only").html("Image "+slide_number);
+    $('.pswp__button--zoom').on('click', function () {
+          console.log('works');
+          if($('.pswp__button--zoom').attr("aria-label") == 'Zoom in'){
+            $('.pswp__button--zoom').attr("aria-label","Zoom out")
+          } else{
+            $('.pswp__button--zoom').attr("aria-label","Zoom in")
+            
+          }
+  });
       
 });
 jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
