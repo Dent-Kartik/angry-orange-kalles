@@ -653,14 +653,14 @@ $('#t4s-mini_cart').on('keydown', function(e) {
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
                     console.log("shft");
-                    lastFocusableElement.focus();
                     e.preventDefault();
+                    lastFocusableElement.focus();
                 }
             } else { // tab
                 if (document.activeElement === lastFocusableElement[0]) {
                     console.log("tab");
-                    firstFocusableElement.focus();
                     e.preventDefault();
+                    firstFocusableElement.focus();
                 }
             }
         }
