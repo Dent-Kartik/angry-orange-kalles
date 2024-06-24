@@ -653,16 +653,15 @@ jQuery(document).on('keydown','#t4s-mini_cart',function(e){
                 if (document.activeElement === firstFocusableElement[0]) {
                     lastFocusableElement.focus();
                     e.preventDefault();
+                               console.log("shift");
                 }
             } else { // tab
                 if (document.activeElement === lastFocusableElement[0]) {
                     firstFocusableElement.focus();
                     e.preventDefault();
+                               console.log("tab");
                 }
             }
         }
-         if (e.key === 'Escape' || e.keyCode === 27) {
-			$('.t4s-pr__pswp-btn').focus();
-         }
  },250);
 });
