@@ -564,6 +564,12 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
         });
  },2500);
 });
+      $('.pswp__t4s').on('keydown', function(e) {
+        if (e.key === 'Escape' || e.keyCode === 27) {
+                    e.preventDefault();
+                    $(".t4s-pr__icon-btn").focus();
+        }
+      });
 jQuery(document).on('click','.pswp__button',function(event){
    
   // Add an event listener to the checkout button to trap focus
