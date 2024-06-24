@@ -562,6 +562,7 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
             }
         }
          if (e.key === 'Escape' || e.keyCode === 27) {
+              console.log("escape")
                     e.preventDefault();
                     $(".t4s-pr__icon-btn").focus();
         }
