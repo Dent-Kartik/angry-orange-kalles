@@ -643,11 +643,10 @@ dialog.addEventListener('keydown', function(e) {
   });
 
 
-jQuery(document).on('keydown','#header-cart',function(event){
+jQuery(document).on('keydown','#t4s-mini_cart',function(e){
    setTimeout(function(){
         var firstFocusableElement = $('.t4s-drawer__close');
         var lastFocusableElement = $('.t4s-btn__checkout');
-      $('.t4s-mini_cart').on('keydown', function(e) {
              console.log("out");
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) { // shift + tab
@@ -665,6 +664,5 @@ jQuery(document).on('keydown','#header-cart',function(event){
          if (e.key === 'Escape' || e.keyCode === 27) {
 			$('.t4s-pr__pswp-btn').focus();
          }
-        });
- },2500);
+ },250);
 });
