@@ -622,7 +622,7 @@ jQuery( document ).ready(function() {
 // },2500);
 //   });
 
-  });
+//   });
 jQuery(document).on('click','.t4s-modal',function(event){
 
 var dialog_product = $('.t4s-modal');
