@@ -238,12 +238,13 @@ jQuery_T4NT(document).on('keydown', '.pswp__button.pswp__button--share', functio
 			$('#share_modal .pswp__share--facebook').focus();
 		}, 250);
     }
-      if (event.key === ' ') {
+      if (event.key === 'tab') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			$('#share_modal .pswp__share--facebook').focus();
 		}, 250);
 	}
+    
 });
 jQuery_T4NT(document).on('keydown', '.t4s-pr__pswp-btn', function(event) {
 	// Add an event listener to the checkout button to trap focus
