@@ -327,7 +327,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__back', function(event)
           console.log(lastFocusedElementClass);
 			$('.' + lastFocusedElementClass).focus();
 		}, 250);
-	}else if (event.key === 'Escape') {
+	}else if (event.key === 'Escape' || event.keyCode === 27){
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
