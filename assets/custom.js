@@ -643,11 +643,11 @@ dialog.addEventListener('keydown', function(e) {
   });
 
 
-jQuery(document).on('keydown','#t4s-mini_cart',function(event){
+jQuery(document).on('keydown','#header-cart',function(event){
    setTimeout(function(){
         var firstFocusableElement = $('.t4s-drawer__close');
         var lastFocusableElement = $('.t4s-btn__checkout');
-      $('.pswp__t4s').on('keydown', function(e) {
+      $('.t4s-mini_cart').on('keydown', function(e) {
              console.log("out");
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) { // shift + tab
