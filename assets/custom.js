@@ -642,7 +642,7 @@ dialog.addEventListener('keydown', function(e) {
     });
   });
 
-jQuery_T4NT(document).on('keydown', '.t4s-bottom-bar .t4s-footer-link:eq(1)', function(event) {
+jQuery_T4NT(document).on('keydown', '.t4s-bottom-bar .t4s-tooltip-actived:eq(1)', function(event) {
 	var closesuButton = $('#t4s-backToTop');
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Tab') {
