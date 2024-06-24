@@ -541,7 +541,7 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
         var dialog = $('.pswp__t4s');
         console.log(dialog);
         var firstFocusableElement = $('.pswp__button--zoom');
-        var lastFocusableElement = $('.pswp__button--arrow--right');
+        var lastFocusableElement = $(".pswp_thumb_item").last();
       $('.pswp__t4s').on('keydown', function(e) {
 
      console.log(firstFocusableElement[0]);
