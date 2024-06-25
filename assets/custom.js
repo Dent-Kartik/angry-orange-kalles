@@ -89,7 +89,6 @@ jQuery_T4NT(document).on('keydown', '.t4s-product-form__submit', function(event)
 		}
 	}, 250);
 });
-
 jQuery_T4NT(document).on('keydown', '.signup_btn', function(event) {
 	//var suButton = $('.signup_btn');
 	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
@@ -681,7 +680,7 @@ jQuery_T4NT(document).on('keydown', '#ot-sdk-btn', function(event) {
 $(document).ready(function () {
 
 $('#t4s-mini_cart').on('keydown', function(e) {
-   // setTimeout(function(){
+   setTimeout(function(){
    //      var firstFocusableElement = $('.t4s-btn__checkout');
    //      var lastFocusableElement = $('.t4s-drawer__close');
    //        console.log("out");
