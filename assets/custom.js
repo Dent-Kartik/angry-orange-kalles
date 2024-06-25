@@ -662,25 +662,25 @@ jQuery_T4NT(document).on('keydown', '#ot-sdk-btn', function(event) {
 $(document).ready(function () {
 
 $('#t4s-mini_cart').on('keydown', function(e) {
-   setTimeout(function(){
-        var firstFocusableElement = $('.t4s-btn__checkout');
-        var lastFocusableElement = $('.t4s-drawer__close');
-          console.log("out");
-        if (e.key === 'Tab' || e.keyCode === 9) {
-            if (e.shiftKey) { // shift + tab
-                if (document.activeElement === firstFocusableElement[0]) {
-                    console.log("shft");
-                    e.preventDefault();
-                    lastFocusableElement.focus();
-                }
-            } else { // tab
-                if (document.activeElement === lastFocusableElement[0]) {
-                    console.log("tab");
-                    e.preventDefault();
-                    firstFocusableElement.focus();
-                }
-            }
-        }
+   // setTimeout(function(){
+   //      var firstFocusableElement = $('.t4s-btn__checkout');
+   //      var lastFocusableElement = $('.t4s-drawer__close');
+   //        console.log("out");
+   //      if (e.key === 'Tab' || e.keyCode === 9) {
+   //          if (e.shiftKey) { // shift + tab
+   //              if (document.activeElement === firstFocusableElement[0]) {
+   //                  console.log("shft");
+   //                  e.preventDefault();
+   //                  lastFocusableElement.focus();
+   //              }
+   //          } else { // tab
+   //              if (document.activeElement === lastFocusableElement[0]) {
+   //                  console.log("tab");
+   //                  e.preventDefault();
+   //                  firstFocusableElement.focus();
+   //              }
+   //          }
+   //      }
          if (e.key === 'Escape' || e.keyCode === 27) {
 			$('#header-cart').focus();
          }
