@@ -563,12 +563,17 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
         });
  },2500);
 });
-      // $('.pswp__t4s').on('keydown', function(e) {
-      //   if (e.key === 'Escape' || e.keyCode === 27) {
-      //               e.preventDefault();
-      //               $(".t4s-pr__icon-btn").focus();
-      //   }
-      // });
+
+jQuery_T4NT(document).on('keydown', '.pswp--open', function(event) {
+	// Add an event listener to the checkout button to trap focus
+	if (event.key === 'Escape') {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			$('.t4s-pr__pswp-btn').focus();
+		}, 250);
+	}
+});
 jQuery(document).on('click','.pswp__button',function(event){
    
   // Add an event listener to the checkout button to trap focus
