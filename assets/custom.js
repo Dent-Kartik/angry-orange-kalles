@@ -34,6 +34,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-drawer-menu__close', function(event) {
 		}, 250);
 	}
 });
+
 jQuery_T4NT(document).on('keydown', '.t4s-site-nav__cart a[href="/cart"]', function(event) {
 	//  var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
 	var miniCart = $('#t4s-mini_cart .t4s-drawer__close');
@@ -41,12 +42,13 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__cart a[href="/cart"]', funct
 		// Prevent the default link behavior
 		event.preventDefault();
 		localStorage.setItem('lastFocusedElement', 'header-cart');
+      localStorage.setItem('tabShiftElement', '#t4s-mini_cart .t4s-btn__checkout ');
 		// Check if the pressed key is Enter (key code 13)
 		if (event.key === 'Enter') {
 			// Move focus to the mini cart
 			miniCart.focus();
 		}
-	}, 250);
+	}, 50);
 });
 // jQuery_T4NT(document).on('keydown', '.t4s-mini_cart__edit', function(event) {
 // 	//  var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
@@ -169,8 +171,8 @@ jQuery_T4NT(document).on('keydown', '.t4s-drawer__close', function(event) {
 	}else if(event.shiftKey && event.key === 'Tab'){
       setTimeout(function() {
             event.preventDefault();
-      var tabShiftElementId = localStorage.getItem('tabShiftElement');            console.log(tabShiftElementId);
-
+      var tabShiftElementId = localStorage.getItem('tabShiftElement');            
+        console.log(tabShiftElementId);
         if(tabShiftElementId){
           $(tabShiftElementId).focus();    
         }
