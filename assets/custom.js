@@ -160,6 +160,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-drawer__close', function(event) {
 			event.preventDefault(); // Prevent default tab behavior
 			//       console.log('Working');
 			var lastFocusedElementId = localStorage.getItem('lastFocusedElement');
+          console.log(lastFocusedElementId);
 			if (lastFocusedElementId) {
 				$('#' + lastFocusedElementId).focus();
 			} else {
