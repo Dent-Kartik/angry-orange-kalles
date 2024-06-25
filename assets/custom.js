@@ -89,19 +89,20 @@ jQuery_T4NT(document).on('keydown', '.t4s-product-form__submit', function(event)
 		}
 	}, 250);
 });
+
 jQuery_T4NT(document).on('keydown', '.signup_btn', function(event) {
 	//var suButton = $('.signup_btn');
 	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
 	// Add an event listener to the checkout button to trap focus
-    	if (event.key === 'Tab') {
-    		event.preventDefault(); // Prevent default tab behavior
-    		closesuButton.focus(); // Move focus to the close button
-    	} else if (event.key === 'Enter') {
-    		setTimeout(function() {
-    			event.preventDefault(); // Prevent default tab behavior
-    			closesuButton.focus(); // Move focus to the close button 
-    		}, 250);
-    	}
+	if(event.shiftKey && event.key === 'Tab'){
+event.preventDefault();
+$('.t4s_btn_submmit').focus();
+    }else if (event.key === 'Tab') {
+		event.preventDefault(); // Prevent default tab behavior
+		closesuButton.focus(); // Move focus to the close button
+	}else if (event.key == 'Enter'){
+       localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .login_linka.backsign');
+    }
 });
 jQuery_T4NT(document).on('keydown', '.t4s-site-nav__account a[href="/account"]', function(event) {
 	// var accountLink = $('.t4s-site-nav__account a[href="/account"]');
@@ -111,6 +112,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__account a[href="/account"]',
 		// Prevent the default link behavior
 		event.preventDefault();
 		localStorage.setItem('lastFocusedElement', 'header-account');
+        localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .signup_btn');
 		// Check if the pressed key is Enter (key code 13)
 		if (event.key === 'Enter') {
 			// Move focus to the mini cart
@@ -122,10 +124,18 @@ jQuery_T4NT(document).on('keydown', '.login_linka', function(event) {
 	//var suButton = $('.signup_btn');
 	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
 	// Add an event listener to the checkout button to trap focus
-	if (event.key === 'Tab') {
+	if(event.shiftKey && event.key === 'Tab'){
+event.preventDefault();
+if ($(this).hasClass('backrec')) {
+$('#recover_login-sidebar .t4s_btn_submmit').focus();
+}else{
+$('#create_login-sidebar .t4s_btn_submmit').focus();   
+}
+    }else if (event.key === 'Tab') {
 		event.preventDefault(); // Prevent default tab behavior
 		closesuButton.focus(); // Move focus to the close button
 	} else if (event.key === 'Enter') {
+localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .signup_btn');
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			closesuButton.focus(); // Move focus to the close button 
@@ -137,6 +147,7 @@ jQuery_T4NT(document).on('keydown', '.precover_link', function(event) {
 	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Enter') {
+localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .login_linka.backrec');
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			closesuButton.focus(); // Move focus to the close button 
@@ -153,10 +164,18 @@ jQuery_T4NT(document).on('keydown', '.t4s-drawer__close', function(event) {
 			if (lastFocusedElementId) {
 				$('#' + lastFocusedElementId).focus();
 			} else {
-				$('main').focus();
+				$('header').focus();
 			}
-		}, 250);
-	}
+		}, 50);
+	}else if(event.shiftKey && event.key === 'Tab'){
+setTimeout(function() {
+      event.preventDefault();
+var tabShiftElementId = localStorage.getItem('tabShiftElement');  
+  if(tabShiftElementId){
+    $(tabShiftElementId).focus();    
+  }
+	}, 50);
+    }
 });
 jQuery_T4NT(document).on('keydown', '.mi3', function(event) {
 	// Check if the pressed key is 'Tab' (key code 9)
