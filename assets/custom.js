@@ -39,6 +39,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__cart a[href="/cart"]', funct
 	var miniCart = $('#t4s-mini_cart .t4s-drawer__close');
 	setTimeout(function() {
 		// Prevent the default link behavior
+      console.log(miniCart);
 		event.preventDefault();
 		localStorage.setItem('lastFocusedElement', 'header-cart');
       localStorage.setItem('tabShiftElement', '#t4s-mini_cart .t4s-btn__checkout ');
