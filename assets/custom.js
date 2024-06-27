@@ -109,6 +109,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__account a[href="/account"]',
 	// var accountLink = $('.t4s-site-nav__account a[href="/account"]');
 	var miniAc = $('#t4s-login-sidebar .t4s-drawer__close');
 	//console.log('Working');
+      console.log(miniAc);
 	setTimeout(function() {
 		// Prevent the default link behavior
 		event.preventDefault();
