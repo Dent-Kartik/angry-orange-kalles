@@ -34,7 +34,6 @@ jQuery_T4NT(document).on('keydown', '.t4s-drawer-menu__close', function(event) {
 		}, 250);
 	}
 });
-
 jQuery_T4NT(document).on('keydown', '.t4s-site-nav__cart a[href="/cart"]', function(event) {
 	//  var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
 	var miniCart = $('#t4s-mini_cart .t4s-drawer__close');
@@ -188,13 +187,21 @@ jQuery_T4NT(document).on('keydown', '.mi3', function(event) {
 });
 jQuery_T4NT(document).on('keydown', '.t4s-pr__notify-stock', function(event) {
 	var closesuButton = $('#t4s-pr-popup__notify-stock input[type="email"]');
+ var tabButton = jQuery_T4NT('.t4s-modal-close');
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Enter') {
 setTimeout(function() {
 		event.preventDefault(); // Prevent default tab behavior
 		closesuButton.focus(); // Move focus to the close button
 	}, 250);
-	}
+	}else if (event.shiftKey && event.key === 'Tab') {
+       
+    }else if (event.key === 'Tab') {
+       if (jQuery_T4NT(this).closest('.t4s-product-quick-shop').length) {
+      event.preventDefault();
+      tabButton.focus();       
+}
+    }
 });
 jQuery_T4NT(document).on('keydown', '.mfp-close', function(event) {
 	var closesuButton = $('#t4s-pr-popup__notify-stock input[type="email"]');
@@ -227,47 +234,48 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--note', function(eve
 		}, 250);
 	}
 });
-
-// jQuery_T4NT(document).on('keydown', '.pswp__button.pswp__button--share', function(event) {
-// 	// Add an event listener to the checkout button to trap focus
-// 	if (event.key === 'Enter') {
-// 		setTimeout(function() {
-// 			event.preventDefault(); // Prevent default tab behavior
-// 			$('#share_modal .pswp__share--facebook').focus();
-// 		}, 250);
-//     }
-//    // var isShareOpen = $(".pswp__button.pswp__button--share").attr("aria-expanded");
-//    //  console.log(isShareOpen);
-//    // if (isShareOpen == 'true'){
-//    //        if (event.key === 'Tab') {
-//    //  			event.preventDefault(); // Prevent default tab behavior
-//    //  			$('#share_modal .pswp__share--facebook').focus();
-//    //  	}
-//    //   }
-    
-// });
-// jQuery_T4NT(document).on('keydown', '.t4s-pr__pswp-btn', function(event) {
-// 	// Add an event listener to the checkout button to trap focus
-// 	if (event.key === 'Enter') {
-// 		setTimeout(function() {
-// 			event.preventDefault(); // Prevent default tab behavior
-// 			//  console.log('Working');
-// 			$('.pswp__button--zoom').focus();
-// 		}, 250);
-// 	}
-// });
+jQuery_T4NT(document).on('keydown', '.t4s-pr__pswp-btn', function(event) {
+	// Add an event listener to the checkout button to trap focus
+	if (event.key === 'Enter') {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			$('.pswp__button--zoom').focus();
+		}, 250);
+	}
+});
 
 
-// jQuery_T4NT(document).on('keydown', '.pswp__button--arrow--right', function(event) {
-// 	// Add an event listener to the checkout button to trap focus
-// 	if (event.key === 'Tab') {
-// 		setTimeout(function() {
-// 			event.preventDefault(); // Prevent default tab behavior
-// 			//  console.log('Working');
-// 			$('.pswp__button--zoom').focus();
-// 		}, 250);
-// 	}
-// });
+jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
+  
+  setTimeout(function(){
+        var dialog = $('.pswp__t4s');
+        console.log(dialog);
+        var firstFocusableElement = $('.pswp__button--zoom');
+        var lastFocusableElement = $(".pswp_thumb_item").last();
+      $('.pswp__t4s').on('keydown', function(e) {
+
+     console.log(firstFocusableElement[0]);
+     console.log(lastFocusableElement[0]);
+        if (e.key === 'Tab' || e.keyCode === 9) {
+            if (e.shiftKey) { // shift + tab
+                if (document.activeElement === firstFocusableElement[0]) {
+                  console.log("No shift");
+                    lastFocusableElement.focus();
+                    e.preventDefault();
+                }
+            } else { // tab
+                if (document.activeElement === lastFocusableElement[0]) {
+                  console.log("shift");
+                    firstFocusableElement.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+        });
+ },2500);
+});
+
 jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Enter') {
@@ -368,60 +376,13 @@ jQuery(document).ready(function() {
 			}
 		});
 	});
-	// $('.t4s-tabs-collection .flickityt4s-prev-next-button').removeAttr('disabled', 'disabled');
-	// $('.t4s-product-tabs-wrapper .flickityt4s-prev-next-button').removeAttr('disabled', 'disabled');
 	setTimeout(function() {
 		checkHidden();
 		$('.t4s-drawer__header span').attr("role", "heading").attr("aria-level", "1");
 	}, 250);
 });
 
-// function activateTab($tab) {
-//       $('.t4s-tabs-collection .t4s-tab-item a').removeClass('t4s-active').attr('aria-selected', 'false');
-//       $tab.addClass('t4s-active').attr('aria-selected', 'true');
-//     $tab.click();
-//     }
 
-//     jQuery('.t4s-tabs-collection .flickityt4s-prev-next-button.next').click(function() {
-//       var $active = $('.t4s-tabs-collection .t4s-tab-item a.t4s-active');
-//       var $next = $active.parent().next().find('a');
-//       if ($next.length) {
-//         activateTab($next);
-//       }
-//     });
-
-//    jQuery('.t4s-tabs-collection .flickityt4s-prev-next-button.previous').click(function() {
-//       var $active = $('.t4s-tabs-collection .t4s-tab-item a.t4s-active');
-//       var $prev = $active.parent().prev().find('a');
-//       if ($prev.length) {
-//         activateTab($prev);
-//       }
-//     });
-// function activateTabP($tab) {
-//       $('.t4s-product-tabs-wrapper a').removeClass('t4s-active').attr('aria-selected', 'false');
-// $tab.removeAttr('tabindex');
-//       $tab.addClass('t4s-active').attr('aria-selected', 'true');
-//     $tab.click();
-//     }
-
-//     jQuery('.t4s-product-tabs-wrapper .flickityt4s-prev-next-button.next').click(function() {
-// //console.log('Working');
-//       var $active = $('.t4s-product-tabs-wrapper a.t4s-active');
-// $('.t4s-product-tabs-wrapper a.t4s-active').attr('tabindex','-1');
-//       var $next = $active.parent().next().find('a');
-//       if ($next.length) {
-//         activateTabP($next);
-//       }
-//     });
-
-//    jQuery('.t4s-product-tabs-wrapper .flickityt4s-prev-next-button.previous').click(function() {
-//       var $active = $('.t4s-product-tabs-wrapper a.t4s-active');
-// $('.t4s-product-tabs-wrapper a.t4s-active').attr('tabindex','-1');
-//       var $prev = $active.parent().prev().find('a');
-//       if ($prev.length) {
-//         activateTabP($prev);
-//       }
-//     });
 
 jQuery(document).on('keydown', '.t4s-search-header__input', function(event) { 
     if (event.key != 'Tab') {
@@ -487,43 +448,57 @@ $('.t4s-search-header__input').attr('aria-activedescendant',currentId);
    // console.log(currentIndex);
 });
 jQuery_T4NT(document).on('keydown', '.t4s-page_cart__edit', function(event) {
-	var miniCart = $('.t4s-drawer__close');
-	setTimeout(function() {
-		// Prevent the default link behavior
-		event.preventDefault();
+	var miniCart = $('.t4s-drawer__close');	
 		// Check if the pressed key is Enter (key code 13)
 		if (event.key === 'Enter') {
-			localStorage.setItem('lastModalElement', 't4s-page_cart__edit');
-			localStorage.setItem('tabModalElement', 't4s-product-qs__title a');
+setTimeout(function() {
+		// Prevent the default link behavior
+		event.preventDefault();
+			localStorage.setItem('lastModalElement', '.t4s-page_cart__edit');
+			localStorage.setItem('tabModalElement', '.t4s-product-qs__title a');
+          localStorage.setItem('tabShiftElement', 'button[data-testid="sheet-open-button"]');
+ localStorage.setItem('escElement', '.t4s-page_cart__edit');
 			// Move focus to the mini cart
 			miniCart.focus();
-		}
-	}, 250);
+}, 50);
+		}	
 });
- jQuery_T4NT(document).on('keydown','.t4s-modal-close',function(event){
-   
-  // Add an event listener to the checkout button to trap focus
-
-    if (event.key === 'Tab') {
-        setTimeout(function(){
-            event.preventDefault(); // Prevent default tab behavior
-           //  console.log('Working');
-var tabModalElement = localStorage.getItem('tabModalElement');
-      
-         $(tabModalElement).focus();
-       
-        },200);
-    }else if (event.key === 'Enter') {
-        setTimeout(function(){
-            event.preventDefault(); // Prevent default tab behavior
-           //  console.log('Working');
-var lastModalElement = localStorage.getItem('lastModalElement');
-      
-         $(lastModalElement).focus();
-       
-        },200);
-    }
-
+jQuery_T4NT(document).on('keydown', '.t4s-mini_cart__edit', function(event) {
+	var miniCart = $('.t4s-modal-close');
+		// Check if the pressed key is Enter (key code 13)
+		if (event.key === 'Enter') {
+setTimeout(function() {
+		// Prevent the default link behavior
+		event.preventDefault();
+			localStorage.setItem('lastModalElement', '.t4s-mini_cart__edit');
+			localStorage.setItem('tabModalElement', '.t4s-product-qs__title a');
+          localStorage.setItem('tabShiftElement', '.shopify-payment-button__more-options');
+  localStorage.setItem('escElement', '#header-cart');
+			// Move focus to the mini cart
+			miniCart.focus();
+	}, 200);
+		}
+});
+jQuery_T4NT(document).on('keydown', '.t4s-modal-close', function(event) {
+	// Add an event listener to the checkout button to trap focus
+if (event.shiftKey && event.key === 'Tab') {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			var tabShiftElement = localStorage.getItem('tabShiftElement');
+			$(tabShiftElement).focus();
+	} else if (event.key === 'Tab') {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			var tabModalElement = localStorage.getItem('tabModalElement');
+			$(tabModalElement).focus();
+	} else if (event.key === 'Enter') {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			var lastModalElement = localStorage.getItem('lastModalElement');
+			$(lastModalElement).focus();
+		}, 200);
+	}
 });
 // Attach a click event handler to the element with attribute 'data-dropdown-open'
 function handleDropdownOpen() {
@@ -546,7 +521,6 @@ $('[data-dropdown-open]').on('keydown', function(event) {
 	}
 });
 $('[data-sticky-select] [data-dropdown-item]').on('click', handleDropdownOpen);
-
 
 jQuery(document).on('click','.t4s-swatch__item',function(event){
 setTimeout(function(){
@@ -577,32 +551,6 @@ jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
 
       
 });
-jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
-  
-  setTimeout(function(){
-        var dialog = $('.pswp__t4s');
-        console.log(dialog);
-        var firstFocusableElement = $('.pswp__button--zoom');
-        var lastFocusableElement = $(".pswp_thumb_item").last();
-      $('.pswp__t4s').on('keydown', function(e) {
-        if (e.key === 'Tab' || e.keyCode === 9) {
-            if (e.shiftKey) { // shift + tab
-                if (document.activeElement === firstFocusableElement[0]) {
-                  console.log("No shift");
-                    lastFocusableElement.focus();
-                    e.preventDefault();
-                }
-            } else { // tab
-                if (document.activeElement === lastFocusableElement[0]) {
-                  console.log("shift");
-                    firstFocusableElement.focus();
-                    e.preventDefault();
-                }
-            }
-        }
-        });
- },2500);
-});
 
 jQuery_T4NT(document).on('keydown', '.pswp--open', function(event) {
 	// Add an event listener to the checkout button to trap focus
@@ -620,8 +568,9 @@ jQuery(document).on('click','.pswp__button',function(event){
        let slide_number = $(".pswp__counter").text();
     slide_number = slide_number.replace("/", "of");
       console.log("Image "+slide_number);
-      $(".pswp__top-bar .sr-only").html("Image "+slide_number);  
+      $(".pswp__top-bar .sr-only").html("Image "+slide_number);
  jQuery(document).on('click','.pswp__button--zoom', function (e) {
+          console.log('works');
           if($('.pswp__button--zoom').attr("aria-label") == 'Zoom in'){
             $('.pswp__button--zoom').attr("aria-label","Zoom out")
           } else{
