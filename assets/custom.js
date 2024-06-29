@@ -475,7 +475,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart__edit', function(event) {
 setTimeout(function() {
 		// Prevent the default link behavior
 		event.preventDefault();
-			localStorage.setItem('lastModalElement', '.t4s-mini_cart__edit');
+			localStorage.setItem('lastModalElement', clickedEdidteId);
 			localStorage.setItem('tabModalElement', '.t4s-product-qs__title a');
           localStorage.setItem('tabShiftElement', '.shopify-payment-button__more-options');
   localStorage.setItem('escElement', '#header-cart');
