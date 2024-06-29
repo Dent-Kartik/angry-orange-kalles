@@ -528,6 +528,7 @@ if (event.shiftKey && event.key === 'Tab') {
 			event.preventDefault(); // Prevent default tab behavior
 			//  console.log('Working');
 			var lastModalElement = localStorage.getItem('lastModalElement');
+            console.log(lastModalElement);
 			$(lastModalElement).focus();
 		}, 200);
 	}
