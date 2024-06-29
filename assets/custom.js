@@ -489,7 +489,7 @@ setTimeout(function() {
         }else if (event.key === 'Tab') {
               console.log(closeButton);
     		event.preventDefault(); // Prevent default tab behavior
-    		$( "#product-edit-modal>.t4s-modal__inner .t4s-modal-close" ).focus(); // Move focus to the close button
+    		$(closeButton).focus(); // Move focus to the close button
     	}
     });
 });
