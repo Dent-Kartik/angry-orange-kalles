@@ -480,19 +480,20 @@ setTimeout(function() {
 			miniCart.focus();
 	}, 200);
 		}
+  jQuery_T4NT(document).on('keydown', '.shopify-payment-button__more-options', function(event) {
+    	//var checkoutButton = $('.t4s-btn__checkout');
+    	var closeButton = document.querySelector('#product-edit-modal>.t4s-modal__inner .t4s-drawer__close');
+    	// Add an event listener to the checkout button to trap focus
+    	if(event.shiftKey && event.key === 'Tab'){
+    
+        }else if (event.key === 'Tab') {
+              console.log(closeButton);
+    		event.preventDefault(); // Prevent default tab behavior
+    		$('#product-edit-modal>.t4s-modal__inner .t4s-drawer__close').focus(); // Move focus to the close button
+    	}
+    });
 });
-jQuery_T4NT(document).on('keydown', '.shopify-payment-button__more-options', function(event) {
-	//var checkoutButton = $('.t4s-btn__checkout');
-	var closeButton = document.querySelector('#product-edit-modal>.t4s-modal__inner .t4s-drawer__close');
-	// Add an event listener to the checkout button to trap focus
-	if(event.shiftKey && event.key === 'Tab'){
 
-    }else if (event.key === 'Tab') {
-          console.log(closeButton);
-		event.preventDefault(); // Prevent default tab behavior
-		$('#product-edit-modal>.t4s-modal__inner .t4s-drawer__close').focus(); // Move focus to the close button
-	}
-});
 jQuery_T4NT(document).on('keydown', '.t4s-modal-close', function(event) {
 	// Add an event listener to the checkout button to trap focus
 if (event.shiftKey && event.key === 'Tab') {
