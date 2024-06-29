@@ -506,11 +506,7 @@ setTimeout(function() {
               console.log(closeButton);
     		event.preventDefault(); // Prevent default tab behavior
     		$(closeButton).focus(); // Move focus to the close button
-    	} else if (event.key === 'Enter'){
-			var currEditButton = localStorage.getItem('clickedEdidteId');
-              console.log(currEditButton.length);
-            $(currEditButton).focus();
-        }
+    	} 
     });
 });
 
