@@ -508,7 +508,7 @@ setTimeout(function() {
     		$(closeButton).focus(); // Move focus to the close button
     	} else if (event.key === 'Enter'){
 			var currEditButton = localStorage.getItem('clickedEdidteId');
-              console.log(currEditButton);
+              console.log(currEditButton.length);
             $(currEditButton).focus();
         }
     });
