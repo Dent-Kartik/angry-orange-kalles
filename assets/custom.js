@@ -497,13 +497,14 @@ jQuery_T4NT(document).on('keydown', '.t4s-modal-close', function(event) {
 	// Add an event listener to the checkout button to trap focus
 if (event.shiftKey && event.key === 'Tab') {
 			event.preventDefault(); // Prevent default tab behavior
-			//  console.log('Working');
+			 console.log('Working');
 			var tabShiftElement = localStorage.getItem('tabShiftElement');
 			$(tabShiftElement).focus();
 	} else if (event.key === 'Tab') {
 			event.preventDefault(); // Prevent default tab behavior
-			//  console.log('Working');
+			 console.log('Working');
 			var tabModalElement = localStorage.getItem('tabModalElement');
+             console.log(tabModalElement);
 			$(tabModalElement).focus();
 	} else if (event.key === 'Enter') {
 		setTimeout(function() {
