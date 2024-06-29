@@ -25,40 +25,63 @@ var flkty = new Flickity( elem, {
   wrapAround:true
 });
 
-function updateAriaAttributes() {
-  var dots = document.querySelectorAll('.flickity-page-dots .dot');
+// function updateAriaAttributes() {
+//   var dots = document.querySelectorAll('.flickity-page-dots .dot');
   
-  dots.forEach((dot, index) => {
-    dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
-    dot.setAttribute('tabindex', 0);
-    if (dot.classList.contains('is-selected')) {
-      dot.setAttribute('aria-current', 'true');
-    } else {
-      dot.removeAttribute('aria-current');
-    }
-  });
-}
-function updateAriaHidden() {
-  var slides = document.querySelectorAll('.flickity-slider .shopify-section');
-  slides.forEach((slide, index) => {
-      if (index === flkty.selectedIndex) {
-        slide.setAttribute('aria-hidden', 'false');
-        slide.setAttribute('tabindex', '0');
-      } else {
-        slide.setAttribute('aria-hidden', 'true');
-        slide.setAttribute('tabindex', '-1');
-      }
+//   dots.forEach((dot, index) => {
+//     dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+//     dot.setAttribute('tabindex', 0);
+//     if (dot.classList.contains('is-selected')) {
+//       dot.setAttribute('aria-current', 'true');
+//     } else {
+//       dot.removeAttribute('aria-current');
+//     }
+//   });
+// }
+// function updateAriaHidden() {
+//   var slides = document.querySelectorAll('.flickity-slider .shopify-section');
+//   slides.forEach((slide, index) => {
+//       if (index === flkty.selectedIndex) {
+//         slide.setAttribute('aria-hidden', 'false');
+//         slide.setAttribute('tabindex', '0');
+//       } else {
+//         slide.setAttribute('aria-hidden', 'true');
+//         slide.setAttribute('tabindex', '-1');
+//       }
+//     });
+// }
+
+//   updateAriaAttributes();
+// updateAriaHidden();
+
+// // Update the attributes whenever the slider changes
+// flkty.on('change', function(index) {
+//   updateAriaAttributes();
+//   updateAriaHidden();
+// });
+  function updateAccessibility() {
+    var cells = flkty.getCellElements();
+    var selectedIndex = flkty.selectedIndex;
+    var groupCells = flkty.options.groupCells;
+
+    // Reset all cells
+    cells.forEach(function(cell, index) {
+      cell.setAttribute('aria-hidden', 'true');
+      cell.setAttribute('tabindex', '-1');
     });
-}
 
-  updateAriaAttributes();
-updateAriaHidden();
+    // Set attributes for visible cells
+    for (var i = 0; i < groupCells; i++) {
+      var visibleIndex = (selectedIndex + i) % cells.length;
+      var cell = cells[visibleIndex];
+      cell.setAttribute('aria-hidden', 'false');
+      cell.setAttribute('tabindex', '0');
+    }
+  }
 
-// Update the attributes whenever the slider changes
-flkty.on('change', function(index) {
-  updateAriaAttributes();
-  updateAriaHidden();
-});
+  // Update accessibility on initialization and when the slide changes
+  flkty.on('ready', updateAccessibility);
+  flkty.on('change', updateAccessibility);
 </script>
 </div>
 {% style %}
