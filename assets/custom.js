@@ -509,7 +509,7 @@ setTimeout(function() {
     	} else if (event.key === 'Enter'){
 			var currEditButton = localStorage.getItem('clickedEdidteId');
               console.log(currEditButton);
-            $(`currEditButton`).focus();
+            $(`#currEditButton`).focus();
         }
     });
 });
