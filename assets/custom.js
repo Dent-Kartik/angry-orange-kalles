@@ -467,8 +467,8 @@ setTimeout(function() {
 });
 jQuery_T4NT(document).on('keydown', '.t4s-mini_cart__edit', function(event) {
 	var miniCart = $('.t4s-modal-close');
-     var clickedEdidteId = $(event.target).attr('id');
-         clickedEdidteId = `#${clickedEdidteId}`;
+     var clickedEdidteId = "#"+$(event.target).attr('id');
+         // clickedEdidteId = `${clickedEdidteId}`;
 	 localStorage.setItem('clickedEdidteId', clickedEdidteId);
           console.log(clickedEdidteId);
 		// Check if the pressed key is Enter (key code 13)
