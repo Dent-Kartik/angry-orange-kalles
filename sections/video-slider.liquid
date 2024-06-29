@@ -36,33 +36,19 @@ function updateAriaAttributes() {
     } else {
       dot.removeAttribute('aria-current');
     }
-    // Add keydown event listener to change slide on Enter key press
-    dot.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        flkty.select(index);
-      }
-    });
   });
 }
 function updateAriaHidden() {
-   var cells = flkty.getCellElements();
-    var selectedIndex = flkty.selectedIndex;
-    var groupCells = flkty.options.groupCells;
-
-    // Reset all cells
-    cells.forEach(function(cell, index) {
-      cell.setAttribute('aria-hidden', 'true');
-      cell.setAttribute('tabindex', '-1');
+  var slides = document.querySelectorAll('.flickity-slider .shopify-section');
+  slides.forEach((slide, index) => {
+      if (index === flkty.selectedIndex) {
+        slide.setAttribute('aria-hidden', 'false');
+        slide.setAttribute('tabindex', '0');
+      } else {
+        slide.setAttribute('aria-hidden', 'true');
+        slide.setAttribute('tabindex', '-1');
+      }
     });
-
-    // Set attributes for visible cells
-    for (var i = 0; i < groupCells; i++) {
-      var visibleIndex = (selectedIndex + i) % cells.length;
-      var cell = cells[visibleIndex];
-      cell.setAttribute('aria-hidden', 'false');
-      cell.setAttribute('tabindex', '0');
-    }
-  
 }
 
   updateAriaAttributes();
