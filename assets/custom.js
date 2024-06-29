@@ -490,7 +490,7 @@ jQuery_T4NT(document).on('keydown', '.shopify-payment-button__more-options', fun
     }else if (event.key === 'Tab') {
       console.log(closeButton);
 		event.preventDefault(); // Prevent default tab behavior
-		$('#product-edit-modal .t4s-drawer__close').focus(); // Move focus to the close button
+		$('#product-edit-modal>.t4s-modal__inner>.t4s-drawer__close').focus(); // Move focus to the close button
 	}
 });
 jQuery_T4NT(document).on('keydown', '.t4s-modal-close', function(event) {
