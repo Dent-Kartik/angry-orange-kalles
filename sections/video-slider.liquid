@@ -25,19 +25,14 @@ var flkty = new Flickity( elem, {
   wrapAround:true
 });
 
-// function updateAriaAttributes() {
-//   var dots = document.querySelectorAll('.flickity-page-dots .dot');
+function updateAriaAttributes() {
+  var dots = document.querySelectorAll('.flickity-page-dots .dot');
   
-//   dots.forEach((dot, index) => {
-//     dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
-//     dot.setAttribute('tabindex', 0);
-//     if (dot.classList.contains('is-selected')) {
-//       dot.setAttribute('aria-current', 'true');
-//     } else {
-//       dot.removeAttribute('aria-current');
-//     }
-//   });
-// }
+  dots.forEach((dot, index) => {
+    dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+  
+  });
+}
 // function updateAriaHidden() {
 //   var slides = document.querySelectorAll('.flickity-slider .shopify-section');
 //   slides.forEach((slide, index) => {
@@ -78,8 +73,13 @@ var flkty = new Flickity( elem, {
       cell.setAttribute('tabindex', '0');
     }
   }
-  flkty.on('ready', updateAccessibility);
-  flkty.on('change', updateAccessibility);
+  // flkty.on('ready', updateAccessibility);
+  updateAccessibility();
+    updateAccessibility();
+  flkty.on('change', function(index) {
+    updateAriaAttributes();
+    updateAccessibility();
+});
 </script>
 </div>
 {% style %}
