@@ -483,7 +483,7 @@ setTimeout(function() {
 });
 jQuery_T4NT(document).on('keydown', '.shopify-payment-button__more-options', function(event) {
 	//var checkoutButton = $('.t4s-btn__checkout');
-	var closeButton = $('#product-edit-modal .t4s-drawer__close');
+	var closeButton = document.querySelector('#product-edit-modal .t4s-drawer__close');
 	// Add an event listener to the checkout button to trap focus
 	if(event.shiftKey && event.key === 'Tab'){
 
