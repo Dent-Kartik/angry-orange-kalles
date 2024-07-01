@@ -102,9 +102,9 @@
                  endif -%}
 
                 {%- if original_price != final_price -%}
-                   <del>{{ money_original_price }}</del><ins>{{ money_final_price }}</ins>
+                   <span style='display: none' class='sr-only'>Original price: </span><del>{{ money_original_price }}</del><span class='sr-only' style='display: none'>Current price: </span><ins>{{ money_final_price }}</ins>
                 {%- elsif v_compare_at_price > original_price -%}
-                   <del>{% if cur_code_enabled %}{{ v_compare_at_price | money_with_currency }}{% else %}{{ v_compare_at_price | money }}{% endif %}</del><ins>{{ money_final_price }}</ins>
+                   <span style='display: none' class='sr-only'>Original price: </span><del>{% if cur_code_enabled %}{{ v_compare_at_price | money_with_currency }}{% else %}{{ v_compare_at_price | money }}{% endif %}</del><span class='sr-only' style='display: none'>Current price: </span><ins>{{ money_final_price }}</ins>
                 {%- else -%}
                    {{ money_original_price }}
                 {%- endif -%}
