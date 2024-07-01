@@ -100,8 +100,8 @@ endif -%}
             {%- if on_sale -%}<span class="t4s-price__sale">{{ money_price }} – {{ price_max }}</span>{% else %}{{ money_price }} – {{ price_max }}{% endif -%}
 
           {%- elsif on_sale -%}
-
-          <ins>{{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}</ins><del>{{ money_compare_at_price }}</del>
+          <span class="sr-only" style="display: none">Current price: </span>
+          <ins>{{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}</ins><span style="display: none" class="sr-only">Original price: </span><del>{{ money_compare_at_price }}</del>
 
           {%- else -%}
           {{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}
