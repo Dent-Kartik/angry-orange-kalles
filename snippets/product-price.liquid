@@ -61,7 +61,7 @@
             assign price_variant = variant.price | money
             assign price_compare = variant.compare_at_price | money
          endif -%}
-      {%- if variant.compare_at_price > variant.price -%} <del aria-label="Deleted Text">{{ price_compare }}</del><ins>{{ price_variant }}</ins>{%- else -%}{{ price_variant }}{%- endif -%}
+      {%- if variant.compare_at_price > variant.price -%} <span style="display: none" class="sr-only">Original price: </span><del>{{ price_compare }}</del><span class="sr-only" style="display: none">Current price: </span><ins>{{ price_variant }}</ins>{%- else -%}{{ price_variant }}{%- endif -%}
       </span>
 
       {%- capture unit_price_base_unit -%}
@@ -90,13 +90,13 @@
 
           {%- elsif on_sale -%}
 
-          <del aria-label="Deleted Text">{{ money_compare_at_price }}</del><ins>{{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}</ins>
+          <span class="sr-only" style="display: none">Current price: </span><del>{{ money_compare_at_price }}</del><span style="display: none" class="sr-only">Original price: </span><ins>{{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}</ins>
 
           {%- else -%}
           {{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}
           {%- endif -%}
 
-      {%- elsif on_sale -%}<del aria-label="Deleted Text">{{ money_compare_at_price }}</del><ins>{{ money_price }}</ins>
+      {%- elsif on_sale -%}<span class="sr-only" style="display: none">Current price: </span><del>{{ money_compare_at_price }}</del><span style="display: none" class="sr-only">Original price: </span><ins>{{ money_price }}</ins>
       {%- else -%}{{ money_price }}
       {%- endif -%}
 </div>
