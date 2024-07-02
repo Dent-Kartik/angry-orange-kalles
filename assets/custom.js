@@ -280,7 +280,7 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
 
 jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 	// Add an event listener to the checkout button to trap focus
-	if (event.key === 'Enter') {
+	if (event.key === 'Enter' || event.key === 'blank space') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			//  console.log('Working');
