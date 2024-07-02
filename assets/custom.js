@@ -280,10 +280,16 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
 
 jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 	// Add an event listener to the checkout button to trap focus
-	if (event.key === 'Enter' || event.key === 'Space') {
+	if (event.key === 'Enter') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
-    		console.log('Working');
+    		// console.log('Working');
+			$('.t4s-pr__pswp-btn').focus();
+		}, 25);
+      if (event.key === 'Space') {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+    		console.log(' Space Working');
 			$('.t4s-pr__pswp-btn').focus();
 		}, 25);
 	}
