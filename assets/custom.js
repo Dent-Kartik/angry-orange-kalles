@@ -283,7 +283,7 @@ jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 	if (event.key === 'Enter' || event.key === 'Space') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
-			//  console.log('Working');
+    		console.log('Working');
 			$('.t4s-pr__pswp-btn').focus();
 		}, 25);
 	}
