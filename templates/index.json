@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "1646028739ae283905": {
@@ -885,6 +894,7 @@
       "blocks": {
         "video_col_yerAXD": {
           "type": "video-col",
+          "disabled": true,
           "settings": {
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6d6a549b696a4db5ad2246493a9483b3.mov",
             "image_url": "shopify:\/\/shop_images\/AO_UGC_1.webp"
@@ -892,6 +902,7 @@
         },
         "video_col_6Q4pJg": {
           "type": "video-col",
+          "disabled": true,
           "settings": {
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/45f2bc7b78394d05a3df6e759845dd32.mov",
             "image_url": "shopify:\/\/shop_images\/AO_UGC_3_v2.jpg"
@@ -899,16 +910,31 @@
         },
         "video_col_XkJ74n": {
           "type": "video-col",
+          "disabled": true,
           "settings": {
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/692f00edb44b41b39f2ad424b24cf0c0.mov",
             "image_url": "shopify:\/\/shop_images\/AO_UGC_2.jpg"
+          }
+        },
+        "video_col_zfF9E8": {
+          "type": "video-col",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/275df5140c5d4b48af85dfd4fcc4f32a.mp4"
+          }
+        },
+        "video_col_qCUkWn": {
+          "type": "video-col",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/275df5140c5d4b48af85dfd4fcc4f32a.mp4"
           }
         }
       },
       "block_order": [
         "video_col_yerAXD",
         "video_col_6Q4pJg",
-        "video_col_XkJ74n"
+        "video_col_XkJ74n",
+        "video_col_zfF9E8",
+        "video_col_qCUkWn"
       ],
       "custom_css": [
 
