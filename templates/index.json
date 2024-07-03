@@ -919,13 +919,15 @@
         "video_col_zfF9E8": {
           "type": "video-col",
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/275df5140c5d4b48af85dfd4fcc4f32a.mp4"
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b8464773b1e14601886fd1a426037341.mp4",
+            "image_url": "shopify:\/\/shop_images\/Untitled_design.jpg"
           }
         },
         "video_col_qCUkWn": {
           "type": "video-col",
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/275df5140c5d4b48af85dfd4fcc4f32a.mp4"
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/275df5140c5d4b48af85dfd4fcc4f32a.mp4",
+            "image_url": "shopify:\/\/shop_images\/Untitled_design_1.jpg"
           }
         }
       },
