@@ -359,6 +359,18 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__content', function(eve
 		}, 25);
 	}
 });
+
+jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__primary', function(event) {
+  
+      if (event.key === 'Enter' || event.keyCode === 13){
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
+			console.log(lastFocusedElementClass);
+			$('.' + lastFocusedElementClass).focus();
+		}, 25);
+	}
+});
 jQuery(document).ready(function() {
 	localStorage.setItem('ci', -1);
 	localStorage.setItem('cp', 1);
