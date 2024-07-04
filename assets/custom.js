@@ -369,6 +369,7 @@ jQuery_T4NT(document).on('keydown', '.is--note .t4s-mini_cart-tool__primary', fu
             var textarea = document.getElementById('CartSpecialInstructions');
             console.log(textarea.value.trim());
             if (textarea.value.trim() !== "") {
+    			console.log(lastFocusedElementClass);
                $('.' + lastFocusedElementClass+'.is--editNote').focus();
             } else{
     			console.log(lastFocusedElementClass);
