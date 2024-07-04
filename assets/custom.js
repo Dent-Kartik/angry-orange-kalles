@@ -368,13 +368,13 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__primary', function(eve
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
             var test1 = "."+lastFocusedElementClass;
             console.log(test1);
-            if(test1.classList.contains('is--editNote')){
-    			$('.' + lastFocusedElementClass+'.is--editNote').focus();
-    			console.log("in IF");
+            var textarea = document.getElementById('CartSpecialInstructions');
+            if (textarea.value.trim() !== "") {
+               $('.' + lastFocusedElementClass+'.is--editNote').focus();
             } else{
     			console.log(lastFocusedElementClass);
     			$('.' + lastFocusedElementClass).focus();
-              }
+            }
 		}, 250);
 	}
 });
