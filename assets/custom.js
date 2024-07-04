@@ -368,9 +368,11 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__primary', function(eve
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
             if(lastFocusedElementClass.classList.contains('is--editNote')){
     			$('.' + lastFocusedElementClass+'.is--editNote').focus();
-            }
-			console.log(lastFocusedElementClass);
-			$('.' + lastFocusedElementClass).focus();
+    			console.log("in IF");
+            } else{
+    			console.log(lastFocusedElementClass);
+    			$('.' + lastFocusedElementClass).focus();
+              }
 		}, 250);
 	}
 });
