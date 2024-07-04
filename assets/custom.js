@@ -360,7 +360,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__content', function(eve
 	}
 });
 
-jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__primary', function(event) {
+jQuery_T4NT(document).on('keydown', '.is--note .t4s-mini_cart-tool__primary', function(event) {
   
       if (event.key === 'Enter' || event.keyCode === 13){
 		setTimeout(function() {
