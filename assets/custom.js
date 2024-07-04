@@ -390,6 +390,17 @@ jQuery_T4NT(document).on('keydown', '.is--discount .t4s-mini_cart-tool__primary'
 		}, 250);
 	}
 });
+
+jQuery_T4NT(document).on('keydown', '#CartDiscountcode', function(event) {
+  
+      if(event.shiftKey && event.key === 'Tab'){
+              console.log(closeButton);
+    		event.preventDefault(); // Prevent default tab behavior
+    		$(".is--discount .t4s-mini_cart-tool__back").focus(); // Move focus to the close button
+    
+        }else if (event.key === 'Tab') {
+    	}
+});
 jQuery(document).ready(function() {
 	localStorage.setItem('ci', -1);
 	localStorage.setItem('cp', 1);
