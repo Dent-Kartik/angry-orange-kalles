@@ -394,7 +394,7 @@ jQuery_T4NT(document).on('keydown', '.is--discount .t4s-mini_cart-tool__primary'
 jQuery_T4NT(document).on('keydown', '#CartDiscountcode', function(event) {
   
       if(event.shiftKey && event.key === 'Tab'){
-              console.log(closeButton);
+              console.log("workgins");
     		event.preventDefault(); // Prevent default tab behavior
     		$(".is--discount .t4s-mini_cart-tool__back").focus(); // Move focus to the close button
     
