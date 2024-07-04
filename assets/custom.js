@@ -366,9 +366,12 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__primary', function(eve
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
+            if(lastFocusedElementClass.classList.contains('is--editNote')){
+    			$('.' + lastFocusedElementClass+'.is--editNote').focus();
+            }
 			console.log(lastFocusedElementClass);
 			$('.' + lastFocusedElementClass).focus();
-		}, 1000);
+		}, 250);
 	}
 });
 jQuery(document).ready(function() {
