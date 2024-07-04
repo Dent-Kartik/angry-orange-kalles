@@ -387,7 +387,7 @@ jQuery_T4NT(document).on('keydown', '.is--discount .t4s-mini_cart-tool__primary'
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
     			console.log(lastFocusedElementClass);
                $('.' + lastFocusedElementClas).focus();
-		}, 450);
+		}, 250);
 	}
 });
 jQuery(document).ready(function() {
