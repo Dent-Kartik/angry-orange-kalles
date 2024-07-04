@@ -366,7 +366,8 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__primary', function(eve
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
-            if(lastFocusedElementClass.classList.contains('is--editNote')){
+            var test1 = "."+lastFocusedElementClass;
+            if(test1.classList.contains('is--editNote')){
     			$('.' + lastFocusedElementClass+'.is--editNote').focus();
     			console.log("in IF");
             } else{
