@@ -385,7 +385,6 @@ function selectColorButton(swatchButton, swatchButtons) {
   swatchButtons.forEach(function(otherColorButton) {
     otherColorButton.setAttribute('tabindex', -1);
     otherColorButton.setAttribute('aria-checked', false);
-    otherColorButton.removeAttribute("aria-current");
   });
 
   // Select the provided color button
