@@ -118,7 +118,7 @@
             
             {%- if get_color contains name_downcase -%}
               
-              <div data-swatch-option data-id="{{ forloop.index0 }}" class="t4s-swatch__option is-t4s-style__color is-t4s-name__{{ option_name | handle }} {% cycle 'is--first-color', '', '' %}">
+              <div data-swatch-option data-id="{{ forloop.index0 }}" class="t4s-swatch__option is-t4s-style__color is-t4s-name__{{ option_name | handle }} {% cycle 'is--first-color', '', '' %}" role="radiogroup" aria-labelledby="op_{{ option_name | handleize }}">
                 <h2 class="t4s-swatch__title"><span>{{ forloop.index }}. Select {{ option_name }}: <span data-current-value class="t4s-dib t4s-swatch__current">{{ selected_value | default: choose_an_option }}</span></span>{% if name_sizeg == name_downcase %}{{ html_sizeg }}{% endif %}</h2>
                 <ul data-swatch-list class="t4s-swatch__list " id="list">
                   {%- if color_mode != 'dropdown' -%}
