@@ -329,6 +329,8 @@
 
 {% if template.name == 'product' %}
 <script>
+  
+// Keyboard Swatch selector begins 
  document.querySelectorAll('[data-id]').forEach(function(group) {
   var swatchButtons = group.querySelectorAll('.t4s-swatch__item'); 
 
@@ -392,8 +394,7 @@ function selectColorButton(swatchButton, swatchButtons) {
 swatchButton.click();
   swatchButton.focus();
 }
-
-  
+// Keyboard Swatch selector ends 
    document.body.addEventListener('click', function(event) {
   var target = event.target;
   if (target && target.classList.contains('t4s-product-form__submit')) {
