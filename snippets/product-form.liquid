@@ -329,6 +329,70 @@
 
 {% if template.name == 'product' %}
 <script>
+ document.querySelectorAll('[data-id]').forEach(function(group) {
+  var swatchButtons = group.querySelectorAll('.t4s-swatch__item'); 
+
+  swatchButtons.forEach(function(swatchButton) {
+    swatchButton.addEventListener('click', function(e) {
+      selectColorButton(e.target, swatchButtons);
+    });
+  });
+
+  group.addEventListener('keyup', function(e) {
+    switch(e.key) {
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        selectPreviousColorButton(e.target, swatchButtons);
+        break;
+
+      case 'ArrowDown':
+      case 'ArrowRight':
+        selectNextColorButton(e.target, swatchButtons);
+        break;
+
+      case ' ':
+      case 'Spacebar':
+        selectColorButton(e.target, swatchButtons);
+        break;
+    }
+  });
+});
+
+function selectPreviousColorButton(swatchButton, swatchButtons) {
+  var index = Array.prototype.indexOf.call(swatchButtons, swatchButton);
+
+  if (index > 0) {
+    selectColorButton(swatchButtons[index - 1], swatchButtons);
+  } else {
+    selectColorButton(swatchButtons[swatchButtons.length - 1], swatchButtons);
+  }
+}
+
+function selectNextColorButton(swatchButton, swatchButtons) {
+  var index = Array.prototype.indexOf.call(swatchButtons, swatchButton);
+
+  if (index < swatchButtons.length - 1) {
+    selectColorButton(swatchButtons[index + 1], swatchButtons);
+  } else {
+    selectColorButton(swatchButtons[0], swatchButtons);
+  }
+}
+
+function selectColorButton(swatchButton, swatchButtons) {
+  // Deselect all other color buttons in the same group
+  swatchButtons.forEach(function(otherColorButton) {
+    otherColorButton.setAttribute('tabindex', -1);
+    otherColorButton.setAttribute('aria-checked', false);
+  });
+
+  // Select the provided color button
+  swatchButton.setAttribute('tabindex', 0);
+  swatchButton.setAttribute('aria-checked', true);
+swatchButton.click();
+  swatchButton.focus();
+}
+
+  
    document.body.addEventListener('click', function(event) {
   var target = event.target;
   if (target && target.classList.contains('t4s-product-form__submit')) {
