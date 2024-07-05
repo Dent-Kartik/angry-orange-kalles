@@ -590,8 +590,8 @@ $('[data-sticky-select] [data-dropdown-item]').on('click', handleDropdownOpen);
 
 jQuery(document).on('click','.t4s-swatch__item',function(event){
 setTimeout(function(){
-   $('.t4s-swatch__item.is--selected').attr('aria-current','true');
-  $('.t4s-swatch__item.is--selected').siblings().attr('aria-current','false');
+  //  $('.t4s-swatch__item.is--selected').attr('aria-current','true');
+  // $('.t4s-swatch__item.is--selected').siblings().attr('aria-current','false');
  $('.t4s-carousel__nav-item.is-nav-selected').attr('aria-current','true');
   $('.t4s-carousel__nav-item.is-nav-selected').siblings().attr('aria-current','false');
 },25);
