@@ -127,7 +127,7 @@
                       {%- endif -%}
                     {%- for value in option.values -%}
                       
-                    <li data-swatch-item data-tooltip{{ show_tooltip }}="top" title="{{ value | escape }}" class="t4s-swatch__item {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</li>
+                    <li data-swatch-item data-tooltip{{ show_tooltip }}="top" title="{{ value | escape }}" class="t4s-swatch__item {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="radio" tabindex="0">{{ value }}</li>
                     {%- endfor -%}
                     {% if loopindex > 5 %}
                     <li class="lazyloadt4sed "><button class="  t4s-swatch__item " id="show-more">More+</button></li>
@@ -143,7 +143,7 @@
                       <div class="t4s-dropdown__content">
                           {%- for value in option.values -%}
                             {% assign loopindex = forloop.index | minus: 1 %}
-                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</div>
+                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate {{ color_swatch }}bg_color_{{ value | handle }} lazyloadt4s{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="radio" tabindex="0">{{ value }}</div>
                           {%- endfor -%}
                       </div>
                     </div>
@@ -160,7 +160,7 @@
                   {%- if selector_mode != 'dropdown' -%}
                     {%- for value in option.values -%}
                       {% assign loopindex = forloop.index | minus: 1 %}
-                    <li data-swatch-item class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</li>
+                    <li data-swatch-item class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="radio" tabindex="0">{{ value }}</li>
                     {%- endfor -%}
             
                   {%- else -%}
@@ -174,7 +174,7 @@
                       <div class="t4s-dropdown__content">
                           {%- for value in option.values -%}
                             {% assign loopindex = forloop.index | minus: 1 %}
-                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="button" tabindex="0">{{ value }}</div>
+                          <div data-swatch-item data-dropdown-off class="t4s-swatch__item t4s-truncate{% if selected_value == value %} is--selected{% endif %}" data-value="{{ value | escape }}" role="radio" tabindex="0">{{ value }}</div>
                           {%- endfor -%}
                       </div>
                     </div>
