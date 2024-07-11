@@ -430,13 +430,13 @@ jQuery_T4NT(document).on('keydown', '#CartDiscountcode', function(event) {
 jQuery(document).ready(function() {
 	localStorage.setItem('ci', -1);
 	localStorage.setItem('cp', 1);
-	$('.flickityt4s-page-dots .dot').each(function() {
-		$(this).on('keydown', function(event) {
-			if (event.key === 'Enter' || event.keyCode === 13) {
-				$(this).click();
-			}
-		});
-	});
+	// $('.flickityt4s-page-dots .dot').each(function() {
+	// 	$(this).on('keydown', function(event) {
+	// 		if (event.key === 'Enter' || event.keyCode === 13) {
+	// 			$(this).click();
+	// 		}
+	// 	});
+	// });
 	setTimeout(function() {
 		checkHidden();
 		$('.t4s-drawer__header span').attr("role", "heading").attr("aria-level", "1");
@@ -444,9 +444,7 @@ jQuery(document).ready(function() {
 });
 
 jQuery_T4NT(document).on('keydown', '.flickityt4s-prev-next-button, .dot', function(event) {
-  console.log("key");
 if (event.key == 'Enter') {
-  console.log("enter");
 event.preventDefault();
   $(this).click();
 //console.log('Working');
