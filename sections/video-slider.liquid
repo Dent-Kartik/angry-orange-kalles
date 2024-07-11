@@ -59,10 +59,13 @@ function updateAriaAttributes() {
     var selectedIndex = flkty.selectedIndex;
     var groupCells = 2; // Number of visible cells
 
+      var video = slide.querySelector('video');
     // Reset all cells
     cells.forEach(function(cell) {
       cell.setAttribute('aria-hidden', 'true');
       cell.setAttribute('tabindex', '-1');
+      var video = cell.querySelector('video');
+        if (video) video.setAttribute('tabindex', '-1');
     });
 
     // Set attributes for visible cells
