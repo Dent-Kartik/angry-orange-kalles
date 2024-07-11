@@ -437,6 +437,11 @@ jQuery(document).ready(function() {
 			}
 		});
 	});
+	setTimeout(function() {
+		checkHidden();
+		$('.t4s-drawer__header span').attr("role", "heading").attr("aria-level", "1");
+	}, 25);
+});
 
 jQuery_T4NT(document).on('keydown', '.flickityt4s-prev-next-button, .dot', function(event) {
 if (event.key == 'Enter') {
@@ -444,12 +449,6 @@ event.preventDefault();
   $(this).click();
 //console.log('Working');
 }
-	setTimeout(function() {
-		checkHidden();
-		$('.t4s-drawer__header span').attr("role", "heading").attr("aria-level", "1");
-	}, 25);
-});
-
 
 
 jQuery(document).on('keydown', '.t4s-search-header__input', function(event) { 
