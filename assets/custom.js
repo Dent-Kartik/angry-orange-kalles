@@ -444,7 +444,9 @@ jQuery(document).ready(function() {
 });
 
 jQuery_T4NT(document).on('keydown', '.flickityt4s-prev-next-button, .dot', function(event) {
+  console.log("key");
 if (event.key == 'Enter') {
+  console.log("enter");
 event.preventDefault();
   $(this).click();
 //console.log('Working');
