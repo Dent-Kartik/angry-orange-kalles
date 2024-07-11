@@ -19,6 +19,32 @@ jQuery_T4NT(document).on('keydown', '.t4s-push-menu-btn', function(event) {
 		closeButton.focus(); // Move focus to the close button
 	}
 });
+
+jQuery_T4NT(document).on('keydown', '.t4s-quantity-selector', function(event) {
+     var clickedQuantityId = "#"+$(event.target).attr('id');
+	if (event.key === 'Enter') {
+    	setTimeout(function() {
+            console.log(clickedQuantityId);
+    		event.preventDefault(); // Prevent default tab behavior
+    		$(clickedQuantityId).focus(); // Move focus to the close button
+        },1500);
+      }
+});
+jQuery_T4NT(document).on('change', '.t4s-quantity-input', function(event) {
+     var clickedQuantityId = "#"+$(event.target).attr('id');
+        console.log('clickedQuantityId');
+	// Add an event listener to the checkout button to trap focus
+    jQuery_T4NT(document).on('keydown', '.t4s-quantity-input', function(event) {
+    	if (event.key === 'Tab') {
+          console.log("keypress");
+    	setTimeout(function() {
+            console.log(clickedQuantityId);
+    		event.preventDefault(); // Prevent default tab behavior
+    		$(clickedQuantityId).focus(); // Move focus to the close button
+        },2500);
+    	}
+      });
+});
 jQuery_T4NT(document).on('keydown', '.t4s-drawer-menu__close', function(event) {
 	//var checkoutButton = $('.t4s-btn__checkout');
 	var closeButton = $('.menumob1 a');
