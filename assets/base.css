@@ -4973,3 +4973,9 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
     outline-offset: .3rem;
     box-shadow: none;
 }
+
+@media (min-width: 650px) {
+  .t4s-drawer-menu__close {
+    display:none;
+  }
+}
