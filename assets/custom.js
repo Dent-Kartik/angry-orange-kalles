@@ -451,7 +451,7 @@ event.preventDefault();
   $(this).click();
 //console.log('Working');
 }
-
+});
 
 jQuery(document).on('keydown', '.t4s-search-header__input', function(event) { 
     if (event.key != 'Tab') {
