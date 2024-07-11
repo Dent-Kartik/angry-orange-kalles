@@ -289,7 +289,7 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
                   console.log("No shift");
-                    $(".pswp__button--close").focus();
+                    lastFocusableElement.focus();
                     e.preventDefault();
                 }
             } else { // tab
@@ -305,7 +305,7 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
             if (e.shiftKey) { // shift + tab
                 if (document.activeElement === firstFocusableElement[0]) {
                   console.log("No shift");
-                    lastFocusableElement.focus();
+                     $(".pswp__button--close").focus();
                     e.preventDefault();
                 }
             } else { // tab
@@ -317,7 +317,8 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
             }
           
         }
-        });
+        }
+      });
  },25);
 });
 
