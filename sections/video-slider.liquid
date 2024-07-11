@@ -73,8 +73,11 @@ function updateAriaAttributes() {
       var cell = cells[visibleIndex];
       cell.setAttribute('aria-hidden', 'false');
       cell.setAttribute('tabindex', '0');
+      var video = cell.querySelector('video');
+        if (video) video.setAttribute('tabindex', '0');
     }
   }
+
   // flkty.on('ready', updateAccessibility);
   updateAccessibility();
     updateAccessibility();
