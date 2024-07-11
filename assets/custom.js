@@ -184,10 +184,10 @@ localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .login_linka.backrec
 });
 jQuery_T4NT(document).on('keydown', '.t4s-drawer__close', function(event) {
 	// Add an event listener to the checkout button to trap focus
-	if (event.key === 'Enter' || event.key === ' ') {
+	if (event.key === 'Enter') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
-			      console.log('Working');
+			      // console.log('Working');
 			var lastFocusedElementId = localStorage.getItem('lastFocusedElement');
 			if (lastFocusedElementId) {
 				$('#' + lastFocusedElementId).focus();
