@@ -187,7 +187,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-drawer__close', function(event) {
 	if (event.key === 'Enter' || event.key === ' ') {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
-			//       console.log('Working');
+			      console.log('Working');
 			var lastFocusedElementId = localStorage.getItem('lastFocusedElement');
 			if (lastFocusedElementId) {
 				$('#' + lastFocusedElementId).focus();
