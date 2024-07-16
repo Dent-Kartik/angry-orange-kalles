@@ -33,6 +33,7 @@ jQuery_T4NT(document).on('keydown', '.t4s-quantity-selector', function(event) {
 
 jQuery_T4NT(document).on('click', '.t4s-quantity-selector', function(event) {
      var clickedQuantityId = "#"+$(event.target).attr('id');
+      console.log("clicked");
 	if (event.key === 'Enter') {
     	setTimeout(function() {
             console.log(clickedQuantityId);
