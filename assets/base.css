@@ -414,7 +414,7 @@ ol, ul {
     color: var(--t4s-light-color);
     padding: 10px 15px;
 }
-*:focus-visible,a:focus:focus-visible {
+*:focus,*:focus-visible,a:focus:focus-visible {
     outline: 0.2rem solid rgba(var(--text-color-rgb));
     outline-offset: 0.3rem;
     box-shadow: none;
