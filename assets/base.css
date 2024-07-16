@@ -4979,3 +4979,104 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
     display:none;
   }
 }
+
+.toolTip{
+  position: absolute;
+    width: 125px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, .8);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    text-align:center;
+}
+.t4s-mini_cart__edit:focus:focus-visible .toolTip {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+
+}
+.t4s-mini_cart__remove:focus:focus-visible .toolTip {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+
+}
+.t4s-pr-item-btn.t4s-pr-quickview:focus:focus-visible + .toolTip.ttqv{
+  opacity: 1;
+    pointer-events: auto;
+    bottom: 35px;
+
+}
+.t4s-pr-item-btn.t4s-pr-wishlist:focus:focus-visible + .toolTip.ttws{
+  opacity: 1;
+    pointer-events: auto;
+    bottom: 35px;
+}
+.t4s-pr-item-btn.t4s-pr-addtocart:focus:focus-visible + .toolTip.ttac{
+  opacity: 1;
+    pointer-events: auto;
+    bottom: 35px;
+}
+.t4s-pr-item-btn:hover + .toolTip {
+  opacity: 0;
+  pointer-events: none;
+}
+.t4s-mini_cart__edit:hover .toolTip {
+   opacity: 0;
+  pointer-events: none;
+}
+.t4s-minicart-recommendations__item--qv:focus:focus-visible .toolTip {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 65px;
+}
+.pswp__button--share:focus:focus-visible + .toolTip.ttpssh {
+    opacity: 1;
+    pointer-events: auto;
+    top: 30px;
+}
+.pswp__button--close:focus:focus-visible + .toolTip.ttpscl {
+    opacity: 1;
+    pointer-events: auto;
+    top: 30px;
+}
+.pswp__button--fs:focus:focus-visible + .toolTip.ttpsfs {
+    opacity: 1;
+    pointer-events: auto;
+    top: 30px;
+}
+.pswp__button--zoom:focus:focus-visible + .toolTip.ttpszm {
+    opacity: 1;
+    pointer-events: auto;
+    top: 30px;
+}
+.pswp__button--arrow--left:focus:focus-visible + .toolTip.ttpspreva {
+    opacity: 1;
+    pointer-events: auto;
+    top: calc(50% + 100px);
+}
+.pswp__button--arrow--right:focus:focus-visible + .toolTip.ttpsnexta {
+    opacity: 1;
+    pointer-events: auto;
+  right:0;
+    top: calc(50% + 100px);
+}
+.mini_cart_tool_btn:focus:focus-visible .toolTip{
+   opacity: 1;
+    pointer-events: auto;
+   bottom: 50px;
+padding:0;
+}
+.t4s-product-inner:focus-within .t4s-product-btns, .t4s-product-inner:focus-within .t4s-product-btns2 a{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.mini_cart_tool_btn:focus:focus-visible{
+   position:relative;
+}
+.t4s-product-inner:focus-within .t4s-product-img.t4s_ratio.is-show-img2 {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
