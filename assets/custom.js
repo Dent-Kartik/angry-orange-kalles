@@ -216,6 +216,21 @@ jQuery_T4NT(document).on('keydown', '.t4s-drawer__close', function(event) {
       	}, 25);
     }
 });
+
+jQuery_T4NT(document).on('click', '.t4s-drawer__close', function(event) {
+	// Add an event listener to the checkout button to trap focus
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			      // console.log('Working');
+			var lastFocusedElementId = localStorage.getItem('lastFocusedElement');
+			if (lastFocusedElementId) {
+				$('#' + lastFocusedElementId).focus();
+			} else {
+				$('header').focus();
+			}
+		}, 25);
+    }
+});
 jQuery_T4NT(document).on('keydown', '.mi3', function(event) {
 	// Check if the pressed key is 'Tab' (key code 9)
 	if (event.which === 9) {
