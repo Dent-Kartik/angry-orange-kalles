@@ -30,6 +30,17 @@ jQuery_T4NT(document).on('keydown', '.t4s-quantity-selector', function(event) {
         },1500);
       }
 });
+
+jQuery_T4NT(document).on('click', '.t4s-quantity-selector', function(event) {
+     var clickedQuantityId = "#"+$(event.target).attr('id');
+	if (event.key === 'Enter') {
+    	setTimeout(function() {
+            console.log(clickedQuantityId);
+    		event.preventDefault(); // Prevent default tab behavior
+    		$(clickedQuantityId).focus(); // Move focus to the close button
+        },1500);
+      }
+});
 jQuery_T4NT(document).on('change', '.t4s-quantity-input', function(event) {
      var clickedQuantityId = "#"+$(event.target).attr('id');
         console.log('clickedQuantityId');
