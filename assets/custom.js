@@ -36,7 +36,7 @@ jQuery_T4NT(document).on('click', '.t4s-quantity-selector', function() {
       console.log("clicked");
     	setTimeout(function() {
             console.log(clickedQuantityId);
-    		event.preventDefault(); // Prevent default tab behavior
+    		// event.preventDefault(); // Prevent default tab behavior
     		$(clickedQuantityId).focus(); // Move focus to the close button
         },1500);
 });
