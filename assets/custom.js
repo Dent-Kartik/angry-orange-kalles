@@ -229,7 +229,6 @@ jQuery_T4NT(document).on('click', '.t4s-drawer__close', function(event) {
 				$('header').focus();
 			}
 		}, 25);
-    }
 });
 jQuery_T4NT(document).on('keydown', '.mi3', function(event) {
 	// Check if the pressed key is 'Tab' (key code 9)
