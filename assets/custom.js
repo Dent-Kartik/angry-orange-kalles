@@ -31,8 +31,8 @@ jQuery_T4NT(document).on('keydown', '.t4s-quantity-selector', function(event) {
       }
 });
 
-jQuery_T4NT(document).on('click', '.t4s-quantity-selector', function(event) {
-     var clickedQuantityId = "#"+$(event.target).attr('id');
+jQuery_T4NT(document).on('click', '.t4s-quantity-selector', function() {
+     var clickedQuantityId = "#"+$(this).attr('id');
       console.log("clicked");
     	setTimeout(function() {
             console.log(clickedQuantityId);
