@@ -31,12 +31,12 @@ jQuery_T4NT(document).on('keydown', '.t4s-quantity-selector', function(event) {
       }
 });
 
-jQuery_T4NT(document).on('click', '.t4s-quantity-selector', function() {
+jQuery_T4NT(document).on('click', '.t4s-quantity-selector', function(event) {
      var clickedQuantityId = "#"+$(this).attr('id');
       console.log("clicked");
     	setTimeout(function() {
             console.log(clickedQuantityId);
-    		// event.preventDefault(); // Prevent default tab behavior
+    		 event.preventDefault(); // Prevent default tab behavior
     		$(clickedQuantityId).focus(); // Move focus to the close button
         },1500);
 });
