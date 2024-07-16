@@ -343,6 +343,14 @@ jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 }
 });
 
+jQuery_T4NT(document).on('click', '.pswp__button--close', function(event) {
+	// Add an event listener to the checkout button to trap focus
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+    		// console.log('Working');
+			$('.t4s-pr__pswp-btn').focus();
+		}, 25);
+});
 jQuery_T4NT(document).on('keydown', '#CartSpecialInstructions', function(event) {
 	// Add an event listener to the checkout button to trap focus
 	if (event.shiftKey && event.key === 'Tab') {		
