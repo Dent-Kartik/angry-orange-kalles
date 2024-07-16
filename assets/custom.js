@@ -141,6 +141,23 @@ $('.t4s_btn_submmit').focus();
        localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .login_linka.backsign');
     }
 });
+
+
+jQuery_T4NT(document).on('click', '.t4s-site-nav__account a[href="/account"]', function(event) {
+	// var accountLink = $('.t4s-site-nav__account a[href="/account"]');
+	var miniAc = $('#t4s-login-sidebar .t4s-drawer__close');
+	//console.log('Working');
+      console.log(miniAc);
+	setTimeout(function() {
+		// Prevent the default link behavior
+		event.preventDefault();
+		localStorage.setItem('lastFocusedElement', 'header-account');
+        localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .signup_btn');
+		// Check if the pressed key is Enter (key code 13)
+			// Move focus to the mini cart
+			miniAc.focus();
+	}, 25);
+});
 jQuery_T4NT(document).on('keydown', '.t4s-site-nav__account a[href="/account"]', function(event) {
 	// var accountLink = $('.t4s-site-nav__account a[href="/account"]');
 	var miniAc = $('#t4s-login-sidebar .t4s-drawer__close');
@@ -156,22 +173,6 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__account a[href="/account"]',
 			// Move focus to the mini cart
 			miniAc.focus();
 		}
-	}, 25);
-});
-
-jQuery_T4NT(document).on('click', '.t4s-site-nav__account a[href="/account"]', function(event) {
-	// var accountLink = $('.t4s-site-nav__account a[href="/account"]');
-	var miniAc = $('#t4s-login-sidebar .t4s-drawer__close');
-	//console.log('Working');
-      console.log(miniAc);
-	setTimeout(function() {
-		// Prevent the default link behavior
-		event.preventDefault();
-		localStorage.setItem('lastFocusedElement', 'header-account');
-        localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .signup_btn');
-		// Check if the pressed key is Enter (key code 13)
-			// Move focus to the mini cart
-			miniAc.focus();
 	}, 25);
 });
 jQuery_T4NT(document).on('keydown', '.login_linka', function(event) {
