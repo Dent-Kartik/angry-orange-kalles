@@ -925,8 +925,15 @@
         "video_col_XkJ74n": {
           "type": "video-col",
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/692f00edb44b41b39f2ad424b24cf0c0.mov",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d2327e134e324a53ba8a93ab295a42dd.mp4",
             "image_url": "shopify:\/\/shop_images\/AO_UGC_2.jpg"
+          }
+        },
+        "video_col_FkWkDn": {
+          "type": "video-col",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5c0f647d337f487982870bcfd416aea6.mp4",
+            "image_url": "shopify:\/\/shop_images\/AO_UGC_3_v2.jpg"
           }
         }
       },
@@ -935,7 +942,8 @@
         "video_col_6Q4pJg",
         "video_col_zfF9E8",
         "video_col_qCUkWn",
-        "video_col_XkJ74n"
+        "video_col_XkJ74n",
+        "video_col_FkWkDn"
       ],
       "custom_css": [
 
