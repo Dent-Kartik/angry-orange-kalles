@@ -325,6 +325,15 @@ jQuery_T4NT(document).on('keydown', '.t4s-pr__pswp-btn', function(event) {
 	}
 });
 
+jQuery_T4NT(document).on('click', '.t4s-pr__pswp-btn', function(event) {
+	// Add an event listener to the checkout button to trap focus
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			$('.pswp__button--zoom').focus();
+		}, 25);
+});
+
 
 jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
   
