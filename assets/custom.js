@@ -452,6 +452,15 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__back', function(event)
 		}, 25);
 	}
 });
+
+jQuery_T4NT(document).on('click', '.t4s-mini_cart-tool__back', function(event) {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
+          console.log(lastFocusedElementClass);
+			$('.' + lastFocusedElementClass).focus();
+		}, 25);
+});
 jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__content', function(event) {
   
       if (event.key === 'Escape' || event.keyCode === 27){
