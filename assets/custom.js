@@ -422,6 +422,16 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--rates', function(ev
 		}, 25);
 	}
 });
+
+jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--rates', function(event) {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--rates');
+			localStorage.setItem('resumeElement', 'ShippingCountry_mini_cart');
+			$('#ShippingCountry_mini_cart').focus();
+		}, 25);
+});
 jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--discount', function(event) {
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Enter') {
@@ -433,6 +443,15 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--discount', function
 			$('#CartDiscountcode').focus();
 		}, 25);
 	}
+});
+jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--discount', function(event) {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--discount');
+			localStorage.setItem('resumeElement', 'CartDiscountcode');
+			$('#CartDiscountcode').focus();
+		}, 25);
 });
 jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__back', function(event) {
 	// Add an event listener to the checkout button to trap focus
@@ -452,7 +471,6 @@ jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__back', function(event)
 		}, 25);
 	}
 });
-
 jQuery_T4NT(document).on('click', '.t4s-mini_cart-tool__back', function(event) {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
@@ -461,6 +479,7 @@ jQuery_T4NT(document).on('click', '.t4s-mini_cart-tool__back', function(event) {
 			$('.' + lastFocusedElementClass).focus();
 		}, 25);
 });
+
 jQuery_T4NT(document).on('keydown', '.t4s-mini_cart-tool__content', function(event) {
   
       if (event.key === 'Escape' || event.keyCode === 27){
