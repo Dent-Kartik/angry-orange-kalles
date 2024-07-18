@@ -492,6 +492,21 @@ jQuery_T4NT(document).on('keydown', '.is--note .t4s-mini_cart-tool__primary', fu
 	}
 });
 
+jQuery_T4NT(document).on('click', '.is--note .t4s-mini_cart-tool__primary', function(event) {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
+            var textarea = document.getElementById('CartSpecialInstructions');
+            console.log(textarea.value.trim());
+            if (textarea.value.trim() !== "") {
+    			console.log(lastFocusedElementClass);
+               $('.' + lastFocusedElementClass + '.is--editNote').focus();
+            } else{
+    			console.log(lastFocusedElementClass);
+    			$('.' + lastFocusedElementClass).focus();
+            }
+		}, 450);
+});
 jQuery_T4NT(document).on('keydown', '.is--discount .t4s-mini_cart-tool__primary', function(event) {
   
       if (event.key === 'Enter' || event.keyCode === 13){
@@ -504,6 +519,15 @@ jQuery_T4NT(document).on('keydown', '.is--discount .t4s-mini_cart-tool__primary'
 	}
 });
 
+jQuery_T4NT(document).on('click', '.is--discount .t4s-mini_cart-tool__primary', function(event) {
+  
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
+    			console.log(lastFocusedElementClass);
+               $('.' + lastFocusedElementClass).focus();
+		}, 250);
+});
 jQuery_T4NT(document).on('keydown', '#CartDiscountcode', function(event) {
   
       if(event.shiftKey && event.key === 'Tab'){
@@ -513,6 +537,13 @@ jQuery_T4NT(document).on('keydown', '#CartDiscountcode', function(event) {
     
         }else if (event.key === 'Tab') {
     	}
+});
+
+jQuery_T4NT(document).on('click', '#CartDiscountcode', function(event) {
+              console.log("workgins");
+    		event.preventDefault(); // Prevent default tab behavior
+    		$(".is--discount .t4s-mini_cart-tool__back").focus(); // Move focus to the close button
+    
 });
 jQuery(document).ready(function() {
 	localStorage.setItem('ci', -1);
