@@ -433,6 +433,7 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--rates', function(ev
 });
 
 jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--rates', function(event) {
+			console.log('click rates Working');
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			console.log('click rates Working');
