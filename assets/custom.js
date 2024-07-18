@@ -435,7 +435,7 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--rates', function(ev
 jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--rates', function(event) {
 		setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
-			//  console.log('Working');
+			console.log('click rates Working');
 			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--rates');
 			localStorage.setItem('resumeElement', 'ShippingCountry_mini_cart');
 			$('#ShippingCountry_mini_cart').focus();
