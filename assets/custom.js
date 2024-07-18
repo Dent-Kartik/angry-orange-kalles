@@ -303,6 +303,17 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--note', function(eve
 		}, 25);
 	}
 });
+
+jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--note', function(event) {
+	// Add an event listener to the checkout button to trap focus
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--note');
+			localStorage.setItem('resumeElement', 'CartSpecialInstructions');
+			$('#CartSpecialInstructions').focus();
+		}, 25);
+});
 jQuery_T4NT(document).on('keydown', '.t4s-pr__pswp-btn', function(event) {
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Enter') {
