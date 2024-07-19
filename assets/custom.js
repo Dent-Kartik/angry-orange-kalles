@@ -911,7 +911,4 @@ $('#t4s-login-sidebar').on('keydown', function(e) {
          }
  },25);
 });
-document.getElementById('myButton').addEventListener('click', (event) => {
-        console.log('Click event: Button clicked');
-      });
 });
