@@ -554,6 +554,7 @@ jQuery_T4NT(document).on('click', '.is--discount .t4s-mini_cart-tool__primary', 
 			event.preventDefault(); // Prevent default tab behavior
 			var lastFocusedElementClass = localStorage.getItem('lastFocusedElementClass');
     			console.log(lastFocusedElementClass);
+                console.log("click works");
                $('.' + lastFocusedElementClass).focus();
 		}, 250);
 });
