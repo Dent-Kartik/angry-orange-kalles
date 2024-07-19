@@ -762,6 +762,16 @@ if (event.shiftKey && event.key === 'Tab') {
 		}, 25);
 	}
 });
+
+jQuery_T4NT(document).on('click', '.t4s-modal-close', function(event) {
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			//  console.log('Working');
+			var lastModalElement = localStorage.getItem('lastModalElement');
+            console.log(lastModalElement);
+			$(lastModalElement).focus();
+		}, 25);
+});
 // Attach a click event handler to the element with attribute 'data-dropdown-open'
 function handleDropdownOpen() {
 	// Check if the element does not have class 'is--clicked'
