@@ -911,7 +911,7 @@ $('#t4s-login-sidebar').on('keydown', function(e) {
          }
  },25);
 });
- $('#sidecart-note').on('click', function(){
+ $('.mini_cart_tool_btn.is--rates').on('click', function(){
             console.log("this is the click");
             return false;
         });
