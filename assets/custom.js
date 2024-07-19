@@ -927,10 +927,3 @@ $('#t4s-login-sidebar').on('keydown', function(e) {
  },25);
 });
 });
-window.addEventListener('click', function(e){
-	if (document.getElementById('t4s-login-sidebar').contains(e.target)){
-  	alert("Clicked in Box");
-  } else{
-  	alert("Clicked outside Box");
-  }
-})
