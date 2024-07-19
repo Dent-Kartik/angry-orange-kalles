@@ -534,7 +534,7 @@ jQuery_T4NT(document).on('click', '.is--note .t4s-mini_cart-tool__primary', func
     			console.log(lastFocusedElementClass);
     			$('.' + lastFocusedElementClass).focus();
             }
-		}, 450);
+		}, 750);
 });
 jQuery_T4NT(document).on('keydown', '.is--discount .t4s-mini_cart-tool__primary', function(event) {
   
