@@ -392,16 +392,13 @@
 
 {%- if request.design_mode %}</div>{% endif -%}
 <script>
-jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--rates', function() {
-			console.log('click rates Working');
-		// setTimeout(function() {
-		// 	// event.preventDefault(); // Prevent default tab behavior
-		// 	console.log('click rates Working');
-		// 	localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--rates');
-		// 	localStorage.setItem('resumeElement', 'ShippingCountry_mini_cart');
-		// 	$('#ShippingCountry_mini_cart').focus();
-		// }, 25);
-});
+  
+document.getElementById('sidecart-note').addEventListener('click', (event) => {
+            console.log('Click event: Button clicked');
+			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--rates');
+			localStorage.setItem('resumeElement', 'ShippingCountry_mini_cart');
+			document.getElementById('ShippingCountry_mini_cart').focus();
+      });
 </script>
 {%- schema -%}
   {
