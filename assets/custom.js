@@ -305,8 +305,8 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--note', function(eve
 });
 
 jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--note', function(event) {
-	// Add an event listener to the checkout button to trap focus
-		setTimeout(function() {
+  alert("dd");
+  setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
 			console.log('Click Working');
 			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--note');
