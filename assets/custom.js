@@ -739,6 +739,24 @@ setTimeout(function() {
   //   });
 });
 
+jQuery_T4NT(document).on('click', '.t4s-mini_cart__edit', function(event) {
+	var miniCart = $('.t4s-modal-close');
+     var clickedEdidteId = "#"+$(event.target).attr('id');
+         // clickedEdidteId = `${clickedEdidteId}`;
+	 localStorage.setItem('clickedEdidteId', clickedEdidteId);
+          console.log(clickedEdidteId);
+		// Check if the pressed key is Enter (key code 13)
+setTimeout(function() {
+		// Prevent the default link behavior
+		event.preventDefault();
+			localStorage.setItem('lastModalElement', clickedEdidteId);
+			localStorage.setItem('tabModalElement', '.t4s-product-qs__title a');
+          localStorage.setItem('tabShiftElement', '.shopify-payment-button__more-options');
+  localStorage.setItem('escElement', '#header-cart');
+			// Move focus to the mini cart
+			miniCart.focus();
+	}, 25);
+});
 jQuery_T4NT(document).on('keydown', '.t4s-modal-close', function(event) {
 	// Add an event listener to the checkout button to trap focus
 if (event.shiftKey && event.key === 'Tab') {
