@@ -580,16 +580,16 @@ jQuery(document).ready(function() {
 		$('.t4s-drawer__header span').attr("role", "heading").attr("aria-level", "1");
 	}, 25);
 
-jQuery_T4NT(document).live('click', '#sidecart-note', function() {
-  alert("dd");
-  // setTimeout(function() {
-		// 	event.preventDefault(); // Prevent default tab behavior
-		// 	console.log('Click Working');
-		// 	localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--note');
-		// 	localStorage.setItem('resumeElement', 'CartSpecialInstructions');
-		// 	$('#CartSpecialInstructions').focus();
-		// }, 25);
-});
+// jQuery_T4NT(document).live('click', '#sidecart-note', function() {
+//   alert("dd");
+//   // setTimeout(function() {
+// 		// 	event.preventDefault(); // Prevent default tab behavior
+// 		// 	console.log('Click Working');
+// 		// 	localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--note');
+// 		// 	localStorage.setItem('resumeElement', 'CartSpecialInstructions');
+// 		// 	$('#CartSpecialInstructions').focus();
+// 		// }, 25);
+// });
 });
 
 jQuery_T4NT(document).on('keydown', '.flickityt4s-prev-next-button, .dot', function(event) {
@@ -910,6 +910,9 @@ $('#t4s-login-sidebar').on('keydown', function(e) {
 			$('#header-account').focus();
          }
  },25);
-  
 });
+ $('#sidecart-note').live('click', function(){
+            console.log("this is the click");
+            return false;
+        });
 });
