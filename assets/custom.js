@@ -580,7 +580,7 @@ jQuery(document).ready(function() {
 		$('.t4s-drawer__header span').attr("role", "heading").attr("aria-level", "1");
 	}, 25);
 
-jQuery_T4NT(document).on('click', '#sidecart-note', function() {
+jQuery_T4NT(document).live('click', '#sidecart-note', function() {
   alert("dd");
   // setTimeout(function() {
 		// 	event.preventDefault(); // Prevent default tab behavior
