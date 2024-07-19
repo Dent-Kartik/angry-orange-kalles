@@ -86,6 +86,21 @@ jQuery_T4NT(document).on('keydown', '.t4s-site-nav__cart a[href="/cart"]', funct
 		}
 	}, 25);
 });
+
+jQuery_T4NT(document).on('click', '.t4s-site-nav__cart a[href="/cart"]', function(event) {
+	//  var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
+	var miniCart = $('#t4s-mini_cart .t4s-drawer__close');
+	setTimeout(function() {
+		// Prevent the default link behavior
+      console.log(miniCart);
+		event.preventDefault();
+		localStorage.setItem('lastFocusedElement', 'header-cart');
+      localStorage.setItem('tabShiftElement', '#t4s-mini_cart .t4s-btn__checkout ');
+		// Check if the pressed key is Enter (key code 13)
+			// Move focus to the mini cart
+			miniCart.focus();
+	}, 25);
+});
 // jQuery_T4NT(document).on('keydown', '.t4s-mini_cart__edit', function(event) {
 // 	//  var cartLink = $('.t4s-site-nav__cart a[href="/cart"]');
 // 	var miniCart = $('#t4s-mini_cart .t4s-modal-close');
