@@ -741,7 +741,7 @@ setTimeout(function() {
 
 jQuery_T4NT(document).on('click', '.t4s-mini_cart__edit', function(event) {
 	var miniCart = $('.t4s-modal-close');
-     var clickedEdidteId = "#"+$(event.target).attr('id');
+     var clickedEdidteId = "#"+$(this).attr('id');
          // clickedEdidteId = `${clickedEdidteId}`;
 	 localStorage.setItem('clickedEdidteId', clickedEdidteId);
           console.log(clickedEdidteId);
