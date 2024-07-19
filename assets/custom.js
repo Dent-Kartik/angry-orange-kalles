@@ -304,7 +304,7 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--note', function(eve
 	}
 });
 
-jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--note', function(event) {
+jQuery_T4NT(document).on('click', '.mini_cart_tool_btn', function(event) {
   alert("dd");
   setTimeout(function() {
 			event.preventDefault(); // Prevent default tab behavior
