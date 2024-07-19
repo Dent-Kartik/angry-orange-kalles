@@ -304,15 +304,16 @@ jQuery_T4NT(document).on('keydown', '.mini_cart_tool_btn.is--note', function(eve
 	}
 });
 
-jQuery_T4NT(document).on('click', '.mini_cart_tool_btn', function(event) {
+jQuery_T4NT(document).on('click', '.mini_cart_tool_btn.is--note', function(event) {
+			event.preventDefault();
   alert("dd");
-  setTimeout(function() {
-			event.preventDefault(); // Prevent default tab behavior
-			console.log('Click Working');
-			localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--note');
-			localStorage.setItem('resumeElement', 'CartSpecialInstructions');
-			$('#CartSpecialInstructions').focus();
-		}, 25);
+  // setTimeout(function() {
+		// 	event.preventDefault(); // Prevent default tab behavior
+		// 	console.log('Click Working');
+		// 	localStorage.setItem('lastFocusedElementClass', 'mini_cart_tool_btn.is--note');
+		// 	localStorage.setItem('resumeElement', 'CartSpecialInstructions');
+		// 	$('#CartSpecialInstructions').focus();
+		// }, 25);
 });
 jQuery_T4NT(document).on('keydown', '.t4s-pr__pswp-btn', function(event) {
 	// Add an event listener to the checkout button to trap focus
