@@ -388,6 +388,53 @@ jQuery(document).on('keydown','.t4s-pr__pswp-btn',function(event){
  },25);
 });
 
+jQuery(document).on('click','.t4s-pr__pswp-btn',function(event){
+  
+  setTimeout(function(){
+        var dialog = $('.pswp__t4s');
+        console.log(dialog);
+        var firstFocusableElement = $('.pswp__button--zoom');
+        var lastFocusableElement = $(".pswp_thumb_item").last();
+      $('.pswp__t4s').on('keydown', function(e) {
+     console.log(firstFocusableElement[0]);
+     console.log(lastFocusableElement[0]);
+        if(lastFocusableElement){
+        if (e.key === 'Tab' || e.keyCode === 9) {
+            if (e.shiftKey) { // shift + tab
+                if (document.activeElement === firstFocusableElement[0]) {
+                  console.log("No shift");
+                    lastFocusableElement.focus();
+                    e.preventDefault();
+                }
+            } else { // tab
+                if (document.activeElement === lastFocusableElement[0]) {
+                  console.log("shift");
+                    firstFocusableElement.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+        } else{
+        if (e.key === 'Tab' || e.keyCode === 9) {
+            if (e.shiftKey) { // shift + tab
+                if (document.activeElement === firstFocusableElement[0]) {
+                  console.log("No shift");
+                     $(".pswp__button--close").focus();
+                    e.preventDefault();
+                }
+            } else { // tab
+                if (document.activeElement === lastFocusableElement[0]) {
+                  console.log("shift");
+                    firstFocusableElement.focus();
+                    e.preventDefault();
+                }
+            }
+          
+        }
+        }
+      });
+ },25);
+});
 jQuery_T4NT(document).on('keydown', '.pswp__button--close', function(event) {
 	// Add an event listener to the checkout button to trap focus
 	if (event.key === 'Enter') {
