@@ -55,6 +55,7 @@ data-show="login" login , create, recover
                     >
                     <label for="RecoverEmail">
                       {{ 'customer.recover_password.email' | t }}
+                    <span class="required">*</span>
                     </label>
                   </div>
                   {%- if form.errors -%}
