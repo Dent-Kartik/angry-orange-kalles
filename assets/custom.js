@@ -158,7 +158,10 @@ $('.t4s_btn_submmit').focus();
 });
 jQuery_T4NT(document).on('click', '.signup_btn', function(event) {
 
-       localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .login_linka.backsign');
+	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
+       localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .login_linka.backsign');			
+      closesuButton.focus(); // Move focus to the close button 
+
 });
 
 
