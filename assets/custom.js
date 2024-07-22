@@ -217,6 +217,17 @@ localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .signup_btn');
 		}, 25);
 	}
 });
+
+jQuery_T4NT(document).on('click', '.login_linka', function(event) {
+	//var suButton = $('.signup_btn');
+	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
+	// Add an event listener to the checkout button to trap focus  
+localStorage.setItem('tabShiftElement', '#t4s-login-sidebar .signup_btn');
+		setTimeout(function() {
+			event.preventDefault(); // Prevent default tab behavior
+			closesuButton.focus(); // Move focus to the close button 
+		}, 25);
+});
 jQuery_T4NT(document).on('keydown', '.precover_link', function(event) {
 	//var suButton = $('.signup_btn');
 	var closesuButton = $('#t4s-login-sidebar .t4s-drawer__close');
