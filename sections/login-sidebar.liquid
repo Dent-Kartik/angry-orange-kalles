@@ -46,6 +46,7 @@ data-show="login" login , create, recover
                       autocapitalize="off"
                       autocomplete="email"
                       aria-required="true"
+                      required
                       {% if form.errors %}
                         aria-invalid="true"
                         aria-describedby="RecoverEmail-email-error"
@@ -110,6 +111,7 @@ data-show="login" login , create, recover
                       autocorrect="off"
                       autocapitalize="off"
                       aria-required="true"
+                      required
                       {% if form.errors contains 'form' %}
                         aria-invalid="true"
                       {% endif %}
@@ -129,6 +131,7 @@ data-show="login" login , create, recover
                         id="CustomerPassword"
                         autocomplete="current-password"
                         aria-required="true"
+                        required
                         {% if form.errors contains 'form' %}
                           aria-invalid="true"
                         {% endif %}
@@ -213,6 +216,7 @@ data-show="login" login , create, recover
                        autocapitalize="off"
                        autocomplete="email"
                        aria-required="true"
+                       required
                        {% if form.errors contains 'email' %}
                          aria-invalid="true"
                          aria-describedby="RegisterForm-email-error"
@@ -237,6 +241,7 @@ data-show="login" login , create, recover
                        name="customer[password]"
                        id="RegisterForm-password"
                        aria-required="true"
+                       required
                        autocomplete="new-password"
                        {% if form.errors contains 'password' %}
                          aria-invalid="true"
