@@ -792,6 +792,7 @@ setTimeout(function() {
 		}
         if (event.key === 'Escape') {
       setTimeout(function() {
+          console.log('hig');
       			// Move focus to the mini cart
       			$('#header-cart').focus();
       	}, 25);
