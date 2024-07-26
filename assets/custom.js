@@ -842,6 +842,15 @@ setTimeout(function() {
 			// Move focus to the mini cart
 			miniCart.focus();
 	}, 25);
+  
+  jQuery_T4NT(document).on('keydown', '#product-edit-modal', function(event) {
+        if (event.key === 'Escape') {
+      setTimeout(function() {
+      			// Move focus to the mini cart
+      			$('#header-cart').focus();
+      	}, 25);
+      		}
+  });
 });
 jQuery_T4NT(document).on('keydown', '.t4s-modal-close', function(event) {
 	// Add an event listener to the checkout button to trap focus
