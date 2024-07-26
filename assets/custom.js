@@ -790,6 +790,12 @@ setTimeout(function() {
 			miniCart.focus();
 	}, 25);
 		}
+        if (event.key === 'Escape') {
+      setTimeout(function() {
+      			// Move focus to the mini cart
+      			miniCart.focus();
+      	}, 25);
+      		}
   jQuery_T4NT(document).on('keydown', '.shopify-payment-button__more-options', function(event) {
     	//var checkoutButton = $('.t4s-btn__checkout');
     	var closeButton = $( "#product-edit-modal>.t4s-modal__inner .t4s-modal-close" );
