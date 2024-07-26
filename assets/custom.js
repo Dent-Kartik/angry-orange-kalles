@@ -793,7 +793,7 @@ setTimeout(function() {
         if (event.key === 'Escape') {
       setTimeout(function() {
       			// Move focus to the mini cart
-      			miniCart.focus();
+      			$('#header-cart').focus();
       	}, 25);
       		}
   jQuery_T4NT(document).on('keydown', '.shopify-payment-button__more-options', function(event) {
