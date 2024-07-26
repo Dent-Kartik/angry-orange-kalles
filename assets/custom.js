@@ -794,7 +794,6 @@ setTimeout(function() {
   jQuery_T4NT(document).on('keydown', '#product-edit-modal', function(event) {
         if (event.key === 'Escape') {
       setTimeout(function() {
-          console.log('hig');
       			// Move focus to the mini cart
       			$('#header-cart').focus();
       	}, 25);
