@@ -96,7 +96,7 @@
          </div>
          <div data-results-search class="t4s-mini-search__content t4s_ratioadapt">
            <div class="results-count sr-only" aria-live="assertive">{% if results_count == 0 %}No {% else %}{{ results_count }}{% endif %} Results</div>
-                      <ul role="listbox" aria-labelledby="search-label" >
+                      <ul role="listbox" aria-labelledby="search-label">
            {%- if results_count == 0 -%}{{ 'search.general.no_product_results' | t }}
              
            {%- elsif results_count > 0 -%}
