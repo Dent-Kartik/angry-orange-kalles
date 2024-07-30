@@ -251,7 +251,8 @@
     transition: padding 356ms cubic-bezier(.4,0,.2,1), max-width 356ms cubic-bezier(.4,0,.2,1);
 }
 .t4s-featured-product .t4s-pr-group-btns>button:hover>.t4s-pr__text-btn ,
-.t4s-section-main-product .t4s-pr-group-btns>button:hover>.t4s-pr__text-btn {
+.t4s-section-main-product .t4s-pr-group-btns>button:hover>.t4s-pr__text-btn,.t4s-featured-product .t4s-pr-group-btns>button:focus>.t4s-pr__text-btn ,
+.t4s-section-main-product .t4s-pr-group-btns>button:focus>.t4s-pr__text-btn {
     padding-inline-start: 10px;
     max-width: 290px;
 }
