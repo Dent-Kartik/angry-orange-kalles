@@ -1049,4 +1049,23 @@ $('#t4s-login-sidebar').on('keydown', function(e) {
          }
  },25);
 });
+   $("#autocomplete-results").onkeydown = function(e) {
+            var selected = $('#autocomplete-results ul li:focus').index();
+
+            var next = selected + 1;
+            var pre = selected - 1;
+
+            if(pre < 0)
+                pre = 0;
+            if(next > $('#autocomplete-results ul li').length)
+                next = $('#autocomplete-results ul li').length;
+
+            if(e.which == 38) { // up
+                $('#autocomplete-results ul li').eq(pre).focus();
+            }
+            if(e.which == 40) { // down
+                $('#autocomplete-results ul li').eq(next).focus();
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        };
 });
