@@ -68,7 +68,9 @@
 {% endfor%}
 
 {% assign newTagList = newTagList | remove_first: ',' | split: ',' %}
-
+  <!-- Begin ReCharge code -->
+{% if product.available %}{% include 'subscription-product' %}{% endif %}
+<!-- End ReCharge code -->
 
 
 {%- if color_mode == 'dropdown' or selector_mode == 'dropdown' %}<link rel="stylesheet" href="{{ 'base_drop.min.css' | asset_url }}" media="all">{% endif -%}
