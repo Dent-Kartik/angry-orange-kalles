@@ -1050,6 +1050,7 @@ $('#t4s-login-sidebar').on('keydown', function(e) {
  },25);
 });
    $("#autocomplete-results").onkeydown = function(e) {
+           console.log("list");
             var selected = $('#autocomplete-results ul li:focus').index();
 
             var next = selected + 1;
