@@ -1070,3 +1070,41 @@ $('#t4s-login-sidebar').on('keydown', function(e) {
             e.preventDefault(); // prevent the default action (scroll / move caret)
         };
 });
+
+jQuery_T4NT('.tbtn_menu').on('keydown', function(event) {
+   if (event.keyCode === 13 || event.keyCode === 32) {
+    // Prevent default action for both 'Enter' and 'Space' keys
+    event.preventDefault();
+
+    // Toggle the 'is-action__hover' class on menuItem
+    var $menuItem = $(this).closest('.t4s-menu-item.has--children');
+    $menuItem.toggleClass('is-action__hover');
+
+    // Toggle aria-expanded attribute on button
+    var isExpanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', !isExpanded);
+
+    // Set aria-hidden attribute on submenu
+    var $submenu = $menuItem.find('.t4s-sub-menu');
+    $submenu.attr('aria-hidden', isExpanded);
+
+    // Focus on first submenu item if expanded
+    if (!isExpanded) {
+      $submenu.find('.mi1 a').focus();
+    }
+  }
+});
+jQuery_T4NT('.tbtn_menu').on('click', function(event) {
+    // Toggle the 'is-action__hover' class on menuItem
+    var $menuItem = $(this).closest('.t4s-menu-item.has--children');
+    $menuItem.toggleClass('is-action__hover');
+
+    // Toggle aria-expanded attribute on button
+    var isExpanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', !isExpanded);
+
+    // Set aria-hidden attribute on submenu
+    var $submenu = $menuItem.find('.t4s-sub-menu');
+    $submenu.attr('aria-hidden', isExpanded);
+
+});
