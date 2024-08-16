@@ -8,6 +8,7 @@
 {{ 'section.css' | asset_url | stylesheet_tag }}
 {{ 'button-style.css' | asset_url | stylesheet_tag }}
 <link href="{{ 'custom-effect.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
+
 {%- liquid
     assign sid = section.id
     assign se_stts = section.settings  
@@ -33,6 +34,13 @@
         assign number_of_comments = article.comments_count 
     endif
  -%}
+{% assign prefix = "Products_" %}
+          {% assign matched_tag = "" %}
+  {% for tag in article.tags %}
+    {% if tag contains prefix %}
+      {% assign matched_tag = tag | remove: prefix %}
+    {% endif %}
+  {% endfor %}
 <div class="t4s-section-inner t4s_nt_se_{{ sid }} {{ stt_layout }}{% if stt_image_bg != blank and stt_layout != 't4s-se-container' %} t4s-has-imgbg lazyloadt4s{% endif %}" {% if stt_image_bg != blank and stt_layout != 't4s-se-container' %} data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto"  data-optimumx="2"{% endif %} {% render 'section_style', se_stts: se_stts -%} >
     {{- html_layout[0] -}}
     {%- if stt_layout == 't4s-se-container' -%}
@@ -293,6 +301,49 @@
                     {%- endcase -%}
             {%- endfor -%}
         </div>
+
+        {% if matched_tag != "" %}
+{% assign c = 0 %}
+           {% assign collection_handle = "all-products" %} 
+{% for product in collections[collection_handle].products %}
+ {% for tag in product.tags %}
+    {% if tag contains matched_tag %}
+      {% assign c = c | plus :1 %}
+ {% endif %}
+  {% endfor %}
+{% endfor %}
+          <h4 class="t4s-article-related-heading t4s-text-center" style="width:100%;margin-top:50px;">FEATURED PRODUCTS</h4>
+  <div class="t4s-flicky-slider t4s_ratio4_3 t4s_position_8 t4s_cover t4s-row t4s-row-cols-lg-3 t4s-row-cols-md-2 t4s-row-cols-1 t4s-gx-md-30 t4s-gy-md-30 t4s-gx-10 t4s-gy-10 t4s-slider-btn-style-outline t4s-slider-btn-round t4s-slider-btn-small t4s-slider-btn-cl-dark t4s-slider-btn-vi-hover t4s-slider-btn-hidden-mobile-true flickityt4s flickityt4s-enabled is-draggable t4s-enabled" style="--space-dots: 10px; --flickity-btn-pos: 30px; --flickity-btn-pos-mb: 10px; --prev-next-top: 139px;width:100%;display:flex;">
+{% for product in collections[collection_handle].products %}
+ {% for tag in product.tags %}
+    {% if tag contains matched_tag %}
+    <div class="t4s-product t4s-pr-grid t4s-pr-style1 t4s-col-item t4s-text-center">
+      <a href="{{ product.url }}">
+        <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}" style="width:100%;">
+        <h5>{{ product.title }}</h5>
+        <span>{{ product.price | money }}</span>
+        {% assign variant_id = '' %}
+        {% if product.variants.size > 1 %}
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              {% assign variant_id = variant.id %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% assign variant_id = product.variants.first.id %}
+        {% endif %}
+        {% if variant_id != '' %}
+        <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-btn-color-custom1 t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/add?id={{ variant_id }}&quantity=1" style="padding:10px 0;">Add to Cart</a>
+  <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/{{ variant_id }}:1" style="margin-top:5px;padding:10px 0;border:1px solid black;">Buy Now</a>
+  {% endif %}
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+          </div>
+{% endif %}
         <aside data-sidebar-content class="t4s-col-item t4s-col-12 t4s-col-lg-3 t4s-sidebar t4s-dn"><div class="t4s-loading--bg"></div></aside>
     </div>
     {{- html_layout[0] -}}
@@ -416,6 +467,14 @@
     .t4s-main-article .t4s-btn-style-link{
         border-bottom: none;
     }
+  {% if article.metafields.custom.show_featured_product != true %}.t4s-featured-product{display:none}{% endif %}
+.hoverblock{display:none;background: white;
+    border: 1px solid black;
+    padding: 25px;width: 316px;
+    bottom: -150%;
+    left: 50%;}
+.gposrelb{position:relative;}
+.posrelb:hover .hoverblock{display:block;position:absolute;}
 </style>
 <script type="application/ld+json">
 {
@@ -456,6 +515,148 @@
   }
 }
 </script>
+{% if article.metafields.global.product1 != blank %}
+  {% assign product_handle = article.metafields.global.product1 %}
+  {% assign pro = all_products[product_handle] %}
+  {% if pro %}<div class="hoverblock" id="hoverblock-p1">
+  <div class="t4s-product t4s-pr-grid t4s-pr-style1 t4s-col-item t4s-text-center" id="p1-block">
+      <a href="{{ pro.url }}">
+        <img src="{{ pro.featured_image | img_url: 'master' }}" alt="{{ pro.title }}" style="width:100%;">
+        <h5>{{ pro.title }}</h5>
+        <span>{{ pro.price | money }}</span>
+        {% assign variant_id = '' %}
+        {% if pro.variants.size > 1 %}
+          {% for variant in pro.variants %}
+            {% if variant.available %}
+              {% assign variant_id = variant.id %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% assign variant_id = pro.variants.first.id %}
+        {% endif %}
+        {% if variant_id != '' %}
+        <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-btn-color-custom1 t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/add?id={{ variant_id }}&quantity=1" style="padding:10px 0;">Add to Cart</a>
+  <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/{{ variant_id }}:1" style="margin-top:5px;padding:10px 0;border:1px solid black;">Buy Now</a>
+  {% endif %}
+      </a>
+    </div>
+  </div> {% endif %}
+{% endif %}
+
+{% if article.metafields.global.product2 != blank %}
+  {% assign product_handle = article.metafields.global.product2 %}
+  {% assign pro = all_products[product_handle] %}
+  {% if pro %}<div id="hoverblock-p2">
+  <div class="t4s-product t4s-pr-grid t4s-pr-style1 t4s-col-item t4s-text-center hoverblock" id="p2-block">
+      <a href="{{ pro.url }}">
+        <img src="{{ pro.featured_image | img_url: 'master' }}" alt="{{ pro.title }}" style="width:100%;">
+        <h5>{{ pro.title }}</h5>
+        <span>{{ pro.price | money }}</span>
+        {% assign variant_id = '' %}
+        {% if pro.variants.size > 1 %}
+          {% for variant in pro.variants %}
+            {% if variant.available %}
+              {% assign variant_id = variant.id %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% assign variant_id = pro.variants.first.id %}
+        {% endif %}
+        {% if variant_id != '' %}
+        <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-btn-color-custom1 t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/add?id={{ variant_id }}&quantity=1" style="padding:10px 0;">Add to Cart</a>
+  <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/{{ variant_id }}:1" style="margin-top:5px;padding:10px 0;border:1px solid black;">Buy Now</a>
+  {% endif %}
+      </a>
+    </div>
+  </div> {% endif %}
+{% endif %}
+
+{% if article.metafields.global.product3 != blank %}
+  {% assign product_handle = article.metafields.global.product3 %}
+  {% assign pro = all_products[product_handle] %}
+  {% if pro %}<div id="hoverblock-p3">
+  <div class="t4s-product t4s-pr-grid t4s-pr-style1 t4s-col-item t4s-text-center hoverblock" id="p3-block">
+      <a href="{{ pro.url }}">
+        <img src="{{ pro.featured_image | img_url: 'master' }}" alt="{{ pro.title }}" style="width:100%;">
+        <h5>{{ pro.title }}</h5>
+        <span>{{ pro.price | money }}</span>
+        {% assign variant_id = '' %}
+        {% if pro.variants.size > 1 %}
+          {% for variant in pro.variants %}
+            {% if variant.available %}
+              {% assign variant_id = variant.id %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% assign variant_id = pro.variants.first.id %}
+        {% endif %}
+        {% if variant_id != '' %}
+        <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-btn-color-custom1 t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/add?id={{ variant_id }}&quantity=1" style="padding:10px 0;">Add to Cart</a>
+  <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/{{ variant_id }}:1" style="margin-top:5px;padding:10px 0;border:1px solid black;">Buy Now</a>
+  {% endif %}
+      </a>
+    </div>
+  </div> {% endif %}
+{% endif %}
+
+{% if article.metafields.global.product4 != blank %}
+  {% assign product_handle = article.metafields.global.product4 %}
+  {% assign pro = all_products[product_handle] %}
+  {% if pro %}<div id="hoverblock-p4">
+  <div class="t4s-product t4s-pr-grid t4s-pr-style1 t4s-col-item t4s-text-center hoverblock" id="p4-block">
+      <a href="{{ pro.url }}">
+        <img src="{{ pro.featured_image | img_url: 'master' }}" alt="{{ pro.title }}" style="width:100%;">
+        <h5>{{ pro.title }}</h5>
+        <span>{{ pro.price | money }}</span>
+        {% assign variant_id = '' %}
+        {% if pro.variants.size > 1 %}
+          {% for variant in pro.variants %}
+            {% if variant.available %}
+              {% assign variant_id = variant.id %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% assign variant_id = pro.variants.first.id %}
+        {% endif %}
+        {% if variant_id != '' %}
+        <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-btn-color-custom1 t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/add?id={{ variant_id }}&quantity=1" style="padding:10px 0;">Add to Cart</a>
+  <br>  <a class="t4s-btn t4s-btn t4s-btn-base t4s-btn-style-default t4s-w-100 t4s-justify-content-center  t4s-btn-effect-sweep-to-top t4s-btn-loading__svg" href="/cart/{{ variant_id }}:1" style="margin-top:5px;padding:10px 0;border:1px solid black;">Buy Now</a>
+  {% endif %}
+      </a>
+    </div>
+  </div> {% endif %}
+{% endif %}
+ <script>
+        // Wait for the DOM to fully load
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the elements by their IDs
+            var hoverblock = document.getElementById('hoverblock-p1');
+            var p1 = document.getElementById('p1');
+
+            // Check if the element exists
+            if (p1) {
+                // Get the parent element of p1
+                var parentElement = p1.parentNode;
+
+                // Set the position of the parent element to relative
+               parentElement.classList.add('posrelb');
+var grandparentElement = p1.parentNode.parentNode;
+
+    // Add the class 'posrelb' to the grandparent element
+    grandparentElement.classList.add('gposrelb');
+            }
+
+            // Check if both elements exist
+            if (hoverblock && p1) {
+                // Insert the hoverblock after the p1 element
+                p1.parentNode.insertBefore(hoverblock, p1.nextSibling);
+            }
+        });
+    </script>
 {%- schema -%}
 {
     "name": "Posts",
