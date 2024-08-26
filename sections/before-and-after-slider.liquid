@@ -143,7 +143,7 @@ div.slider-button:after {
   $(document).ready(function() {
 
     $("input.slider").on("input change", function(event) {
-        var element = $(this).parents("div.container");
+        var element = $(this).parents("div.ba-container");
         var pos = event.target.value;
 
         element.find("div.before").css({width: pos + "%"});
