@@ -636,13 +636,13 @@
             "tag": "h2",
             "fontf": "inherit",
             "text_cl": "#fff",
-            "text_fs": 48,
+            "text_fs": 52,
             "text_lh": 0,
             "text_fw": 400,
             "text_ls": 0,
             "font_italic": false,
             "text_shadow": false,
-            "text_mgb": 15,
+            "text_mgb": 40,
             "hidden_mobile": false,
             "text_fs_mb": 16,
             "text_lh_mb": 0,
@@ -653,46 +653,8 @@
         "html_XCcyXB": {
           "type": "html",
           "settings": {
-            "html_content": "<div class=\"row\">\n<div class=\"col-md-5\">\n<p class=\"counter\"> 4.5<\/p>\n<p class=\"counter-text\">average rating<\/p>\n<\/div>\n<div class=\"col-md-5\">\n<p class=\"counter\">173453+<\/p>\n<p class=\"counter-text\">number of reviews<\/p>\n<\/div>\n\n<div class=\"col-md-5\">\n<p class=\"counter\"> 1700+\n<\/p>\n<p class=\"counter-text\">returning customers<\/p>\n<\/div>\n<\/div>",
+            "html_content": "<div class=\"c-row\">\n<div class=\"col-md-5\">\n<p class=\"counter\"> 4.5<\/p>\n<p class=\"counter-text\">average rating<\/p>\n<\/div>\n<div class=\"col-md-5\">\n<p class=\"counter\">173453+<\/p>\n<p class=\"counter-text\">number of reviews<\/p>\n<\/div>\n\n<div class=\"col-md-5\">\n<p class=\"counter\"> 1700+\n<\/p>\n<p class=\"counter-text\">returning customers<\/p>\n<\/div>\n<\/div>",
             "hidden_mobile": false
-          }
-        },
-        "bl_col_zi8rDJ": {
-          "type": "bl_col",
-          "settings": {
-            "col_dk": "6",
-            "col_tb": "6",
-            "col_mb": "12",
-            "align_vertical": false,
-            "content_align": "center",
-            "content_align_tablet": "center",
-            "content_align_mobile": "center",
-            "padding_inner": "",
-            "padding_inner_tb": "",
-            "padding_inner_mb": "",
-            "bg_cl": "rgba(0,0,0,0)"
-          }
-        },
-        "custom_text_FzpMpb": {
-          "type": "custom_text",
-          "settings": {
-            "text": "Textddd",
-            "remove_br_tag": false,
-            "tag": "p",
-            "fontf": "inherit",
-            "text_cl": "#fff",
-            "text_fs": 16,
-            "text_lh": 0,
-            "text_fw": 400,
-            "text_ls": 0,
-            "font_italic": false,
-            "text_shadow": false,
-            "text_mgb": 15,
-            "hidden_mobile": false,
-            "text_fs_mb": 16,
-            "text_lh_mb": 0,
-            "text_ls_mb": 0,
-            "text_mgb_mobile": 10
           }
         }
       },
@@ -701,14 +663,14 @@
         "image_pRmEP6",
         "bl_col_VgxjAp",
         "custom_text_Qndczm",
-        "html_XCcyXB",
-        "bl_col_zi8rDJ",
-        "custom_text_FzpMpb"
+        "html_XCcyXB"
       ],
       "custom_css": [
         "{color: white;}",
         ".counter {font-size: 48px; font-style: normal; font-weight: 700; line-height: normal; margin-bottom: 0px;}",
-        ".counter-text {font-size: 28px; font-style: normal; font-weight: 400; line-height: normal; margin-bottom: 0px;}"
+        ".counter-text {font-size: 28px; font-style: normal; font-weight: 400; line-height: normal; margin-bottom: 0px;}",
+        ".c-row {display: flex; flex-wrap: wrap;}",
+        ".c-row > .col-md-5 {flex: 50%; margin-bottom: 30px;}"
       ],
       "settings": {
         "space_h_item": "30",
