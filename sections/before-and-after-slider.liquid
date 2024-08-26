@@ -1,8 +1,8 @@
 <div class="ba-container">
     <div class="image before" style="background-image:url('{{ section.settings.before_image | image_url }}');"></div>
     <div class="image after" style="background-image:url('{{ section.settings.after_image | image_url }}');"></div>
-    <input type="range" class="slider" min="1" max="100" value="50" />
-    <div class="slider-button"></div>
+    <input type="range" class="ba-slider" min="1" max="100" value="50" />
+    <div class="ba-slider-button"></div>
 </div>
 
 {% schema %}
@@ -64,7 +64,7 @@ div.after {
     z-index: 1;
 }
 
-input.slider {
+input.ba-slider {
     width: 100%;
     height: 100%;
     outline: none;
@@ -82,14 +82,14 @@ input.slider {
     z-index: 4;
 }
 
-input.slider::-moz-range-thumb {
+input.ba-slider::-moz-range-thumb {
     width: 6px;
     height: 600px;
     background-color: white;
     cursor: pointer;
 }
 
-input.slider::-webkit-slider-thumb {
+input.ba-slider::-webkit-slider-thumb {
     width: 6px;
     height: 530px;
     background-color: white;
@@ -99,7 +99,7 @@ input.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
 
-div.slider-button {
+div.ba-slider-button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -113,7 +113,7 @@ div.slider-button {
     z-index: 3;
 }
 
-div.slider-button:before {
+div.ba-slider-button:before {
     color: #555;
     position: absolute;
     top: 3px;
@@ -121,7 +121,7 @@ div.slider-button:before {
     content: "\2B9C";
 }
 
-div.slider-button:after {
+div.ba-slider-button:after {
     color: #555;
     position: absolute;
     top: 3px;
@@ -141,12 +141,12 @@ div.slider-button:after {
 {% javascript %}
   $(document).ready(function() {
 
-    $("input.slider").on("input change", function(event) {
+    $("input.ba-slider").on("input change", function(event) {
         var element = $(this).parents("div.ba-container");
         var pos = event.target.value;
 
         element.find("div.before").css({width: pos + "%"});
-        element.find("div.slider-button").css({left: "calc(" + pos + "% - 18px)"});
+        element.find("div.ba-slider-button").css({left: "calc(" + pos + "% - 18px)"});
     });
 
 });
