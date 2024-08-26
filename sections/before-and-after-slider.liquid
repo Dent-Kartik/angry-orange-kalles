@@ -1,4 +1,4 @@
-{% if section.settings.heading  %} <h2>{{ section.settings.heading }}</h2>{% endif %}
+{% if section.settings.heading  %} <h2 class="ba-heading">{{ section.settings.heading }}</h2>{% endif %}
 <div class="ba-container">
     <div class="image before" style="background-image:url('{{ section.settings.before_image | image_url }}');"></div>
     <div class="image after" style="background-image:url('{{ section.settings.after_image | image_url }}');"></div>
@@ -38,6 +38,9 @@
 {% endschema %}
 
 {% stylesheet %}
+  .ba-heading{
+    text-align:center;
+  }
   div.ba-container {
     width: 800px;
     height: 530px;
