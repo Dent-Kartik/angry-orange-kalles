@@ -1,5 +1,5 @@
+{% if section.settings.heading  %} <h2>{{ section.settings.heading }}</h2>{% endif %}
 <div class="ba-container">
-    {% if section.settings.heading  %} <h2>{{ section.settings.heading }}</h2>{% endif %}
     <div class="image before" style="background-image:url('{{ section.settings.before_image | image_url }}');"></div>
     <div class="image after" style="background-image:url('{{ section.settings.after_image | image_url }}');"></div>
     <input type="range" class="ba-slider" min="1" max="100" value="50" />
@@ -40,9 +40,9 @@
 {% stylesheet %}
   div.ba-container {
     width: 100%;
+    height: 530px;
     margin: 20px 100px;
     position: relative;
-    margin: 20px;
 }
 
 div.image {
