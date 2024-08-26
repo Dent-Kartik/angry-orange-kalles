@@ -132,7 +132,6 @@
         },
         "recharge_subscriptions_subscription_widget_LxCUKr": {
           "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
-          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
@@ -287,7 +286,7 @@
         "tab_html_8tU9M8"
       ],
       "custom_css": [
-        ".t4s-tab-wrapper {font-weight: 500; margin-bottom: 50px;}"
+        ".t4s-tab-wrapper {font-weight: 500; margin-bottom: 20px;}"
       ],
       "settings": {
         "pr_layout": "default",
@@ -688,6 +687,51 @@
         "pd_mb": "",
         "use_cus_css": false,
         "code_cus_css": ""
+      }
+    },
+    "video_slider_qLBgyn": {
+      "type": "video-slider",
+      "blocks": {
+        "video_col_mXcGLM": {
+          "type": "video-col",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b8464773b1e14601886fd1a426037341.mp4",
+            "image_url": "shopify:\/\/shop_images\/Untitled_design.jpg"
+          }
+        },
+        "video_col_EMtiDH": {
+          "type": "video-col",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/275df5140c5d4b48af85dfd4fcc4f32a.mp4",
+            "image_url": "shopify:\/\/shop_images\/Untitled_design_1.jpg"
+          }
+        },
+        "video_col_Rgtwpx": {
+          "type": "video-col",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d2327e134e324a53ba8a93ab295a42dd.mp4",
+            "image_url": "shopify:\/\/shop_images\/AO_UGC_2.jpg"
+          }
+        },
+        "video_col_jd6yXa": {
+          "type": "video-col",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5c0f647d337f487982870bcfd416aea6.mp4",
+            "image_url": "shopify:\/\/shop_images\/AO_UGC_3_v2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "video_col_mXcGLM",
+        "video_col_EMtiDH",
+        "video_col_Rgtwpx",
+        "video_col_jd6yXa"
+      ],
+      "settings": {
+        "video_section_title": "Pet Lover Tested and Approved",
+        "title_color": "#000000",
+        "padding_top": 30,
+        "padding_bottom": 20
       }
     },
     "feature_columns2_DVMUpm": {
@@ -1416,6 +1460,7 @@
     "cbe86456-c461-46df-ae43-0af0d7d95359",
     "video_featured_VJ8JH3",
     "custom_section_NbxJGq",
+    "video_slider_qLBgyn",
     "feature_columns2_DVMUpm",
     "custom_section_9yQp6j",
     "custom_section_LJgDyF",
