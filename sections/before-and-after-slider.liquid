@@ -1,6 +1,60 @@
+<div class="container">
+    <div class="image before" style="background-image:url('img/before.jpg');"></div>
+    <div class="image after" style="background-image:url('img/after.jpg');"></div>
+    <input type="range" class="slider" min="1" max="100" value="50" />
+    <div class="slider-button"></div>
+</div>
+
+<div class="container">
+    <div class="image before" style="background-image:url('img/before.jpg');"></div>
+    <div class="image after" style="background-image:url('img/after.jpg');"></div>
+    <input type="range" class="slider" min="1" max="100" value="50" />
+    <div class="slider-button"></div>
+</div>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Before and After Slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading",
+      "default": "Before % After"
+    },
+    {
+      "type": "image_picker",
+      "label": "Before Image",
+      "id": "before_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "After Image",
+      "id": "after_image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "My New Section"
+    }
+  ]
+}
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+  $(document).ready(function() {
+
+    $("input.slider").on("input change", function(event) {
+        var element = $(this).parents("div.container");
+        var pos = event.target.value;
+
+        element.find("div.before").css({width: pos + "%"});
+        element.find("div.slider-button").css({left: "calc(" + pos + "% - 18px)"});
+    });
+
+});
+{% endjavascript %}
