@@ -1,4 +1,5 @@
 <div class="ba-container">
+  
     <div class="image before" style="background-image:url('{{ section.settings.before_image | image_url }}');"></div>
     <div class="image after" style="background-image:url('{{ section.settings.after_image | image_url }}');"></div>
     <input type="range" class="ba-slider" min="1" max="100" value="50" />
@@ -38,8 +39,8 @@
 
 {% stylesheet %}
   div.ba-container {
-    width: 800px;
-    height: 530px;
+    width: 100%;
+    margin: 20px 100px;
     position: relative;
     margin: 20px;
 }
