@@ -653,7 +653,7 @@
         "html_XCcyXB": {
           "type": "html",
           "settings": {
-            "html_content": "<div class=\"row\">\n<div class=\"col-md-5\">\n<p> 4.5<\/p>\n<p>average rating<\/p>\n<\/div>\n<div class=\"col-md-5\">\n<p>173453+<\/p>\n<p>number of reviews<\/p>\n<\/div>\n\n<div class=\"col-md-5\">\n<p> 1700+\n<\/p>\n<p>returning customers<\/p>\n<\/div>\n<\/div>",
+            "html_content": "<div class=\"row\">\n<div class=\"col-md-5\">\n<p class=\"counter\"> 4.5<\/p>\n<p class=\"counter-text\">average rating<\/p>\n<\/div>\n<div class=\"col-md-5\">\n<p class=\"counter\">173453+<\/p>\n<p class=\"counter-text\">number of reviews<\/p>\n<\/div>\n\n<div class=\"col-md-5\">\n<p class=\"counter\"> 1700+\n<\/p>\n<p class=\"counter-text\">returning customers<\/p>\n<\/div>\n<\/div>",
             "hidden_mobile": false
           }
         },
@@ -706,7 +706,9 @@
         "custom_text_FzpMpb"
       ],
       "custom_css": [
-        "{color: white;}"
+        "{color: white;}",
+        ".counter {font-size: 48px; font-style: normal; font-weight: 700; line-height: normal; margin-bottom: 0px;}",
+        ".counter-text {font-size: 28px; font-style: normal; font-weight: 400; line-height: normal; margin-bottom: 0px;}"
       ],
       "settings": {
         "space_h_item": "30",
