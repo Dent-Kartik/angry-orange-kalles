@@ -352,6 +352,9 @@
    .t4s-product-media__combined_grid .t4s-product__media-wrapper [data-media-sizes="normal"] > [data-index="5"] {
        width: 50%;
    }
+  .t4s-product-media__two_columns .t4s-product__media-wrapper [data-media-sizes="normal"] > [data-index="0"]{
+    width: 100%;
+   }
 }
 button.t4s-product-form__submit[disabled="disabled"],
 button.t4s-product-form__submit[aria-disabled="true"] {
