@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "purchase_code": "c109b1a0-516b-4ec8-b02e-b7b63142b4ea",
@@ -19,13 +28,13 @@
     "heading_color": "#0d0d0d",
     "text_color": "#0d0d0d",
     "accent_color": "#282973",
-    "secondary_color": "#bb3b00"
+    "secondary_color": "#bb3b00",
     "border_color": "#9b9a96",
     "border_primary_color": "#0d0d0d",
     "price_primary": "#0d0d0d",
     "price_secondary": "#4e6c72",
     "link_color": "#0d0d0d",
-    "link_color_hover": "#e1713d",
+    "link_color_hover": "#282973",
     "btn_bg": "#282973",
     "btn_color": "#fff",
     "cl_lazyload": "#ff4f33",
@@ -610,7 +619,6 @@
           "full_header": true,
           "height": 70,
           "arrow": false,
-          "arrow_outside": true,
           "align": "center",
           "hover": "hover_sideup",
           "enable_active": false,
@@ -2289,18 +2297,6 @@
           "images_aspect_ratio": "1",
           "cards_background": "#ffffff",
           "cards_border_color": "rgba(0,0,0,0)"
-        }
-      },
-      "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "2728461494843721857": {
-        "type": "shopify:\/\/apps\/amped-email-sms-popups\/blocks\/app-embed\/d9d8f140-4443-4f6c-a16a-95357ecc2125",
-        "disabled": false,
-        "settings": {
         }
       },
       "13951170544780599758": {
