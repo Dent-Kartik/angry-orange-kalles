@@ -33,57 +33,12 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }} rtl_{{ isRTL }} swatch_col
   {% endif %}
 >
   <head>
-
  <!-- Added by TAPITA SEO SCHEMA-->
 {% if content_for_header contains 'tapita-seo-script-tags' %}
-  {% render 'tapita-seo-schema' %}
+  {% include 'tapita-seo-schema' %}
 {% endif %}
 <!-- /Added by TAPITA SEO SCHEMA --> 
- {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
-{%- if request.page_type == "index" -%}{%assign luvitatu = 1%}{%- endif -%}
 
-{%if luvitatu%}
-<style>
-    #onetrust-consent-sdk:has(#onetrust-banner-sdk[style*="display: none"]) .onetrust-pc-dark-filter{
-        display: none !important;
-    }
-</style>
-{%endif%}
-    {% capture modified_content_for_header %}{{ content_for_header }}{% endcapture %} 
-
-{% assign domcontentloadeda = "document.addEventListener('DOMContentLoaded'" %} 
-
-{% assign startasyncLoadinga= "document.addEventListener('StartAsyncLoading'" %} 
-
-{% assign domcontentloaded = 'e.addEventListener("DOMContentLoaded"' %} 
-
-{% assign startasyncLoading= "e.addEventListener('StartAsyncLoading'" %} 
-
-{% assign rapp = ", asyncLoad" %}{% assign napp= ", function(){}" %} 
-
-{% assign rappload = "if(window.attachEvent)" %} 
-
-{% assign nappload= "document.addEventListener('StartAsyncLoading',function(event){asyncLoad();});if(window.attachEvent)" %} 
-
-{% assign rstorefrontload = "var customDocumentWrite = function(content)" %} 
-
-{% assign nstorefrontload= "document.addEventListener('StartKernelLoading', function() { document.dispatchEvent(new CustomEvent('StartShopifyLoading')); var customDocumentWrite = function(content)" %} 
-
-{% assign rstorefront = "document.getElementsByTagName('head')[0].appendChild(eventsListenerScript)" %} 
-
-{% assign nstorefront= "document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);})" %} 
-
-{% if template == 'cart' %} 
-
-{{ modified_content_for_header | replace: 'src=', 'data-src=' | replace: domcontentloadeda, startasyncLoadinga | replace: domcontentloaded, startasyncLoading | replace: rapp, napp | replace: rappload, nappload }} 
-
-{% else %} 
-
-{{ modified_content_for_header | replace: 'src=', 'data-src=' | replace: domcontentloadeda, startasyncLoadinga | replace: domcontentloaded, startasyncLoading | replace: rapp, napp | replace: rappload, nappload | replace: rstorefrontload, nstorefrontload | replace: rstorefront, nstorefront }} 
-
-{% endif %} 
-
-     
 
     <!-- OneTrust Cookies Consent Notice start -->
     <script
@@ -96,13 +51,6 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }} rtl_{{ isRTL }} swatch_col
       function OptanonWrapper() { }
     </script>
     <!-- OneTrust Cookies Consent Notice end -->
-    <!-- Google tag (gtag.js) -->
-    {%if luvitatu%}
-    <script>delayLoadTillUserInteraction("trust_gtag",function(){deloadAny("https://www.googletagmanager.com/gtag/js?id=G-WKK1JVEEVK",{type:"text/javascript",async:!0,onload:"assignEvento('gtag_load')"})});</script>
-    {%else%}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WKK1JVEEVK"></script>
-    {%endif%}
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-WKK1JVEEVK");</script>
 {% comment %}
     <style>
               #opinew_badge_plugin_app > div > div > div {
@@ -119,10 +67,6 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }} rtl_{{ isRTL }} swatch_col
       display:none!important;}
     </style>
 {% endcomment %}
-  
-{%if luvitatu%}
-<script>delayLoadTillUserInteraction("trust_gtag",function(){deloadAny("https://www.googletagmanager.com/gtag/js?id=G-WKK1JVEEVK",{type:"text/javascript",async:!0,onload:"assignEvento('gtag_load')"})}),function(t,a,e,g,s){t[g]=t[g]||[],t[g].push({"gtm.start":new Date().getTime(),event:"gtm.js"}),a.getElementsByTagName(e)[0];var n=a.createElement(e);n.async=!0,n.src="https://www.googletagmanager.com/gtm.js?id="+s+("dataLayer"!=g?"&l="+g:"")}(window,document,"script","dataLayer","GTM-W7DJ8GJ");</script>
-{%else%}
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -130,14 +74,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W7DJ8GJ');</script>
 <!-- End Google Tag Manager -->
-{%endif%}
-    {% render 'dataLayer.common' %}
-{% if template.suffix == 'try-v2' %}
-  {% render 'dataLayer.bundle' %}
-{% endif %}
-{% comment %}
+
+<!--   Start Google Tag Manager -->
+<script type="text/plain" class="optanon-category-C0004" defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7DJ8GJ');</script>
+<!-- End Google Tag Manager-->
     {%- render 'ecom_header' -%}
-    {% endcomment %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
@@ -181,37 +126,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         content="{{ page_description | default: shop.description | default: shop.name | escape }}"
       >
     {%- else -%}
-      <title>{{ 'list_collections.meta_title' | t | escape }}</title>
-      <meta name="description" content="{{ 'list_collections.meta_description' | t | escape }}">
+      <title>{{ 'list_collections.meta_title' | t | escape }}</title
+      ><meta name="description" content="{{ 'list_collections.meta_description' | t | escape }}">
     {%- endif -%}
 
     {%- render 'meta-tags', t_name: t_name -%}
-       {%if luvitatu%}
-        <script>
-        delayLoadTillUserInteraction("trust_lz",function(){deloadAny("{{ 'lazysizes.min.js' | asset_url }}",{type:"text/javascript",async:!0,onload:"assignEvento('lazysize_load')"})});
-        </script>
-        {%else%}
-        <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
-        {%endif%}
-    <script src="{{ 'global.min.js' | asset_url }}" defer="defer" ></script>
-  
+   
+    <script src="{{ 'lazysizes.min.js' | asset_url }}"></script>
+    <script src="{{ 'global.min.js' | asset_url }}" defer="defer"></script>
    <script src="{{ 'policies-privacy-policy.js' | asset_url }}" defer></script> 
-    <!-- <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" as="script"> -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
    <script src="{{ 'termsOfUse.js' | asset_url }}" defer></script>
-    
-{%- render 'head_assets', t_name: t_name, isRTL: isRTL -%}
-     <!-- Optimizely -->
-  <script src="https://cdn.optimizely.com/js/20542322736.js" defer></script>
-  <!-- -->
+    {{ content_for_header }}
+    {%- render 'head_assets', t_name: t_name, isRTL: isRTL -%}
   {% render 'opinew_head' %}
-   {% if request.page_type == 'product' %}
-      {%- render 'recharge-product-subscription' -%}
+  {% if request.page_type == 'product' %}
+      {%- include 'recharge-product-subscription' -%}
 {% else %}
-      {% render 'recharge-all-pages-subscription' %}
+      {% include 'recharge-all-pages-subscription' %}
 {% endif %}
-  <script src="{{ 'jquery-3.6.4.min.js' | asset_url }}"></script>
 </head>
 
   <body
@@ -230,8 +162,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </script>
     {% endif -%}
    
-    <a class="skip-to-content-link visually-hidden" href="#MainContent" role="link">{{ 'accessibility.skip_to_text' | t }}</a>
-    <a class="skip-to-content-link visually-hidden" href="#shopify-section-footer" role="link">Skip to Footer</a>
+    <a class="skip-to-content-link visually-hidden" href="#MainContent" role="button">{{ 'accessibility.skip_to_text' | t }}</a>
+    <a class="skip-to-content-link visually-hidden" href="#shopify-section-footer" role="button">Skip to Footer</a>
     <div class="t4s-close-overlay t4s-op-0"></div>
 
     <div class="t4s-website-wrapper">
@@ -252,12 +184,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
     {%- render 'render_bottom' -%}
-{% comment %}
+
     {%- render 'ecom_footer' -%}
-    {% endcomment %}
     <a class="skip-to-content-link visually-hidden" href="#shopify-section-header-inline" role="button">Skip to Menu</a>
-   {{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23' | script_tag }}  
-   {% comment %}
+    {{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23' | script_tag }}
+ 
     <script>
        const menuToggle = document.getElementsByClassName('menu-toggle');
       for (i = 0; i < menuToggle.length; i++) {
@@ -267,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
       }
     </script>
-    
+    {% comment %}
     {% if customer %}
       <script>
         var customerId = '{{ customer.id }}';
@@ -286,11 +217,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       </script>
     {% endif %}
-   
+    {% endcomment %}
     {% if template.name != 'collection' and template.name != 'search' %}
       {% render 'additional-scripts-datalayer' %}
     {% endif %}
-    
     <script> 
   document.body.addEventListener('click', function(event) {
   var target = event.target;
@@ -349,12 +279,11 @@ dataLayer.push({
 
 }
     </script>
- {% endcomment %}
-     {% comment %}
+
     <script type="text/javascript">
       document.body.className = document.body.className.replace("mm-wrapper--position-left","");
     </script>
-   
+    {% comment %}
  <script type="text/javascript">
       {% if customer %}
       window.dataLayer.push({
@@ -368,10 +297,9 @@ dataLayer.push({
       });
       {% endif %}
     </script>
+    {% endcomment %}
     <script type="text/javascript" defer>var script_loaded=!1;function loadJSscripts(){if(!script_loaded){observer.disconnect(),script_loaded=!0,document.querySelectorAll("iframe.lazy").forEach(t=>{datasrc=t.dataset.src,null!=datasrc&&(t.src=datasrc)});var t=document.getElementsByTagName("script");for(i=0;i<t.length;i++)if(null!==t[i].getAttribute("data-src")&&(t[i].setAttribute("src",t[i].getAttribute("data-src")),delete t[i].dataset.src),"text/lazyload"==t[i].getAttribute("type")){for(var e=document.createElement("script"),a=0;a<t[i].attributes.length;a++){var n=t[i].attributes[a];e.setAttribute(n.name,n.value)}e.type="text/javascript",e.innerHTML=t[i].innerHTML,t[i].parentNode.removeChild(t[i]),t[i].parentNode.insertBefore(e,t[i])}var r=document.getElementsByTagName("link");for(i=0;i<r.length;i++)null!==r[i].getAttribute("data-href")&&(r[i].setAttribute("href",r[i].getAttribute("data-href")),delete r[i].dataset.href);document.dispatchEvent(new CustomEvent("asyncLazyLoad"))}}var activityEvents=["mousedown","mousemove","keydown","scroll","touchstart","click","keypress","touchmove"];activityEvents.forEach(function(t){window.addEventListener(t,loadJSscripts,!1)}),window.addEventListener?window.addEventListener("load",function(){},!1):window.attachEvent?window.attachEvent("onload",function(){}):window.onload=(t=>{});</script> 
- 
-    {% endcomment %}{% comment %}
-    <script>
+ <script>
    function onScroll (evt) {
 
     // Store the scroll value for laterz.
@@ -387,7 +315,5 @@ dataLayer.push({
 
 window.addEventListener('scroll', onScroll);
  </script>
-     {% endcomment %}
-  
   </body>
 </html>
