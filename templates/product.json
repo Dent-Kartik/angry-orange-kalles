@@ -1,1 +1,1092 @@
-{"sections":{"breadcrumb":{"type":"brc-nav-product","settings":{"breadcrumb_pr":true,"back_next_pr":false,"cl_bg":"#f6f6f6","cl_link":"#222222"}},"main":{"type":"main-product","blocks":{"meta":{"type":"meta","settings":{"show_options":false,"show_vendor":true,"show_type":false,"show_sku":false,"show_barcode":false,"show_available":false,"show_category":false,"show_tags":false}},"title":{"type":"title","settings":{"txt_tr_pr":"none","fnt_df_pr":"1","size_pr":26,"fw_pr":700,"lh_pr":0,"ls_pr":0,"pr_title_color":"#000f41"}},"46f48626-36c1-4c15-85cf-3ae47a93c16e":{"type":"shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/product-stars\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676","settings":{}},"description":{"type":"description","disabled":true,"settings":{"des":"2","text":"","length":31,"readm":true,"readm_txt":"Read more"}},"152e7505-1077-4ecb-956c-1f52beee2fd8":{"type":"countdown","disabled":true,"settings":{"source":"1","icon":"3","icon_name":"las la-stopwatch","ani":"none","al":"start","mess":"Free shipping on ALL orders","size":16,"dayx":1,"stock_time":"8:00:00,16:00:00,23:59:59","loop":true,"cdt_des":"1","cdt_size":"small","box_bdr":10,"bd_width":0,"space_item":8,"space_item_mb":8,"number_cl":"#f4dd4a","text_cl":"#000f41","border_cl":"#000000","bg_cl":"#000f41"}},"price_review":{"type":"price_review","settings":{"price":"0","type_sale":"1","tax_ship":false,"rating":false,"review_liquid":"","size_price_pr":24.5,"fw_price_pr":700,"price_color":"#000000","price_sale_color":"#1d9e34"}},"custom_liquid_kQdCKR":{"type":"custom_liquid","settings":{"custom_liquid":"<div class=\"customrw\"><\/div>"}},"33baad01-228a-4fde-8fb8-5af287b996d8":{"type":"inventory_qty","disabled":true,"settings":{"icon":"1","icon_name":"hourglass-half","ani":"none","stock":"3","qty":10,"total_items":100,"stock_from":12,"stock_to":20,"al":"start","mess":"Only [stock_number] left!","size":30,"progress":true,"wbar":100,"stock_bg_process":"#56cfe1","bgten":"#ec0101","stock_bg":"#effffe"}},"recharge_subscriptions_subscription_widget_LxCUKr":{"type":"shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e","disabled":true,"settings":{"product":"{{product}}"}},"form":{"type":"form","settings":{"selector_mode":"block","color_mode":"variant_image is-sw-cl__round","enable_fit_ratio_img":false,"color_size":"exlarge","show_qty":true,"enable_wishlist":true,"enable_compare":false,"btn_atc_full":false,"pr_btn_round":8,"ani":"none","time":6,"btn_txt":"3","btn_icon":false,"button_style":"default","button_color":"custom1","button_effect":"sweep-to-top","wishlist_color":"#282973","wishlist_color_hover":"#ffffff","wishlist_color_active":"#0d0d0d","compare_color":"#282973","compare_color_hover":"#ffffff","compare_color_active":"#222222","show_dynamic_checkout":true,"btn_txt2":"2","button_color_payment":"custom1","show_gift_card_recipient":false,"product_list":[],"show_product_current":true,"qty_val":"0","advance_label":"Choose style","advance_pr_list":[]}},"07bfb470-16c0-49ab-94f8-3c128655bc98":{"type":"text","disabled":true,"settings":{"text":"<p>SAVE 40% OFF with CODE: 2023DEAL<\/p>"}},"c2e1fa95-5c4d-4f3d-92de-63dbd96ef13e":{"type":"live_view","disabled":true,"settings":{"icon":"2","icon_name":"las la-eye","ani":"none","min":1,"max":100,"time":2,"text":"[count] <span class=\"t4s-fwm\">People<\/span> are viewing this right now"}},"23551ebc-3be1-40d6-81b2-30f03478cccb":{"type":"img","disabled":true,"settings":{"al":"start","mess":"","size":16,"source":"1","wimg":70,"svg":"amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa","height":11}},"size_delivery_ask":{"type":"size_delivery_ask","disabled":true,"settings":{"size_chart":"3","pos_sizeg":"1","sc_type":"1","page":"size-chart","size_ck":"","delivery":true,"page_dr":"delivery-return","ask":true,"phone":true}},"95d4f334-8ea7-4cd2-b609-2373b1e848b8":{"type":"tab_des","settings":{"title":"Description"}},"94011ade-ec25-4d68-b37a-70660ede49dd":{"type":"social","disabled":true,"settings":{"socials_align":"start","social_mode":"2","social_style":"1","social_size":"extra_small","bd_radius":0,"use_color_set":true,"icon_cl":"#222222","bg_cl":"#00badb","space_h_item":"20","space_v_item":"5","space_h_item_mb":"20","space_v_item_mb":"4"}},"tab_html_gnhVpi":{"type":"tab_html","settings":{"title":"Ingredients","content":"{{ product.metafields.custom.ingredients | metafield_tag }}","page":""}},"tab_html_8tU9M8":{"type":"tab_html","settings":{"title":"Scent","content":"{{ product.metafields.custom.scent | metafield_tag }}","page":""}}},"block_order":["meta","title","46f48626-36c1-4c15-85cf-3ae47a93c16e","description","152e7505-1077-4ecb-956c-1f52beee2fd8","price_review","custom_liquid_kQdCKR","33baad01-228a-4fde-8fb8-5af287b996d8","recharge_subscriptions_subscription_widget_LxCUKr","form","07bfb470-16c0-49ab-94f8-3c128655bc98","c2e1fa95-5c4d-4f3d-92de-63dbd96ef13e","23551ebc-3be1-40d6-81b2-30f03478cccb","size_delivery_ask","95d4f334-8ea7-4cd2-b609-2373b1e848b8","94011ade-ec25-4d68-b37a-70660ede49dd","tab_html_gnhVpi","tab_html_8tU9M8"],"custom_css":[".t4s-tab-wrapper {font-weight: 500; margin-bottom: 50px;}"],"settings":{"pr_layout":"default","enable_sticky_info":true,"media_layout":"thumbnails_bottom","media_size":"medium","thumb_lr_size":"small","image_ratio":"ratio1_1","image_size":"cover","image_position":"8","main_click":"zoom","zoom_tp":"external","enable_zoom_icon":true,"enable_zoom_click_mb":true,"enable_video_looping":false,"enable_video_muting":true,"enable_video_autoplaying":true,"eff":"slide","nav_btn":true,"btn_vi":"always","btn_owl":"outline","btn_shape":"round","btn_cl":"custom1","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"outline","dots_cl":"primary","dots_round":true,"dots_space":9,"dots_hidden_mobile":false,"tabs_design":"tab","tabs_design_mb":"tab","tabs_position":"inner","enable_first_tab":true,"tabs_layout_fix":"full","bg":"#f6f6f8","bg_mb":"#ffffff","product_list":[],"sticky_mode":"2","sticky_show":"2","sticky_layout_mb":"default","enable_select":true,"ani":"t4s-ani-heartBeat","time":5}},"a183f929-3190-46fb-a8c2-960c8c8b7c6f":{"type":"image_text","blocks":{"template--21441721336085__a183f929-3190-46fb-a8c2-960c8c8b7c6f-bl_image-1":{"type":"bl_image","settings":{"col_dk":"12","col_tb":"12","layout_des":"carousel","post_mobile":"default","image_ratio":"ratioadapt","image_size":"cover","image_position":"8","loop":true,"au_time":0,"au_hover":true,"nav_btn":false,"btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false}}},"block_order":["template--21441721336085__a183f929-3190-46fb-a8c2-960c8c8b7c6f-bl_image-1"],"disabled":true,"settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"show_badge":false,"space_h_item":"20","space_v_item":"10","space_h_item_mb":"20","space_v_item_mb":"10","layout":"t4s-container-wrap","cl_bg":"rgba(0,0,0,0)","cl_bg_gradient":"","mg":",20%,25px,20%","pd":"25px,,25px,","mg_tb":",15%,25px,15%","pd_tb":"25px,,25px,","mg_mb":",,30px,","pd_mb":"25px,,25px,","use_cus_css":false,"code_cus_css":""}},"cbe86456-c461-46df-ae43-0af0d7d95359":{"type":"product-with-static-counter","blocks":{"template--21441721336085__cbe86456-c461-46df-ae43-0af0d7d95359-text_block-1":{"type":"text_block","settings":{"enable_image":true,"counter_val":30,"tagline":"Full-Body Applications","specs":"<p>100ml | 3.4 oz.<\/p>","title":"Travel Necessity","text":"","button_label":"SHOP NOW","button_link":"","open_link":"_self","btn_icon":false,"button_style":"default","btn_size":"extra-medium","btn_cl":"primary","button_effect":"fade"}},"6353b9c7-9e0d-40db-b0d4-b2eaa377c4f9":{"type":"text_block","settings":{"enable_image":true,"counter_val":45,"tagline":"Full-Body Applications","specs":"<p>150ml | 5.0oz<\/p>","title":"Ideal For Excursions","text":"","button_label":"SHOP NOW","button_link":"","open_link":"_self","btn_icon":false,"button_style":"default","btn_size":"extra-medium","btn_cl":"primary","button_effect":"fade"}},"23d8f2e8-e721-4672-8569-7b8d32508b28":{"type":"text_block","settings":{"enable_image":true,"counter_val":70,"tagline":"Full-Body Applications","specs":"<p>235ml | 8.0oz<\/p>","title":"Equipped for Daily Use","text":"","button_label":"SHOP NOW","button_link":"","open_link":"_self","btn_icon":false,"button_style":"default","btn_size":"extra-medium","btn_cl":"primary","button_effect":"fade"}},"1b3deada-8fb2-4969-90b5-cb64bf6304bd":{"type":"text_block","settings":{"enable_image":true,"counter_val":230,"tagline":"Full-Body Applications","specs":"<p>710 ml | 24.0 oz<\/p>","title":"For Groups & Businesses","text":"","button_label":"SHOP NOW","button_link":"","open_link":"_self","btn_icon":false,"button_style":"default","btn_size":"extra-medium","btn_cl":"primary","button_effect":"fade"}}},"block_order":["template--21441721336085__cbe86456-c461-46df-ae43-0af0d7d95359-text_block-1","6353b9c7-9e0d-40db-b0d4-b2eaa377c4f9","23d8f2e8-e721-4672-8569-7b8d32508b28","1b3deada-8fb2-4969-90b5-cb64bf6304bd"],"disabled":true,"settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"text_align":"center","pos_text":"default","fs_counter":50,"fs_tagline":13,"fs_specs":16,"fs_title":15,"fs_text":14,"fs_counter_mb":22,"fs_tagline_mb":12,"fs_specs_mb":12,"fs_title_mb":15,"fs_text_mb":12,"image_ratio":"ratio2_3","image_size":"contain","image_position":"8","img_effect":"none","b_effect":"none","layout_des":"1","space_h_item":"10","space_v_item":"20","space_h_item_mb":"10","space_v_item_mb":"20","col_dk":"4","col_tb":"4","col_mb":"2","loop":false,"au_time":0,"au_hover":false,"nav_btn":false,"btn_vi":"always","btn_owl":"default","btn_shape":"round","btn_cl":"light","btn_size":"small","btn_hidden_mobile":false,"nav_dot":true,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,50px,","pd_mb":"","use_cus_css":true,"code_cus_css":".SectionID a.t4s-btn{border-radius:8px;margin-top:15px;}\n.SectionID h3,.SectionID h4{color:#e87200!important;text-transform:uppercase;}\n@media (max-width:767px){\n.SectionID .t4s-row-cols-2>.t4s-col-item:first-child,.SectionID .t4s-row-cols-2>.t4s-col-item:nth-child(2){border-bottom: 1px solid grey;}\n}"}},"video_featured_VJ8JH3":{"type":"video_featured","disabled":true,"settings":{"se_height":"t4s_ratio16_9","custom_dk":true,"height_dk":600,"custom_tb":true,"height_tb":400,"custom_mb":true,"height_mb":250,"source":"1","video_url":"https:\/\/vimeo.com\/577705578","au_video":false,"loop_video":true,"bg_overlay":"#000000","bg_opacity":0,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"1702895640c62aba6a":{"type":"apps","blocks":{"8a680922-6c51-4cd9-8c1f-48449967dd9f":{"type":"shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/product-widget\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676","settings":{}}},"block_order":["8a680922-6c51-4cd9-8c1f-48449967dd9f"],"settings":{}},"product-recommendations":{"type":"product-recommendations","settings":{"show":true,"design_heading":"1","heading_align":"t4s-text-center","top_heading":"You may also like","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"product_des":"2","show_vendor":false,"use_cdt":false,"limit":9,"display_type":"4","image_ratio":"ratio1_1","image_size":"nt_cover","image_position":"8","content_align":"center","col_dk":"3","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":true,"au_time":0,"au_hover":true,"nav_btn":true,"btn_vi":"1","btn_owl":"outline","btn_shape":"round","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"1","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":"75px,,30px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,0px,","pd_mb":",,0px,"}},"recently-viewed-products":{"type":"recently_viewed","disabled":true,"settings":{"show":true,"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Recently viewed","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"product_des":"2","show_vendor":false,"use_cdt":true,"limit":9,"sortby":"1","unavailable_prs":"show","image_ratio":"ratio1_1","image_size":"cover","image_position":"8","content_align":"center","col_dk":"3","col_tb":"2","col_mb":"2","space_h_item":"20","space_v_item":"20","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":true,"au_time":0,"au_hover":true,"nav_btn":true,"btn_vi":"always","btn_owl":"outline","btn_shape":"round","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":"35px,,20px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":""}},"sidebar":{"type":"sidebar-product","blocks":{"f01b181b-62ee-4735-8e25-32cb71ccfaba":{"type":"category","settings":{"title_category":"Product Categories","cat_source":"1","cat_link_list":"","count":true}},"f65f464b-9487-43be-9c91-8688a098bb6f":{"type":"collection","settings":{"title_fea_pr":"Sale Products","collection":"frontpage","limit_pr":5,"image_ratio":"t4s_ratioadapt","image_size":"t4s_cover","image_position":"t4s_position_8"}},"83340bb8-58d2-4148-89e2-a4c7a01cf792":{"type":"instagram","settings":{"title_ins":"Instagram","mode":"2","acc":"","limit":12,"open_link":"_blank","round":0,"col_dk":"3","space_item":"6"}},"9ce9ded8-1cef-4e32-b98b-47364ffa328c":{"type":"shipping","settings":{"title":"Shipping & Delivery","shipping_1":"las la-truck,FREE SHIPPING,Free shipping for all US order","shipping_2":"las la-headset,SUPPORT 24\/7,We support 24 hours a day","shipping_3":"las la-exchange-alt,30 DAYS RETURN,You have 30 days to return","shipping_4":"","shipping_5":"","shipping_6":""}},"4a9c6ae8-f3b4-4192-a6d1-82d01670bce6":{"type":"image","settings":{"b_link":"","open_link":"_self","img_effect":"none","date":"2022\/12\/26","content_align":"center","cdt_des":"2","countdown_pos":"2","cdt_size":"medium","box_bdr":0,"bd_width":0,"space_item":10,"number_cl":"#ffffff","text_cl":"#ffffff","border_cl":"#000000","bg_cl":"#000000"}},"8797917a-a8e1-44fe-acb7-ff1e83a3f295":{"type":"text","disabled":true,"settings":{"title_cus_html":"Talk about your brand","text_html":"<p>Get it for 50% off with code SLEEP<\/p>"}}},"block_order":["f01b181b-62ee-4735-8e25-32cb71ccfaba","f65f464b-9487-43be-9c91-8688a098bb6f","83340bb8-58d2-4148-89e2-a4c7a01cf792","9ce9ded8-1cef-4e32-b98b-47364ffa328c","4a9c6ae8-f3b4-4192-a6d1-82d01670bce6","8797917a-a8e1-44fe-acb7-ff1e83a3f295"],"disabled":true,"settings":{"enable_drawer":true,"space":50,"size":"medium","br_style":"none","brcolor":"#222222","sidebar_bdr":5,"sidebar_pd":10}},"9f87910c-c229-4870-a34d-b30c3e3613f4":{"type":"hero_image","disabled":true,"settings":{"se_height":"t4s_ratioadapt","custom_dk":true,"height_dk":600,"custom_tb":true,"height_tb":400,"custom_mb":true,"height_mb":250,"parallax":false,"image_position":"0","link_img1":"","open_link":"_blank","text_align":"center","text_align_mb":"center","content_width":"auto","cv_pos":50,"ch_pos":50,"cv_pos_mb":50,"ch_pos_mb":50,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"#ffffff","bg_content_op":0,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":40,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"1a5f18e3-6d85-43b3-a67d-fd565e3561bd":{"type":"featured-collection","disabled":true,"settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Frequently bought together","icon_heading":"las la-gem","top_subheading":"","show_btn":true,"shop_all_btn":"Shop All","shop_all_link":"shopify:\/\/collections\/all","tophead_mb":30,"head_btn_label":"View All","head_btn_url":"","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"medium","head_btn_cl":"dark","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"bed-sheets","product_des":"2","show_vendor":false,"use_cdt":false,"image_ratio":"ratio1_1","image_size":"cover","image_position":"8","content_align":"default","limit":8,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":true,"au_time":0,"au_hover":true,"nav_btn":false,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"none","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"large","btns_cl":"dark","button_effect":"default","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":"30px,,50px,","pd":"30px,0px,0px,0px","mg_tb":"","pd_tb":"","mg_mb":"30px,,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"34eab03a-b1c4-4c29-9079-64f6e663d12a":{"type":"blog-post-manual","blocks":{"107e41f0-e279-4e5f-9c92-f62803a620ca":{"type":"article","settings":{"article":""}}},"block_order":["107e41f0-e279-4e5f-9c92-f62803a620ca"],"disabled":true,"settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Featured Blogs","icon_heading":"las la-gem","top_subheading":"","blog_btn":"","bt_lb":"Button label","tophead_mb":30,"post_des":"1","show_cate":false,"show_tags":false,"show_cnt":true,"show_au":true,"show_dt":true,"show_cm":false,"show_rm":false,"date":"date","content_align":"t4s-text-start","limit":8,"img_effect":"none","b_effect":"none","image_ratio":"ratioadapt","image_size":"cover","image_position":"8","col_dk":"3","col_tb":"2","col_mb":"1","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":true,"au_time":0,"au_hover":true,"nav_btn":false,"btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"67aee4f6-c98c-4da7-9ea9-8fe5b50e0691":{"type":"blog-post","settings":{"design_heading":"20","heading_align":"t4s-text-center","top_heading":"Blog and Updates","bt_lb":"View More","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"blog":"news","post_des":"2","show_cate":false,"show_tags":false,"show_cnt":true,"show_au":false,"show_dt":false,"show_cm":false,"show_rm":false,"show_irm":false,"date":"date","content_align":"t4s-text-start","limit":3,"img_effect":"none","b_effect":"none","image_ratio":"ratio16_9","image_size":"cover","image_position":"8","col_dk":"3","col_tb":"3","col_mb":"1","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","loop":true,"au_time":0,"au_hover":true,"nav_btn":true,"btn_vi":"always","btn_owl":"default","btn_shape":"round","btn_cl":"light","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"none","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"large","btns_cl":"dark","button_effect":"default","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":"50px,,50px,","pd":"","mg_tb":"50px,,50px,","pd_tb":"","mg_mb":"75px,,50px,","pd_mb":"","use_cus_css":true,"code_cus_css":"@media (min-width:768px){\n.SectionID h3 span{color:#0B0F0E;font-size:38px;}\n.t4s-blog-button-heading{font-size:18px;}\n}\n\n.SectionID img{border-radius:8px;}\n.SectionID  h3.t4s-section-title.t4s-title{padding:0!important;}\n@media (max-width:767px){\n.SectionID h3 span{color:#0B0F0E;}\n.SectionID h3.t4s-section-title.t4s-title{margin-bottom:0;}\n}"}}},"order":["breadcrumb","main","a183f929-3190-46fb-a8c2-960c8c8b7c6f","cbe86456-c461-46df-ae43-0af0d7d95359","video_featured_VJ8JH3","1702895640c62aba6a","product-recommendations","recently-viewed-products","sidebar","9f87910c-c229-4870-a34d-b30c3e3613f4","1a5f18e3-6d85-43b3-a67d-fd565e3561bd","34eab03a-b1c4-4c29-9079-64f6e663d12a","67aee4f6-c98c-4da7-9ea9-8fe5b50e0691"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": false,
+        "cl_bg": "#f6f6f6",
+        "cl_link": "#222222"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "meta": {
+          "type": "meta",
+          "settings": {
+            "show_options": false,
+            "show_vendor": true,
+            "show_type": false,
+            "show_sku": false,
+            "show_barcode": false,
+            "show_available": false,
+            "show_category": false,
+            "show_tags": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 26,
+            "fw_pr": 700,
+            "lh_pr": 0,
+            "ls_pr": 0,
+            "pr_title_color": "#000f41"
+          }
+        },
+        "46f48626-36c1-4c15-85cf-3ae47a93c16e": {
+          "type": "shopify:\/\/apps\/opinew-reviews\/blocks\/product-stars\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "des": "2",
+            "text": "",
+            "length": 31,
+            "readm": true,
+            "readm_txt": "Read more"
+          }
+        },
+        "152e7505-1077-4ecb-956c-1f52beee2fd8": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "source": "1",
+            "icon": "3",
+            "icon_name": "las la-stopwatch",
+            "ani": "none",
+            "al": "start",
+            "mess": "Free shipping on ALL orders",
+            "size": 16,
+            "dayx": 1,
+            "stock_time": "8:00:00,16:00:00,23:59:59",
+            "loop": true,
+            "cdt_des": "1",
+            "cdt_size": "small",
+            "box_bdr": 10,
+            "bd_width": 0,
+            "space_item": 8,
+            "space_item_mb": 8,
+            "number_cl": "#f4dd4a",
+            "text_cl": "#000f41",
+            "border_cl": "#000000",
+            "bg_cl": "#000f41"
+          }
+        },
+        "price_review": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "1",
+            "tax_ship": false,
+            "rating": false,
+            "review_liquid": "",
+            "size_price_pr": 24.5,
+            "fw_price_pr": 700,
+            "price_color": "#000000",
+            "price_sale_color": "#1d9e34"
+          }
+        },
+        "custom_liquid_kQdCKR": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"customrw\"><\/div>"
+          }
+        },
+        "33baad01-228a-4fde-8fb8-5af287b996d8": {
+          "type": "inventory_qty",
+          "disabled": true,
+          "settings": {
+            "icon": "1",
+            "icon_name": "hourglass-half",
+            "ani": "none",
+            "stock": "3",
+            "qty": 10,
+            "total_items": 100,
+            "stock_from": 12,
+            "stock_to": 20,
+            "al": "start",
+            "mess": "Only [stock_number] left!",
+            "size": 30,
+            "progress": true,
+            "wbar": 100,
+            "stock_bg_process": "#56cfe1",
+            "bgten": "#ec0101",
+            "stock_bg": "#effffe"
+          }
+        },
+        "recharge_subscriptions_subscription_widget_LxCUKr": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "variant_image is-sw-cl__round",
+            "enable_fit_ratio_img": false,
+            "color_size": "exlarge",
+            "show_qty": true,
+            "enable_wishlist": true,
+            "enable_compare": false,
+            "btn_atc_full": false,
+            "pr_btn_round": 8,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "custom1",
+            "button_effect": "sweep-to-top",
+            "wishlist_color": "#282973",
+            "wishlist_color_hover": "#ffffff",
+            "wishlist_color_active": "#0d0d0d",
+            "compare_color": "#282973",
+            "compare_color_hover": "#ffffff",
+            "compare_color_active": "#222222",
+            "show_dynamic_checkout": true,
+            "btn_txt2": "2",
+            "button_color_payment": "custom1",
+            "show_gift_card_recipient": false,
+            "product_list": [
+
+            ],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": [
+
+            ]
+          }
+        },
+        "07bfb470-16c0-49ab-94f8-3c128655bc98": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>SAVE 40% OFF with CODE: 2023DEAL<\/p>"
+          }
+        },
+        "c2e1fa95-5c4d-4f3d-92de-63dbd96ef13e": {
+          "type": "live_view",
+          "disabled": true,
+          "settings": {
+            "icon": "2",
+            "icon_name": "las la-eye",
+            "ani": "none",
+            "min": 1,
+            "max": 100,
+            "time": 2,
+            "text": "[count] <span class=\"t4s-fwm\">People<\/span> are viewing this right now"
+          }
+        },
+        "23551ebc-3be1-40d6-81b2-30f03478cccb": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "al": "start",
+            "mess": "",
+            "size": 16,
+            "source": "1",
+            "wimg": 70,
+            "svg": "amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa",
+            "height": 11
+          }
+        },
+        "size_delivery_ask": {
+          "type": "size_delivery_ask",
+          "disabled": true,
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "size-chart",
+            "size_ck": "",
+            "delivery": true,
+            "page_dr": "delivery-return",
+            "ask": true,
+            "phone": true
+          }
+        },
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
+          "type": "tab_des",
+          "settings": {
+            "title": "Description"
+          }
+        },
+        "94011ade-ec25-4d68-b37a-70660ede49dd": {
+          "type": "social",
+          "disabled": true,
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "2",
+            "social_style": "1",
+            "social_size": "extra_small",
+            "bd_radius": 0,
+            "use_color_set": true,
+            "icon_cl": "#222222",
+            "bg_cl": "#00badb",
+            "space_h_item": "20",
+            "space_v_item": "5",
+            "space_h_item_mb": "20",
+            "space_v_item_mb": "4"
+          }
+        },
+        "tab_html_gnhVpi": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Ingredients",
+            "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "tab_html_8tU9M8": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Scent",
+            "content": "{{ product.metafields.custom.scent | metafield_tag }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "meta",
+        "title",
+        "46f48626-36c1-4c15-85cf-3ae47a93c16e",
+        "description",
+        "152e7505-1077-4ecb-956c-1f52beee2fd8",
+        "price_review",
+        "custom_liquid_kQdCKR",
+        "33baad01-228a-4fde-8fb8-5af287b996d8",
+        "recharge_subscriptions_subscription_widget_LxCUKr",
+        "form",
+        "07bfb470-16c0-49ab-94f8-3c128655bc98",
+        "c2e1fa95-5c4d-4f3d-92de-63dbd96ef13e",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb",
+        "size_delivery_ask",
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
+        "94011ade-ec25-4d68-b37a-70660ede49dd",
+        "tab_html_gnhVpi",
+        "tab_html_8tU9M8"
+      ],
+      "custom_css": [
+        ".t4s-tab-wrapper {font-weight: 500; margin-bottom: 50px;}"
+      ],
+      "settings": {
+        "pr_layout": "default",
+        "enable_sticky_info": true,
+        "media_layout": "thumbnails_bottom",
+        "media_size": "medium",
+        "thumb_lr_size": "small",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "zoom",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": false,
+        "enable_video_muting": true,
+        "enable_video_autoplaying": true,
+        "eff": "slide",
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "custom1",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "outline",
+        "dots_cl": "primary",
+        "dots_round": true,
+        "dots_space": 9,
+        "dots_hidden_mobile": false,
+        "tabs_design": "tab",
+        "tabs_design_mb": "tab",
+        "tabs_position": "inner",
+        "enable_first_tab": true,
+        "tabs_layout_fix": "full",
+        "bg": "#f6f6f8",
+        "bg_mb": "#ffffff",
+        "product_list": [
+
+        ],
+        "sticky_mode": "2",
+        "sticky_show": "2",
+        "sticky_layout_mb": "default",
+        "enable_select": true,
+        "ani": "t4s-ani-heartBeat",
+        "time": 5
+      }
+    },
+    "a183f929-3190-46fb-a8c2-960c8c8b7c6f": {
+      "type": "image_text",
+      "blocks": {
+        "template--21441721336085__a183f929-3190-46fb-a8c2-960c8c8b7c6f-bl_image-1": {
+          "type": "bl_image",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21441721336085__a183f929-3190-46fb-a8c2-960c8c8b7c6f-bl_image-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "show_badge": false,
+        "space_h_item": "20",
+        "space_v_item": "10",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_bg_gradient": "",
+        "mg": ",20%,25px,20%",
+        "pd": "25px,,25px,",
+        "mg_tb": ",15%,25px,15%",
+        "pd_tb": "25px,,25px,",
+        "mg_mb": ",,30px,",
+        "pd_mb": "25px,,25px,",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "cbe86456-c461-46df-ae43-0af0d7d95359": {
+      "type": "product-with-static-counter",
+      "blocks": {
+        "template--21441721336085__cbe86456-c461-46df-ae43-0af0d7d95359-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "counter_val": 30,
+            "tagline": "Full-Body Applications",
+            "specs": "<p>100ml | 3.4 oz.<\/p>",
+            "title": "Travel Necessity",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "open_link": "_self",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "primary",
+            "button_effect": "fade"
+          }
+        },
+        "6353b9c7-9e0d-40db-b0d4-b2eaa377c4f9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "counter_val": 45,
+            "tagline": "Full-Body Applications",
+            "specs": "<p>150ml | 5.0oz<\/p>",
+            "title": "Ideal For Excursions",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "open_link": "_self",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "primary",
+            "button_effect": "fade"
+          }
+        },
+        "23d8f2e8-e721-4672-8569-7b8d32508b28": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "counter_val": 70,
+            "tagline": "Full-Body Applications",
+            "specs": "<p>235ml | 8.0oz<\/p>",
+            "title": "Equipped for Daily Use",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "open_link": "_self",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "primary",
+            "button_effect": "fade"
+          }
+        },
+        "1b3deada-8fb2-4969-90b5-cb64bf6304bd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "counter_val": 230,
+            "tagline": "Full-Body Applications",
+            "specs": "<p>710 ml | 24.0 oz<\/p>",
+            "title": "For Groups & Businesses",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "open_link": "_self",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "primary",
+            "button_effect": "fade"
+          }
+        }
+      },
+      "block_order": [
+        "template--21441721336085__cbe86456-c461-46df-ae43-0af0d7d95359-text_block-1",
+        "6353b9c7-9e0d-40db-b0d4-b2eaa377c4f9",
+        "23d8f2e8-e721-4672-8569-7b8d32508b28",
+        "1b3deada-8fb2-4969-90b5-cb64bf6304bd"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "text_align": "center",
+        "pos_text": "default",
+        "fs_counter": 50,
+        "fs_tagline": 13,
+        "fs_specs": 16,
+        "fs_title": 15,
+        "fs_text": 14,
+        "fs_counter_mb": 22,
+        "fs_tagline_mb": 12,
+        "fs_specs_mb": 12,
+        "fs_title_mb": 15,
+        "fs_text_mb": 12,
+        "image_ratio": "ratio2_3",
+        "image_size": "contain",
+        "image_position": "8",
+        "img_effect": "none",
+        "b_effect": "none",
+        "layout_des": "1",
+        "space_h_item": "10",
+        "space_v_item": "20",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "20",
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "loop": false,
+        "au_time": 0,
+        "au_hover": false,
+        "nav_btn": false,
+        "btn_vi": "always",
+        "btn_owl": "default",
+        "btn_shape": "round",
+        "btn_cl": "light",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": true,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,50px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".SectionID a.t4s-btn{border-radius:8px;margin-top:15px;}\n.SectionID h3,.SectionID h4{color:#e87200!important;text-transform:uppercase;}\n@media (max-width:767px){\n.SectionID .t4s-row-cols-2>.t4s-col-item:first-child,.SectionID .t4s-row-cols-2>.t4s-col-item:nth-child(2){border-bottom: 1px solid grey;}\n}"
+      }
+    },
+    "video_featured_VJ8JH3": {
+      "type": "video_featured",
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratio16_9",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "source": "1",
+        "video_url": "https:\/\/vimeo.com\/577705578",
+        "au_video": false,
+        "loop_video": true,
+        "bg_overlay": "#000000",
+        "bg_opacity": 0,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "1702895640c62aba6a": {
+      "type": "apps",
+      "blocks": {
+        "8a680922-6c51-4cd9-8c1f-48449967dd9f": {
+          "type": "shopify:\/\/apps\/opinew-reviews\/blocks\/product-widget\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "8a680922-6c51-4cd9-8c1f-48449967dd9f"
+      ],
+      "settings": {
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "You may also like",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "2",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 9,
+        "display_type": "4",
+        "image_ratio": "ratio1_1",
+        "image_size": "nt_cover",
+        "image_position": "8",
+        "content_align": "center",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "1",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "1",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,30px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": ",,0px,"
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Recently viewed",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "2",
+        "show_vendor": false,
+        "use_cdt": true,
+        "limit": 9,
+        "sortby": "1",
+        "unavailable_prs": "show",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "20",
+        "space_v_item": "20",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "35px,,20px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "frontpage",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24\/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022\/12\/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        },
+        "8797917a-a8e1-44fe-acb7-ff1e83a3f295": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title_cus_html": "Talk about your brand",
+            "text_html": "<p>Get it for 50% off with code SLEEP<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6",
+        "8797917a-a8e1-44fe-acb7-ff1e83a3f295"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "9f87910c-c229-4870-a34d-b30c3e3613f4": {
+      "type": "hero_image",
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "parallax": false,
+        "image_position": "0",
+        "link_img1": "",
+        "open_link": "_blank",
+        "text_align": "center",
+        "text_align_mb": "center",
+        "content_width": "auto",
+        "cv_pos": 50,
+        "ch_pos": 50,
+        "cv_pos_mb": 50,
+        "ch_pos_mb": 50,
+        "bg_overlay": "#000000",
+        "bg_opacity": 0,
+        "bg_content_cl": "#ffffff",
+        "bg_content_op": 0,
+        "content_pd_tb": 15,
+        "content_pd_lr": 15,
+        "content_pd_tb_mb": 10,
+        "content_pd_lr_mb": 10,
+        "border_bl": false,
+        "br_color": "#222222",
+        "br_bg": "#ffffff",
+        "br_opacity": 50,
+        "br_style": "solid",
+        "br_pd": 20,
+        "br_pd_mb": 10,
+        "time_animation": 1,
+        "animation_delay": 40,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "1a5f18e3-6d85-43b3-a67d-fd565e3561bd": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Frequently bought together",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "show_btn": true,
+        "shop_all_btn": "Shop All",
+        "shop_all_link": "shopify:\/\/collections\/all",
+        "tophead_mb": 30,
+        "head_btn_label": "View All",
+        "head_btn_url": "",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "medium",
+        "head_btn_cl": "dark",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "bed-sheets",
+        "product_des": "2",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "limit": 8,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "none",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "large",
+        "btns_cl": "dark",
+        "button_effect": "default",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "30px,,50px,",
+        "pd": "30px,0px,0px,0px",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": "30px,,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "34eab03a-b1c4-4c29-9079-64f6e663d12a": {
+      "type": "blog-post-manual",
+      "blocks": {
+        "107e41f0-e279-4e5f-9c92-f62803a620ca": {
+          "type": "article",
+          "settings": {
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "107e41f0-e279-4e5f-9c92-f62803a620ca"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Featured Blogs",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "blog_btn": "",
+        "bt_lb": "Button label",
+        "tophead_mb": 30,
+        "post_des": "1",
+        "show_cate": false,
+        "show_tags": false,
+        "show_cnt": true,
+        "show_au": true,
+        "show_dt": true,
+        "show_cm": false,
+        "show_rm": false,
+        "date": "date",
+        "content_align": "t4s-text-start",
+        "limit": 8,
+        "img_effect": "none",
+        "b_effect": "none",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "67aee4f6-c98c-4da7-9ea9-8fe5b50e0691": {
+      "type": "blog-post",
+      "settings": {
+        "design_heading": "20",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Blog and Updates",
+        "bt_lb": "View More",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "blog": "news",
+        "post_des": "2",
+        "show_cate": false,
+        "show_tags": false,
+        "show_cnt": true,
+        "show_au": false,
+        "show_dt": false,
+        "show_cm": false,
+        "show_rm": false,
+        "show_irm": false,
+        "date": "date",
+        "content_align": "t4s-text-start",
+        "limit": 3,
+        "img_effect": "none",
+        "b_effect": "none",
+        "image_ratio": "ratio16_9",
+        "image_size": "cover",
+        "image_position": "8",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "default",
+        "btn_shape": "round",
+        "btn_cl": "light",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "none",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "large",
+        "btns_cl": "dark",
+        "button_effect": "default",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_tb": "50px,,50px,",
+        "pd_tb": "",
+        "mg_mb": "75px,,50px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": "@media (min-width:768px){\n.SectionID h3 span{color:#0B0F0E;font-size:38px;}\n.t4s-blog-button-heading{font-size:18px;}\n}\n\n.SectionID img{border-radius:8px;}\n.SectionID  h3.t4s-section-title.t4s-title{padding:0!important;}\n@media (max-width:767px){\n.SectionID h3 span{color:#0B0F0E;}\n.SectionID h3.t4s-section-title.t4s-title{margin-bottom:0;}\n}"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "a183f929-3190-46fb-a8c2-960c8c8b7c6f",
+    "cbe86456-c461-46df-ae43-0af0d7d95359",
+    "video_featured_VJ8JH3",
+    "1702895640c62aba6a",
+    "product-recommendations",
+    "recently-viewed-products",
+    "sidebar",
+    "9f87910c-c229-4870-a34d-b30c3e3613f4",
+    "1a5f18e3-6d85-43b3-a67d-fd565e3561bd",
+    "34eab03a-b1c4-4c29-9079-64f6e663d12a",
+    "67aee4f6-c98c-4da7-9ea9-8fe5b50e0691"
+  ]
+}
