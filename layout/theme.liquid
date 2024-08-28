@@ -50,9 +50,6 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }} rtl_{{ isRTL }} swatch_col
 </style>
 {%endif%}
 {{ content_for_header }}
-  
-
-     
 
     <!-- OneTrust Cookies Consent Notice start -->
     <script
@@ -173,15 +170,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {%- render 'head_assets', t_name: t_name, isRTL: isRTL -%}
      <!-- Optimizely -->
   <script src="https://cdn.optimizely.com/js/20542322736.js" defer></script>
-  <!-- -->
-    {% comment %}
+
   {% render 'opinew_head' %}
    {% if request.page_type == 'product' %}
       {%- render 'recharge-product-subscription' -%}
 {% else %}
       {% render 'recharge-all-pages-subscription' %}
 {% endif %}
-    {% endcomment %}
   <script src="{{ 'jquery-3.6.4.min.js' | asset_url }}"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 
