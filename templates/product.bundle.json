@@ -291,7 +291,7 @@
       "settings": {
         "pr_layout": "default",
         "enable_sticky_info": true,
-        "media_layout": "one_column",
+        "media_layout": "two_columns",
         "media_size": "medium",
         "thumb_lr_size": "small",
         "image_ratio": "ratio1_1",
@@ -404,10 +404,10 @@
             "text_shadow": false,
             "text_mgb": 40,
             "hidden_mobile": false,
-            "text_fs_mb": 16,
+            "text_fs_mb": 28,
             "text_lh_mb": 0,
             "text_ls_mb": 0,
-            "text_mgb_mobile": 10
+            "text_mgb_mobile": 20
           }
         },
         "html_XCcyXB": {
@@ -430,7 +430,8 @@
         ".counter {font-size: 48px; font-style: normal; font-weight: 700; line-height: normal; margin-bottom: 0px;}",
         ".counter-text {font-size: 28px; font-style: normal; font-weight: 400; line-height: normal; margin-bottom: 0px;}",
         ".c-row {display: flex; flex-wrap: wrap;}",
-        ".c-row > .col-md-5 {flex: 50%; margin-bottom: 30px;}"
+        ".c-row > .col-md-5 {flex: 50%; margin-bottom: 30px;}",
+        "@media screen and (max-width: 650px) {.counter {font-size: 28px; } .counter-text {font-size: 18px; }}"
       ],
       "settings": {
         "space_h_item": "30",
@@ -642,7 +643,7 @@
             "text_shadow": false,
             "text_mgb": 5,
             "hidden_mobile": false,
-            "text_fs_mb": 16,
+            "text_fs_mb": 28,
             "text_lh_mb": 0,
             "text_ls_mb": 0,
             "text_mgb_mobile": 10
@@ -844,7 +845,7 @@
             "text_shadow": false,
             "text_mgb": 15,
             "hidden_mobile": false,
-            "text_fs_mb": 16,
+            "text_fs_mb": 28,
             "text_lh_mb": 0,
             "text_ls_mb": 0,
             "text_mgb_mobile": 10
