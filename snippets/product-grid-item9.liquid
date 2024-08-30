@@ -146,3 +146,17 @@ endif -%}
     </div>
   </div>
 </div>
+<script>
+  const config = {
+  productId: {{ product.id }}, // Required
+  injectionParent: '.t4s-product-btns', // The node that will have the widget injected in
+  injectionMethod: 'prepend', // How will the widget be injected 
+  injectFn: (node, target) => {}, // Runs a custom injection function 
+  selectors: {
+    price: ['.t4s-product-price'], // the selectors that will be updated based on subscription
+    variant: ['.variant-selector'] // The variants to watch for to update the subscription prices
+  }
+};
+window.ReChargeWidget.createWidget(config);
+
+</script>
