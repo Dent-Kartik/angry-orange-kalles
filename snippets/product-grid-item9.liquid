@@ -147,7 +147,8 @@ endif -%}
   </div>
 </div>
 <script>
-  const rechargeConfig = {
+window.ReChargeWidget.createWidget(
+  {
   productId: {{ product.id }}, // Required
   injectionParent: '.t4s-product-btns', // The node that will have the widget injected in
   injectionMethod: 'prepend', // How will the widget be injected 
@@ -156,7 +157,7 @@ endif -%}
     price: ['.t4s-product-price'], // the selectors that will be updated based on subscription
     variant: ['.variant-selector'] // The variants to watch for to update the subscription prices
   }
-};
-window.ReChargeWidget.createWidget(rechargeConfig);
+}
+);
 
 </script>
