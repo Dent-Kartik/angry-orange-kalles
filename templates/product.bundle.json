@@ -336,6 +336,24 @@
         "time": 5
       }
     },
+    "172501811016c6b453": {
+      "type": "apps",
+      "blocks": {
+        "opinew_reviews_product_widget_gGLBEm": {
+          "type": "shopify:\/\/apps\/opinew-reviews\/blocks\/product-widget\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "opinew_reviews_product_widget_gGLBEm"
+      ],
+      "custom_css": [
+        ".opw-reviews-container.opw-pt-4, .opw-pagination-container, .opinew-header-new > .opw-mt-4.opw-w-full.opw-pb-0.opw-reviewsCardBorderColor {display: none!important;}"
+      ],
+      "settings": {
+      }
+    },
     "custom_section_NbxJGq": {
       "type": "custom-section",
       "blocks": {
@@ -1218,6 +1236,7 @@
   "order": [
     "breadcrumb",
     "main",
+    "172501811016c6b453",
     "custom_section_NbxJGq",
     "video_slider_qLBgyn",
     "feature_columns2_DVMUpm",
