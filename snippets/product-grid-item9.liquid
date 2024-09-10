@@ -144,7 +144,7 @@ endif -%}
         </div>
       {% endif %}
     </div>
-    <input type="button" id="add-to-cart-button" value="Subscribe" onClick="addItemToCart({{ product.id }}, 1, {{product.selling_plan_groups[0].selling_plans[0].id}})">       
+    <input type="button" id="add-to-cart-button" value="Subscribe" onClick="addItemToCart({{ product.variants.first.id }}, 1, {{product.selling_plan_groups[0].selling_plans[0].id}})">       
 
   </div>
 </div>
