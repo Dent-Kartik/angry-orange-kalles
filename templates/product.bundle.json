@@ -286,7 +286,8 @@
         "tab_html_8tU9M8"
       ],
       "custom_css": [
-        ".t4s-tab-wrapper {font-weight: 500; margin-bottom: 20px;}"
+        ".t4s-tab-wrapper {font-weight: 500; margin-bottom: 20px;}",
+        ".t4s-section-main-product {margin-bottom: 30px;}"
       ],
       "settings": {
         "pr_layout": "default",
@@ -443,6 +444,7 @@
         "custom_text_Qndczm",
         "html_XCcyXB"
       ],
+      "disabled": true,
       "custom_css": [
         "{color: white;}",
         ".counter {font-size: 48px; font-style: normal; font-weight: 700; line-height: normal; margin-bottom: 0px;}",
