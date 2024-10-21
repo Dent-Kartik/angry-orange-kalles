@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "purchase_code": "c109b1a0-516b-4ec8-b02e-b7b63142b4ea",
@@ -16,13 +16,13 @@
     "use_rtl": "0",
     "platform_email": "3",
     "header_design": "inline",
-    "logo": "shopify:\/\/shop_images\/AO-Wordmark_O.png",
+    "logo": "shopify://shop_images/AO-Wordmark_O.png",
     "logo_width": 180,
-    "logos": "shopify:\/\/shop_images\/AO-Wordmark_O.png",
+    "logos": "shopify://shop_images/AO-Wordmark_O.png",
     "logos_width": 120,
-    "logo_mb": "shopify:\/\/shop_images\/jbn.jpg",
+    "logo_mb": "shopify://shop_images/jbn.jpg",
     "logo_mb_width": 140,
-    "logo_tr": "shopify:\/\/shop_images\/header-logo-01.png",
+    "logo_tr": "shopify://shop_images/header-logo-01.png",
     "logo_tr_width": 95,
     "mobile_nav_type": "1",
     "only_icon": true,
@@ -49,7 +49,7 @@
     "fnt_fm_gg1": "Barlow Condensed",
     "fnt_fm_gg2": "Barlow Condensed",
     "fnt_fm_gg3": "Barlow Condensed",
-    "custom_font_html": "@font-face {\n  font-family: 'Barlow';\n  src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0255\/3367\/7650\/files\/BarlowCondensed-Regular.woff2?v=1713520634') format('woff2'), \/* Modern Browsers *\/\n       url('https:\/\/cdn.shopify.com\/s\/files\/1\/0255\/3367\/7650\/files\/BarlowCondensed-Regular.woff?v=1713520634') format('woff'); \/* Modern Browsers *\/\n  font-weight: normal;\n  font-style: normal;\nfont-display: swap;\n}\n@font-face {\n  font-family: 'Barlow-Bold';\n  src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0255\/3367\/7650\/files\/BarlowCondensed-Bold.woff2?v=1713520634') format('woff2'), \/* Modern Browsers *\/\n       url('https:\/\/cdn.shopify.com\/s\/files\/1\/0255\/3367\/7650\/files\/BarlowCondensed-Bold.woff?v=1713520634') format('woff'); \/* Modern Browsers *\/\n  font-weight: normal;\n  font-style: normal;\nfont-display: swap;\n}\nbody {\n  font-family: 'Barlow'!important;\n}\nh1,h2,h3,h4,h5,h6{\n font-family: 'Barlow-Bold'!important;\n}",
+    "custom_font_html": "@font-face {\n  font-family: 'Barlow';\n  src: url('https://cdn.shopify.com/s/files/1/0255/3367/7650/files/BarlowCondensed-Regular.woff2?v=1713520634') format('woff2'), /* Modern Browsers */\n       url('https://cdn.shopify.com/s/files/1/0255/3367/7650/files/BarlowCondensed-Regular.woff?v=1713520634') format('woff'); /* Modern Browsers */\n  font-weight: normal;\n  font-style: normal;\nfont-display: swap;\n}\n@font-face {\n  font-family: 'Barlow-Bold';\n  src: url('https://cdn.shopify.com/s/files/1/0255/3367/7650/files/BarlowCondensed-Bold.woff2?v=1713520634') format('woff2'), /* Modern Browsers */\n       url('https://cdn.shopify.com/s/files/1/0255/3367/7650/files/BarlowCondensed-Bold.woff?v=1713520634') format('woff'); /* Modern Browsers */\n  font-weight: normal;\n  font-style: normal;\nfont-display: swap;\n}\nbody {\n  font-family: 'Barlow'!important;\n}\nh1,h2,h3,h4,h5,h6{\n font-family: 'Barlow-Bold'!important;\n}",
     "bd_fsize": 18,
     "hd_ffamily": "1",
     "fs_h5": 18,
@@ -107,24 +107,24 @@
     "share_tumblr": true,
     "share_telegram": true,
     "share_whatsapp": false,
-    "social_facebook_link": "https:\/\/www.facebook.com\/AngryOrangeForPets\/",
+    "social_facebook_link": "https://www.facebook.com/AngryOrangeForPets/",
     "social_twitter_link": "",
-    "social_instagram_link": "https:\/\/www.instagram.com\/angryorangeforpets\/",
+    "social_instagram_link": "https://www.instagram.com/angryorangeforpets/",
     "social_dribbble_link": "",
     "social_linkedin_link": "",
-    "social_pinterest_link": "https:\/\/nl.pinterest.com\/AngryOrangeUSA\/",
+    "social_pinterest_link": "https://nl.pinterest.com/AngryOrangeUSA/",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCItYyGY9ANPtM3QXgQrOmIw",
+    "social_youtube_link": "https://www.youtube.com/channel/UCItYyGY9ANPtM3QXgQrOmIw",
     "social_vimeo_link": "",
     "social_behance_link": "",
     "social_soundcloud_link": "",
     "social_tiktok_link": "",
     "social_threads_link": "",
     "social_spotify_link": "",
-    "favicon": "shopify:\/\/shop_images\/AO_Profile_Logo_Rd_200px.png",
-    "favicon_apple": "shopify:\/\/shop_images\/AO_Profile_Logo_Rd_200px_2x_bfb996cb-b03e-4da6-9a2f-037c654aa200.png",
-    "checkout_logo_image": "shopify:\/\/shop_images\/Ranger-Ready-logo_1.png",
+    "favicon": "shopify://shop_images/AO_Profile_Logo_Rd_200px.png",
+    "favicon_apple": "shopify://shop_images/AO_Profile_Logo_Rd_200px_2x_bfb996cb-b03e-4da6-9a2f-037c654aa200.png",
+    "checkout_logo_image": "shopify://shop_images/Ranger-Ready-logo_1.png",
     "checkout_logo_size": "large",
     "pr_incoming_mess": true,
     "use_vimg": true,
@@ -152,7 +152,7 @@
           "b3c6ceca-2d54-4a14-b482-bb86cbf25f08": {
             "type": "copyR",
             "settings": {
-              "text": "<span class=\"t4s-cp\">© Angry Orange [year]. All Rights Reserved<\/span>",
+              "text": "<span class=\"t4s-cp\">© Angry Orange [year]. All Rights Reserved</span>",
               "mgb": 0,
               "mgb_mb": 0
             }
@@ -275,8 +275,8 @@
           "1ba4b938-4484-4256-9fd2-1d3c7d58213f": {
             "type": "image",
             "settings": {
-              "image_child": "shopify:\/\/shop_images\/AO-Wordmark_O.png",
-              "link_img": "\/",
+              "image_child": "shopify://shop_images/AO-Wordmark_O.png",
+              "link_img": "/",
               "img_width": 160,
               "img_width_mb": 120,
               "mgb": 20,
@@ -365,7 +365,7 @@
           "html_pU73Rw": {
             "type": "html",
             "settings": {
-              "html_content": "<strong>Call us at:<\/strong> <a href=\"tel:(877)%20873-5402\">(877) 873-5402<\/a> <br><strong>Email us:<\/strong> <a href=\"mailTo:support@angryorange.com\">support@angryorange.com<\/a>",
+              "html_content": "<strong>Call us at:</strong> <a href=\"tel:(877)%20873-5402\">(877) 873-5402</a> <br><strong>Email us:</strong> <a href=\"mailTo:support@angryorange.com\">support@angryorange.com</a>",
               "hidden_mobile": false
             }
           },
@@ -502,36 +502,11 @@
       },
       "top-bar": {
         "type": "top-bar",
-        "blocks": {
-          "435a9eb6-413b-4cf0-8f9f-1359395beee8": {
-            "type": "text",
-            "settings": {
-              "text": "<p><a href=\"https:\/\/angryorange.com\/collections\/all-products\" title=\"https:\/\/angryorange.com\/collections\/all-products\"><strong>SPRING CLEANING SALE! SAVE 20% SITEWIDE WITH CODE: SPRING20<\/strong><\/a><\/p>",
-              "adding_border": false,
-              "countdown": "2023\/12\/26",
-              "txt_day": "days",
-              "dayx": 0,
-              "effect": "1",
-              "au_time": 0,
-              "fw_bold": 400,
-              "cl_a": "#ffffff",
-              "cl_bold": "#ffffff",
-              "cl_a_tr": "#000000",
-              "cl_bold_tr": "#000000",
-              "hide": false,
-              "text_align": "center",
-              "col": "12"
-            }
-          }
-        },
-        "block_order": [
-          "435a9eb6-413b-4cf0-8f9f-1359395beee8"
-        ],
         "custom_css": [
           "p strong {font-size: 18px; line-height: 1.4; font-weight: 800 !important;}"
         ],
         "settings": {
-          "show_topbar": true,
+          "show_topbar": false,
           "topbar_transparent": false,
           "height": 20,
           "fontsize": 15,
@@ -556,7 +531,7 @@
             "type": "drop",
             "settings": {
               "title": "SHOP",
-              "url": "shopify:\/\/collections\/odor-stain-removers",
+              "url": "shopify://collections/odor-stain-removers",
               "open_link": "_self",
               "menu": "shop",
               "icon": "",
@@ -573,7 +548,7 @@
             "type": "base",
             "settings": {
               "title": "ABOUT US",
-              "url": "https:\/\/angryorange.com\/pages\/about-us",
+              "url": "https://angryorange.com/pages/about-us",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -586,7 +561,7 @@
             "type": "base",
             "settings": {
               "title": "BLOG",
-              "url": "https:\/\/angryorange.com\/blogs\/news",
+              "url": "https://angryorange.com/blogs/news",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -599,7 +574,7 @@
             "type": "base",
             "settings": {
               "title": "CONTACT US",
-              "url": "https:\/\/angryorange.com\/pages\/contact-us",
+              "url": "https://angryorange.com/pages/contact-us",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -995,7 +970,7 @@
             "type": "menu",
             "settings": {
               "title": "Shop",
-              "url": "shopify:\/\/collections\/all",
+              "url": "shopify://collections/all",
               "open_link": "_self",
               "menu": "shop",
               "lb": "",
@@ -1008,7 +983,7 @@
             "type": "menu",
             "settings": {
               "title": "About Us",
-              "url": "https:\/\/angryorange.com\/pages\/about-us",
+              "url": "https://angryorange.com/pages/about-us",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -1021,7 +996,7 @@
             "type": "menu",
             "settings": {
               "title": "Blog",
-              "url": "https:\/\/angryorange.com\/blogs\/news",
+              "url": "https://angryorange.com/blogs/news",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -1034,7 +1009,7 @@
             "type": "menu",
             "settings": {
               "title": "FAQs",
-              "url": "https:\/\/support.angryorange.com\/hc\/en-us",
+              "url": "https://support.angryorange.com/hc/en-us",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -1047,7 +1022,7 @@
             "type": "menu",
             "settings": {
               "title": "Contact Us",
-              "url": "https:\/\/angryorange.com\/pages\/contact-us",
+              "url": "https://angryorange.com/pages/contact-us",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -1072,7 +1047,7 @@
             "disabled": true,
             "settings": {
               "title": "Need help?",
-              "text": "<a href=\"tel:%20+0123456789\">\n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M 8.65625 3 C 8.132813 3 7.617188 3.1875 7.1875 3.53125 L 7.125 3.5625 L 7.09375 3.59375 L 3.96875 6.8125 L 4 6.84375 C 3.035156 7.734375 2.738281 9.066406 3.15625 10.21875 C 3.160156 10.226563 3.152344 10.242188 3.15625 10.25 C 4.003906 12.675781 6.171875 17.359375 10.40625 21.59375 C 14.65625 25.84375 19.402344 27.925781 21.75 28.84375 L 21.78125 28.84375 C 22.996094 29.25 24.3125 28.960938 25.25 28.15625 L 28.40625 25 C 29.234375 24.171875 29.234375 22.734375 28.40625 21.90625 L 24.34375 17.84375 L 24.3125 17.78125 C 23.484375 16.953125 22.015625 16.953125 21.1875 17.78125 L 19.1875 19.78125 C 18.464844 19.433594 16.742188 18.542969 15.09375 16.96875 C 13.457031 15.40625 12.621094 13.609375 12.3125 12.90625 L 14.3125 10.90625 C 15.152344 10.066406 15.167969 8.667969 14.28125 7.84375 L 14.3125 7.8125 L 14.21875 7.71875 L 10.21875 3.59375 L 10.1875 3.5625 L 10.125 3.53125 C 9.695313 3.1875 9.179688 3 8.65625 3 Z M 8.65625 5 C 8.730469 5 8.804688 5.035156 8.875 5.09375 L 12.875 9.1875 L 12.96875 9.28125 C 12.960938 9.273438 13.027344 9.378906 12.90625 9.5 L 10.40625 12 L 9.9375 12.4375 L 10.15625 13.0625 C 10.15625 13.0625 11.304688 16.136719 13.71875 18.4375 L 13.9375 18.625 C 16.261719 20.746094 19 21.90625 19 21.90625 L 19.625 22.1875 L 22.59375 19.21875 C 22.765625 19.046875 22.734375 19.046875 22.90625 19.21875 L 27 23.3125 C 27.171875 23.484375 27.171875 23.421875 27 23.59375 L 23.9375 26.65625 C 23.476563 27.050781 22.988281 27.132813 22.40625 26.9375 C 20.140625 26.046875 15.738281 24.113281 11.8125 20.1875 C 7.855469 16.230469 5.789063 11.742188 5.03125 9.5625 C 4.878906 9.15625 4.988281 8.554688 5.34375 8.25 L 5.40625 8.1875 L 8.4375 5.09375 C 8.507813 5.035156 8.582031 5 8.65625 5 Z\"><\/path><\/svg> +01 23456789<\/a>\n<br>\n<a href=\"mailto:kalles@domain.com\">\n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M 3 8 L 3 26 L 29 26 L 29 8 Z M 7.3125 10 L 24.6875 10 L 16 15.78125 Z M 5 10.875 L 15.4375 17.84375 L 16 18.1875 L 16.5625 17.84375 L 27 10.875 L 27 24 L 5 24 Z\"><\/path><\/svg>\nkalles@domain.com<\/a>"
+              "text": "<a href=\"tel:%20+0123456789\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M 8.65625 3 C 8.132813 3 7.617188 3.1875 7.1875 3.53125 L 7.125 3.5625 L 7.09375 3.59375 L 3.96875 6.8125 L 4 6.84375 C 3.035156 7.734375 2.738281 9.066406 3.15625 10.21875 C 3.160156 10.226563 3.152344 10.242188 3.15625 10.25 C 4.003906 12.675781 6.171875 17.359375 10.40625 21.59375 C 14.65625 25.84375 19.402344 27.925781 21.75 28.84375 L 21.78125 28.84375 C 22.996094 29.25 24.3125 28.960938 25.25 28.15625 L 28.40625 25 C 29.234375 24.171875 29.234375 22.734375 28.40625 21.90625 L 24.34375 17.84375 L 24.3125 17.78125 C 23.484375 16.953125 22.015625 16.953125 21.1875 17.78125 L 19.1875 19.78125 C 18.464844 19.433594 16.742188 18.542969 15.09375 16.96875 C 13.457031 15.40625 12.621094 13.609375 12.3125 12.90625 L 14.3125 10.90625 C 15.152344 10.066406 15.167969 8.667969 14.28125 7.84375 L 14.3125 7.8125 L 14.21875 7.71875 L 10.21875 3.59375 L 10.1875 3.5625 L 10.125 3.53125 C 9.695313 3.1875 9.179688 3 8.65625 3 Z M 8.65625 5 C 8.730469 5 8.804688 5.035156 8.875 5.09375 L 12.875 9.1875 L 12.96875 9.28125 C 12.960938 9.273438 13.027344 9.378906 12.90625 9.5 L 10.40625 12 L 9.9375 12.4375 L 10.15625 13.0625 C 10.15625 13.0625 11.304688 16.136719 13.71875 18.4375 L 13.9375 18.625 C 16.261719 20.746094 19 21.90625 19 21.90625 L 19.625 22.1875 L 22.59375 19.21875 C 22.765625 19.046875 22.734375 19.046875 22.90625 19.21875 L 27 23.3125 C 27.171875 23.484375 27.171875 23.421875 27 23.59375 L 23.9375 26.65625 C 23.476563 27.050781 22.988281 27.132813 22.40625 26.9375 C 20.140625 26.046875 15.738281 24.113281 11.8125 20.1875 C 7.855469 16.230469 5.789063 11.742188 5.03125 9.5625 C 4.878906 9.15625 4.988281 8.554688 5.34375 8.25 L 5.40625 8.1875 L 8.4375 5.09375 C 8.507813 5.035156 8.582031 5 8.65625 5 Z\"></path></svg> +01 23456789</a>\n<br>\n<a href=\"mailto:kalles@domain.com\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M 3 8 L 3 26 L 29 26 L 29 8 Z M 7.3125 10 L 24.6875 10 L 16 15.78125 Z M 5 10.875 L 15.4375 17.84375 L 16 18.1875 L 16.5625 17.84375 L 27 10.875 L 27 24 L 5 24 Z\"></path></svg>\nkalles@domain.com</a>"
             }
           },
           "mb_nav-8": {
@@ -1221,7 +1196,7 @@
             "type": "description",
             "settings": {
               "des": "2",
-              "text": "<p>Go kalles this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish kalles vibe.<\/p>",
+              "text": "<p>Go kalles this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish kalles vibe.</p>",
               "length": 31
             }
           },
@@ -1421,7 +1396,7 @@
           "heading-template-0"
         ],
         "settings": {
-          "image": "shopify:\/\/shop_images\/shopping-cart-head.jpg",
+          "image": "shopify://shop_images/shopping-cart-head.jpg",
           "parallax": false,
           "color": "#000000",
           "overlay": 54,
@@ -1592,7 +1567,7 @@
             "type": "base",
             "settings": {
               "title": "base",
-              "url": "\/",
+              "url": "/",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -1638,7 +1613,7 @@
           "bg_hc": "#000000",
           "cl_hc": "#ffffff",
           "source": "2",
-          "txt": "<p>Welcome to our store!<\/p>",
+          "txt": "<p>Welcome to our store!</p>",
           "h_navmb": 62,
           "fm_nav": "1",
           "fs_nav": 14,
@@ -1832,7 +1807,7 @@
             "type": "base",
             "settings": {
               "title": "base",
-              "url": "\/",
+              "url": "/",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -1882,7 +1857,7 @@
           "clnavtr": "#ffffff",
           "clnavtr_hover": "#ffffff",
           "source": "2",
-          "txt": "<p>Welcome to our store!<\/p>",
+          "txt": "<p>Welcome to our store!</p>",
           "fm_nav": "1",
           "fs_nav": 14,
           "fw_nav": 400,
@@ -1924,7 +1899,7 @@
           "clnavtr_hover": "#ffffff",
           "clseatr": "#56cfe1",
           "source": "1",
-          "txt": "<p>Welcome to our store!<\/p>"
+          "txt": "<p>Welcome to our store!</p>"
         }
       },
       "header-categories-menu": {
@@ -1972,7 +1947,7 @@
             "type": "base",
             "settings": {
               "title": "base",
-              "url": "\/",
+              "url": "/",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -2038,7 +2013,7 @@
           "fw_nav": 400,
           "ls_nav": 0,
           "txt_cat": "SHOP BY CATEGORY",
-          "text": "<i class=\"las la-phone fs__14\"><\/i> +01 23456789 <i class=\"las la-envelope fs__14 ml__15\"><\/i> <a class=\"cg\" href=\"mailto:kalles@domain.com\">kalles@domain.com<\/a>",
+          "text": "<i class=\"las la-phone fs__14\"></i> +01 23456789 <i class=\"las la-envelope fs__14 ml__15\"></i> <a class=\"cg\" href=\"mailto:kalles@domain.com\">kalles@domain.com</a>",
           "shop_cat": true
         }
       },
@@ -2085,7 +2060,7 @@
             "type": "lv0_base",
             "settings": {
               "title": "base",
-              "url": "\/",
+              "url": "/",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -2271,31 +2246,31 @@
     ],
     "blocks": {
       "9790993569898449839": {
-        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/global\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+        "type": "shopify://apps/opinew-product-reviews-app/blocks/global/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
         "disabled": false,
         "settings": {
         }
       },
       "18306912302550125850": {
-        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/rich-snippet\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+        "type": "shopify://apps/opinew-product-reviews-app/blocks/rich-snippet/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
         "disabled": false,
         "settings": {
         }
       },
       "13951170544780599758": {
-        "type": "shopify:\/\/apps\/tapita-seo-speed\/blocks\/app-embed\/cd37ca7a-40ad-4fdc-afd3-768701482209",
+        "type": "shopify://apps/tapita-seo-speed/blocks/app-embed/cd37ca7a-40ad-4fdc-afd3-768701482209",
         "disabled": true,
         "settings": {
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "17151115064775110295": {
-        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "type": "shopify://apps/recharge-subscriptions/blocks/recharge-theme/371eed76-0b44-4869-9813-730372ea378e",
         "disabled": false,
         "settings": {
           "color_brand": "#467c99",
