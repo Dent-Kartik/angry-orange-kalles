@@ -2237,7 +2237,7 @@
           "mg_mb": "",
           "pd_mb": "20px,,20px,",
           "use_cus_css": true,
-          "code_cus_css": ".t4s_se_footer-top .t4s-top-heading{padding-left: 0 !important;}\n.t4s_se_footer-top .t4s-newsletter__email::placeholder {\n  opacity: 0;\n}\n<div class=\"klaviyo-form-00 Subscribers\"></div>"
+          "code_cus_css": ".t4s_se_footer-top .t4s-top-heading{padding-left: 0 !important;}\n.t4s_se_footer-top .t4s-newsletter__email::placeholder {\n  opacity: 0;\n}"
         }
       }
     },
