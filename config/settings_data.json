@@ -15,6 +15,7 @@
     "shop_author": "Thrasio",
     "use_rtl": "0",
     "platform_email": "3",
+    "klaviyo_list_id": "NtXMLe",
     "header_design": "inline",
     "logo": "shopify://shop_images/AO-Wordmark_O.png",
     "logo_width": 180,
@@ -2171,7 +2172,6 @@
         "blocks": {
           "custom_text_kBckMm": {
             "type": "custom_text",
-            "disabled": true,
             "settings": {
               "text": "Subscribe & get 20% off your first order!",
               "remove_br_tag": false,
@@ -2194,7 +2194,6 @@
           },
           "newsletter_yrP9di": {
             "type": "newsletter",
-            "disabled": true,
             "settings": {
               "form_width": 0,
               "form_width_mb": 0,
