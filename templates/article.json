@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "heading": {
@@ -129,13 +129,11 @@
         },
         "5908f252-0a66-4bc2-8069-a8f60d79fb18": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "e8da95d6-7323-4d99-a68c-16088d24fa34": {
           "type": "tags",
-          "settings": {
-          }
+          "settings": {}
         },
         "d905ad63-1b38-496e-8a7e-38751e0ad0b8": {
           "type": "socials",
@@ -156,8 +154,7 @@
         },
         "dec42554-02e5-40e5-89ff-f922277dcb34": {
           "type": "navigation",
-          "settings": {
-          }
+          "settings": {}
         },
         "0ae37c6c-16ef-447b-bbbf-31a449c30d2f": {
           "type": "related",
@@ -244,7 +241,7 @@
             "fw_pr": 600,
             "lh_pr": 0,
             "ls_pr": 0,
-            "pr_title_color": "#222",
+            "pr_title_color": "#222222",
             "pr_title_color_hover": "#56cfe1"
           }
         },
@@ -291,7 +288,7 @@
             "button_effect": "fade",
             "wishlist_color": "#222222",
             "wishlist_color_hover": "#56cfe1",
-            "wishlist_color_active": "#E81E1E",
+            "wishlist_color_active": "#e81e1e",
             "compare_color": "#222222",
             "compare_color_hover": "#56cfe1",
             "compare_color_active": "#222222",
@@ -299,15 +296,11 @@
             "btn_txt2": "3",
             "button_color_payment": "dark",
             "show_gift_card_recipient": true,
-            "product_list": [
-
-            ],
+            "product_list": [],
             "show_product_current": true,
             "qty_val": "0",
             "advance_label": "Choose style",
-            "advance_pr_list": [
-
-            ]
+            "advance_pr_list": []
           }
         },
         "size_delivery_ask_Bk3GzR": {
@@ -364,6 +357,7 @@
         "meta_eXBjBT",
         "social_EAeibt"
       ],
+      "disabled": true,
       "settings": {
         "product": "{{ article.metafields.global.featured_product.value }}",
         "enable_sticky_info": false,
