@@ -636,31 +636,31 @@
   </div> {% endif %}
 {% endif %}
  <script>
-        // Wait for the DOM to fully load
-        document.addEventListener("DOMContentLoaded", function() {
-            // Get the elements by their IDs
-            var hoverblock = document.getElementById('hoverblock-p1');
-            var p1 = document.getElementById('p1');
+//         // Wait for the DOM to fully load
+//         document.addEventListener("DOMContentLoaded", function() {
+//             // Get the elements by their IDs
+//             var hoverblock = document.getElementById('hoverblock-p1');
+//             var p1 = document.getElementById('p1');
 
-            // Check if the element exists
-            if (p1) {
-                // Get the parent element of p1
-                var parentElement = p1.parentNode;
+//             // Check if the element exists
+//             if (p1) {
+//                 // Get the parent element of p1
+//                 var parentElement = p1.parentNode;
 
-                // Set the position of the parent element to relative
-               parentElement.classList.add('posrelb');
-var grandparentElement = p1.parentNode.parentNode;
+//                 // Set the position of the parent element to relative
+//                parentElement.classList.add('posrelb');
+// var grandparentElement = p1.parentNode.parentNode;
 
-    // Add the class 'posrelb' to the grandparent element
-    grandparentElement.classList.add('gposrelb');
-            }
+//     // Add the class 'posrelb' to the grandparent element
+//     grandparentElement.classList.add('gposrelb');
+//             }
 
-            // Check if both elements exist
-            if (hoverblock && p1) {
-                // Insert the hoverblock after the p1 element
-                p1.parentNode.insertBefore(hoverblock, p1.nextSibling);
-            }
-        });
+//             // Check if both elements exist
+//             if (hoverblock && p1) {
+//                 // Insert the hoverblock after the p1 element
+//                 p1.parentNode.insertBefore(hoverblock, p1.nextSibling);
+//             }
+//         });
     </script>
 {%- schema -%}
 {
