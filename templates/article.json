@@ -364,7 +364,7 @@
         ".t4s-product__title a {font-size: 32px;}",
         ".opinew-stars-plugin-link span {font-size: 20px;}",
         ".opinew-stars-plugin-product-list {margin-top: 5px !important;}",
-        "@media screen and (max-width: 650px) {.t4s-product__title {font-size: 28px; } .opinew-stars-plugin-link span {font-size: 18px; }}"
+        "@media screen and (max-width: 650px) {.t4s-product__title a{font-size: 28px; } .opinew-stars-plugin-link span {font-size: 18px; }}"
       ],
       "settings": {
         "product": "{{ article.metafields.global.featured_product.value }}",
