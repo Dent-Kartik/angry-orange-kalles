@@ -158,6 +158,7 @@
         },
         "0ae37c6c-16ef-447b-bbbf-31a449c30d2f": {
           "type": "related",
+          "disabled": true,
           "settings": {
             "hd_related": "RELATED ARTICLES",
             "hd_align": "center",
@@ -319,6 +320,7 @@
         },
         "meta_eXBjBT": {
           "type": "meta",
+          "disabled": true,
           "settings": {
             "show_options": true,
             "show_vendor": false,
@@ -332,6 +334,7 @@
         },
         "social_EAeibt": {
           "type": "social",
+          "disabled": true,
           "settings": {
             "socials_align": "start",
             "social_mode": "2",
@@ -357,7 +360,12 @@
         "meta_eXBjBT",
         "social_EAeibt"
       ],
-      "disabled": true,
+      "custom_css": [
+        ".t4s-product__title a {font-size: 32px;}",
+        ".opinew-stars-plugin-link span {font-size: 20px;}",
+        ".opinew-stars-plugin-product-list {margin-top: 5px !important;}",
+        "@media screen and (max-width: 650px) {.t4s-product__title {font-size: 28px; } .opinew-stars-plugin-link span {font-size: 18px; }}"
+      ],
       "settings": {
         "product": "{{ article.metafields.global.featured_product.value }}",
         "enable_sticky_info": false,
