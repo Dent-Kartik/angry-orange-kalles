@@ -1144,7 +1144,7 @@
           "pos": "2",
           "enable_pr": true,
           "enable_calc_ship": true,
-          "enable_note": true,
+          "enable_note": false,
           "enable_rates": true,
           "enable_discount": true,
           "enable_gift_wrap": true,
