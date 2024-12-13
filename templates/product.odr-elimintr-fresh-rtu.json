@@ -50,6 +50,13 @@
           "type": "shopify://apps/opinew-reviews/blocks/product-stars/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
           "settings": {}
         },
+        "custom_liquid_XeCLwD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<script type=\"module\" data-target-id=\"bp-38964d5f-eed2-45da-b2f3-13712829c5d8\" src=\"https://cdn.elements.amazon/elements/amazon-product-rating/v1.0/web-component.shopify.js\"></script>\n{% if product.sku %}\n    <amazon-product-rating product-sku=\"{{product.sku}}\" product-id=\"{{ product.selected_or_first_available_variant.id }}\"></amazon-product-rating>\n{% else %}\n    <amazon-product-rating product-sku=\"{{product.selected_or_first_available_variant.sku}}\" product-id=\"{{ product.selected_or_first_available_variant.id }}\"></amazon-product-rating>\n{% endif %}"
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -104,7 +111,7 @@
         "custom_liquid_kQdCKR": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"customrw\"></div>\n<script type=\"module\" data-target-id=\"bp-38964d5f-eed2-45da-b2f3-13712829c5d8\" src=\"https://cdn.elements.amazon/elements/amazon-product-rating/v1.0/web-component.shopify.js\"></script>\n{% if product.sku %}\n    <amazon-product-rating product-sku=\"{{product.sku}}\" product-id=\"{{ product.selected_or_first_available_variant.id }}\"></amazon-product-rating>\n{% else %}\n    <amazon-product-rating product-sku=\"{{product.selected_or_first_available_variant.sku}}\" product-id=\"{{ product.selected_or_first_available_variant.id }}\"></amazon-product-rating>\n{% endif %}"
+            "custom_liquid": "<div class=\"customrw\"></div>"
           }
         },
         "33baad01-228a-4fde-8fb8-5af287b996d8": {
@@ -265,6 +272,7 @@
         "meta",
         "title",
         "46f48626-36c1-4c15-85cf-3ae47a93c16e",
+        "custom_liquid_XeCLwD",
         "description",
         "152e7505-1077-4ecb-956c-1f52beee2fd8",
         "price_review",
@@ -581,6 +589,22 @@
         "8a680922-6c51-4cd9-8c1f-48449967dd9f"
       ],
       "settings": {}
+    },
+    "custom_liquid_B9GcxV": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<script type=\"module\" data-target-id=\"bp-38964d5f-eed2-45da-b2f3-13712829c5d8\" src=\"https://cdn.elements.amazon/elements/amazon-product-reviews/v1.0/web-component.shopify.js\"></script>\n{% if product.sku %}\n    <amazon-product-reviews product-sku=\"{{product.sku}}\" product-id=\"{{ product.selected_or_first_available_variant.id }}\"></amazon-product-reviews>\n{% else %}\n    <amazon-product-reviews product-sku=\"{{product.selected_or_first_available_variant.sku}}\" product-id=\"{{ product.selected_or_first_available_variant.id }}\"></amazon-product-reviews>\n{% endif %}",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
     },
     "product-recommendations": {
       "type": "product-recommendations",
@@ -1073,6 +1097,7 @@
     "cbe86456-c461-46df-ae43-0af0d7d95359",
     "video_featured_VJ8JH3",
     "1702895640c62aba6a",
+    "custom_liquid_B9GcxV",
     "product-recommendations",
     "recently-viewed-products",
     "sidebar",
