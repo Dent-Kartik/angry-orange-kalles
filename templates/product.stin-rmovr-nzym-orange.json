@@ -18,6 +18,15 @@
         "cl_link": "#222222"
       }
     },
+    "product_redirect_LVjpV3": {
+      "type": "product-redirect",
+      "settings": {
+        "default_message": "This variant is currently sold out. We have an alternative available.",
+        "default_button_text": "View Alternative",
+        "button_color": "#000000",
+        "button_text_color": "#FFFFFF"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -133,12 +142,6 @@
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {
             "product": "{{product}}"
-          }
-        },
-        "custom_liquid_Y7AEdc": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% assign current_variant = product.selected_or_first_available_variant %}\n{% if template.name == 'product' %}\n  <script>\n    // Function to handle variant change and check redirect\n    function handleVariantChange() {\n      const selectElements = document.querySelectorAll('select[name=\"id\"], input[name=\"id\"]');\n      const currentVariantId = Array.from(selectElements).find(el => el.checked || el.selected)?.value;\n      \n      if (currentVariantId) {\n        const variantData = {\n          {% for variant in product.variants %}\n            {{ variant.id }}: {\n              available: {{ variant.available }},\n              redirectUrl: {{ variant.metafields.custom.redirect_url | json }},\n              buttonText: {{ variant.metafields.custom.redirect_button_text | default: \"View Alternative\" | json }},\n              messageText: {{ variant.metafields.custom.redirect_message | default: \"This variant is currently sold out. We have an alternative available.\" | json }}\n            }{% unless forloop.last %},{% endunless %}\n          {% endfor %}\n        };\n        \n        const currentVariant = variantData[currentVariantId];\n        \n        if (!currentVariant.available && currentVariant.redirectUrl) {\n          // Show and update redirect message and button\n          const redirectDiv = document.querySelector('.sold-out-redirect');\n          if (redirectDiv) {\n            redirectDiv.style.display = 'block';\n            \n            // Update message text\n            const messageElement = redirectDiv.querySelector('.redirect-message');\n            if (messageElement) {\n              messageElement.textContent = currentVariant.messageText;\n            }\n            \n            // Update button text and URL\n            const redirectButton = redirectDiv.querySelector('.redirect-button');\n            if (redirectButton) {\n              redirectButton.href = currentVariant.redirectUrl;\n              redirectButton.textContent = currentVariant.buttonText;\n            }\n          }\n        } else {\n          // Hide redirect message if variant is available\n          const redirectDiv = document.querySelector('.sold-out-redirect');\n          if (redirectDiv) {\n            redirectDiv.style.display = 'none';\n          }\n        }\n      }\n    }\n\n    // Add event listeners for variant selectors\n    document.addEventListener('DOMContentLoaded', function() {\n      const selectElements = document.querySelectorAll('select[name=\"id\"], input[name=\"id\"]');\n      selectElements.forEach(element => {\n        element.addEventListener('change', handleVariantChange);\n      });\n      \n      // Initial check\n      handleVariantChange();\n    });\n  </script>\n\n  {% comment %}\n    Add the redirect message div that will be shown/hidden based on variant selection\n  {% endcomment %}\n  <div class=\"sold-out-redirect\" style=\"display: none;\">\n    <p class=\"redirect-message\">This variant is currently sold out. We have an alternative available.</p>\n    <a href=\"#\" class=\"button redirect-button\">\n      View Alternative\n    </a>\n  </div>\n\n  <style>\n    .sold-out-redirect {\n      margin: 20px 0;\n      padding: 15px;\n      border: 1px solid #ddd;\n      border-radius: 4px;\n      text-align: center;\n    }\n    \n    .sold-out-redirect .button {\n      display: inline-block;\n      margin-top: 10px;\n      padding: 10px 20px;\n      background-color: #000;\n      color: #fff;\n      text-decoration: none;\n      border-radius: 4px;\n    }\n  </style>\n{% endif %}"
           }
         },
         "form": {
@@ -276,7 +279,6 @@
         "custom_liquid_kQdCKR",
         "33baad01-228a-4fde-8fb8-5af287b996d8",
         "recharge_subscriptions_subscription_widget_LxCUKr",
-        "custom_liquid_Y7AEdc",
         "form",
         "07bfb470-16c0-49ab-94f8-3c128655bc98",
         "c2e1fa95-5c4d-4f3d-92de-63dbd96ef13e",
@@ -1077,6 +1079,7 @@
     }
   },
   "order": [
+    "product_redirect_LVjpV3",
     "breadcrumb",
     "main",
     "a183f929-3190-46fb-a8c2-960c8c8b7c6f",
