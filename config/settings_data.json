@@ -1122,7 +1122,7 @@
             "type": "btn",
             "settings": {
               "title": "Return To Shop",
-              "url": "",
+              "url": "shopify://collections/odor-stain-removers",
               "btn_icon": false,
               "button_style": "default",
               "btn_cl": "primary",
