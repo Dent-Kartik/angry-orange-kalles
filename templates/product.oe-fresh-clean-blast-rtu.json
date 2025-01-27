@@ -18,15 +18,6 @@
         "cl_link": "#222222"
       }
     },
-    "product_redirect_XXAUxt": {
-      "type": "product-redirect",
-      "settings": {
-        "default_message": "This variant is currently sold out. We have an alternative available.",
-        "default_button_text": "View Alternative",
-        "button_color": "#000000",
-        "button_text_color": "#FFFFFF"
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -1077,7 +1068,6 @@
   },
   "order": [
     "breadcrumb",
-    "product_redirect_XXAUxt",
     "main",
     "a183f929-3190-46fb-a8c2-960c8c8b7c6f",
     "cbe86456-c461-46df-ae43-0af0d7d95359",
