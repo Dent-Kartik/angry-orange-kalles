@@ -67,6 +67,7 @@
     "new_badge_color": "#00a39f",
     "soldout_badge_color": "#777777",
     "custom_badge_color": "#f4dd4a",
+    "price_varies_style": "2",
     "enable_quickview": false,
     "type_qv": "2",
     "enable_quickshop": false,
