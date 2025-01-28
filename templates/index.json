@@ -1,25 +1,66 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "1646028739ae283905": {
       "type": "slideshow",
       "blocks": {
+        "image_parent_F8kPbG": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/AOR_2025Jan-Refresh_DTC_Banner_012825_Desktop-4.png",
+            "image_mb": "shopify://shop_images/AOR_2025Jan-Refresh_DTC_Banner_012825_Mobile-4.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://products/angry-orange-enzyme-stain-cleaner",
+            "open_link": "_self",
+            "animate_slide": "none",
+            "text_align": "center",
+            "text_align_mb": "center",
+            "show_mobile-content-bottom": false,
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#fff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222",
+            "br_bg": "#fff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
         "164602873867eb3815-0": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/AOR-HOMEPAGE-DTC-DESKTOP-1.webp",
-            "image_mb": "shopify:\/\/shop_images\/AOR_homepage-mobile.webp",
+            "image": "shopify://shop_images/AOR_2025Jan-Refresh_DTC_Banner_012825_Desktop-1.png",
+            "image_mb": "shopify://shop_images/AOR_2025Jan-Refresh_DTC_Banner_012825_Mobile-1.jpg",
             "image_position": "9",
             "cl_img": "#f26829",
-            "link_img1": "",
+            "link_img1": "https://angryorange.com/collections/odor-stain-removers/products/angry-orange-pet-odor-eliminator-spray?variant=44817932615869",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
@@ -55,6 +96,7 @@
         },
         "164602873867eb3815-2": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "WITH ANGRY ORANGE,",
             "remove_br_tag": false,
@@ -79,6 +121,7 @@
         },
         "164602873867eb3815-1": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "ODORS & STAINS<br>DON'T STAND A CHANCE!",
             "remove_br_tag": false,
@@ -103,6 +146,7 @@
         },
         "2520939e-82a3-4dc8-99c2-7f1ce20e1005": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "Smells like Heaven. Works like Hell.",
             "remove_br_tag": false,
@@ -127,9 +171,10 @@
         },
         "390cb6f8-c5fc-44ed-badf-074a03818e5a": {
           "type": "custom_button",
+          "disabled": true,
           "settings": {
             "button_text": "SHOP NOW",
-            "button_link": "shopify:\/\/collections\/odor-stain-removers",
+            "button_link": "shopify://collections/odor-stain-removers",
             "target_link": "_self",
             "fontf": "inherit",
             "button_icon_w": 0,
@@ -158,15 +203,14 @@
         }
       },
       "block_order": [
+        "image_parent_F8kPbG",
         "164602873867eb3815-0",
         "164602873867eb3815-2",
         "164602873867eb3815-1",
         "2520939e-82a3-4dc8-99c2-7f1ce20e1005",
         "390cb6f8-c5fc-44ed-badf-074a03818e5a"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "se_height": "t4s_ratioadapt_f",
         "custom_dk": true,
@@ -175,20 +219,20 @@
         "height_tb": 400,
         "custom_mb": true,
         "height_mb": 250,
-        "eff": "fade",
+        "eff": "slide",
         "loop": true,
-        "au_time": 8.5,
+        "au_time": 5,
         "au_hover": true,
         "nav_btn": true,
-        "btn_vi": "always",
+        "btn_vi": "hover",
         "btn_owl": "outline",
         "btn_shape": "round",
         "btn_cl": "light",
         "btn_size": "small",
         "btn_hidden_mobile": false,
         "nav_dot": true,
-        "dot_owl": "outline",
-        "dots_position": "default",
+        "dot_owl": "default",
+        "dots_position": "bottom_left",
         "dots_cl": "primary",
         "dots_round": true,
         "dots_space": 10,
@@ -213,7 +257,7 @@
           "type": "shipping",
           "settings": {
             "icon_themes": "help",
-            "image_icon": "shopify:\/\/shop_images\/paw-heart.png",
+            "image_icon": "shopify://shop_images/paw-heart.png",
             "icon": "las la-life-ring",
             "title": "Never tested on animals",
             "text": "",
@@ -224,7 +268,7 @@
           "type": "shipping",
           "settings": {
             "icon_themes": "none",
-            "image_icon": "shopify:\/\/shop_images\/no-added-chemicals.png",
+            "image_icon": "shopify://shop_images/no-added-chemicals.png",
             "icon": "",
             "title": "No added bleach, sulfates, <br>peroxide, parabens & phthalates",
             "text": "",
@@ -235,7 +279,7 @@
           "type": "shipping",
           "settings": {
             "icon_themes": "refesh",
-            "image_icon": "shopify:\/\/shop_images\/made-in-USA_90730d88-103a-476e-94f1-d4b229556c64.png",
+            "image_icon": "shopify://shop_images/made-in-USA_90730d88-103a-476e-94f1-d4b229556c64.png",
             "icon": "las la-undo-alt",
             "title": "Made in the USA",
             "text": "",
@@ -434,7 +478,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/7xjns5935dSR_360x_1.png",
+            "image": "shopify://shop_images/7xjns5935dSR_360x_1.png",
             "title": "",
             "text": "",
             "cl_text": "#ffffff",
@@ -455,7 +499,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/People-Magazine-Logo_360x_1.png",
+            "image": "shopify://shop_images/People-Magazine-Logo_360x_1.png",
             "title": "",
             "text": "",
             "cl_text": "#ffffff",
@@ -476,7 +520,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/1280px-RealSimple_1.png",
+            "image": "shopify://shop_images/1280px-RealSimple_1.png",
             "title": "",
             "text": "",
             "cl_text": "#ffffff",
@@ -606,15 +650,11 @@
             "btn_txt2": "3",
             "button_color_payment": "dark",
             "show_gift_card_recipient": true,
-            "product_list": [
-
-            ],
+            "product_list": [],
             "show_product_current": true,
             "qty_val": "0",
             "advance_label": "Choose style",
-            "advance_pr_list": [
-
-            ]
+            "advance_pr_list": []
           }
         },
         "size_delivery_ask_hMdNVA": {
@@ -754,7 +794,7 @@
             "collection": "wedding-registry",
             "collection_subtitle": "Celebrate Love",
             "collection_title": "Wedding Registry Ideas",
-            "collection_link": "shopify:\/\/collections\/wedding-registry"
+            "collection_link": "shopify://collections/wedding-registry"
           }
         },
         "template--20783191064873__b8f1ee29-d27d-447d-b278-0ff05615f8e8-collection_item-6": {
@@ -763,7 +803,7 @@
             "collection": "new-arrivals",
             "collection_subtitle": "New Releases",
             "collection_title": "Shop New Releases",
-            "collection_link": "shopify:\/\/collections\/new-arrivals"
+            "collection_link": "shopify://collections/new-arrivals"
           }
         },
         "template--20783191064873__b8f1ee29-d27d-447d-b278-0ff05615f8e8-collection_item-7": {
@@ -886,8 +926,7 @@
         ".yotpo-pictures-gallery .load-btn-white,.yotpo-pictures-widget .load-btn-white {border-radius: 8px; width: 140px; border: 1px solid #1e4c2f !important;}",
         ".yotpo-pictures-gallery .yotpo-icon-button-text,.yotpo-pictures-widget .yotpo-icon-button-text {color: #1e4c2f !important; font-weight: 500 !important; font-family: Barlow !important;}"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "video_slider_KRLUt4": {
       "type": "video-slider",
@@ -896,44 +935,46 @@
           "type": "video-col",
           "disabled": true,
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6d6a549b696a4db5ad2246493a9483b3.mov",
-            "image_url": "shopify:\/\/shop_images\/AO_UGC_1.webp"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/6d6a549b696a4db5ad2246493a9483b3.mov",
+            "image_url": "shopify://shop_images/AO_UGC_1.webp"
           }
         },
         "video_col_6Q4pJg": {
           "type": "video-col",
           "disabled": true,
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/45f2bc7b78394d05a3df6e759845dd32.mov",
-            "image_url": "shopify:\/\/shop_images\/AO_UGC_3_v2.jpg"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/45f2bc7b78394d05a3df6e759845dd32.mov",
+            "image_url": "shopify://shop_images/AO_UGC_3_v2.jpg"
           }
         },
         "video_col_zfF9E8": {
           "type": "video-col",
+          "disabled": true,
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b8464773b1e14601886fd1a426037341.mp4",
-            "image_url": "shopify:\/\/shop_images\/Untitled_design.jpg"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/b8464773b1e14601886fd1a426037341.mp4",
+            "image_url": "shopify://shop_images/Untitled_design.jpg"
           }
         },
         "video_col_qCUkWn": {
           "type": "video-col",
+          "disabled": true,
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/275df5140c5d4b48af85dfd4fcc4f32a.mp4",
-            "image_url": "shopify:\/\/shop_images\/Untitled_design_1.jpg"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/275df5140c5d4b48af85dfd4fcc4f32a.mp4",
+            "image_url": "shopify://shop_images/Untitled_design_1.jpg"
           }
         },
         "video_col_XkJ74n": {
           "type": "video-col",
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d2327e134e324a53ba8a93ab295a42dd.mp4",
-            "image_url": "shopify:\/\/shop_images\/AO_UGC_2.jpg"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/d2327e134e324a53ba8a93ab295a42dd.mp4",
+            "image_url": "shopify://shop_images/AO_UGC_2.jpg"
           }
         },
         "video_col_FkWkDn": {
           "type": "video-col",
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5c0f647d337f487982870bcfd416aea6.mp4",
-            "image_url": "shopify:\/\/shop_images\/AO_UGC_3_v2.jpg"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/5c0f647d337f487982870bcfd416aea6.mp4",
+            "image_url": "shopify://shop_images/AO_UGC_3_v2.jpg"
           }
         }
       },
@@ -945,9 +986,8 @@
         "video_col_XkJ74n",
         "video_col_FkWkDn"
       ],
-      "custom_css": [
-
-      ],
+      "disabled": true,
+      "custom_css": [],
       "settings": {
         "video_section_title": "Pet Lover Tested and Approved",
         "title_color": "#000000",
@@ -966,17 +1006,15 @@
         ".opw-carousel__control:hover,.opw-carousel__control:focus {background: white;}",
         ".opw-carousel__control:hover path,.opw-carousel__control:focus path {fill: #f26829;}"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "1696627529d8e7efa8": {
       "type": "apps",
       "blocks": {
         "opinew_product_reviews_app_carousel_abrFgP": {
-          "type": "shopify:\/\/apps\/opinew-reviews\/blocks\/carousel\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "type": "shopify://apps/opinew-reviews/blocks/carousel/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -986,8 +1024,7 @@
       "custom_css": [
         "{}"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "7f6dbb86-18ab-4678-82da-9c175a851438": {
       "type": "newsletter",
@@ -1061,7 +1098,7 @@
           "type": "custom_button",
           "settings": {
             "button_text": "CONTACT US",
-            "button_link": "shopify:\/\/pages\/contact-us",
+            "button_link": "shopify://pages/contact-us",
             "target_link": "_self",
             "fontf": "inherit",
             "button_icon_w": 0,
@@ -1125,19 +1162,19 @@
         "article_wcPFVw": {
           "type": "article",
           "settings": {
-            "article": "news\/the-top-5-smells-dogs-hate-to-pee-on"
+            "article": "news/the-top-5-smells-dogs-hate-to-pee-on"
           }
         },
         "article_mBeRhP": {
           "type": "article",
           "settings": {
-            "article": "news\/why-does-my-dog-smell-so-bad"
+            "article": "news/why-does-my-dog-smell-so-bad"
           }
         },
         "article_yRKtFy": {
           "type": "article",
           "settings": {
-            "article": "news\/top-7-litter-box-odor-control-solutions"
+            "article": "news/top-7-litter-box-odor-control-solutions"
           }
         }
       },
