@@ -97,7 +97,7 @@
         "price_review": {
           "type": "price_review",
           "settings": {
-            "price": "0",
+            "price": "2",
             "type_sale": "1",
             "tax_ship": false,
             "rating": false,
