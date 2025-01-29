@@ -108,12 +108,6 @@
             "price_sale_color": "#1d9e34"
           }
         },
-        "custom_liquid_kQdCKR": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"customrw\"></div>"
-          }
-        },
         "33baad01-228a-4fde-8fb8-5af287b996d8": {
           "type": "inventory_qty",
           "disabled": true,
@@ -276,7 +270,6 @@
         "description",
         "152e7505-1077-4ecb-956c-1f52beee2fd8",
         "price_review",
-        "custom_liquid_kQdCKR",
         "33baad01-228a-4fde-8fb8-5af287b996d8",
         "recharge_subscriptions_subscription_widget_LxCUKr",
         "form",
