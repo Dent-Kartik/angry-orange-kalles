@@ -1176,10 +1176,6 @@ color: var(--btn-color-hover);
     height: 60% !important;
 }
 }
-  /* hide recharge default form */
-.rc_popup__how_it_works {
-    color: white;
-}
   .rc_popup__label[data-v-7bc675e0]{
     color: black;
   }
