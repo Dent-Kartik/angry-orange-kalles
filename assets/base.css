@@ -4929,10 +4929,6 @@ i.fas.fa-shopping-bag.t4s-icon.t4s-icon--account,i.fa-solid.fa-circle-user.t4s-i
 .flickity-page-dots .dot{
   background: #4E6C72;
 }
-/* hide recharge default form */
-.rc-widget {
-    display: none !important;
-}
 .rc_popup_label_wrapper:hover svg,.rc_popup_label_wrapper:hover span{
     color: #ffffff !important;
 }
