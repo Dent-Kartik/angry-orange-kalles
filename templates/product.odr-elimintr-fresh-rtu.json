@@ -110,6 +110,7 @@
         },
         "custom_liquid_kQdCKR": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"customrw\"></div>"
           }
