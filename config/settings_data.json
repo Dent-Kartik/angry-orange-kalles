@@ -2259,5 +2259,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".rc-selling-plans-dropdown__select[data-v-43993cfe] {padding-right: 0 !important; padding-left: 5 !important; padding-top: 0 !important; padding-bottom: 0 !important;}"
+    ]
   }
 }
