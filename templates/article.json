@@ -76,6 +76,7 @@
         },
         "33e93b80-0f24-44e5-adfa-9e2b066b1473": {
           "type": "tags",
+          "disabled": true,
           "settings": {
             "title": "Blog tags",
             "count": true
@@ -109,6 +110,182 @@
         "sidebar_pd": 10
       }
     },
+    "featured_product_A97KWp": {
+      "type": "featured-product",
+      "blocks": {
+        "title_qdb4zm": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 16,
+            "fw_pr": 600,
+            "lh_pr": 0,
+            "ls_pr": 0,
+            "pr_title_color": "#222222",
+            "pr_title_color_hover": "#56cfe1"
+          }
+        },
+        "price_review_MKqyJf": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "0",
+            "tax_ship": true,
+            "rating": true,
+            "review_liquid": "",
+            "size_price_pr": 22,
+            "fw_price_pr": 400,
+            "price_color": "#696969",
+            "price_sale_color": "#ec0101"
+          }
+        },
+        "description_RNgnXV": {
+          "type": "description",
+          "settings": {
+            "des": "2",
+            "text": "",
+            "length": 31
+          }
+        },
+        "form_HfxXJh": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "color",
+            "enable_fit_ratio_img": false,
+            "color_size": "medium",
+            "show_qty": true,
+            "enable_wishlist": true,
+            "enable_compare": true,
+            "btn_atc_full": false,
+            "pr_btn_round": 40,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "dark",
+            "button_effect": "fade",
+            "wishlist_color": "#222222",
+            "wishlist_color_hover": "#56cfe1",
+            "wishlist_color_active": "#e81e1e",
+            "compare_color": "#222222",
+            "compare_color_hover": "#56cfe1",
+            "compare_color_active": "#222222",
+            "show_dynamic_checkout": false,
+            "btn_txt2": "3",
+            "button_color_payment": "dark",
+            "show_gift_card_recipient": true,
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "size_delivery_ask_Bk3GzR": {
+          "type": "size_delivery_ask",
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "",
+            "size_ck": "",
+            "delivery": false,
+            "page_dr": "",
+            "ask": false,
+            "phone": true
+          }
+        },
+        "meta_eXBjBT": {
+          "type": "meta",
+          "settings": {
+            "show_options": true,
+            "show_vendor": false,
+            "show_type": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_available": true,
+            "show_category": true,
+            "show_tags": true
+          }
+        },
+        "social_EAeibt": {
+          "type": "social",
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "2",
+            "social_style": "3",
+            "social_size": "medium",
+            "bd_radius": 0,
+            "use_color_set": false,
+            "icon_cl": "#878787",
+            "bg_cl": "#222222",
+            "space_h_item": "5",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        }
+      },
+      "block_order": [
+        "title_qdb4zm",
+        "price_review_MKqyJf",
+        "description_RNgnXV",
+        "form_HfxXJh",
+        "size_delivery_ask_Bk3GzR",
+        "meta_eXBjBT",
+        "social_EAeibt"
+      ],
+      "custom_css": [
+        ".t4s-product__title a {font-size: 32px;}",
+        ".opinew-stars-plugin-link span {font-size: 20px;}",
+        ".opinew-stars-plugin-product-list {margin-top: 5px !important;}",
+        "@media screen and (max-width: 650px) {.t4s-product__title a {font-size: 28px; } .opinew-stars-plugin-link span {font-size: 18px; }}"
+      ],
+      "settings": {
+        "product": "carpet-cleaner",
+        "image": "{{ section.settings.product.featured_image }}",
+        "enable_sticky_info": true,
+        "media_layout": "thumbnails_bottom",
+        "media_size": "medium",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "zoom",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": false,
+        "enable_video_muting": true,
+        "enable_video_autoplaying": true,
+        "eff": "fade",
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
     "main": {
       "type": "main-article",
       "blocks": {
@@ -133,6 +310,7 @@
         },
         "e8da95d6-7323-4d99-a68c-16088d24fa34": {
           "type": "tags",
+          "disabled": true,
           "settings": {}
         },
         "d905ad63-1b38-496e-8a7e-38751e0ad0b8": {
@@ -229,189 +407,12 @@
         "mg_mb": ",,30px,",
         "pd_mb": ""
       }
-    },
-    "featured_product_A97KWp": {
-      "type": "featured-product",
-      "blocks": {
-        "title_qdb4zm": {
-          "type": "title",
-          "settings": {
-            "txt_tr_pr": "none",
-            "fnt_df_pr": "1",
-            "size_pr": 16,
-            "fw_pr": 600,
-            "lh_pr": 0,
-            "ls_pr": 0,
-            "pr_title_color": "#222222",
-            "pr_title_color_hover": "#56cfe1"
-          }
-        },
-        "price_review_MKqyJf": {
-          "type": "price_review",
-          "settings": {
-            "price": "0",
-            "type_sale": "0",
-            "tax_ship": true,
-            "rating": true,
-            "review_liquid": "",
-            "size_price_pr": 22,
-            "fw_price_pr": 400,
-            "price_color": "#696969",
-            "price_sale_color": "#ec0101"
-          }
-        },
-        "description_RNgnXV": {
-          "type": "description",
-          "settings": {
-            "des": "2",
-            "text": "",
-            "length": 31
-          }
-        },
-        "form_HfxXJh": {
-          "type": "form",
-          "settings": {
-            "selector_mode": "block",
-            "color_mode": "color",
-            "enable_fit_ratio_img": false,
-            "color_size": "medium",
-            "show_qty": true,
-            "enable_wishlist": true,
-            "enable_compare": true,
-            "btn_atc_full": false,
-            "pr_btn_round": 40,
-            "ani": "none",
-            "time": 6,
-            "btn_txt": "3",
-            "btn_icon": false,
-            "button_style": "default",
-            "button_color": "dark",
-            "button_effect": "fade",
-            "wishlist_color": "#222222",
-            "wishlist_color_hover": "#56cfe1",
-            "wishlist_color_active": "#e81e1e",
-            "compare_color": "#222222",
-            "compare_color_hover": "#56cfe1",
-            "compare_color_active": "#222222",
-            "show_dynamic_checkout": false,
-            "btn_txt2": "3",
-            "button_color_payment": "dark",
-            "show_gift_card_recipient": true,
-            "product_list": [],
-            "show_product_current": true,
-            "qty_val": "0",
-            "advance_label": "Choose style",
-            "advance_pr_list": []
-          }
-        },
-        "size_delivery_ask_Bk3GzR": {
-          "type": "size_delivery_ask",
-          "settings": {
-            "size_chart": "3",
-            "pos_sizeg": "1",
-            "sc_type": "1",
-            "page": "",
-            "size_ck": "",
-            "delivery": false,
-            "page_dr": "",
-            "ask": false,
-            "phone": true
-          }
-        },
-        "meta_eXBjBT": {
-          "type": "meta",
-          "disabled": true,
-          "settings": {
-            "show_options": true,
-            "show_vendor": false,
-            "show_type": false,
-            "show_sku": true,
-            "show_barcode": false,
-            "show_available": true,
-            "show_category": true,
-            "show_tags": true
-          }
-        },
-        "social_EAeibt": {
-          "type": "social",
-          "disabled": true,
-          "settings": {
-            "socials_align": "start",
-            "social_mode": "2",
-            "social_style": "3",
-            "social_size": "medium",
-            "bd_radius": 0,
-            "use_color_set": false,
-            "icon_cl": "#878787",
-            "bg_cl": "#222222",
-            "space_h_item": "5",
-            "space_v_item": "5",
-            "space_h_item_mb": "2",
-            "space_v_item_mb": "2"
-          }
-        }
-      },
-      "block_order": [
-        "title_qdb4zm",
-        "price_review_MKqyJf",
-        "description_RNgnXV",
-        "form_HfxXJh",
-        "size_delivery_ask_Bk3GzR",
-        "meta_eXBjBT",
-        "social_EAeibt"
-      ],
-      "custom_css": [
-        ".t4s-product__title a {font-size: 32px;}",
-        ".opinew-stars-plugin-link span {font-size: 20px;}",
-        ".opinew-stars-plugin-product-list {margin-top: 5px !important;}",
-        "@media screen and (max-width: 650px) {.t4s-product__title a{font-size: 28px; } .opinew-stars-plugin-link span {font-size: 18px; }}"
-      ],
-      "settings": {
-        "product": "{{ article.metafields.global.featured_product.value }}",
-        "enable_sticky_info": false,
-        "media_layout": "thumbnails_bottom",
-        "media_size": "medium",
-        "thumb_lr_size": "medium",
-        "image_ratio": "ratioadapt",
-        "image_size": "cover",
-        "image_position": "8",
-        "main_click": "zoom",
-        "zoom_tp": "external",
-        "enable_zoom_icon": true,
-        "enable_zoom_click_mb": true,
-        "enable_video_looping": false,
-        "enable_video_muting": true,
-        "enable_video_autoplaying": true,
-        "eff": "fade",
-        "nav_btn": true,
-        "btn_vi": "always",
-        "btn_owl": "outline",
-        "btn_shape": "round",
-        "btn_cl": "dark",
-        "btn_size": "small",
-        "btn_hidden_mobile": false,
-        "nav_dot": false,
-        "dot_owl": "default",
-        "dots_cl": "dark",
-        "dots_round": true,
-        "dots_space": 10,
-        "dots_hidden_mobile": false,
-        "layout": "t4s-container-wrap",
-        "cl_bg": "",
-        "cl_bg_gradient": "",
-        "mg": ",,50px,",
-        "pd": "",
-        "mg_tb": "",
-        "pd_tb": "",
-        "mg_mb": ",,30px,",
-        "pd_mb": ""
-      }
     }
   },
   "order": [
     "heading",
     "sidebar",
-    "main",
-    "featured_product_A97KWp"
+    "featured_product_A97KWp",
+    "main"
   ]
 }
