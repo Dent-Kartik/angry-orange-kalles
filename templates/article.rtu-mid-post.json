@@ -135,6 +135,23 @@
         "pd_mb": ""
       }
     },
+    "custom_html_iLnYmf": {
+      "type": "custom-html",
+      "settings": {
+        "code": "<h2>Top 5 Smells Dogs Hate To Pee On</h2>\nFeb 10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
     "featured_product_A97KWp": {
       "type": "featured-product",
       "blocks": {
@@ -319,6 +336,7 @@
     "heading",
     "sidebar",
     "main",
+    "custom_html_iLnYmf",
     "featured_product_A97KWp"
   ]
 }
