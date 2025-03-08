@@ -311,6 +311,7 @@
         },
         "size_delivery_ask_Bk3GzR": {
           "type": "size_delivery_ask",
+          "disabled": true,
           "settings": {
             "size_chart": "3",
             "pos_sizeg": "1",
