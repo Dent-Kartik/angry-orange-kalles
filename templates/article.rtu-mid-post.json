@@ -110,7 +110,7 @@
         "sidebar_pd": 10
       }
     },
-    "main": {
+   "main": {
       "type": "main-article",
       "blocks": {
         "c9d358e2-df0b-4360-bd29-d09caded2ea0": {
@@ -232,23 +232,6 @@
         "pd_tb": "",
         "mg_mb": ",,30px,",
         "pd_mb": ""
-      }
-    },
-    "custom_html_9hpRR9": {
-      "type": "custom-html",
-      "settings": {
-        "code": "<p style=\"text-align: center;\">Blog written by Angry Orange.</p>\n<p>Dogs are naturally gifted with a dazzling sense of smell. Matter of fact, they are some of the best sniffers in the animal kingdom. While there are many benefits of having such a sensitive nose, this gift does come with some vulnerability to some strong scents which most people consider normal.</p>\n<p>If you have ever had your dog pee on something that you did not want, you know how frustrating this can get. The good news, however, is that you can put this behavior to a stop. <em>All you have to do is find out what smells your dog hates to pee on.</em> In this article, we unlock<span> </span>the top five smells that dogs hate to pee on.</p>\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" alt=\"dog peed on the floor waiting for owner to come home\" src=\"https://cdn.shopify.com/s/files/1/0255/3367/7650/files/AdobeStock_258271821_480x480.jpg?v=1644507655\"></p>\n<h2 style=\"text-align: center;\"><strong>The Top 5 Smells Dogs Hate to Pee On</strong></h2>\n<h3><strong>1. Citrus</strong></h3>\n<p>The citrus smell is arguably the best dog repellent there is. You do not have to do a lot. Simply peel an orange or a lemon next to your dog and you will observe it leaving the spot immediately. While most dogs are repelled by the citrus smell, not all are. Therefore, you want to check whether your dog falls in the majority category. You can also use a <strong><a href=\"https://angryorange.com/products/angry-orange-pet-odor-eliminator-spray\" target=\"_blank\">citrus spray</a></strong> to stop your dog from peeing in certain areas such as your house or garden.</p>\n<!-- insert-custom-section -->",
-        "layout": "t4s-container-wrap",
-        "cl_bg": "",
-        "cl_bg_gradient": "",
-        "mg": ",,50px,",
-        "pd": "",
-        "mg_tb": "",
-        "pd_tb": "",
-        "mg_mb": ",,30px,",
-        "pd_mb": "",
-        "use_cus_css": false,
-        "code_cus_css": ""
       }
     },
     "featured_product_A97KWp": {
@@ -429,31 +412,12 @@
         "mg_mb": ",,30px,",
         "pd_mb": ""
       }
-    },
-    "custom_html_QEeRUx": {
-      "type": "custom-html",
-      "settings": {
-        "code": "<div class=\"t4s-text-center\" style=\"padding: 15px 0;background-color: #000;color: #fff;\">This is an advanced section. Knowledge of web design languages such as HTML, CSS is required.</div>",
-        "layout": "t4s-container-wrap",
-        "cl_bg": "",
-        "cl_bg_gradient": "",
-        "mg": ",,50px,",
-        "pd": "",
-        "mg_tb": "",
-        "pd_tb": "",
-        "mg_mb": ",,30px,",
-        "pd_mb": "",
-        "use_cus_css": false,
-        "code_cus_css": ""
-      }
     }
   },
   "order": [
     "heading",
     "sidebar",
     "main",
-    "custom_html_9hpRR9",
-    "featured_product_A97KWp",
-    "custom_html_QEeRUx"
+    "featured_product_A97KWp"
   ]
 }
