@@ -301,7 +301,7 @@
                     {%- endcase -%}
             {%- endfor -%}
         </div>
-
+{% comment %}
         {% if matched_tag != "" %}
 {% assign c = 0 %}
            {% assign collection_handle = "all-products" %} 
@@ -343,7 +343,7 @@
   {% endfor %}
 {% endfor %}
           </div>
-{% endif %}
+{% endif %}{% endcomment %}
         <aside data-sidebar-content class="t4s-col-item t4s-col-12 t4s-col-lg-3 t4s-sidebar t4s-dn"><div class="t4s-loading--bg"></div></aside>
     </div>
     {{- html_layout[0] -}}
