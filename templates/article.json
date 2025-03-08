@@ -156,6 +156,7 @@
         },
         "dec42554-02e5-40e5-89ff-f922277dcb34": {
           "type": "navigation",
+          "disabled": true,
           "settings": {}
         },
         "0ae37c6c-16ef-447b-bbbf-31a449c30d2f": {
@@ -257,14 +258,15 @@
             "tax_ship": true,
             "rating": true,
             "review_liquid": "",
-            "size_price_pr": 22,
+            "size_price_pr": 31,
             "fw_price_pr": 400,
-            "price_color": "#696969",
+            "price_color": "#0d0d0d",
             "price_sale_color": "#ec0101"
           }
         },
         "description_RNgnXV": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "des": "2",
             "text": "",
@@ -323,6 +325,7 @@
         },
         "meta_eXBjBT": {
           "type": "meta",
+          "disabled": true,
           "settings": {
             "show_options": true,
             "show_vendor": false,
@@ -368,11 +371,11 @@
         "@media screen and (max-width: 650px) {.t4s-product__title a {font-size: 28px; } .opinew-stars-plugin-link span {font-size: 18px; }}"
       ],
       "settings": {
-        "product": "carpet-cleaner",
+        "product": "angry-orange-pet-odor-eliminator-spray",
         "image": "{{ section.settings.product.featured_image }}",
         "enable_sticky_info": true,
         "media_layout": "thumbnails_bottom",
-        "media_size": "medium",
+        "media_size": "small",
         "thumb_lr_size": "medium",
         "image_ratio": "ratioadapt",
         "image_size": "cover",
