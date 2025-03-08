@@ -185,6 +185,12 @@
             "pr_title_color_hover": "#56cfe1"
           }
         },
+        "text_DqchbA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Angry Orange Citrus Scented Pet Odor Eliminator is a great option to help prevent your dog from peeing in certain areas.</p>"
+          }
+        },
         "price_review_MKqyJf": {
           "type": "price_review",
           "settings": {
@@ -293,6 +299,7 @@
       },
       "block_order": [
         "title_qdb4zm",
+        "text_DqchbA",
         "price_review_MKqyJf",
         "description_RNgnXV",
         "form_HfxXJh",
