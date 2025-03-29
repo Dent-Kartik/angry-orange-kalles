@@ -169,6 +169,23 @@
         "code_cus_css": ""
       }
     },
+    "custom_html_AtpkUq": {
+      "type": "custom-html",
+      "settings": {
+        "code": "<h3>Step 3: Clean Up Accidents the Right Way (So They Don’t Re-MARK the Spot)</h3><br>\n🚫 <strong>The biggest mistake dog owners make? Using the WRONG cleaner.</strong> If your dog can still smell their old pee, guess what? They’ll keep treating your floor like it’s the bathroom.\n<p>\n🧡 <strong>Enter Angry Orange Stain &amp; Odor Remover (with Orange and Fresh Scents)</strong></p><p></p>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
     "featured_product_A97KWp": {
       "type": "featured-product",
       "blocks": {
@@ -314,7 +331,7 @@
         "@media screen and (max-width: 650px) {.t4s-product__title a {font-size: 28px; } .opinew-stars-plugin-link span {font-size: 18px; }}"
       ],
       "settings": {
-        "product": "angry-orange-pet-odor-eliminator-spray",
+        "product": "angry-orange-enzyme-stain-cleaner",
         "image": "{{ section.settings.product.featured_image }}",
         "enable_sticky_info": true,
         "media_layout": "thumbnails_bottom",
@@ -355,10 +372,10 @@
         "pd_mb": ""
       }
     },
-    "custom_html_AtpkUq": {
+    "custom_html_y3McpB": {
       "type": "custom-html",
       "settings": {
-        "code": "<h3>Step 3: Clean Up Accidents the Right Way (So They Don’t Re-MARK the Spot)</h3><br>\n🚫 <strong>The biggest mistake dog owners make? Using the WRONG cleaner.</strong> If your dog can still smell their old pee, guess what? They’ll keep treating your floor like it’s the bathroom.\n<p>\n🧡 <strong>Enter Angry Orange Stain &amp; Odor Remover (with Orange and Clean Laundry Scents)</strong></p><p>\nYour fur baby is attracted to pee spots like a urine-obsessed homing missile. When they pee, they’re not just making a mess—they’re leaving behind a powerful scent marker full of pheromones and proteins that scream, \"Hey, this is MY spot!\" If even a trace of that scent remains, they’ll keep coming back to re-mark it.</p><p>\nThat’s where enzymes come in. Regular cleaners might get rid of stains and mask odors for your nose, but they don’t break down the actual molecules that trigger your pet’s instincts. Enzymatic cleaners, like Angry Orange Enzyme Cleaner, work by digesting urine at a microscopic level—literally breaking down the proteins and ammonia compounds that tell your pet to pee there again. No scent, no trigger, no more repeat accidents. Science wins.</p><p>\n✔ Breaks down pee at the molecular level—we’re not here to “mask” odors, we’re here to annihilate them.</p><p>\n✔ Stops re-marking in its tracks. Your dog won’t even think about peeing there again.</p><p>\n✔ Smells like fresh oranges or fresh laundry—not a chemical lab. Because you want your house to smell normal, right?</p><p>\nSo remember...Follow these steps, stay patient, and reclaim your home from unwanted pee puddles. Because let’s be honest—your dog is awesome, but random floor pee? Not so much.\n</p>",
+        "code": "Your fur baby is attracted to pee spots like a urine-obsessed homing missile. When they pee, they’re not just making a mess—they’re leaving behind a powerful scent marker full of pheromones and proteins that scream, \"Hey, this is MY spot!\" If even a trace of that scent remains, they’ll keep coming back to re-mark it.<p></p><p>\nThat’s where enzymes come in. Regular cleaners might get rid of stains and mask odors for your nose, but they don’t break down the actual molecules that trigger your pet’s instincts. Enzymatic cleaners, like Angry Orange Enzyme Cleaner, work by digesting urine at a microscopic level—literally breaking down the proteins and ammonia compounds that tell your pet to pee there again. No scent, no trigger, no more repeat accidents. Science wins.</p><p>\n✔ Breaks down pee at the molecular level—we’re not here to “mask” odors, we’re here to annihilate them.</p><p>\n✔ Stops re-marking in its tracks. Your dog won’t even think about peeing there again.</p><p>\n✔ Smells like fresh oranges or fresh laundry—not a chemical lab. Because you want your house to smell normal, right?</p><p>\nSo remember...Follow these steps, stay patient, and reclaim your home from unwanted pee puddles. Because let’s be honest—your dog is awesome, but random floor pee? Not so much.\n</p>",
         "layout": "t4s-container-wrap",
         "cl_bg": "",
         "cl_bg_gradient": "",
@@ -379,7 +396,8 @@
     "main",
     "custom_html_iLnYmf",
     "custom_html_cDAb6z",
+    "custom_html_AtpkUq",
     "featured_product_A97KWp",
-    "custom_html_AtpkUq"
+    "custom_html_y3McpB"
   ]
 }
