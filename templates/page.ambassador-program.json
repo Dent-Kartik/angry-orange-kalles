@@ -11,7 +11,6 @@
   "sections": {
     "hero_image_tpe9rF": {
       "type": "hero_image",
-      "disabled": true,
       "settings": {
         "se_height": "t4s_ratioadapt",
         "custom_dk": true,
@@ -67,6 +66,7 @@
       "blocks": {
         "0553a192-f7d5-4c12-8232-b8fcd6c08676": {
           "type": "1",
+          "disabled": true,
           "settings": {
             "heading": "",
             "fontf": "inherit",
@@ -90,6 +90,7 @@
       "block_order": [
         "0553a192-f7d5-4c12-8232-b8fcd6c08676"
       ],
+      "disabled": true,
       "settings": {
         "heading_fullwidth": false,
         "use_specify_image": true,
@@ -110,6 +111,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "layout": "t4s-container-wrap",
         "cl_bg": "",
