@@ -4791,6 +4791,8 @@ h3.t4s-section-title.t4s-title{
  footer{margin-bottom:-20px;}
 footer .t4s-newsl-des-10 .t4s-newsletter__inner{background-color:white;}
 footer .t4s-newsl-des-10 .t4s-newsletter__inner .t4s-newsletter__submit .t4s-newsletter__text svg{color:#000f41;}
+{% comment %}
+
 #onetrust-consent-sdk #onetrust-accept-btn-handler, #onetrust-banner-sdk #onetrust-reject-all-handler{
  
   
@@ -4836,6 +4838,7 @@ footer .t4s-newsl-des-10 .t4s-newsletter__inner .t4s-newsletter__submit .t4s-new
     width: 40%!important;
 }
 }
+{% endcomment %}
 .collection-all #blockid_3,.collection-all #blockid_4{display:none;}
 .t4s-post-item .t4s-post-title,.t4s-post-item .t4s-post-metas>span>span{color:#0B0F0E!important;}
 .t4s-blog-post .t4s-blog-button{align-self:center;}
