@@ -90,6 +90,7 @@
       "block_order": [
         "0553a192-f7d5-4c12-8232-b8fcd6c08676"
       ],
+      "disabled": true,
       "settings": {
         "heading_fullwidth": false,
         "use_specify_image": true,
