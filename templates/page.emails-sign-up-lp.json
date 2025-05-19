@@ -149,12 +149,31 @@
         "sidebar_bdr": 5,
         "sidebar_pd": 10
       }
+    },
+    "custom_html_JABVG3": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "code": "<div class=\"klaviyo-form-VDtNdU\"></div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
     }
   },
   "order": [
     "hero_image_tpe9rF",
     "heading",
     "main",
-    "sidebar-page"
+    "sidebar-page",
+    "custom_html_JABVG3"
   ]
 }
