@@ -168,6 +168,24 @@
         "use_cus_css": false,
         "code_cus_css": ""
       }
+    },
+    "custom_html_KUMMKT": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "code": "<div class=\"klaviyo-form-RnrtYW\"></div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
     }
   },
   "order": [
@@ -175,6 +193,7 @@
     "heading",
     "main",
     "sidebar-page",
-    "custom_html_JABVG3"
+    "custom_html_JABVG3",
+    "custom_html_KUMMKT"
   ]
 }
