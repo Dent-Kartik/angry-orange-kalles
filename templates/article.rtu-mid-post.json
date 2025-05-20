@@ -169,6 +169,24 @@
         "code_cus_css": ""
       }
     },
+    "custom_html_CUQ6Mz": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "code": "<div class=\"klaviyo-form-WPSz4Z\"></div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
     "featured_product_A97KWp": {
       "type": "featured-product",
       "blocks": {
@@ -379,6 +397,7 @@
     "main",
     "custom_html_iLnYmf",
     "custom_html_cDAb6z",
+    "custom_html_CUQ6Mz",
     "featured_product_A97KWp",
     "custom_html_AtpkUq"
   ]
