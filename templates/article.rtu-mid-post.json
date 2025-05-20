@@ -171,9 +171,27 @@
     },
     "custom_html_CUQ6Mz": {
       "type": "custom-html",
-      "name": "Custom HTML",
+      "name": "Custom HTML Klaviyo Desktop",
       "settings": {
         "code": "<div class=\"klaviyo-form-WPSz4Z\"></div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_html_RXUwxr": {
+      "type": "custom-html",
+      "name": "Custom HTML Klaviyo Mobile",
+      "settings": {
+        "code": "<div class=\"klaviyo-form-RZQsDZ\"></div>",
         "layout": "t4s-container-wrap",
         "cl_bg": "",
         "cl_bg_gradient": "",
@@ -571,6 +589,7 @@
     "custom_html_iLnYmf",
     "custom_html_cDAb6z",
     "custom_html_CUQ6Mz",
+    "custom_html_RXUwxr",
     "featured_product_A97KWp",
     "custom_html_AtpkUq",
     "featured_collection2_UNrNTT",
