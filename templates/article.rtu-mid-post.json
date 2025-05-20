@@ -187,24 +187,6 @@
         "code_cus_css": ""
       }
     },
-    "custom_html_RXUwxr": {
-      "type": "custom-html",
-      "name": "Custom HTML Klaviyo Mobile",
-      "settings": {
-        "code": "<div class=\"klaviyo-form-RZQsDZ\"></div>",
-        "layout": "t4s-container-wrap",
-        "cl_bg": "",
-        "cl_bg_gradient": "",
-        "mg": ",,50px,",
-        "pd": "",
-        "mg_tb": "",
-        "pd_tb": "",
-        "mg_mb": ",,30px,",
-        "pd_mb": "",
-        "use_cus_css": false,
-        "code_cus_css": ""
-      }
-    },
     "featured_product_A97KWp": {
       "type": "featured-product",
       "blocks": {
@@ -389,6 +371,24 @@
         "pd_tb": "",
         "mg_mb": ",,30px,",
         "pd_mb": ""
+      }
+    },
+    "custom_html_RXUwxr": {
+      "type": "custom-html",
+      "name": "Custom HTML Klaviyo Mobile",
+      "settings": {
+        "code": "<div class=\"klaviyo-form-RZQsDZ\"></div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
       }
     },
     "custom_html_AtpkUq": {
@@ -589,8 +589,8 @@
     "custom_html_iLnYmf",
     "custom_html_cDAb6z",
     "custom_html_CUQ6Mz",
-    "custom_html_RXUwxr",
     "featured_product_A97KWp",
+    "custom_html_RXUwxr",
     "custom_html_AtpkUq",
     "featured_collection2_UNrNTT",
     "featured_collection_YJNJTf"
