@@ -389,6 +389,102 @@
         "use_cus_css": false,
         "code_cus_css": ""
       }
+    },
+    "featured_collection2_UNrNTT": {
+      "type": "featured-collection2",
+      "blocks": {
+        "product_V7bqVD": {
+          "type": "product",
+          "settings": {
+            "link_product": "shopify://products/angry-orange-pet-odor-eliminator",
+            "title": "",
+            "desc": "",
+            "btn_txt": "Shop now",
+            "btn_url": ""
+          }
+        },
+        "product_tGe36N": {
+          "type": "product",
+          "settings": {
+            "link_product": "shopify://products/angry-orange-gallon-pet-odor-eliminator-refill",
+            "title": "",
+            "desc": "",
+            "btn_txt": "Shop now",
+            "btn_url": ""
+          }
+        },
+        "product_bigUQE": {
+          "type": "product",
+          "settings": {
+            "link_product": "shopify://products/angry-orange-enzyme-stain-cleaner",
+            "title": "",
+            "desc": "",
+            "btn_txt": "Shop now",
+            "btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_V7bqVD",
+        "product_tGe36N",
+        "product_bigUQE"
+      ],
+      "name": "Featured collection 2",
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Shop Our Favorites",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 24,
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "show_des_pr": false,
+        "show_btn": true,
+        "btn_icon": false,
+        "button_style": "bordered",
+        "btns_size": "extra-large",
+        "btns_cl": "custom1",
+        "button_effect": "fade",
+        "content_align": "center",
+        "limit": 3,
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": true,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
     }
   },
   "order": [
@@ -399,6 +495,7 @@
     "custom_html_cDAb6z",
     "custom_html_CUQ6Mz",
     "featured_product_A97KWp",
-    "custom_html_AtpkUq"
+    "custom_html_AtpkUq",
+    "featured_collection2_UNrNTT"
   ]
 }
