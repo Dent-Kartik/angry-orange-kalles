@@ -93,6 +93,7 @@
     "variant_remove": "1",
     "use_notify_me": true,
     "share_source": "1",
+    "cart_type": "disable",
     "gift_wrap_pr": "gift-wrap",
     "login_side": true,
     "growave_social_login": false,
