@@ -597,7 +597,9 @@
         "8a680922-6c51-4cd9-8c1f-48449967dd9f"
       ],
       "custom_css": [
-        "{max-width: 50%; margin: 0 auto;}"
+        "{max-width: 50%; margin: 0 auto;}",
+        "@media (max-width: 1024px) {{width: 75vw; }}",
+        "@media (max-width: 600px) {{width: 90vw; }}"
       ],
       "settings": {}
     },
