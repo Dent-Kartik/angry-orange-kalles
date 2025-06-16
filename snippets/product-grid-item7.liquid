@@ -126,7 +126,12 @@ endif -%}
          {%- render 'product-price', product: product, price_varies_style: price_varies_style, type: 'card', isGrouped: isGrouped -%}
               {% if settings.global_promo_text != blank %}<b style="display:block;color:{{ settings.promo_color }};">{% if product.metafields.global.promo_text != blank %}{{ product.metafields.global.promo_text }}{% else %}{{ settings.global_promo_text }}{% endif %}</b>{% endif %}
         {%- if enable_rating %}{%- render 'product-rating', product: product, app_review: app_review -%}{% endif -%}
-         <div class='opinew-stars-plugin-product-list'>{% render 'opinew_review_stars_lists' product:product %}</div>
+         <script type="module" data-target-id="bp-38964d5f-eed2-45da-b2f3-13712829c5d8" src="https://cdn.elements.amazon/elements/amazon-product-rating/v1.0/web-component.shopify.js"></script>
+{% if product.sku %}
+    <amazon-product-rating product-sku="{{product.sku}}" product-external-id="gid://shopify/ProductVariant/{{ product.selected_or_first_available_variant.id }}"></amazon-product-rating>
+{% else %}
+    <amazon-product-rating product-sku="{{product.selected_or_first_available_variant.sku}}" product-external-id="gid://shopify/ProductVariant/{{ product.selected_or_first_available_variant.id }}"></amazon-product-rating>
+{% endif %}</div>
          {%- if show_list_btns -%}
            {%- assign description_excerpt = product.metafields.theme.description_excerpt -%}
            <div class="t4s-rte">{% if description_excerpt != blank %}{{ description_excerpt }}{% else %}{{ product.content | strip_html | truncatewords: 30 }}{% endif %}</div>
