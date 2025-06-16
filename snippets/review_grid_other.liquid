@@ -1,9 +1,4 @@
-<script type="module" data-target-id="bp-38964d5f-eed2-45da-b2f3-13712829c5d8" src="https://cdn.elements.amazon/elements/amazon-product-rating/v1.0/web-component.shopify.js"></script>
-{% if product.sku %}
-    <amazon-product-rating product-sku="{{product.sku}}" product-external-id="gid://shopify/ProductVariant/{{ product.selected_or_first_available_variant.id }}"></amazon-product-rating>
-{% else %}
-    <amazon-product-rating product-sku="{{product.selected_or_first_available_variant.sku}}" product-external-id="gid://shopify/ProductVariant/{{ product.selected_or_first_available_variant.id }}"></amazon-product-rating>
-{% endif %}
+
 
 {%- comment -%}
 DOCUMENT https://docs.the4.co/kalles-4/theme-faqs/custom-review-app
