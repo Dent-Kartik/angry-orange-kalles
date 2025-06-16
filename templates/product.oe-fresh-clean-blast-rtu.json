@@ -46,8 +46,15 @@
             "pr_title_color": "#000f41"
           }
         },
+        "reviews_from_amazon_amazon_ratings_qLxmpa": {
+          "type": "shopify://apps/reviews-from-amazon/blocks/Amazon ratings/d2a0c9ad-3f97-43c4-9e0c-bc1a4007a201",
+          "settings": {
+            "heading": "Amazon ratings"
+          }
+        },
         "46f48626-36c1-4c15-85cf-3ae47a93c16e": {
           "type": "shopify://apps/opinew-reviews/blocks/product-stars/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "disabled": true,
           "settings": {}
         },
         "description": {
@@ -264,6 +271,7 @@
       "block_order": [
         "meta",
         "title",
+        "reviews_from_amazon_amazon_ratings_qLxmpa",
         "46f48626-36c1-4c15-85cf-3ae47a93c16e",
         "description",
         "152e7505-1077-4ecb-956c-1f52beee2fd8",
@@ -574,11 +582,24 @@
       "blocks": {
         "8a680922-6c51-4cd9-8c1f-48449967dd9f": {
           "type": "shopify://apps/opinew-reviews/blocks/product-widget/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "disabled": true,
           "settings": {}
+        },
+        "reviews_from_amazon_amazon_reviews_w8i3iG": {
+          "type": "shopify://apps/reviews-from-amazon/blocks/Amazon reviews/d2a0c9ad-3f97-43c4-9e0c-bc1a4007a201",
+          "settings": {
+            "heading": "Amazon reviews"
+          }
         }
       },
       "block_order": [
-        "8a680922-6c51-4cd9-8c1f-48449967dd9f"
+        "8a680922-6c51-4cd9-8c1f-48449967dd9f",
+        "reviews_from_amazon_amazon_reviews_w8i3iG"
+      ],
+      "custom_css": [
+        "{max-width: 50%; margin: 0 auto;}",
+        "@media (max-width: 1024px) {{max-width: 75%; }}",
+        "@media (max-width: 600px) {{max-width: 90%; }}"
       ],
       "settings": {}
     },
