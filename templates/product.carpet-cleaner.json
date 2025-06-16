@@ -596,6 +596,9 @@
         "reviews_from_amazon_amazon_reviews_ik4F3p",
         "8a680922-6c51-4cd9-8c1f-48449967dd9f"
       ],
+      "custom_css": [
+        "{max-width: 50%; margin: 0 auto;}"
+      ],
       "settings": {}
     },
     "product-recommendations": {
