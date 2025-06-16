@@ -346,7 +346,12 @@
                 assign lh_pr = bk_stts.lh_pr | append: 'px'
               endif -%}
               <h2 class="t4s-product__title" style="--title-family:var(--font-family-{{ bk_stts.fnt_df_pr }});--title-style:{{ bk_stts.txt_tr_pr }};--title-size:{{ bk_stts.size_pr }}px;--title-weight:{{ bk_stts.fw_pr }};--title-line-height:{{ lh_pr }};--title-spacing:{{ bk_stts.ls_pr }}px;--title-color:{{ bk_stts.pr_title_color }};--title-color-hover:{{ bk_stts.pr_title_color_hover }};" {{ block.shopify_attributes }}><a href="{{ product.url }}">{{ product.title | escape }}</a>
-<div class='opinew-stars-plugin-product-list'>{% render 'opinew_review_stars_lists' product:product %}</div></h2>
+<script type="module" data-target-id="bp-38964d5f-eed2-45da-b2f3-13712829c5d8" src="https://cdn.elements.amazon/elements/amazon-product-rating/v1.0/web-component.shopify.js"></script>
+{% if product.sku %}
+    <amazon-product-rating product-sku="{{product.sku}}" product-external-id="gid://shopify/ProductVariant/{{ product.selected_or_first_available_variant.id }}"></amazon-product-rating>
+{% else %}
+    <amazon-product-rating product-sku="{{product.selected_or_first_available_variant.sku}}" product-external-id="gid://shopify/ProductVariant/{{ product.selected_or_first_available_variant.id }}"></amazon-product-rating>
+{% endif %}</h2>
               
               {%- when 'price_review' -%}
                 <div class="t4s-product__price-review" style="--price-size:{{ bk_stts.size_price_pr }}px;--price-weight:{{ bk_stts.fw_price_pr }};--price-color:{{ bk_stts.price_color }};--price-sale-color:{{ bk_stts.price_sale_color }};">
