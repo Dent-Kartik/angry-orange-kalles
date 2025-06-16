@@ -580,12 +580,20 @@
     "1702895640c62aba6a": {
       "type": "apps",
       "blocks": {
+        "reviews_from_amazon_amazon_reviews_ik4F3p": {
+          "type": "shopify://apps/reviews-from-amazon/blocks/Amazon reviews/d2a0c9ad-3f97-43c4-9e0c-bc1a4007a201",
+          "settings": {
+            "heading": "Amazon reviews"
+          }
+        },
         "8a680922-6c51-4cd9-8c1f-48449967dd9f": {
           "type": "shopify://apps/opinew-reviews/blocks/product-widget/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "disabled": true,
           "settings": {}
         }
       },
       "block_order": [
+        "reviews_from_amazon_amazon_reviews_ik4F3p",
         "8a680922-6c51-4cd9-8c1f-48449967dd9f"
       ],
       "settings": {}
