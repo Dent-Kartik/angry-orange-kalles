@@ -369,4 +369,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
   </script>
   </body>
+  {% if product %} 
+<div data-rebuy-id="222388" data-rebuy-shopify-product-ids="{{ product.id }}"></div> 
+{% endif %}
 </html>
