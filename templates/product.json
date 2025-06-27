@@ -46,8 +46,15 @@
             "pr_title_color": "#000f41"
           }
         },
+        "reviews_from_amazon_amazon_ratings_HqQzNj": {
+          "type": "shopify://apps/reviews-from-amazon/blocks/Amazon ratings/d2a0c9ad-3f97-43c4-9e0c-bc1a4007a201",
+          "settings": {
+            "heading": "Amazon ratings"
+          }
+        },
         "46f48626-36c1-4c15-85cf-3ae47a93c16e": {
           "type": "shopify://apps/opinew-reviews/blocks/product-stars/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "disabled": true,
           "settings": {}
         },
         "description": {
@@ -131,6 +138,7 @@
         },
         "recharge_subscriptions_subscription_widget_LxCUKr": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
@@ -263,6 +271,7 @@
       "block_order": [
         "meta",
         "title",
+        "reviews_from_amazon_amazon_ratings_HqQzNj",
         "46f48626-36c1-4c15-85cf-3ae47a93c16e",
         "description",
         "152e7505-1077-4ecb-956c-1f52beee2fd8",
@@ -591,6 +600,7 @@
       "blocks": {
         "8a680922-6c51-4cd9-8c1f-48449967dd9f": {
           "type": "shopify://apps/opinew-reviews/blocks/product-widget/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+          "disabled": true,
           "settings": {}
         }
       },
@@ -1099,11 +1109,27 @@
         "rebuy_personalization_engine_rebuy_widget_ib4cnE"
       ],
       "settings": {}
+    },
+    "175105434960146e42": {
+      "type": "apps",
+      "blocks": {
+        "reviews_from_amazon_amazon_reviews_gCqxcM": {
+          "type": "shopify://apps/reviews-from-amazon/blocks/Amazon reviews/d2a0c9ad-3f97-43c4-9e0c-bc1a4007a201",
+          "settings": {
+            "heading": "Amazon reviews"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_from_amazon_amazon_reviews_gCqxcM"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "breadcrumb",
     "main",
+    "175105434960146e42",
     "17507071790c5c0108",
     "a183f929-3190-46fb-a8c2-960c8c8b7c6f",
     "cbe86456-c461-46df-ae43-0af0d7d95359",
