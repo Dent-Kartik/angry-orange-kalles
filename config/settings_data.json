@@ -506,15 +506,29 @@
       },
       "top-bar": {
         "type": "top-bar",
+        "blocks": {
+          "html_g4icr7": {
+            "type": "html",
+            "settings": {
+              "html": "Free Shipping + Free Pet Wipes (80ct) on Orders $50+",
+              "hide": false,
+              "text_align": "center",
+              "col": "12"
+            }
+          }
+        },
+        "block_order": [
+          "html_g4icr7"
+        ],
         "custom_css": [
           "p strong {font-size: 18px; line-height: 1.4; font-weight: 800 !important;}"
         ],
         "settings": {
-          "show_topbar": false,
+          "show_topbar": true,
           "topbar_transparent": false,
           "height": 20,
           "fontsize": 15,
-          "cl": "#282973",
+          "cl": "#ffffff",
           "cl_a_hover": "#ffffff",
           "bg": "#282973",
           "bg_op": 100,
