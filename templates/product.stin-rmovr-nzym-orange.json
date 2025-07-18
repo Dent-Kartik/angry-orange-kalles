@@ -18,15 +18,6 @@
         "cl_link": "#222222"
       }
     },
-    "product_redirect_LVjpV3": {
-      "type": "product-redirect",
-      "settings": {
-        "default_message": "This variant is currently sold out. We have an alternative available.",
-        "default_button_text": "View Alternative",
-        "button_color": "#000000",
-        "button_text_color": "#FFFFFF"
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -1076,10 +1067,27 @@
     "1738010659bba3a6d8": {
       "type": "apps",
       "settings": {}
+    },
+    "175280262981023081": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_rECdEd": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "227500",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_rECdEd"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "product_redirect_LVjpV3",
     "breadcrumb",
     "main",
     "a183f929-3190-46fb-a8c2-960c8c8b7c6f",
@@ -1093,6 +1101,7 @@
     "1a5f18e3-6d85-43b3-a67d-fd565e3561bd",
     "34eab03a-b1c4-4c29-9079-64f6e663d12a",
     "67aee4f6-c98c-4da7-9ea9-8fe5b50e0691",
-    "1738010659bba3a6d8"
+    "1738010659bba3a6d8",
+    "175280262981023081"
   ]
 }

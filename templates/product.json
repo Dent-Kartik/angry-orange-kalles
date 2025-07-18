@@ -338,6 +338,21 @@
         "time": 5
       }
     },
+    "175105434960146e42": {
+      "type": "apps",
+      "blocks": {
+        "reviews_from_amazon_amazon_reviews_gCqxcM": {
+          "type": "shopify://apps/reviews-from-amazon/blocks/Amazon reviews/d2a0c9ad-3f97-43c4-9e0c-bc1a4007a201",
+          "settings": {
+            "heading": "Amazon reviews"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_from_amazon_amazon_reviews_gCqxcM"
+      ],
+      "settings": {}
+    },
     "17507071790c5c0108": {
       "type": "apps",
       "blocks": {
@@ -1103,25 +1118,38 @@
             "product_id_enabled": true,
             "collection_id_enabled": false
           }
-        }
-      },
-      "block_order": [
-        "rebuy_personalization_engine_rebuy_widget_ib4cnE"
-      ],
-      "settings": {}
-    },
-    "175105434960146e42": {
-      "type": "apps",
-      "blocks": {
-        "reviews_from_amazon_amazon_reviews_gCqxcM": {
-          "type": "shopify://apps/reviews-from-amazon/blocks/Amazon reviews/d2a0c9ad-3f97-43c4-9e0c-bc1a4007a201",
+        },
+        "rebuy_personalization_engine_rebuy_widget_bgtVVJ": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
-            "heading": "Amazon reviews"
+            "enabled": true,
+            "id": "227500",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
           }
         }
       },
       "block_order": [
-        "reviews_from_amazon_amazon_reviews_gCqxcM"
+        "rebuy_personalization_engine_rebuy_widget_ib4cnE",
+        "rebuy_personalization_engine_rebuy_widget_bgtVVJ"
+      ],
+      "settings": {}
+    },
+    "175280233535b28d27": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_aCWNGG": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_aCWNGG"
       ],
       "settings": {}
     }
@@ -1142,6 +1170,7 @@
     "1a5f18e3-6d85-43b3-a67d-fd565e3561bd",
     "34eab03a-b1c4-4c29-9079-64f6e663d12a",
     "67aee4f6-c98c-4da7-9ea9-8fe5b50e0691",
-    "175070717806dcffba"
+    "175070717806dcffba",
+    "175280233535b28d27"
   ]
 }
