@@ -15,7 +15,7 @@
   {%- endif -%}
   {%- if templateType and shop.metafields.tapita-seo-schema and shop.metafields.tapita-seo-schema.tapita-meta-array -%}
       {%- assign variableMapper = "shop.name,shop.description,shop.currency,shop.phone,shop.address.country,product.title,product.description,product.type,product.vendor,product.variants.title,product.variants.sku,collection.title,collection.description,collection.products_count,article.title,article.author,article.excerpt_or_content,article.content,article.excerpt,product.id,product.price,page.meta.title,page.meta.description" | split: ',' -%}
-      {%- capture variableValueMapper -%}{{shop.name}},tp,{{shop.description | strip_html}},tp,{{shop.currency}},tp,{{shop.phone}},tp,{{shop.address.country}},tp,{{product.title}},tp,{{product.description | strip_html}},tp,{{product.type}},tp,{{product.vendor}},tp,{{product.variants.title}},tp,{{product.variants.sku}},tp,{{collection.title}},tp,{{collection.description | strip_html}},tp,{{collection.products_count}},tp,{{article.title}},tp,{{article.author}},tp,{{article.excerpt_or_content | strip_html}},tp,{{article.content | strip_html}},tp,{{article.excerpt}},tp,{{product.id}},tp,{{product.price | divided_by: 100.0}},tp,{{ product.metafields.global.title_tag }},tp,{{ collection.metafields.global.title_tag }},tp,{{ article.metafields.global.title_tag }},tp,{{ product.metafields.global.description_tag }},tp,{{ collection.metafields.global.description_tag }},tp,{{ article.metafields.global.description_tag }}{%- endcapture -%}
+      {%- capture variableValueMapper -%}{{shop.name}},tp,{{shop.description | strip_html}},tp,{{shop.currency}},tp,{{shop.phone}},tp,{{shop.address.country}},tp,{{product.title}},tp,{{product.description | strip_html}},tp,{{product.type}},tp,{{product.vendor}},tp,{{product.variants.title}},tp,{{product.variants.sku}},tp,{{collection.title}},tp,{{collection.description | strip_html}},tp,{{collection.products_count}},tp,{{article.title}},tp,{{article.author}},tp,{{article.excerpt_or_content | strip_html}},tp,{{article.content | strip_html}},tp,{{article.excerpt}},tp,{{product.id}},tp,{{product.price | divided_by: 100.0}},tp,{{ product.metafields.global.title_tag }},tp,{{ product.metafields.global.description_tag }}{%- endcapture -%}
       {%- assign variableValueMapper = variableValueMapper | split: ',tp,' -%}
       {%- assign meta_tcontents = shop.metafields.tapita-seo-schema.tapita-meta-array -%}
       {%- assign meta_templates = meta_tcontents.value -%} 
@@ -52,28 +52,30 @@
         {%- for i in (0..22) -%}
             {%- assign variableValueItem =  variableValueMapper[i] | slice: 0, 135 | strip_html -%}
             {%- if variableMapper[i] == "page.meta.title" -%}
-                {%- if variableValueItem == nil or variableValueItem == ''  -%}
-                    {%- if product.title  -%}
-                    {%- assign variableValueItem = product.title -%}
-                    {%- elsif collection.title -%}
-                    {%- assign variableValueItem = collection.title -%}
-                    {%- elsif page_title -%}
-                    {%- assign variableValueItem = page_title | strip_html -%}
-                    {%- else %}
-                    {%- assign variableValueItem = page_title -%}
-                    {%- endif -%}
+                {%- if product.metafields.global.title_tag.value  -%}
+                {%- assign variableValueItem = product.metafields.global.title_tag.value -%}
+                {%- elsif product.title  -%}
+                {%- assign variableValueItem = product.title -%}
+                {%- elsif collection.metafields.global.title_tag.value  -%}
+                {%- assign variableValueItem = collection.metafields.global.title_tag.value -%}
+                {%- elsif collection.title -%}
+                {%- assign variableValueItem = collection.title -%}
+                {%- elsif page_title -%}
+                {%- assign variableValueItem = page_title | strip_html -%}
+                {%- else %}
+                {%- assign variableValueItem = page_title -%}
                 {%- endif -%}
             {%- elsif variableMapper[i] == "page.meta.description"  -%}
-                {%- if variableValueItem == nil or variableValueItem == ''  -%}
-                    {%- if product.description  -%}
-                    {%- assign variableValueItem = product.description | strip_html -%}
-                    {%- elsif page_description -%}
-                    {%- assign variableValueItem = page_description | strip_html -%}
-                    {%- elsif collection.description -%}
-                    {%- assign variableValueItem = collection.description | strip_html -%}
-                    {%- else %}
-                    {%- assign variableValueItem = page_description | strip_html -%}
-                    {%- endif -%}
+                {%- if product.metafields.global.description_tag.value  -%}
+                {%- assign variableValueItem = product.metafields.global.description_tag.value -%}
+                {%- elsif collection.metafields.global.description_tag.value  -%}
+                {%- assign variableValueItem = collection.metafields.global.description_tag.value -%}
+                {%- elsif page_description -%}
+                {%- assign variableValueItem = page_description | strip_html -%}
+                {%- elsif collection.description -%}
+                {%- assign variableValueItem = collection.description | strip_html -%}
+                {%- else %}
+                {%- assign variableValueItem = page_description | strip_html -%}
                 {%- endif -%}
             {%- elsif variableMapper[i] == "product.variants.sku" -%}
                 {%- assign variableValueItem = product.variants | map: 'sku' | join: ', ' -%}
@@ -81,11 +83,12 @@
             {%-  assign new_page_title = new_page_title | replace: variableMapper[i], variableValueItem -%}
             {%-  assign new_page_description = new_page_description | replace: variableMapper[i], variableValueItem -%}
         {%- endfor %}
-        {%-  assign page_title = new_page_title | strip_html | url_decode -%}
+        
+        {%-  assign page_title = new_page_title | strip_html | url_decode | replace: '&quot;', '"' -%}
         {%-  assign page_description = new_page_description | strip_html | url_decode -%}
         {%-  assign page_description = new_page_description | replace: '"', "'" -%}
         <script>
-        var tapita_meta_page_title =  `{{  page_title }}`;
+        var tapita_meta_page_title =  `{{  page_title | replace: '&quot;', '"' }}`;
         var tapita_meta_page_description = `{{  page_description }}`;
         </script>
         {%- break -%}
@@ -112,7 +115,8 @@
       {%- assign handle_decoded = aicustom_tcontent.handle | url_decode | url_decode -%}
       {%- assign handle_with_language = handle_decoded | prepend: aicustom_tcontent.language -%}
       {%- assign handle_with_language = handle_with_language | prepend: "/" -%}
-      {%- assign request_path_with_slash = request.path | append: "/" -%}
+      {%- assign request_path = request.path | url_decode -%}
+      {%- assign request_path_with_slash = request_path | append: "/" -%}
       {%- assign tptmetamatched = false -%}
       {%- if handle_decoded == current_product_handle and request.page_type == "product" -%}
         {%- assign tptmetamatched = true -%}
@@ -120,9 +124,18 @@
         {%- assign tptmetamatched = true -%}
       {%- elsif handle_decoded == current_page_handle -%}
         {%- assign tptmetamatched = true -%}
-      {%- elsif handle_decoded == request.path or handle_with_language == request.path or handle_with_language == request_path_with_slash -%}
+      {%- elsif handle_decoded == request_path or handle_with_language == request_path or handle_with_language == request_path_with_slash -%}
         {%- assign tptmetamatched = true -%}
       {%- endif -%}
+      {%- unless tptmetamatched -%}
+        {%- if template == 'article' and handle_decoded contains '/blogs/' -%}
+          {%- assign url_parts = request_path | split: '/' -%}
+          {%- assign template_parts = handle_decoded | split: '/' -%}
+          {%- if template_parts[3] == url_parts.last -%}
+            {%- assign tptmetamatched = true -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endunless -%}
       {%- if tptmetamatched -%}
         {%- if aicustom_tcontent.title and aicustom_tcontent.title != "" -%}
           {%-  assign page_title = aicustom_tcontent.title | strip_html | url_decode -%}
@@ -141,3 +154,6 @@
     {%- endfor -%}
 {%- endif -%}
 {%- comment -%} End of Tapita Meta Data {%- endcomment -%}
+{%- comment -%} Start of assets preloading {%- endcomment -%}
+
+{%- comment -%} End of of assets preloading {%- endcomment -%}
