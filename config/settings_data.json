@@ -614,6 +614,19 @@
               "lb": "",
               "lb_cl": ""
             }
+          },
+          "base_87hVfH": {
+            "type": "base",
+            "settings": {
+              "title": "WHOLESALE",
+              "url": "shopify://pages/wholesale",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
           }
         },
         "block_order": [
@@ -621,7 +634,8 @@
           "7be36556-8f02-4ac7-9abc-7de59e33c050",
           "base_9MDtLi",
           "base_GqR7dq",
-          "base_7fmz3t"
+          "base_7fmz3t",
+          "base_87hVfH"
         ],
         "custom_css": [
           ".t4s-site-nav__icons svg.t4s-icon {color: #bb3b00;}"
