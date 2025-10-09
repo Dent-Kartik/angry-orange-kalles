@@ -34,7 +34,7 @@ assign current_variant_id = current_variant.id -%}
                -%}
 
                <li class="t4s-fbt__img t4s-fbt_img-0 t4s-pr" data-groups-img="{% increment indexData %}">
-                  <img class="lazyloadt4s t4s-lz--fadeIn" data-orginal="{{ img_url }}" data-src="{{ img_url }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
+                  <img loading="lazy" class="lazyloadt4s t4s-lz--fadeIn" src="{{ image | image_url: width: 115 }}" width="{{ image.width }}" height="{{ image.height }}" " alt="{{ image.alt | escape }}">
                   <span class="lazyloadt4s-loader is-bg-img" style="background: url({{ img_url }})"></span>
                </li>
 
@@ -56,7 +56,7 @@ assign current_variant_id = current_variant.id -%}
                      <svg focusable="false" class="t4s-svg t4s-svg--plus" viewBox="0 0 10 10" role="presentation"><path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path></svg>
                      <a class="t4s-fbt__qv t4s-d-inline-block t4s-pa" href="{{ pr.url }}" data-action-quickview data-tooltip="top" data-id="{{ item.id }}" rel="nofollow"><svg viewBox="0 0 24 24" role="presentation"><use xlink:href="#t4s-icon-qv"></use></svg><span class="t4s-d-none">{{ txt_qv }}</span></a>
                      <a href="{{ item.url }}" class="t4s-d-inline-block t4s-pr t4s-fbt__img-wrap">
-                       <img class="lazyloadt4s t4s-lz--fadeIn" data-orginal="{{ img_url }}" data-src="{{ img_url }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
+                       <img loading="lazy" class="lazyloadt4s t4s-lz--fadeIn" src="{{ image | image_url: width: 115 }}" width="{{ image.width }}" height="{{ image.height }}"  width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
                        <span class="lazyloadt4s-loader is-bg-img" style="background: url({{ img_url }})"></span>
                      </a>
                   </li>
