@@ -430,6 +430,7 @@
         "custom_text_xyyyNB",
         "custom_text_FiehLi"
       ],
+      "disabled": true,
       "settings": {
         "coll_pos": "right",
         "collection": "stain-odor-remover-with-enzymes",
