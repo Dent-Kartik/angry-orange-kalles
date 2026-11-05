@@ -98,7 +98,7 @@
                 <path d="M12.0717 8.63933C12.4511 8.23802 12.455 7.58372 12.0804 7.17792C11.7057 6.77212 11.0945 6.76848 10.715 7.1698L12.0717 8.63933ZM10.715 7.1698C9.81538 8.12133 8.35738 8.11377 7.45854 7.14014L6.08451 8.59342C7.72727 10.3729 10.4078 10.3992 12.0717 8.63933L10.715 7.1698Z" fill="white"/>
               </svg></span
           ></a>{% endcomment %}
-          {%- render 't4s_group_btns', section.settings:section.settings -%}
+          {%- render 't4s_group_btns', settings: section.settings -%}
         </div>
                   
       </div>
@@ -323,3 +323,13 @@
   }
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 't4s_group_btns', section.settings:section.settings -%}"
+  to: "{%- render 't4s_group_btns', settings: section.settings -%}"
+  position: 7829..7888
+{% endcomment %}
